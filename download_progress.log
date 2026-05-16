@@ -1,0 +1,1285 @@
+[01:40:51] ======================================================================
+[01:40:51] BULK REPO DOWNLOADER - Multi-Account
+[01:40:51] Starting at: 2026-04-27 01:40:51
+[01:40:51] ======================================================================
+[01:40:51] 
+======================================================================
+[01:40:51] PROCESSING ACCOUNT: tellemthatsme
+[01:40:51] ======================================================================
+[01:40:51] 
+Fetching repositories for tellemthatsme...
+[01:40:52]   Page 1: +100 repos (total so far: 100)
+[01:40:53]   Page 2: +100 repos (total so far: 200)
+[01:40:55]   Page 3: +100 repos (total so far: 300)
+[01:40:55]   Page 4: +16 repos (total so far: 316)
+[01:40:56]   Total for tellemthatsme: 316 repositories
+[01:40:56] Downloading 316 repositories...
+[01:40:56]   [1/316] tellemthatsme/adk-rag-agent (public)
+[01:40:58]     [DOWNLOADED] tellemthatsme/adk-rag-agent
+[01:40:58]   [2/316] tellemthatsme/agent-zero (public)
+[01:41:00]     [FAILED] tellemthatsme/agent-zero: Cloning into 'C:\temp\velvet-sojourner\repos\tellemthatsme_agent-zero'...
+error:
+[01:41:00]   [3/316] tellemthatsme/agenticSeek (public)
+[01:41:04]     [DOWNLOADED] tellemthatsme/agenticSeek
+[01:41:04]   [4/316] tellemthatsme/agents (public)
+[01:41:05]     [DOWNLOADED] tellemthatsme/agents
+[01:41:06]   [5/316] tellemthatsme/ai (public)
+[01:41:09]     [DOWNLOADED] tellemthatsme/ai
+[01:41:10]   [6/316] tellemthatsme/ai-browser-playground-hub (PRIVATE)
+[01:41:11]     [DOWNLOADED] tellemthatsme/ai-browser-playground-hub
+[01:41:12]   [7/316] tellemthatsme/ai-browser-playground-nexus (PRIVATE)
+[01:41:14]     [DOWNLOADED] tellemthatsme/ai-browser-playground-nexus
+[01:41:14]   [8/316] tellemthatsme/ai-command-center-nexus-22 (PRIVATE)
+[01:41:16]     [DOWNLOADED] tellemthatsme/ai-command-center-nexus-22
+[01:41:16]   [9/316] tellemthatsme/ai-deal-seeker-pro (PRIVATE)
+[01:41:18]     [DOWNLOADED] tellemthatsme/ai-deal-seeker-pro
+[01:41:19]   [10/316] tellemthatsme/ai-dev-flow-41 (PRIVATE)
+[01:41:20]     [DOWNLOADED] tellemthatsme/ai-dev-flow-41
+[01:41:20]   [11/316] tellemthatsme/AI-Empire-Mission-Control (PRIVATE)
+[01:41:22]     [DOWNLOADED] tellemthatsme/AI-Empire-Mission-Control
+[01:41:22]   [12/316] tellemthatsme/ai-empire-monitoring-suite (public)
+[01:41:23]     [DOWNLOADED] tellemthatsme/ai-empire-monitoring-suite
+[01:41:24]   [13/316] tellemthatsme/ai-gradio (public)
+[01:41:25]     [DOWNLOADED] tellemthatsme/ai-gradio
+[01:41:25]   [14/316] tellemthatsme/ai-muse-studio (PRIVATE)
+[01:41:27]     [DOWNLOADED] tellemthatsme/ai-muse-studio
+[01:41:27]   [15/316] tellemthatsme/ai-navigator-pro (PRIVATE)
+[01:41:29]     [DOWNLOADED] tellemthatsme/ai-navigator-pro
+[01:41:29]   [16/316] tellemthatsme/ai-nexus-command-center (PRIVATE)
+[01:41:31]     [DOWNLOADED] tellemthatsme/ai-nexus-command-center
+[01:41:32]   [17/316] tellemthatsme/ai-nexus-command-center-13 (PRIVATE)
+[01:41:33]     [DOWNLOADED] tellemthatsme/ai-nexus-command-center-13
+[01:41:34]   [18/316] tellemthatsme/ai-nexus-project-hub (PRIVATE)
+[01:41:35]     [DOWNLOADED] tellemthatsme/ai-nexus-project-hub
+[01:41:36]   [19/316] tellemthatsme/ai-phone-farm-platform (PRIVATE)
+[01:41:38]     [DOWNLOADED] tellemthatsme/ai-phone-farm-platform
+[01:41:38]   [20/316] tellemthatsme/ai-phone-farming-platform (PRIVATE)
+[01:41:40]     [DOWNLOADED] tellemthatsme/ai-phone-farming-platform
+[01:41:40]   [21/316] tellemthatsme/ai-pulse-dashboard (PRIVATE)
+[01:41:42]     [DOWNLOADED] tellemthatsme/ai-pulse-dashboard
+[01:41:42]   [22/316] tellemthatsme/ai-pulse-dashboard-72 (PRIVATE)
+[01:41:44]     [DOWNLOADED] tellemthatsme/ai-pulse-dashboard-72
+[01:41:44]   [23/316] tellemthatsme/ai-pulse-nexus-ticker (PRIVATE)
+[01:41:46]     [DOWNLOADED] tellemthatsme/ai-pulse-nexus-ticker
+[01:41:46]   [24/316] tellemthatsme/ai-s-global-hub (PRIVATE)
+[01:41:48]     [DOWNLOADED] tellemthatsme/ai-s-global-hub
+[01:41:48]   [25/316] tellemthatsme/ai-synthesis-machine (PRIVATE)
+[01:41:50]     [DOWNLOADED] tellemthatsme/ai-synthesis-machine
+[01:41:50]   [26/316] tellemthatsme/ai-tech-giga-dash (PRIVATE)
+[01:41:52]     [DOWNLOADED] tellemthatsme/ai-tech-giga-dash
+[01:41:53]   [27/316] tellemthatsme/ai-tool-guardian-angel (PRIVATE)
+[01:41:55]     [DOWNLOADED] tellemthatsme/ai-tool-guardian-angel
+[01:41:55]   [28/316] tellemthatsme/ai-toolkit-nexus-forge (PRIVATE)
+[01:41:57]     [DOWNLOADED] tellemthatsme/ai-toolkit-nexus-forge
+[01:41:57]   [29/316] tellemthatsme/ai-toolkit-nexus-forge-83 (PRIVATE)
+[01:42:00]     [DOWNLOADED] tellemthatsme/ai-toolkit-nexus-forge-83
+[01:42:00]   [30/316] tellemthatsme/ai-world-navigator (PRIVATE)
+[01:42:02]     [DOWNLOADED] tellemthatsme/ai-world-navigator
+[01:42:03]   [31/316] tellemthatsme/aicodingassistbolt (PRIVATE)
+[01:42:05]     [DOWNLOADED] tellemthatsme/aicodingassistbolt
+[01:42:05]   [32/316] tellemthatsme/aicodingbolt (PRIVATE)
+[01:42:07]     [DOWNLOADED] tellemthatsme/aicodingbolt
+[01:42:07]   [33/316] tellemthatsme/aider (public)
+[01:42:30]     [DOWNLOADED] tellemthatsme/aider
+[01:42:31]   [34/316] tellemthatsme/aiecosystem (PRIVATE)
+[01:42:32]     [DOWNLOADED] tellemthatsme/aiecosystem
+[01:42:32]   [35/316] tellemthatsme/AIFreeTierTrackerbolt (PRIVATE)
+[01:42:34]     [DOWNLOADED] tellemthatsme/AIFreeTierTrackerbolt
+[01:42:35]   [36/316] tellemthatsme/aiinggfbolt (PRIVATE)
+[01:42:36]     [DOWNLOADED] tellemthatsme/aiinggfbolt
+[01:42:37]   [37/316] tellemthatsme/aiprojectbolt (PRIVATE)
+[01:42:38]     [DOWNLOADED] tellemthatsme/aiprojectbolt
+[01:42:39]   [38/316] tellemthatsme/aitoolkitbolt (PRIVATE)
+[01:42:40]     [DOWNLOADED] tellemthatsme/aitoolkitbolt
+[01:42:40]   [39/316] tellemthatsme/aittradingbolt (PRIVATE)
+[01:42:42]     [DOWNLOADED] tellemthatsme/aittradingbolt
+[01:42:42]   [40/316] tellemthatsme/aiusage (PRIVATE)
+[01:42:43]     [DOWNLOADED] tellemthatsme/aiusage
+[01:42:44]   [41/316] tellemthatsme/aiwriting (PRIVATE)
+[01:42:45]     [DOWNLOADED] tellemthatsme/aiwriting
+[01:42:46]   [42/316] tellemthatsme/allinonecryptobolt (PRIVATE)
+[01:42:47]     [DOWNLOADED] tellemthatsme/allinonecryptobolt
+[01:42:48]   [43/316] tellemthatsme/allspark-dev-studio (PRIVATE)
+[01:42:49]     [DOWNLOADED] tellemthatsme/allspark-dev-studio
+[01:42:50]   [44/316] tellemthatsme/arcana-craft (PRIVATE)
+[01:42:51]     [DOWNLOADED] tellemthatsme/arcana-craft
+[01:42:52]   [45/316] tellemthatsme/Archon (public)
+[01:42:54]     [DOWNLOADED] tellemthatsme/Archon
+[01:42:54]   [46/316] tellemthatsme/artbot-crypto-verse (PRIVATE)
+[01:42:56]     [DOWNLOADED] tellemthatsme/artbot-crypto-verse
+[01:42:56]   [47/316] tellemthatsme/AusAIAgencybolt- (PRIVATE)
+[01:42:58]     [DOWNLOADED] tellemthatsme/AusAIAgencybolt-
+[01:42:58]   [48/316] tellemthatsme/ausaiagentcybolt (PRIVATE)
+[01:43:00]     [DOWNLOADED] tellemthatsme/ausaiagentcybolt
+[01:43:00]   [49/316] tellemthatsme/aussie-burnout-legends (PRIVATE)
+[01:43:02]     [DOWNLOADED] tellemthatsme/aussie-burnout-legends
+[01:43:03]   [50/316] tellemthatsme/aussie-burnout-legends-61 (PRIVATE)
+[01:43:05]     [DOWNLOADED] tellemthatsme/aussie-burnout-legends-61
+[01:43:05]   [51/316] tellemthatsme/aussie-deals-hub (PRIVATE)
+[01:43:07]     [DOWNLOADED] tellemthatsme/aussie-deals-hub
+[01:43:07]   [52/316] tellemthatsme/aussie-metal-mayhem-motors (PRIVATE)
+[01:43:10]     [DOWNLOADED] tellemthatsme/aussie-metal-mayhem-motors
+[01:43:10]   [53/316] tellemthatsme/automated-app-genesis (PRIVATE)
+[01:43:12]     [DOWNLOADED] tellemthatsme/automated-app-genesis
+[01:43:12]   [54/316] tellemthatsme/avatra-content-hive (PRIVATE)
+[01:43:14]     [DOWNLOADED] tellemthatsme/avatra-content-hive
+[01:43:14]   [55/316] tellemthatsme/awesome-agents (public)
+[01:43:15]     [DOWNLOADED] tellemthatsme/awesome-agents
+[01:43:16]   [56/316] tellemthatsme/awesome-ai-agents (public)
+[01:43:18]     [DOWNLOADED] tellemthatsme/awesome-ai-agents
+[01:43:19]   [57/316] tellemthatsme/awesome-ai-coding-tools (public)
+[01:43:20]     [DOWNLOADED] tellemthatsme/awesome-ai-coding-tools
+[01:43:20]   [58/316] tellemthatsme/awesome-ai-sdks (public)
+[01:43:22]     [DOWNLOADED] tellemthatsme/awesome-ai-sdks
+[01:43:22]   [59/316] tellemthatsme/awesome-browser-automation (public)
+[01:43:24]     [DOWNLOADED] tellemthatsme/awesome-browser-automation
+[01:43:24]   [60/316] tellemthatsme/awesome-claude-code (public)
+[01:43:25]     [DOWNLOADED] tellemthatsme/awesome-claude-code
+[01:43:25]   [61/316] tellemthatsme/awesome-cli (public)
+[01:43:27]     [DOWNLOADED] tellemthatsme/awesome-cli
+[01:43:27]   [62/316] tellemthatsme/awesome-cli-apps (public)
+[01:43:28]     [DOWNLOADED] tellemthatsme/awesome-cli-apps
+[01:43:28]   [63/316] tellemthatsme/Awesome-Code-LLM (public)
+[01:43:30]     [DOWNLOADED] tellemthatsme/Awesome-Code-LLM
+[01:43:30]   [64/316] tellemthatsme/awesome-coins (public)
+[01:43:31]     [DOWNLOADED] tellemthatsme/awesome-coins
+[01:43:32]   [65/316] tellemthatsme/awesome-n8n (public)
+[01:43:33]     [DOWNLOADED] tellemthatsme/awesome-n8n
+[01:43:33]   [66/316] tellemthatsme/awesome-nocode-lowcode (public)
+[01:43:34]     [DOWNLOADED] tellemthatsme/awesome-nocode-lowcode
+[01:43:34]   [67/316] tellemthatsme/awesome-selfhosted (public)
+[01:43:36]     [DOWNLOADED] tellemthatsme/awesome-selfhosted
+[01:43:36]   [68/316] tellemthatsme/awesome-ui-component-library (public)
+[01:43:37]     [DOWNLOADED] tellemthatsme/awesome-ui-component-library
+[01:43:37]   [69/316] tellemthatsme/bloom-boost-social (PRIVATE)
+[01:43:39]     [DOWNLOADED] tellemthatsme/bloom-boost-social
+[01:43:39]   [70/316] tellemthatsme/BMAD-METHOD (public)
+[01:43:41]     [DOWNLOADED] tellemthatsme/BMAD-METHOD
+[01:43:42]   [71/316] tellemthatsme/bookcraft-nexus-publish (PRIVATE)
+[01:43:43]     [DOWNLOADED] tellemthatsme/bookcraft-nexus-publish
+[01:43:44]   [72/316] tellemthatsme/bot-trading-alpha-hub (PRIVATE)
+[01:43:46]     [DOWNLOADED] tellemthatsme/bot-trading-alpha-hub
+[01:43:46]   [73/316] tellemthatsme/bot-trading-maestro (PRIVATE)
+[01:43:48]     [DOWNLOADED] tellemthatsme/bot-trading-maestro
+[01:43:48]   [74/316] tellemthatsme/bot-trading-renaissance-hub (PRIVATE)
+[01:43:50]     [DOWNLOADED] tellemthatsme/bot-trading-renaissance-hub
+[01:43:50]   [75/316] tellemthatsme/brainstorm-architect (PRIVATE)
+[01:43:52]     [DOWNLOADED] tellemthatsme/brainstorm-architect
+[01:43:52]   [76/316] tellemthatsme/brave-owl (PRIVATE)
+[01:43:53]     [DOWNLOADED] tellemthatsme/brave-owl
+[01:43:53]   [77/316] tellemthatsme/browse-time-insight (PRIVATE)
+[01:43:55]     [DOWNLOADED] tellemthatsme/browse-time-insight
+[01:43:55]   [78/316] tellemthatsme/browser-quad-vision (PRIVATE)
+[01:43:57]     [DOWNLOADED] tellemthatsme/browser-quad-vision
+[01:43:57]   [79/316] tellemthatsme/browser-use (public)
+[01:43:59]     [DOWNLOADED] tellemthatsme/browser-use
+[01:44:00]   [80/316] tellemthatsme/ccxt (public)
+[01:44:20]     [DOWNLOADED] tellemthatsme/ccxt
+[01:44:20]   [81/316] tellemthatsme/chat-merge-mastery (PRIVATE)
+[01:44:22]     [DOWNLOADED] tellemthatsme/chat-merge-mastery
+[01:44:22]   [82/316] tellemthatsme/chat-saga-sorter (PRIVATE)
+[01:44:24]     [DOWNLOADED] tellemthatsme/chat-saga-sorter
+[01:44:24]   [83/316] tellemthatsme/chat-saga-sorter-ad13c3d7 (PRIVATE)
+[01:44:26]     [DOWNLOADED] tellemthatsme/chat-saga-sorter-ad13c3d7
+[01:44:26]   [84/316] tellemthatsme/chatbolthiostory (PRIVATE)
+[01:44:28]     [DOWNLOADED] tellemthatsme/chatbolthiostory
+[01:44:28]   [85/316] tellemthatsme/chatexporterbolt (PRIVATE)
+[01:44:30]     [DOWNLOADED] tellemthatsme/chatexporterbolt
+[01:44:30]   [86/316] tellemthatsme/ChatGPT (public)
+[01:44:31]     [DOWNLOADED] tellemthatsme/ChatGPT
+[01:44:32]   [87/316] tellemthatsme/chathistoryboplt (PRIVATE)
+[01:44:33]     [DOWNLOADED] tellemthatsme/chathistoryboplt
+[01:44:34]   [88/316] tellemthatsme/chatify-organizer (PRIVATE)
+[01:44:36]     [DOWNLOADED] tellemthatsme/chatify-organizer
+[01:44:36]   [89/316] tellemthatsme/chatplatformbolt (PRIVATE)
+[01:44:38]     [DOWNLOADED] tellemthatsme/chatplatformbolt
+[01:44:38]   [90/316] tellemthatsme/chatprocessor (PRIVATE)
+[01:44:40]     [DOWNLOADED] tellemthatsme/chatprocessor
+[01:44:40]   [91/316] tellemthatsme/chatsortold (PRIVATE)
+[01:44:42]     [DOWNLOADED] tellemthatsme/chatsortold
+[01:44:42]   [92/316] tellemthatsme/chatty-app-factory (PRIVATE)
+[01:44:44]     [DOWNLOADED] tellemthatsme/chatty-app-factory
+[01:44:44]   [93/316] tellemthatsme/ClaraVerse (public)
+[01:45:03]     [DOWNLOADED] tellemthatsme/ClaraVerse
+[01:45:03]   [94/316] tellemthatsme/claude-agent-forge (PRIVATE)
+[01:45:05]     [DOWNLOADED] tellemthatsme/claude-agent-forge
+[01:45:06]   [95/316] tellemthatsme/claude-code-router (public)
+[01:45:08]     [DOWNLOADED] tellemthatsme/claude-code-router
+[01:45:09]   [96/316] tellemthatsme/claude-conductor (public)
+[01:45:10]     [DOWNLOADED] tellemthatsme/claude-conductor
+[01:45:10]   [97/316] tellemthatsme/claude-openrouter-enterprise-system (public)
+[01:45:11]     [DOWNLOADED] tellemthatsme/claude-openrouter-enterprise-system
+[01:45:12]   [98/316] tellemthatsme/claudia (public)
+[01:45:13]     [DOWNLOADED] tellemthatsme/claudia
+[01:45:14]   [99/316] tellemthatsme/cmsbolt (PRIVATE)
+[01:45:15]     [DOWNLOADED] tellemthatsme/cmsbolt
+[01:45:16]   [100/316] tellemthatsme/code-discovery-navigator (PRIVATE)
+[01:45:17]     [DOWNLOADED] tellemthatsme/code-discovery-navigator
+[01:45:18]   [101/316] tellemthatsme/code-lens-ai-review (PRIVATE)
+[01:45:19]     [DOWNLOADED] tellemthatsme/code-lens-ai-review
+[01:45:20]   [102/316] tellemthatsme/code-narrative-alchemy (PRIVATE)
+[01:45:21]     [DOWNLOADED] tellemthatsme/code-narrative-alchemy
+[01:45:22]   [103/316] tellemthatsme/Code2Docs (public)
+[01:45:23]     [DOWNLOADED] tellemthatsme/Code2Docs
+[01:45:23]   [104/316] tellemthatsme/codeguide (public)
+[01:45:24]     [DOWNLOADED] tellemthatsme/codeguide
+[01:45:25]   [105/316] tellemthatsme/compcryptobolt (PRIVATE)
+[01:45:26]     [DOWNLOADED] tellemthatsme/compcryptobolt
+[01:45:27]   [106/316] tellemthatsme/context7 (public)
+[01:45:28]     [DOWNLOADED] tellemthatsme/context7
+[01:45:28]   [107/316] tellemthatsme/conversation-crafter (PRIVATE)
+[01:45:30]     [DOWNLOADED] tellemthatsme/conversation-crafter
+[01:45:30]   [108/316] tellemthatsme/cosmos-ai-desk (PRIVATE)
+[01:45:32]     [DOWNLOADED] tellemthatsme/cosmos-ai-desk
+[01:45:32]   [109/316] tellemthatsme/craft-ai-stack (PRIVATE)
+[01:45:34]     [DOWNLOADED] tellemthatsme/craft-ai-stack
+[01:45:34]   [110/316] tellemthatsme/craft-your-world-87 (PRIVATE)
+[01:45:36]     [DOWNLOADED] tellemthatsme/craft-your-world-87
+[01:45:36]   [111/316] tellemthatsme/crawlee (public)
+[01:45:51]     [DOWNLOADED] tellemthatsme/crawlee
+[01:45:52]   [112/316] tellemthatsme/create-volo-app (public)
+[01:45:55]     [DOWNLOADED] tellemthatsme/create-volo-app
+[01:45:55]   [113/316] tellemthatsme/creatoros-clone (PRIVATE)
+[01:45:57]     [DOWNLOADED] tellemthatsme/creatoros-clone
+[01:45:57]   [114/316] tellemthatsme/creatoros-clone-1 (PRIVATE)
+[01:45:59]     [DOWNLOADED] tellemthatsme/creatoros-clone-1
+[01:46:00]   [115/316] tellemthatsme/crewAI-examples (public)
+[01:46:02]     [DOWNLOADED] tellemthatsme/crewAI-examples
+[01:46:02]   [116/316] tellemthatsme/crush (public)
+[01:46:04]     [DOWNLOADED] tellemthatsme/crush
+[01:46:04]   [117/316] tellemthatsme/crypto-beacon-trader-hub (public)
+[01:46:06]     [DOWNLOADED] tellemthatsme/crypto-beacon-trader-hub
+[01:46:07]   [118/316] tellemthatsme/crypto-command-center-lovable (PRIVATE)
+[01:46:08]     [DOWNLOADED] tellemthatsme/crypto-command-center-lovable
+[01:46:09]   [119/316] tellemthatsme/crypto-dream-trade-sim (public)
+[01:46:10]     [DOWNLOADED] tellemthatsme/crypto-dream-trade-sim
+[01:46:11]   [120/316] tellemthatsme/crypto-genesis-ai (PRIVATE)
+[01:46:12]     [DOWNLOADED] tellemthatsme/crypto-genesis-ai
+[01:46:13]   [121/316] tellemthatsme/cryptobolt (PRIVATE)
+[01:46:14]     [DOWNLOADED] tellemthatsme/cryptobolt
+[01:46:15]   [122/316] tellemthatsme/cryptobot-nexus-ai (PRIVATE)
+[01:46:16]     [DOWNLOADED] tellemthatsme/cryptobot-nexus-ai
+[01:46:16]   [123/316] tellemthatsme/cybersecurity-enterprise-suite (public)
+[01:46:18]     [DOWNLOADED] tellemthatsme/cybersecurity-enterprise-suite
+[01:46:18]   [124/316] tellemthatsme/deepclaude (public)
+[01:46:20]     [DOWNLOADED] tellemthatsme/deepclaude
+[01:46:20]   [125/316] tellemthatsme/deepwiki-open (public)
+[01:46:22]     [DOWNLOADED] tellemthatsme/deepwiki-open
+[01:46:23]   [126/316] tellemthatsme/deer-flow (public)
+[01:46:24]     [DOWNLOADED] tellemthatsme/deer-flow
+[01:46:25]   [127/316] tellemthatsme/dev-chatgpt-prompts (public)
+[01:46:26]     [DOWNLOADED] tellemthatsme/dev-chatgpt-prompts
+[01:46:26]   [128/316] tellemthatsme/dev-stream-seek (PRIVATE)
+[01:46:28]     [DOWNLOADED] tellemthatsme/dev-stream-seek
+[01:46:28]   [129/316] tellemthatsme/devflow-matrix (PRIVATE)
+[01:46:30]     [DOWNLOADED] tellemthatsme/devflow-matrix
+[01:46:30]   [130/316] tellemthatsme/diagram-insight-ai (PRIVATE)
+[01:46:32]     [DOWNLOADED] tellemthatsme/diagram-insight-ai
+[01:46:32]   [131/316] tellemthatsme/ditto (public)
+[01:46:33]     [DOWNLOADED] tellemthatsme/ditto
+[01:46:34]   [132/316] tellemthatsme/dream-crypto-trade-sim (PRIVATE)
+[01:46:35]     [DOWNLOADED] tellemthatsme/dream-crypto-trade-sim
+[01:46:36]   [133/316] tellemthatsme/dyad (public)
+[01:46:37]     [DOWNLOADED] tellemthatsme/dyad
+[01:46:37]   [134/316] tellemthatsme/eliza (public)
+[01:46:43]     [DOWNLOADED] tellemthatsme/eliza
+[01:46:44]   [135/316] tellemthatsme/ember-build-spark (PRIVATE)
+[01:46:45]     [DOWNLOADED] tellemthatsme/ember-build-spark
+[01:46:45]   [136/316] tellemthatsme/emergent (PRIVATE)
+[01:46:47]     [DOWNLOADED] tellemthatsme/emergent
+[01:46:47]   [137/316] tellemthatsme/engage-boost-social-reach (PRIVATE)
+[01:46:49]     [DOWNLOADED] tellemthatsme/engage-boost-social-reach
+[01:46:49]   [138/316] tellemthatsme/engage-flow-insights-ai (PRIVATE)
+[01:46:51]     [DOWNLOADED] tellemthatsme/engage-flow-insights-ai
+[01:46:52]   [139/316] tellemthatsme/fastapi_mcp (public)
+[01:46:53]     [DOWNLOADED] tellemthatsme/fastapi_mcp
+[01:46:53]   [140/316] tellemthatsme/firecrawl (public)
+[01:47:00]     [DOWNLOADED] tellemthatsme/firecrawl
+[01:47:00]   [141/316] tellemthatsme/firefox (PRIVATE)
+[01:47:02]     [DOWNLOADED] tellemthatsme/firefox
+[01:47:02]   [142/316] tellemthatsme/Flowise (public)
+[01:47:11]     [DOWNLOADED] tellemthatsme/Flowise
+[01:47:11]   [143/316] tellemthatsme/forge-creative-flow (PRIVATE)
+[01:47:13]     [DOWNLOADED] tellemthatsme/forge-creative-flow
+[01:47:13]   [144/316] tellemthatsme/freeitbolt (PRIVATE)
+[01:47:15]     [DOWNLOADED] tellemthatsme/freeitbolt
+[01:47:16]   [145/316] tellemthatsme/freetrail (PRIVATE)
+[01:47:17]     [DOWNLOADED] tellemthatsme/freetrail
+[01:47:17]   [146/316] tellemthatsme/freetrailbolt (PRIVATE)
+[01:47:19]     [DOWNLOADED] tellemthatsme/freetrailbolt
+[01:47:19]   [147/316] tellemthatsme/fusion-sight-navigator-buddy (PRIVATE)
+[01:47:21]     [DOWNLOADED] tellemthatsme/fusion-sight-navigator-buddy
+[01:47:21]   [148/316] tellemthatsme/git-insight-hub (PRIVATE)
+[01:47:23]     [DOWNLOADED] tellemthatsme/git-insight-hub
+[01:47:23]   [149/316] tellemthatsme/git-mcp (public)
+[01:47:33]     [DOWNLOADED] tellemthatsme/git-mcp
+[01:47:33]   [150/316] tellemthatsme/githubdoco (PRIVATE)
+[01:47:35]     [DOWNLOADED] tellemthatsme/githubdoco
+[01:47:35]   [151/316] tellemthatsme/githubhubbolt (PRIVATE)
+[01:47:37]     [DOWNLOADED] tellemthatsme/githubhubbolt
+[01:47:37]   [152/316] tellemthatsme/githubrepoanalyzer (PRIVATE)
+[01:47:39]     [DOWNLOADED] tellemthatsme/githubrepoanalyzer
+[01:47:39]   [153/316] tellemthatsme/goose (public)
+[01:48:03]     [DOWNLOADED] tellemthatsme/goose
+[01:48:03]   [154/316] tellemthatsme/guardian-ai-speak (PRIVATE)
+[01:48:05]     [DOWNLOADED] tellemthatsme/guardian-ai-speak
+[01:48:05]   [155/316] tellemthatsme/hackathonbolt (PRIVATE)
+[01:48:07]     [DOWNLOADED] tellemthatsme/hackathonbolt
+[01:48:07]   [156/316] tellemthatsme/Harvard-Algorithmic-Trading-with-AI (public)
+[01:48:09]     [DOWNLOADED] tellemthatsme/Harvard-Algorithmic-Trading-with-AI
+[01:48:09]   [157/316] tellemthatsme/hermes-agent (public)
+[01:48:14]     [DOWNLOADED] tellemthatsme/hermes-agent
+[01:48:14]   [158/316] tellemthatsme/hyperdrive-ai-nexus (PRIVATE)
+[01:48:16]     [DOWNLOADED] tellemthatsme/hyperdrive-ai-nexus
+[01:48:17]   [159/316] tellemthatsme/hyperlink-organizer-plus (PRIVATE)
+[01:48:18]     [DOWNLOADED] tellemthatsme/hyperlink-organizer-plus
+[01:48:19]   [160/316] tellemthatsme/ideaforgemobilebolt (PRIVATE)
+[01:48:21]     [DOWNLOADED] tellemthatsme/ideaforgemobilebolt
+[01:48:21]   [161/316] tellemthatsme/idealaunch-hub (PRIVATE)
+[01:48:23]     [DOWNLOADED] tellemthatsme/idealaunch-hub
+[01:48:23]   [162/316] tellemthatsme/image-code-scholar (PRIVATE)
+[01:48:25]     [DOWNLOADED] tellemthatsme/image-code-scholar
+[01:48:25]   [163/316] tellemthatsme/insight-enterprise-ai-nexus (PRIVATE)
+[01:48:27]     [DOWNLOADED] tellemthatsme/insight-enterprise-ai-nexus
+[01:48:27]   [164/316] tellemthatsme/insight-garden-craft (PRIVATE)
+[01:48:28]     [DOWNLOADED] tellemthatsme/insight-garden-craft
+[01:48:29]   [165/316] tellemthatsme/InstantCoder (public)
+[01:48:31]     [DOWNLOADED] tellemthatsme/InstantCoder
+[01:48:31]   [166/316] tellemthatsme/intellicode-nexus (PRIVATE)
+[01:48:33]     [DOWNLOADED] tellemthatsme/intellicode-nexus
+[01:48:33]   [167/316] tellemthatsme/intellitool-dash (PRIVATE)
+[01:48:35]     [DOWNLOADED] tellemthatsme/intellitool-dash
+[01:48:35]   [168/316] tellemthatsme/JARVIS-Ecosystem (public)
+[01:48:37]     [DOWNLOADED] tellemthatsme/JARVIS-Ecosystem
+[01:48:37]   [169/316] tellemthatsme/kbbolt (PRIVATE)
+[01:48:39]     [DOWNLOADED] tellemthatsme/kbbolt
+[01:48:39]   [170/316] tellemthatsme/kbbolt2 (PRIVATE)
+[01:48:41]     [DOWNLOADED] tellemthatsme/kbbolt2
+[01:48:41]   [171/316] tellemthatsme/keno-oz-oracle (PRIVATE)
+[01:48:43]     [DOWNLOADED] tellemthatsme/keno-oz-oracle
+[01:48:43]   [172/316] tellemthatsme/kenobolt (PRIVATE)
+[01:48:45]     [DOWNLOADED] tellemthatsme/kenobolt
+[01:48:45]   [173/316] tellemthatsme/keymaster-bot (PRIVATE)
+[01:48:47]     [DOWNLOADED] tellemthatsme/keymaster-bot
+[01:48:47]   [174/316] tellemthatsme/knnoo (PRIVATE)
+[01:48:48]     [DOWNLOADED] tellemthatsme/knnoo
+[01:48:49]   [175/316] tellemthatsme/knowl-ai-nexus (PRIVATE)
+[01:48:50]     [DOWNLOADED] tellemthatsme/knowl-ai-nexus
+[01:48:50]   [176/316] tellemthatsme/ladybird (public)
+[01:49:11]     [DOWNLOADED] tellemthatsme/ladybird
+[01:49:11]   [177/316] tellemthatsme/leaked-system-prompts (public)
+[01:49:16]     [DOWNLOADED] tellemthatsme/leaked-system-prompts
+[01:49:16]   [178/316] tellemthatsme/learn-typescript-from-python (public)
+[01:49:23]     [DOWNLOADED] tellemthatsme/learn-typescript-from-python
+[01:49:23]   [179/316] tellemthatsme/legacy-compass (PRIVATE)
+[01:49:25]     [DOWNLOADED] tellemthatsme/legacy-compass
+[01:49:25]   [180/316] tellemthatsme/legacy-video-forge (PRIVATE)
+[01:49:27]     [DOWNLOADED] tellemthatsme/legacy-video-forge
+[01:49:28]   [181/316] tellemthatsme/linkwarden (public)
+[01:49:32]     [DOWNLOADED] tellemthatsme/linkwarden
+[01:49:32]   [182/316] tellemthatsme/litellm (public)
+[01:50:38]     [DOWNLOADED] tellemthatsme/litellm
+[01:50:38]   [183/316] tellemthatsme/local-ai-packaged (public)
+[01:50:41]     [DOWNLOADED] tellemthatsme/local-ai-packaged
+[01:50:41]   [184/316] tellemthatsme/local-operator (public)
+[14:22:38] ======================================================================
+[14:22:38] RESUMABLE BULK DOWNLOAD - All Accounts
+[14:22:38] Started: 2026-04-27 14:22:38
+[14:22:38] ======================================================================
+[14:22:38] 
+======================================================================
+[14:22:38] ACCOUNT: tellemthatsme
+[14:22:38] ======================================================================
+[14:22:38] 
+Fetching repo list for tellemthatsme...
+[14:22:40]   Page 1: +100 repos
+[14:22:42]   Page 2: +100 repos
+[14:22:43]   Page 3: +100 repos
+[14:22:44]   Page 4: +16 repos
+[14:22:45]   Total repos for tellemthatsme: 316
+[14:22:45] Processing 316 repositories...
+
+[14:26:36] ======================================================================
+[14:26:36] RESUMABLE BULK DOWNLOAD - All Accounts
+[14:26:36] Started: 2026-04-27 14:26:36
+[14:26:36] ======================================================================
+[14:26:36] 
+======================================================================
+[14:26:36] ACCOUNT: tellemthatsme
+[14:26:36] ======================================================================
+[14:26:36] 
+Fetching repo list for tellemthatsme...
+[14:26:38]   Page 1: +100 repos
+[14:26:39]   Page 2: +100 repos
+[14:26:41]   Page 3: +100 repos
+[14:26:42]   Page 4: +16 repos
+[14:26:43]   Total repos for tellemthatsme: 316
+[14:26:43] Processing 316 repositories...
+
+[14:26:44]   [1/316] [UPDATE] tellemthatsme/adk-rag-agent
+[14:26:45]   [2/316] [UPDATE] tellemthatsme/agent-zero
+[14:26:47]   [3/316] [UPDATE] tellemthatsme/agenticSeek
+[14:26:48]   [4/316] [UPDATE] tellemthatsme/agents
+[14:26:49]   [5/316] [UPDATE] tellemthatsme/ai
+[14:26:51]   [6/316] [UPDATE] tellemthatsme/ai-browser-playground-hub
+[14:26:53]   [7/316] [UPDATE] tellemthatsme/ai-browser-playground-nexus
+[14:26:55]   [8/316] [UPDATE] tellemthatsme/ai-command-center-nexus-22
+[14:26:56]   [9/316] [UPDATE] tellemthatsme/ai-deal-seeker-pro
+[14:26:58]   [10/316] [UPDATE] tellemthatsme/ai-dev-flow-41
+[14:27:01]   [12/316] [UPDATE] tellemthatsme/ai-empire-monitoring-suite
+[14:27:02]   [13/316] [UPDATE] tellemthatsme/ai-gradio
+[14:27:04]   [14/316] [UPDATE] tellemthatsme/ai-muse-studio
+[14:27:06]   [15/316] [UPDATE] tellemthatsme/ai-navigator-pro
+[14:27:07]   [16/316] [UPDATE] tellemthatsme/ai-nexus-command-center
+[14:27:09]   [17/316] [UPDATE] tellemthatsme/ai-nexus-command-center-13
+[14:27:11]   [18/316] [UPDATE] tellemthatsme/ai-nexus-project-hub
+[14:27:12]   [19/316] [UPDATE] tellemthatsme/ai-phone-farm-platform
+[14:27:14]   [20/316] [UPDATE] tellemthatsme/ai-phone-farming-platform
+[14:27:16]   [21/316] [UPDATE] tellemthatsme/ai-pulse-dashboard
+[14:27:17]   [22/316] [UPDATE] tellemthatsme/ai-pulse-dashboard-72
+[14:27:19]   [23/316] [UPDATE] tellemthatsme/ai-pulse-nexus-ticker
+[14:27:21]   [24/316] [UPDATE] tellemthatsme/ai-s-global-hub
+[14:27:23]   [25/316] [UPDATE] tellemthatsme/ai-synthesis-machine
+[14:27:25]   [26/316] [UPDATE] tellemthatsme/ai-tech-giga-dash
+[14:27:27]   [27/316] [UPDATE] tellemthatsme/ai-tool-guardian-angel
+[14:27:28]   [28/316] [UPDATE] tellemthatsme/ai-toolkit-nexus-forge
+[14:27:30]   [29/316] [UPDATE] tellemthatsme/ai-toolkit-nexus-forge-83
+[14:27:32]   [30/316] [UPDATE] tellemthatsme/ai-world-navigator
+[14:27:34]   [31/316] [UPDATE] tellemthatsme/aicodingassistbolt
+[14:27:35]   [32/316] [UPDATE] tellemthatsme/aicodingbolt
+[14:27:37]   [33/316] [UPDATE] tellemthatsme/aider
+[14:27:39]   [34/316] [UPDATE] tellemthatsme/aiecosystem
+[14:27:40]   [35/316] [UPDATE] tellemthatsme/AIFreeTierTrackerbolt
+[14:27:42]   [36/316] [UPDATE] tellemthatsme/aiinggfbolt
+[14:27:44]   [37/316] [UPDATE] tellemthatsme/aiprojectbolt
+[14:27:46]   [38/316] [UPDATE] tellemthatsme/aitoolkitbolt
+[14:27:47]   [39/316] [UPDATE] tellemthatsme/aittradingbolt
+[14:27:50]   [41/316] [UPDATE] tellemthatsme/aiwriting
+[14:27:52]   [42/316] [UPDATE] tellemthatsme/allinonecryptobolt
+[14:27:54]   [43/316] [UPDATE] tellemthatsme/allspark-dev-studio
+[14:27:56]   [44/316] [UPDATE] tellemthatsme/arcana-craft
+[14:27:57]   [45/316] [UPDATE] tellemthatsme/Archon
+[14:27:59]   [46/316] [UPDATE] tellemthatsme/artbot-crypto-verse
+[14:28:00]   [47/316] [UPDATE] tellemthatsme/AusAIAgencybolt-
+[14:28:02]   [48/316] [UPDATE] tellemthatsme/ausaiagentcybolt
+[14:28:04]   [49/316] [UPDATE] tellemthatsme/aussie-burnout-legends
+[14:28:06]   [50/316] [UPDATE] tellemthatsme/aussie-burnout-legends-61
+[14:28:07]   [51/316] [UPDATE] tellemthatsme/aussie-deals-hub
+[14:28:09]   [52/316] [UPDATE] tellemthatsme/aussie-metal-mayhem-motors
+[14:28:11]   [53/316] [UPDATE] tellemthatsme/automated-app-genesis
+[14:28:13]   [54/316] [UPDATE] tellemthatsme/avatra-content-hive
+[14:28:14]   [55/316] [UPDATE] tellemthatsme/awesome-agents
+[14:28:16]   [56/316] [UPDATE] tellemthatsme/awesome-ai-agents
+[14:28:17]   [57/316] [UPDATE] tellemthatsme/awesome-ai-coding-tools
+[14:28:18]   [58/316] [UPDATE] tellemthatsme/awesome-ai-sdks
+[14:28:20]   [59/316] [UPDATE] tellemthatsme/awesome-browser-automation
+[14:28:21]   [60/316] [UPDATE] tellemthatsme/awesome-claude-code
+[14:28:22]   [61/316] [UPDATE] tellemthatsme/awesome-cli
+[14:28:24]   [62/316] [UPDATE] tellemthatsme/awesome-cli-apps
+[14:28:25]   [63/316] [UPDATE] tellemthatsme/Awesome-Code-LLM
+[14:28:27]   [64/316] [UPDATE] tellemthatsme/awesome-coins
+[14:28:28]   [65/316] [UPDATE] tellemthatsme/awesome-n8n
+[14:28:29]   [66/316] [UPDATE] tellemthatsme/awesome-nocode-lowcode
+[14:28:31]   [67/316] [UPDATE] tellemthatsme/awesome-selfhosted
+[14:28:32]   [68/316] [UPDATE] tellemthatsme/awesome-ui-component-library
+[14:28:34]   [69/316] [UPDATE] tellemthatsme/bloom-boost-social
+[14:28:35]   [70/316] [UPDATE] tellemthatsme/BMAD-METHOD
+[14:28:37]   [71/316] [UPDATE] tellemthatsme/bookcraft-nexus-publish
+[14:28:39]   [72/316] [UPDATE] tellemthatsme/bot-trading-alpha-hub
+[14:28:40]   [73/316] [UPDATE] tellemthatsme/bot-trading-maestro
+[14:28:42]   [74/316] [UPDATE] tellemthatsme/bot-trading-renaissance-hub
+[14:28:44]   [75/316] [UPDATE] tellemthatsme/brainstorm-architect
+[14:28:47]   [77/316] [UPDATE] tellemthatsme/browse-time-insight
+[14:28:49]   [78/316] [UPDATE] tellemthatsme/browser-quad-vision
+[14:28:50]   [79/316] [UPDATE] tellemthatsme/browser-use
+[14:28:52]   [80/316] [UPDATE] tellemthatsme/ccxt
+[14:28:53]   [81/316] [UPDATE] tellemthatsme/chat-merge-mastery
+[14:28:55]   [82/316] [UPDATE] tellemthatsme/chat-saga-sorter
+[14:28:57]   [83/316] [UPDATE] tellemthatsme/chat-saga-sorter-ad13c3d7
+[14:28:59]   [84/316] [UPDATE] tellemthatsme/chatbolthiostory
+[14:29:00]   [85/316] [UPDATE] tellemthatsme/chatexporterbolt
+[14:29:02]   [86/316] [UPDATE] tellemthatsme/ChatGPT
+[14:29:04]   [87/316] [UPDATE] tellemthatsme/chathistoryboplt
+[14:29:05]   [88/316] [UPDATE] tellemthatsme/chatify-organizer
+[14:29:07]   [89/316] [UPDATE] tellemthatsme/chatplatformbolt
+[14:29:09]   [90/316] [UPDATE] tellemthatsme/chatprocessor
+[14:29:11]   [91/316] [UPDATE] tellemthatsme/chatsortold
+[14:29:13]   [92/316] [UPDATE] tellemthatsme/chatty-app-factory
+[14:29:16]   [93/316] [UPDATE] tellemthatsme/ClaraVerse
+[14:29:18]   [94/316] [UPDATE] tellemthatsme/claude-agent-forge
+[14:29:19]   [95/316] [UPDATE] tellemthatsme/claude-code-router
+[14:29:21]   [96/316] [UPDATE] tellemthatsme/claude-conductor
+[14:29:22]   [97/316] [UPDATE] tellemthatsme/claude-openrouter-enterprise-system
+[14:29:23]   [98/316] [UPDATE] tellemthatsme/claudia
+[14:29:25]   [99/316] [UPDATE] tellemthatsme/cmsbolt
+[14:29:27]   [100/316] [UPDATE] tellemthatsme/code-discovery-navigator
+[14:29:29]   [101/316] [UPDATE] tellemthatsme/code-lens-ai-review
+[14:29:30]   [102/316] [UPDATE] tellemthatsme/code-narrative-alchemy
+[14:29:35]   [103/316] [UPDATE] tellemthatsme/Code2Docs
+[14:29:36]   [104/316] [UPDATE] tellemthatsme/codeguide
+[14:29:38]   [105/316] [UPDATE] tellemthatsme/compcryptobolt
+[14:29:40]   [106/316] [UPDATE] tellemthatsme/context7
+[14:29:41]   [107/316] [UPDATE] tellemthatsme/conversation-crafter
+[14:29:49]   [108/316] [UPDATE] tellemthatsme/cosmos-ai-desk
+[14:29:53]   [109/316] [UPDATE] tellemthatsme/craft-ai-stack
+[14:29:55]   [110/316] [UPDATE] tellemthatsme/craft-your-world-87
+[14:29:56]   [111/316] [UPDATE] tellemthatsme/crawlee
+[14:29:58]   [112/316] [UPDATE] tellemthatsme/create-volo-app
+[14:30:00]   [113/316] [UPDATE] tellemthatsme/creatoros-clone
+[14:30:02]   [114/316] [UPDATE] tellemthatsme/creatoros-clone-1
+[14:30:03]   [115/316] [UPDATE] tellemthatsme/crewAI-examples
+[14:30:05]   [116/316] [UPDATE] tellemthatsme/crush
+[14:30:06]   [117/316] [UPDATE] tellemthatsme/crypto-beacon-trader-hub
+[14:30:08]   [118/316] [UPDATE] tellemthatsme/crypto-command-center-lovable
+[14:30:09]   [119/316] [UPDATE] tellemthatsme/crypto-dream-trade-sim
+[14:30:11]   [120/316] [UPDATE] tellemthatsme/crypto-genesis-ai
+[14:30:13]   [121/316] [UPDATE] tellemthatsme/cryptobolt
+[14:30:15]   [122/316] [UPDATE] tellemthatsme/cryptobot-nexus-ai
+[14:30:16]   [123/316] [UPDATE] tellemthatsme/cybersecurity-enterprise-suite
+[14:30:17]   [124/316] [UPDATE] tellemthatsme/deepclaude
+[14:30:19]   [125/316] [UPDATE] tellemthatsme/deepwiki-open
+[14:30:20]   [126/316] [UPDATE] tellemthatsme/deer-flow
+[14:30:22]   [127/316] [UPDATE] tellemthatsme/dev-chatgpt-prompts
+[14:30:23]   [128/316] [UPDATE] tellemthatsme/dev-stream-seek
+[14:30:25]   [129/316] [UPDATE] tellemthatsme/devflow-matrix
+[14:30:27]   [130/316] [UPDATE] tellemthatsme/diagram-insight-ai
+[14:30:28]   [131/316] [UPDATE] tellemthatsme/ditto
+[14:30:30]   [132/316] [UPDATE] tellemthatsme/dream-crypto-trade-sim
+[14:30:32]   [133/316] [UPDATE] tellemthatsme/dyad
+[14:30:33]   [134/316] [UPDATE] tellemthatsme/eliza
+[14:30:35]   [135/316] [UPDATE] tellemthatsme/ember-build-spark
+[14:30:37]   [136/316] [UPDATE] tellemthatsme/emergent
+[14:30:39]   [137/316] [UPDATE] tellemthatsme/engage-boost-social-reach
+[14:30:41]   [138/316] [UPDATE] tellemthatsme/engage-flow-insights-ai
+[14:30:42]   [139/316] [UPDATE] tellemthatsme/fastapi_mcp
+[14:30:43]   [140/316] [UPDATE] tellemthatsme/firecrawl
+[14:30:47]   [141/316] [UPDATE] tellemthatsme/firefox
+[14:30:49]   [142/316] [UPDATE] tellemthatsme/Flowise
+[14:30:51]   [143/316] [UPDATE] tellemthatsme/forge-creative-flow
+[14:30:53]   [144/316] [UPDATE] tellemthatsme/freeitbolt
+[14:30:55]   [145/316] [UPDATE] tellemthatsme/freetrail
+[14:30:56]   [146/316] [UPDATE] tellemthatsme/freetrailbolt
+[14:30:58]   [147/316] [UPDATE] tellemthatsme/fusion-sight-navigator-buddy
+[14:31:00]   [148/316] [UPDATE] tellemthatsme/git-insight-hub
+[14:31:02]   [149/316] [UPDATE] tellemthatsme/git-mcp
+[14:31:03]   [150/316] [UPDATE] tellemthatsme/githubdoco
+[14:31:05]   [151/316] [UPDATE] tellemthatsme/githubhubbolt
+[14:31:07]   [152/316] [UPDATE] tellemthatsme/githubrepoanalyzer
+[14:31:09]   [153/316] [UPDATE] tellemthatsme/goose
+[14:31:10]   [154/316] [UPDATE] tellemthatsme/guardian-ai-speak
+[14:31:12]   [155/316] [UPDATE] tellemthatsme/hackathonbolt
+[14:31:14]   [156/316] [UPDATE] tellemthatsme/Harvard-Algorithmic-Trading-with-AI
+[14:31:15]   [157/316] [UPDATE] tellemthatsme/hermes-agent
+[14:31:17]   [158/316] [UPDATE] tellemthatsme/hyperdrive-ai-nexus
+[14:31:18]   [159/316] [UPDATE] tellemthatsme/hyperlink-organizer-plus
+[14:31:21]   [160/316] [UPDATE] tellemthatsme/ideaforgemobilebolt
+[14:31:22]   [161/316] [UPDATE] tellemthatsme/idealaunch-hub
+[14:31:24]   [162/316] [UPDATE] tellemthatsme/image-code-scholar
+[14:31:26]   [163/316] [UPDATE] tellemthatsme/insight-enterprise-ai-nexus
+[14:31:27]   [164/316] [UPDATE] tellemthatsme/insight-garden-craft
+[14:31:29]   [165/316] [UPDATE] tellemthatsme/InstantCoder
+[14:31:31]   [166/316] [UPDATE] tellemthatsme/intellicode-nexus
+[14:31:32]   [167/316] [UPDATE] tellemthatsme/intellitool-dash
+[14:31:34]   [168/316] [UPDATE] tellemthatsme/JARVIS-Ecosystem
+[14:31:35]   [169/316] [UPDATE] tellemthatsme/kbbolt
+[14:31:37]   [170/316] [UPDATE] tellemthatsme/kbbolt2
+[14:31:39]   [171/316] [UPDATE] tellemthatsme/keno-oz-oracle
+[14:31:41]   [172/316] [UPDATE] tellemthatsme/kenobolt
+[14:31:43]   [173/316] [UPDATE] tellemthatsme/keymaster-bot
+[14:31:44]   [174/316] [UPDATE] tellemthatsme/knnoo
+[14:31:46]   [175/316] [UPDATE] tellemthatsme/knowl-ai-nexus
+[14:31:48]   [176/316] [UPDATE] tellemthatsme/ladybird
+[14:31:49]   [177/316] [UPDATE] tellemthatsme/leaked-system-prompts
+[14:31:52]   [178/316] [UPDATE] tellemthatsme/learn-typescript-from-python
+[14:31:54]   [179/316] [UPDATE] tellemthatsme/legacy-compass
+[14:31:56]   [180/316] [UPDATE] tellemthatsme/legacy-video-forge
+[14:31:58]   [181/316] [UPDATE] tellemthatsme/linkwarden
+[14:32:00]   [182/316] [UPDATE] tellemthatsme/litellm
+[14:32:01]   [183/316] [UPDATE] tellemthatsme/local-ai-packaged
+[14:32:06]   [185/316] [OK] DOWNLOADED tellemthatsme/lovable-api-genesis [PRIVATE]
+[14:32:08]   [186/316] [OK] DOWNLOADED tellemthatsme/lovable-complex-creator [PRIVATE]
+[14:32:11]   [187/316] [OK] DOWNLOADED tellemthatsme/lovable-trading-sight [PRIVATE]
+[14:32:14]   [188/316] [OK] DOWNLOADED tellemthatsme/lovable-view-hub-nexus [PRIVATE]
+[14:32:17]   [189/316] [OK] DOWNLOADED tellemthatsme/loving-crypto-insights [PRIVATE]
+[14:32:19]   [190/316] [OK] DOWNLOADED tellemthatsme/lumen-ai-pulse [PRIVATE]
+[14:32:20]   [191/316] [OK] DOWNLOADED tellemthatsme/mcp-crawl4ai-rag [public]
+[14:32:22]   [192/316] [OK] DOWNLOADED tellemthatsme/mcp-demo [public]
+[14:32:37]   [193/316] [OK] DOWNLOADED tellemthatsme/mcp-use [public]
+[14:32:40]   [194/316] [OK] DOWNLOADED tellemthatsme/meme-finding [PRIVATE]
+[14:32:43]   [195/316] [OK] DOWNLOADED tellemthatsme/metamcp [public]
+[14:32:45]   [196/316] [OK] DOWNLOADED tellemthatsme/monetization-dashboard [PRIVATE]
+[14:32:47]   [197/316] [OK] DOWNLOADED tellemthatsme/money-mint-machine [PRIVATE]
+[14:32:49]   [198/316] [OK] DOWNLOADED tellemthatsme/moneymakerbolt [PRIVATE]
+[14:36:25]   [199/316] [OK] DOWNLOADED tellemthatsme/moon-dev-ai-agents-for-trading [public]
+[14:36:32]   [200/316] [OK] DOWNLOADED tellemthatsme/Moon-Dev-Code [public]
+[14:36:34]   [201/316] [OK] DOWNLOADED tellemthatsme/multi-agent-coding-environment [public]
+[14:36:42]   [202/316] [OK] DOWNLOADED tellemthatsme/multi-key-mind [PRIVATE]
+[14:36:44]   [203/316] [OK] DOWNLOADED tellemthatsme/my-life-verified [PRIVATE]
+[14:36:46]   [204/316] [OK] DOWNLOADED tellemthatsme/n8n-verse [PRIVATE]
+[14:40:35]   [205/316] [FAIL] tellemthatsme/n8n-workflows
+[14:40:37]   [206/316] [OK] DOWNLOADED tellemthatsme/n8necobolt [PRIVATE]
+[14:41:06]   [207/316] [OK] DOWNLOADED tellemthatsme/nautilus_trader [public]
+[14:42:14]   [208/316] [OK] DOWNLOADED tellemthatsme/no-code-architects-toolkit [public]
+[14:42:21]   [209/316] [OK] DOWNLOADED tellemthatsme/nocodeexplorerbolt [PRIVATE]
+[14:42:23]   [210/316] [OK] DOWNLOADED tellemthatsme/Open-lovable-DIY [public]
+[14:42:26]   [211/316] [OK] DOWNLOADED tellemthatsme/open-source-showcase [PRIVATE]
+[14:43:17]   [212/316] [OK] DOWNLOADED tellemthatsme/open-webui [public]
+[14:43:20]   [213/316] [OK] DOWNLOADED tellemthatsme/openclaw-hub [PRIVATE]
+[14:43:34]   [214/316] [OK] DOWNLOADED tellemthatsme/OpenDeepWiki [public]
+[14:43:36]   [215/316] [OK] DOWNLOADED tellemthatsme/openrouter-archon-unlimited-ai [PRIVATE]
+[14:43:38]   [216/316] [OK] DOWNLOADED tellemthatsme/orchids-devsuite [PRIVATE]
+[14:43:39]   [217/316] [OK] DOWNLOADED tellemthatsme/orchids-poolday-ai-clone [PRIVATE]
+[14:44:58]   [218/316] [OK] DOWNLOADED tellemthatsme/ottomator-agents [public]
+[14:45:00]   [219/316] [OK] DOWNLOADED tellemthatsme/persona-craft-agency [PRIVATE]
+[14:48:45]   [220/316] [OK] DOWNLOADED tellemthatsme/pipedream [public]
+[14:49:30]   [221/316] [OK] DOWNLOADED tellemthatsme/plandex [public]
+[14:49:31]   [222/316] [OK] DOWNLOADED tellemthatsme/platenhance [PRIVATE]
+[14:49:33]   [223/316] [OK] DOWNLOADED tellemthatsme/playwright-mcp [public]
+[14:49:36]   [224/316] [OK] DOWNLOADED tellemthatsme/poke-marvel-market [PRIVATE]
+[14:49:38]   [225/316] [OK] DOWNLOADED tellemthatsme/portalaibolt [PRIVATE]
+[14:49:40]   [226/316] [OK] DOWNLOADED tellemthatsme/productblueprintbolt [PRIVATE]
+[14:49:44]   [227/316] [OK] DOWNLOADED tellemthatsme/project-confluence-magic [PRIVATE]
+[14:49:46]   [228/316] [OK] DOWNLOADED tellemthatsme/project-genesis [PRIVATE]
+[14:49:48]   [229/316] [OK] DOWNLOADED tellemthatsme/project-genesis-ai [PRIVATE]
+[14:49:51]   [230/316] [OK] DOWNLOADED tellemthatsme/project-sage-haven [PRIVATE]
+[14:49:53]   [231/316] [OK] DOWNLOADED tellemthatsme/project-sifter [PRIVATE]
+[14:49:55]   [232/316] [OK] DOWNLOADED tellemthatsme/projectbolt [PRIVATE]
+[14:49:57]   [233/316] [OK] DOWNLOADED tellemthatsme/projectmanagemenbolt [PRIVATE]
+[14:49:59]   [234/316] [OK] DOWNLOADED tellemthatsme/projmanagementhub [PRIVATE]
+[14:50:02]   [235/316] [OK] DOWNLOADED tellemthatsme/prompt-waterfall-blitz [PRIVATE]
+[14:50:04]   [236/316] [OK] DOWNLOADED tellemthatsme/promptbrain-organizer-ai [PRIVATE]
+[14:50:06]   [237/316] [OK] DOWNLOADED tellemthatsme/prompthubbolt [PRIVATE]
+[14:50:08]   [238/316] [OK] DOWNLOADED tellemthatsme/prompts [public]
+[14:50:10]   [239/316] [OK] DOWNLOADED tellemthatsme/PydanticAI-Research-Agent [public]
+[14:50:12]   [240/316] [OK] DOWNLOADED tellemthatsme/quantify-ai-trader [PRIVATE]
+[14:50:16]   [241/316] [OK] DOWNLOADED tellemthatsme/remote-access-tool [public]
+[14:50:19]   [242/316] [OK] DOWNLOADED tellemthatsme/remote-agentic-coding-system [public]
+[14:50:21]   [243/316] [OK] DOWNLOADED tellemthatsme/repo-rite [PRIVATE]
+[14:50:24]   [244/316] [OK] DOWNLOADED tellemthatsme/repo-wizard-supreme [PRIVATE]
+[14:50:27]   [245/316] [OK] DOWNLOADED tellemthatsme/repo-wizard-unleashed [PRIVATE]
+[14:50:30]   [246/316] [OK] DOWNLOADED tellemthatsme/research-loop-dashboard [PRIVATE]
+[14:50:48]   [247/316] [OK] DOWNLOADED tellemthatsme/Roo-Code [public]
+[14:50:49]   [248/316] [OK] DOWNLOADED tellemthatsme/roundabout [public]
+[14:50:52]   [249/316] [OK] DOWNLOADED tellemthatsme/roundabout-creator-hub [PRIVATE]
+[14:50:54]   [250/316] [OK] DOWNLOADED tellemthatsme/scrape-automator-wizard [PRIVATE]
+[14:50:58]   [251/316] [OK] DOWNLOADED tellemthatsme/scrapy [public]
+[14:51:02]   [252/316] [OK] DOWNLOADED tellemthatsme/self-hosted-ai-starter-kit [public]
+[14:51:04]   [253/316] [OK] DOWNLOADED tellemthatsme/servers [public]
+[14:51:06]   [254/316] [OK] DOWNLOADED tellemthatsme/short-crypto-to-0-trading-bot [public]
+[14:51:08]   [255/316] [OK] DOWNLOADED tellemthatsme/sketch-to-artifact-builder [PRIVATE]
+[14:51:10]   [256/316] [OK] DOWNLOADED tellemthatsme/socialautomationbolt [PRIVATE]
+[14:51:13]   [257/316] [OK] DOWNLOADED tellemthatsme/socialmediabolt [PRIVATE]
+[14:51:15]   [258/316] [OK] DOWNLOADED tellemthatsme/socmedia [PRIVATE]
+[14:51:18]   [259/316] [OK] DOWNLOADED tellemthatsme/spec-kit [public]
+[14:51:21]   [260/316] [OK] DOWNLOADED tellemthatsme/story-loom-video [PRIVATE]
+[14:51:23]   [261/316] [OK] DOWNLOADED tellemthatsme/supabase-mcp [public]
+[14:51:25]   [262/316] [OK] DOWNLOADED tellemthatsme/super-coach-pro [public]
+[14:51:27]   [263/316] [OK] DOWNLOADED tellemthatsme/superclaude [public]
+[14:51:29]   [264/316] [OK] DOWNLOADED tellemthatsme/swift-chat-ai-dock [PRIVATE]
+[14:51:31]   [265/316] [OK] DOWNLOADED tellemthatsme/system-prompts-and-models-of-ai-tools [public]
+[14:51:32]   [266/316] [OK] DOWNLOADED tellemthatsme/system_prompts_leaks [public]
+[14:51:34]   [267/316] [OK] DOWNLOADED tellemthatsme/tab-time-automator [PRIVATE]
+[14:51:36]   [268/316] [OK] DOWNLOADED tellemthatsme/taskmanagekanbanbolt [PRIVATE]
+[14:51:38]   [269/316] [OK] DOWNLOADED tellemthatsme/tellem [public]
+[14:51:39]   [270/316] [OK] DOWNLOADED tellemthatsme/tellemthatsme [public]
+[14:51:41]   [271/316] [OK] DOWNLOADED tellemthatsme/time-travel-insights-explorer [PRIVATE]
+[14:51:44]   [272/316] [OK] DOWNLOADED tellemthatsme/time-travel-tracker-reports [PRIVATE]
+[14:51:46]   [273/316] [OK] DOWNLOADED tellemthatsme/time-tunnel-reports [PRIVATE]
+[14:51:48]   [274/316] [OK] DOWNLOADED tellemthatsme/tool-stream-ai [PRIVATE]
+[14:51:50]   [275/316] [OK] DOWNLOADED tellemthatsme/top-ai-directories [public]
+[14:51:53]   [276/316] [OK] DOWNLOADED tellemthatsme/trace-companion-tool [PRIVATE]
+[14:51:57]   [277/316] [OK] DOWNLOADED tellemthatsme/traffic-boost-roundabout [PRIVATE]
+[14:52:00]   [278/316] [OK] DOWNLOADED tellemthatsme/truth-timeline [PRIVATE]
+[14:52:02]   [279/316] [OK] DOWNLOADED tellemthatsme/ulitimateai [PRIVATE]
+[14:52:05]   [280/316] [OK] DOWNLOADED tellemthatsme/ultimateaitoolsbolt [PRIVATE]
+[14:52:09]   [281/316] [OK] DOWNLOADED tellemthatsme/ultimatecryptobolt [PRIVATE]
+[14:52:11]   [282/316] [OK] DOWNLOADED tellemthatsme/ultimatergithubbolt [PRIVATE]
+[14:52:14]   [283/316] [OK] DOWNLOADED tellemthatsme/universal-ai-toolbox [PRIVATE]
+[14:52:16]   [284/316] [OK] DOWNLOADED tellemthatsme/v0-ai-project-management-platform [PRIVATE]
+[14:52:19]   [285/316] [OK] DOWNLOADED tellemthatsme/v0-aus-ai-workspace [PRIVATE]
+[14:52:22]   [286/316] [OK] DOWNLOADED tellemthatsme/v0-browser-extension-features [PRIVATE]
+[14:52:24]   [287/316] [OK] DOWNLOADED tellemthatsme/v0-browser-extension-ideas [PRIVATE]
+[14:52:29]   [288/316] [OK] DOWNLOADED tellemthatsme/v0-clone [PRIVATE]
+[14:52:31]   [289/316] [OK] DOWNLOADED tellemthatsme/v0-combine-projects [PRIVATE]
+[14:52:33]   [290/316] [OK] DOWNLOADED tellemthatsme/v0-content-processing-system [PRIVATE]
+[14:52:35]   [291/316] [OK] DOWNLOADED tellemthatsme/v0-crypto-mining-dashboard [PRIVATE]
+[14:52:37]   [292/316] [OK] DOWNLOADED tellemthatsme/v0-customizable-ai-dashboard [PRIVATE]
+[14:52:39]   [293/316] [OK] DOWNLOADED tellemthatsme/v0-marketplace [PRIVATE]
+[14:52:41]   [294/316] [OK] DOWNLOADED tellemthatsme/v0-round [PRIVATE]
+[14:52:43]   [295/316] [OK] DOWNLOADED tellemthatsme/v0-untitled-project [PRIVATE]
+[14:52:44]   [296/316] [OK] DOWNLOADED tellemthatsme/vibelog [public]
+[14:52:46]   [297/316] [OK] DOWNLOADED tellemthatsme/vidmuse-studio [PRIVATE]
+[14:52:48]   [298/316] [OK] DOWNLOADED tellemthatsme/voice-coder [public]
+[14:52:49]   [299/316] [OK] DOWNLOADED tellemthatsme/voice-coding-assistant [public]
+[14:52:51]   [300/316] [OK] DOWNLOADED tellemthatsme/volo-app [public]
+[14:52:53]   [301/316] [OK] DOWNLOADED tellemthatsme/walpaper [PRIVATE]
+[14:52:55]   [302/316] [OK] DOWNLOADED tellemthatsme/web-quad-workspace-vision [PRIVATE]
+[14:52:58]   [303/316] [OK] DOWNLOADED tellemthatsme/whitelabelaibolt [PRIVATE]
+[14:53:00]   [304/316] [OK] DOWNLOADED tellemthatsme/wiki-weave-ai [PRIVATE]
+[14:53:02]   [305/316] [OK] DOWNLOADED tellemthatsme/workspace-ai-automator [PRIVATE]
+[14:53:05]   [306/316] [OK] DOWNLOADED tellemthatsme/Youtube-playlist-to-formatted-text [public]
+[14:53:07]   [307/316] [OK] DOWNLOADED tellemthatsme/youware-clone-project [PRIVATE]
+[14:53:09]   [308/316] [OK] DOWNLOADED tellemthatsme/z1hackermainbolt [PRIVATE]
+[14:53:11]   [309/316] [OK] DOWNLOADED tellemthatsme/z1knowledgebasebolt [PRIVATE]
+[14:53:13]   [310/316] [OK] DOWNLOADED tellemthatsme/z1projauditfixbolt [PRIVATE]
+[14:53:15]   [311/316] [OK] DOWNLOADED tellemthatsme/zer01bolt [PRIVATE]
+[14:53:17]   [312/316] [OK] DOWNLOADED tellemthatsme/zer0onebolt [PRIVATE]
+[14:53:18]   [313/316] [OK] DOWNLOADED tellemthatsme/ZerePy [public]
+[14:53:21]   [314/316] [OK] DOWNLOADED tellemthatsme/zeroone-private-nexus-50 [PRIVATE]
+[14:53:22]   [315/316] [OK] DOWNLOADED tellemthatsme/zeroonebolt [PRIVATE]
+[14:53:23]   [316/316] [OK] DOWNLOADED woodsai69rme/zeroone-toolkit [public]
+[14:53:23] 
+[OK] Account tellemthatsme complete!
+[14:53:23] 
+======================================================================
+[14:53:23] ACCOUNT: leahmfoots
+[14:53:23] ======================================================================
+[14:53:23] 
+Fetching repo list for leahmfoots...
+[14:53:25]   Page 1: +98 repos
+[14:53:26]   Total repos for leahmfoots: 98
+[14:53:26] Processing 98 repositories...
+
+[14:53:28]   [1/98] [OK] DOWNLOADED leahmfoots/a-889354 [PRIVATE]
+[14:53:30]   [2/98] [OK] DOWNLOADED leahmfoots/ai-coder-s-compass [PRIVATE]
+[14:53:32]   [3/98] [OK] DOWNLOADED leahmfoots/ai-deals-master [PRIVATE]
+[14:53:34]   [4/98] [OK] DOWNLOADED leahmfoots/ai-dev-platform [PRIVATE]
+[14:53:36]   [5/98] [OK] DOWNLOADED leahmfoots/ai-development-control-system [PRIVATE]
+[14:53:38]   [6/98] [OK] DOWNLOADED leahmfoots/ai-pilot-house [PRIVATE]
+[14:53:41]   [7/98] [OK] DOWNLOADED leahmfoots/ai-pilot-station [PRIVATE]
+[14:53:43]   [8/98] [OK] DOWNLOADED leahmfoots/ai-pulse-hub [PRIVATE]
+[14:53:44]   [9/98] [OK] DOWNLOADED leahmfoots/ai-tool-discovery-platform [PRIVATE]
+[14:53:46]   [10/98] [OK] DOWNLOADED leahmfoots/ai-tool-discovery-platform-1 [PRIVATE]
+[14:53:48]   [11/98] [OK] DOWNLOADED leahmfoots/ai-tool-discovery-platform-10 [PRIVATE]
+[14:53:50]   [12/98] [OK] DOWNLOADED leahmfoots/ai-tool-discovery-platform-11 [PRIVATE]
+[14:53:51]   [13/98] [OK] DOWNLOADED leahmfoots/ai-tool-discovery-platform-2 [PRIVATE]
+[14:53:53]   [14/98] [OK] DOWNLOADED leahmfoots/ai-tool-discovery-platform-3 [PRIVATE]
+[14:53:55]   [15/98] [OK] DOWNLOADED leahmfoots/ai-tool-discovery-platform-4 [PRIVATE]
+[14:53:57]   [16/98] [OK] DOWNLOADED leahmfoots/ai-tool-discovery-platform-5 [PRIVATE]
+[14:53:58]   [17/98] [OK] DOWNLOADED leahmfoots/ai-tool-discovery-platform-6 [PRIVATE]
+[14:54:00]   [18/98] [OK] DOWNLOADED leahmfoots/ai-tool-discovery-platform-7 [PRIVATE]
+[14:54:02]   [19/98] [OK] DOWNLOADED leahmfoots/ai-tool-discovery-platform-8 [PRIVATE]
+[14:54:04]   [20/98] [OK] DOWNLOADED leahmfoots/ai-tool-discovery-platform-9 [PRIVATE]
+[14:54:05]   [21/98] [OK] DOWNLOADED leahmfoots/ai-tools-directory [public]
+[14:54:07]   [22/98] [OK] DOWNLOADED leahmfoots/ai-trial-tracker [PRIVATE]
+[14:54:09]   [23/98] [OK] DOWNLOADED leahmfoots/ai-usage-guardian-angel [PRIVATE]
+[14:54:12]   [24/98] [OK] DOWNLOADED leahmfoots/ai-vibe-hub [PRIVATE]
+[14:54:13]   [25/98] [OK] DOWNLOADED leahmfoots/aiaccountoptimizer [PRIVATE]
+[14:54:14]   [26/98] [OK] DOWNLOADED leahmfoots/AIAccountOptimizerreplit [PRIVATE]
+[14:54:16]   [27/98] [OK] DOWNLOADED leahmfoots/AIChorus [PRIVATE]
+[14:54:17]   [28/98] [OK] DOWNLOADED leahmfoots/AiDiscountHunter [PRIVATE]
+[14:54:19]   [29/98] [OK] DOWNLOADED leahmfoots/aigenius-toolkit [PRIVATE]
+[14:54:21]   [30/98] [OK] DOWNLOADED leahmfoots/aiproj [PRIVATE]
+[14:54:23]   [31/98] [OK] DOWNLOADED leahmfoots/aitoolv0 [PRIVATE]
+[14:54:24]   [32/98] [OK] DOWNLOADED leahmfoots/api-key-management-dashboard [public]
+[14:54:26]   [33/98] [OK] DOWNLOADED leahmfoots/ApiKeyFlow [PRIVATE]
+[14:54:28]   [34/98] [OK] DOWNLOADED leahmfoots/artspark-gallery-verse [PRIVATE]
+[14:54:30]   [35/98] [OK] DOWNLOADED leahmfoots/artspark-nft-hub [PRIVATE]
+[14:54:32]   [36/98] [OK] DOWNLOADED leahmfoots/aussie-earn [PRIVATE]
+[14:54:34]   [37/98] [OK] DOWNLOADED leahmfoots/boltaicrypto [PRIVATE]
+[14:54:36]   [38/98] [OK] DOWNLOADED leahmfoots/boltaidevprojdash [PRIVATE]
+[14:54:37]   [39/98] [OK] DOWNLOADED leahmfoots/boltaiprojmanagement [PRIVATE]
+[14:54:39]   [40/98] [OK] DOWNLOADED leahmfoots/boltaupromange [PRIVATE]
+[14:54:41]   [41/98] [OK] DOWNLOADED leahmfoots/boltbookmarkhub [PRIVATE]
+[14:54:43]   [42/98] [OK] DOWNLOADED leahmfoots/boltchathistoryorg [PRIVATE]
+[14:54:45]   [43/98] [OK] DOWNLOADED leahmfoots/boltknowledgemanagement [PRIVATE]
+[14:54:47]   [44/98] [OK] DOWNLOADED leahmfoots/boltnextgencrypto [PRIVATE]
+[14:54:49]   [45/98] [OK] DOWNLOADED leahmfoots/boltrndabout [PRIVATE]
+[14:54:51]   [46/98] [OK] DOWNLOADED leahmfoots/boltultagentsystem [PRIVATE]
+[14:54:54]   [47/98] [OK] DOWNLOADED leahmfoots/c-389547 [PRIVATE]
+[14:54:55]   [48/98] [OK] DOWNLOADED leahmfoots/code-and-ai-tool-discount [public]
+[14:54:57]   [49/98] [OK] DOWNLOADED leahmfoots/code-archaeologist-workbench [PRIVATE]
+[14:54:59]   [50/98] [OK] DOWNLOADED leahmfoots/codecraft-clone [PRIVATE]
+[14:55:01]   [51/98] [OK] DOWNLOADED leahmfoots/command-center-ai [PRIVATE]
+[14:55:03]   [52/98] [OK] DOWNLOADED leahmfoots/comment-roulette-youtube [PRIVATE]
+[14:55:06]   [53/98] [OK] DOWNLOADED leahmfoots/creation-forge-kit [PRIVATE]
+[14:55:08]   [54/98] [OK] DOWNLOADED leahmfoots/creativeforge-nexus-studio [PRIVATE]
+[14:55:10]   [55/98] [OK] DOWNLOADED leahmfoots/crypto-nexus-compass [PRIVATE]
+[14:55:11]   [56/98] [OK] DOWNLOADED leahmfoots/cryptotrade-pro [public]
+[14:55:14]   [57/98] [OK] DOWNLOADED leahmfoots/darkflow-ai-nexus [PRIVATE]
+[14:55:16]   [58/98] [OK] DOWNLOADED leahmfoots/escorts--babes-clone [PRIVATE]
+[14:55:17]   [59/98] [OK] DOWNLOADED leahmfoots/favsort [PRIVATE]
+[14:55:19]   [60/98] [OK] DOWNLOADED leahmfoots/fusion-vision-forge [PRIVATE]
+[14:55:21]   [61/98] [OK] DOWNLOADED leahmfoots/influence-bloom-hub [PRIVATE]
+[14:55:22]   [62/98] [OK] DOWNLOADED leahmfoots/keno-oracle [public]
+[14:55:25]   [63/98] [OK] DOWNLOADED leahmfoots/meme-verse-oracle [PRIVATE]
+[14:55:27]   [64/98] [OK] DOWNLOADED leahmfoots/model-morph-deploy [PRIVATE]
+[16:29:43] ======================================================================
+[16:29:43] RESUMABLE BULK DOWNLOAD - All Accounts
+[16:29:43] Started: 2026-04-27 16:29:43
+[16:29:43] ======================================================================
+[16:29:43] 
+======================================================================
+[16:29:43] ACCOUNT: tellemthatsme
+[16:29:43] ======================================================================
+[16:29:43] 
+Fetching repo list for tellemthatsme...
+[16:29:45]   Page 1: +100 repos
+[16:29:46]   Page 2: +100 repos
+[16:29:48]   Page 3: +100 repos
+[16:29:49]   Page 4: +16 repos
+[16:29:49]   Total repos for tellemthatsme: 316
+[16:29:49] Processing 316 repositories...
+
+[16:29:51]   [1/316] [UPDATE] tellemthatsme/adk-rag-agent
+[16:29:52]   [2/316] [UPDATE] tellemthatsme/agent-zero
+[16:29:53]   [3/316] [UPDATE] tellemthatsme/agenticSeek
+[16:29:55]   [4/316] [UPDATE] tellemthatsme/agents
+[16:29:56]   [5/316] [UPDATE] tellemthatsme/ai
+[16:29:58]   [6/316] [UPDATE] tellemthatsme/ai-browser-playground-hub
+[16:30:00]   [7/316] [UPDATE] tellemthatsme/ai-browser-playground-nexus
+[16:30:02]   [8/316] [UPDATE] tellemthatsme/ai-command-center-nexus-22
+[16:30:04]   [9/316] [UPDATE] tellemthatsme/ai-deal-seeker-pro
+[16:30:06]   [10/316] [UPDATE] tellemthatsme/ai-dev-flow-41
+[16:30:09]   [12/316] [UPDATE] tellemthatsme/ai-empire-monitoring-suite
+[16:30:11]   [13/316] [UPDATE] tellemthatsme/ai-gradio
+[16:30:13]   [14/316] [UPDATE] tellemthatsme/ai-muse-studio
+[16:30:16]   [15/316] [UPDATE] tellemthatsme/ai-navigator-pro
+[16:30:18]   [16/316] [UPDATE] tellemthatsme/ai-nexus-command-center
+[16:30:20]   [17/316] [UPDATE] tellemthatsme/ai-nexus-command-center-13
+[16:30:22]   [18/316] [UPDATE] tellemthatsme/ai-nexus-project-hub
+[16:30:24]   [19/316] [UPDATE] tellemthatsme/ai-phone-farm-platform
+[16:30:26]   [20/316] [UPDATE] tellemthatsme/ai-phone-farming-platform
+[16:30:28]   [21/316] [UPDATE] tellemthatsme/ai-pulse-dashboard
+[16:30:30]   [22/316] [UPDATE] tellemthatsme/ai-pulse-dashboard-72
+[16:30:32]   [23/316] [UPDATE] tellemthatsme/ai-pulse-nexus-ticker
+[16:30:34]   [24/316] [UPDATE] tellemthatsme/ai-s-global-hub
+[16:30:36]   [25/316] [UPDATE] tellemthatsme/ai-synthesis-machine
+[16:30:38]   [26/316] [UPDATE] tellemthatsme/ai-tech-giga-dash
+[16:30:40]   [27/316] [UPDATE] tellemthatsme/ai-tool-guardian-angel
+[16:30:42]   [28/316] [UPDATE] tellemthatsme/ai-toolkit-nexus-forge
+[16:30:45]   [29/316] [UPDATE] tellemthatsme/ai-toolkit-nexus-forge-83
+[16:30:47]   [30/316] [UPDATE] tellemthatsme/ai-world-navigator
+[16:30:49]   [31/316] [UPDATE] tellemthatsme/aicodingassistbolt
+[16:30:51]   [32/316] [UPDATE] tellemthatsme/aicodingbolt
+[16:30:53]   [33/316] [UPDATE] tellemthatsme/aider
+[16:30:56]   [34/316] [UPDATE] tellemthatsme/aiecosystem
+[16:30:58]   [35/316] [UPDATE] tellemthatsme/AIFreeTierTrackerbolt
+[16:31:00]   [36/316] [UPDATE] tellemthatsme/aiinggfbolt
+[16:31:02]   [37/316] [UPDATE] tellemthatsme/aiprojectbolt
+[16:31:14]   [38/316] [UPDATE] tellemthatsme/aitoolkitbolt
+[16:31:16]   [39/316] [UPDATE] tellemthatsme/aittradingbolt
+[16:31:28]   [41/316] [UPDATE] tellemthatsme/aiwriting
+[16:31:30]   [42/316] [UPDATE] tellemthatsme/allinonecryptobolt
+[16:31:34]   [43/316] [UPDATE] tellemthatsme/allspark-dev-studio
+[16:31:39]   [44/316] [UPDATE] tellemthatsme/arcana-craft
+[16:31:41]   [45/316] [UPDATE] tellemthatsme/Archon
+[16:31:44]   [46/316] [UPDATE] tellemthatsme/artbot-crypto-verse
+[16:31:46]   [47/316] [UPDATE] tellemthatsme/AusAIAgencybolt-
+[16:31:48]   [48/316] [UPDATE] tellemthatsme/ausaiagentcybolt
+[16:31:51]   [49/316] [UPDATE] tellemthatsme/aussie-burnout-legends
+[16:31:53]   [50/316] [UPDATE] tellemthatsme/aussie-burnout-legends-61
+[16:31:56]   [51/316] [UPDATE] tellemthatsme/aussie-deals-hub
+[16:32:02]   [52/316] [UPDATE] tellemthatsme/aussie-metal-mayhem-motors
+[16:32:05]   [53/316] [UPDATE] tellemthatsme/automated-app-genesis
+[16:32:07]   [54/316] [UPDATE] tellemthatsme/avatra-content-hive
+[16:32:09]   [55/316] [UPDATE] tellemthatsme/awesome-agents
+[16:32:10]   [56/316] [UPDATE] tellemthatsme/awesome-ai-agents
+[16:32:12]   [57/316] [UPDATE] tellemthatsme/awesome-ai-coding-tools
+[16:32:13]   [58/316] [UPDATE] tellemthatsme/awesome-ai-sdks
+[16:32:14]   [59/316] [UPDATE] tellemthatsme/awesome-browser-automation
+[16:32:16]   [60/316] [UPDATE] tellemthatsme/awesome-claude-code
+[16:32:17]   [61/316] [UPDATE] tellemthatsme/awesome-cli
+[16:32:19]   [62/316] [UPDATE] tellemthatsme/awesome-cli-apps
+[16:32:21]   [63/316] [UPDATE] tellemthatsme/Awesome-Code-LLM
+[16:32:22]   [64/316] [UPDATE] tellemthatsme/awesome-coins
+[16:32:25]   [65/316] [UPDATE] tellemthatsme/awesome-n8n
+[16:32:26]   [66/316] [UPDATE] tellemthatsme/awesome-nocode-lowcode
+[16:32:28]   [67/316] [UPDATE] tellemthatsme/awesome-selfhosted
+[16:32:29]   [68/316] [UPDATE] tellemthatsme/awesome-ui-component-library
+[16:32:31]   [69/316] [UPDATE] tellemthatsme/bloom-boost-social
+[16:32:33]   [70/316] [UPDATE] tellemthatsme/BMAD-METHOD
+[16:32:35]   [71/316] [UPDATE] tellemthatsme/bookcraft-nexus-publish
+[16:32:38]   [72/316] [UPDATE] tellemthatsme/bot-trading-alpha-hub
+[16:32:40]   [73/316] [UPDATE] tellemthatsme/bot-trading-maestro
+[16:32:42]   [74/316] [UPDATE] tellemthatsme/bot-trading-renaissance-hub
+[16:32:44]   [75/316] [UPDATE] tellemthatsme/brainstorm-architect
+[16:33:26]   [77/316] [UPDATE] tellemthatsme/browse-time-insight
+[16:33:27]   [78/316] [UPDATE] tellemthatsme/browser-quad-vision
+[16:33:29]   [79/316] [UPDATE] tellemthatsme/browser-use
+[16:33:30]   [80/316] [UPDATE] tellemthatsme/ccxt
+[16:33:32]   [81/316] [UPDATE] tellemthatsme/chat-merge-mastery
+[16:33:34]   [82/316] [UPDATE] tellemthatsme/chat-saga-sorter
+[16:33:36]   [83/316] [UPDATE] tellemthatsme/chat-saga-sorter-ad13c3d7
+[16:33:38]   [84/316] [UPDATE] tellemthatsme/chatbolthiostory
+[16:33:40]   [85/316] [UPDATE] tellemthatsme/chatexporterbolt
+[16:33:41]   [86/316] [UPDATE] tellemthatsme/ChatGPT
+[16:33:43]   [87/316] [UPDATE] tellemthatsme/chathistoryboplt
+[16:33:45]   [88/316] [UPDATE] tellemthatsme/chatify-organizer
+[16:33:47]   [89/316] [UPDATE] tellemthatsme/chatplatformbolt
+[16:33:48]   [90/316] [UPDATE] tellemthatsme/chatprocessor
+[16:33:50]   [91/316] [UPDATE] tellemthatsme/chatsortold
+[16:33:52]   [92/316] [UPDATE] tellemthatsme/chatty-app-factory
+[16:33:54]   [93/316] [UPDATE] tellemthatsme/ClaraVerse
+[16:33:55]   [94/316] [UPDATE] tellemthatsme/claude-agent-forge
+[16:33:57]   [95/316] [UPDATE] tellemthatsme/claude-code-router
+[16:33:58]   [96/316] [UPDATE] tellemthatsme/claude-conductor
+[16:34:00]   [97/316] [UPDATE] tellemthatsme/claude-openrouter-enterprise-system
+[16:34:01]   [98/316] [UPDATE] tellemthatsme/claudia
+[16:34:03]   [99/316] [UPDATE] tellemthatsme/cmsbolt
+[16:34:05]   [100/316] [UPDATE] tellemthatsme/code-discovery-navigator
+[16:34:07]   [101/316] [UPDATE] tellemthatsme/code-lens-ai-review
+[16:34:09]   [102/316] [UPDATE] tellemthatsme/code-narrative-alchemy
+[16:34:10]   [103/316] [UPDATE] tellemthatsme/Code2Docs
+[16:34:12]   [104/316] [UPDATE] tellemthatsme/codeguide
+[16:34:14]   [105/316] [UPDATE] tellemthatsme/compcryptobolt
+[16:34:16]   [106/316] [UPDATE] tellemthatsme/context7
+[16:34:18]   [107/316] [UPDATE] tellemthatsme/conversation-crafter
+[16:34:19]   [108/316] [UPDATE] tellemthatsme/cosmos-ai-desk
+[16:34:21]   [109/316] [UPDATE] tellemthatsme/craft-ai-stack
+[16:34:23]   [110/316] [UPDATE] tellemthatsme/craft-your-world-87
+[16:34:25]   [111/316] [UPDATE] tellemthatsme/crawlee
+[16:34:26]   [112/316] [UPDATE] tellemthatsme/create-volo-app
+[16:34:28]   [113/316] [UPDATE] tellemthatsme/creatoros-clone
+[16:34:31]   [114/316] [UPDATE] tellemthatsme/creatoros-clone-1
+[16:34:32]   [115/316] [UPDATE] tellemthatsme/crewAI-examples
+[16:34:34]   [116/316] [UPDATE] tellemthatsme/crush
+[16:34:35]   [117/316] [UPDATE] tellemthatsme/crypto-beacon-trader-hub
+[16:34:37]   [118/316] [UPDATE] tellemthatsme/crypto-command-center-lovable
+[16:34:38]   [119/316] [UPDATE] tellemthatsme/crypto-dream-trade-sim
+[16:34:41]   [120/316] [UPDATE] tellemthatsme/crypto-genesis-ai
+[16:34:43]   [121/316] [UPDATE] tellemthatsme/cryptobolt
+[16:34:45]   [122/316] [UPDATE] tellemthatsme/cryptobot-nexus-ai
+[16:34:46]   [123/316] [UPDATE] tellemthatsme/cybersecurity-enterprise-suite
+[16:34:48]   [124/316] [UPDATE] tellemthatsme/deepclaude
+[16:34:49]   [125/316] [UPDATE] tellemthatsme/deepwiki-open
+[16:34:52]   [126/316] [UPDATE] tellemthatsme/deer-flow
+[16:34:54]   [127/316] [UPDATE] tellemthatsme/dev-chatgpt-prompts
+[16:34:56]   [128/316] [UPDATE] tellemthatsme/dev-stream-seek
+[16:34:58]   [129/316] [UPDATE] tellemthatsme/devflow-matrix
+[16:35:01]   [130/316] [UPDATE] tellemthatsme/diagram-insight-ai
+[16:35:02]   [131/316] [UPDATE] tellemthatsme/ditto
+[16:35:06]   [132/316] [UPDATE] tellemthatsme/dream-crypto-trade-sim
+[16:35:08]   [133/316] [UPDATE] tellemthatsme/dyad
+[16:35:09]   [134/316] [UPDATE] tellemthatsme/eliza
+[16:35:11]   [135/316] [UPDATE] tellemthatsme/ember-build-spark
+[16:35:14]   [136/316] [UPDATE] tellemthatsme/emergent
+[16:35:16]   [137/316] [UPDATE] tellemthatsme/engage-boost-social-reach
+[16:35:18]   [138/316] [UPDATE] tellemthatsme/engage-flow-insights-ai
+[16:35:20]   [139/316] [UPDATE] tellemthatsme/fastapi_mcp
+[16:35:22]   [140/316] [UPDATE] tellemthatsme/firecrawl
+[16:35:24]   [141/316] [UPDATE] tellemthatsme/firefox
+[16:35:26]   [142/316] [UPDATE] tellemthatsme/Flowise
+[16:35:28]   [143/316] [UPDATE] tellemthatsme/forge-creative-flow
+[16:35:30]   [144/316] [UPDATE] tellemthatsme/freeitbolt
+[16:35:33]   [145/316] [UPDATE] tellemthatsme/freetrail
+[16:35:35]   [146/316] [UPDATE] tellemthatsme/freetrailbolt
+[16:35:37]   [147/316] [UPDATE] tellemthatsme/fusion-sight-navigator-buddy
+[16:35:39]   [148/316] [UPDATE] tellemthatsme/git-insight-hub
+[16:35:40]   [149/316] [UPDATE] tellemthatsme/git-mcp
+[16:35:42]   [150/316] [UPDATE] tellemthatsme/githubdoco
+[16:35:44]   [151/316] [UPDATE] tellemthatsme/githubhubbolt
+[16:35:46]   [152/316] [UPDATE] tellemthatsme/githubrepoanalyzer
+[16:35:48]   [153/316] [UPDATE] tellemthatsme/goose
+[16:35:50]   [154/316] [UPDATE] tellemthatsme/guardian-ai-speak
+[16:35:52]   [155/316] [UPDATE] tellemthatsme/hackathonbolt
+[16:35:54]   [156/316] [UPDATE] tellemthatsme/Harvard-Algorithmic-Trading-with-AI
+[16:35:55]   [157/316] [UPDATE] tellemthatsme/hermes-agent
+[16:35:58]   [158/316] [UPDATE] tellemthatsme/hyperdrive-ai-nexus
+[16:36:00]   [159/316] [UPDATE] tellemthatsme/hyperlink-organizer-plus
+[16:36:02]   [160/316] [UPDATE] tellemthatsme/ideaforgemobilebolt
+[16:36:04]   [161/316] [UPDATE] tellemthatsme/idealaunch-hub
+[16:36:05]   [162/316] [UPDATE] tellemthatsme/image-code-scholar
+[16:36:07]   [163/316] [UPDATE] tellemthatsme/insight-enterprise-ai-nexus
+[16:36:09]   [164/316] [UPDATE] tellemthatsme/insight-garden-craft
+[16:36:11]   [165/316] [UPDATE] tellemthatsme/InstantCoder
+[16:36:12]   [166/316] [UPDATE] tellemthatsme/intellicode-nexus
+[16:36:14]   [167/316] [UPDATE] tellemthatsme/intellitool-dash
+[16:36:16]   [168/316] [UPDATE] tellemthatsme/JARVIS-Ecosystem
+[16:36:18]   [169/316] [UPDATE] tellemthatsme/kbbolt
+[16:36:20]   [170/316] [UPDATE] tellemthatsme/kbbolt2
+[16:36:22]   [171/316] [UPDATE] tellemthatsme/keno-oz-oracle
+[16:36:23]   [172/316] [UPDATE] tellemthatsme/kenobolt
+[16:36:25]   [173/316] [UPDATE] tellemthatsme/keymaster-bot
+[16:36:27]   [174/316] [UPDATE] tellemthatsme/knnoo
+[16:36:29]   [175/316] [UPDATE] tellemthatsme/knowl-ai-nexus
+[16:36:31]   [176/316] [UPDATE] tellemthatsme/ladybird
+[16:36:32]   [177/316] [UPDATE] tellemthatsme/leaked-system-prompts
+[16:36:34]   [178/316] [UPDATE] tellemthatsme/learn-typescript-from-python
+[16:36:36]   [179/316] [UPDATE] tellemthatsme/legacy-compass
+[16:36:38]   [180/316] [UPDATE] tellemthatsme/legacy-video-forge
+[16:36:39]   [181/316] [UPDATE] tellemthatsme/linkwarden
+[16:36:41]   [182/316] [UPDATE] tellemthatsme/litellm
+[16:36:42]   [183/316] [UPDATE] tellemthatsme/local-ai-packaged
+[16:36:46]   [185/316] [UPDATE] tellemthatsme/lovable-api-genesis
+[16:36:48]   [186/316] [UPDATE] tellemthatsme/lovable-complex-creator
+[16:36:50]   [187/316] [UPDATE] tellemthatsme/lovable-trading-sight
+[16:36:52]   [188/316] [UPDATE] tellemthatsme/lovable-view-hub-nexus
+[16:36:54]   [189/316] [UPDATE] tellemthatsme/loving-crypto-insights
+[16:36:56]   [190/316] [UPDATE] tellemthatsme/lumen-ai-pulse
+[16:36:57]   [191/316] [UPDATE] tellemthatsme/mcp-crawl4ai-rag
+[16:36:59]   [192/316] [UPDATE] tellemthatsme/mcp-demo
+[16:37:00]   [193/316] [UPDATE] tellemthatsme/mcp-use
+[16:37:02]   [194/316] [UPDATE] tellemthatsme/meme-finding
+[16:37:04]   [195/316] [UPDATE] tellemthatsme/metamcp
+[16:37:06]   [196/316] [UPDATE] tellemthatsme/monetization-dashboard
+[16:37:08]   [197/316] [UPDATE] tellemthatsme/money-mint-machine
+[16:37:09]   [198/316] [UPDATE] tellemthatsme/moneymakerbolt
+[16:37:11]   [199/316] [UPDATE] tellemthatsme/moon-dev-ai-agents-for-trading
+[16:37:12]   [200/316] [UPDATE] tellemthatsme/Moon-Dev-Code
+[16:37:14]   [201/316] [UPDATE] tellemthatsme/multi-agent-coding-environment
+[16:37:17]   [202/316] [UPDATE] tellemthatsme/multi-key-mind
+[16:37:19]   [203/316] [UPDATE] tellemthatsme/my-life-verified
+[16:37:21]   [204/316] [UPDATE] tellemthatsme/n8n-verse
+[17:38:49]   [206/316] [UPDATE] tellemthatsme/n8necobolt
+[17:38:50]   [207/316] [UPDATE] tellemthatsme/nautilus_trader
+[17:38:52]   [208/316] [UPDATE] tellemthatsme/no-code-architects-toolkit
+[17:38:53]   [209/316] [UPDATE] tellemthatsme/nocodeexplorerbolt
+[17:38:55]   [210/316] [UPDATE] tellemthatsme/Open-lovable-DIY
+[17:38:57]   [211/316] [UPDATE] tellemthatsme/open-source-showcase
+[17:38:59]   [212/316] [UPDATE] tellemthatsme/open-webui
+[17:39:00]   [213/316] [UPDATE] tellemthatsme/openclaw-hub
+[17:39:02]   [214/316] [UPDATE] tellemthatsme/OpenDeepWiki
+[17:39:03]   [215/316] [UPDATE] tellemthatsme/openrouter-archon-unlimited-ai
+[17:39:06]   [216/316] [UPDATE] tellemthatsme/orchids-devsuite
+[17:39:12]   [218/316] [UPDATE] tellemthatsme/ottomator-agents
+[17:39:14]   [219/316] [UPDATE] tellemthatsme/persona-craft-agency
+[17:39:16]   [220/316] [UPDATE] tellemthatsme/pipedream
+[17:39:17]   [221/316] [UPDATE] tellemthatsme/plandex
+[17:39:19]   [223/316] [UPDATE] tellemthatsme/playwright-mcp
+[17:39:21]   [224/316] [UPDATE] tellemthatsme/poke-marvel-market
+[17:39:23]   [225/316] [UPDATE] tellemthatsme/portalaibolt
+[17:39:25]   [226/316] [UPDATE] tellemthatsme/productblueprintbolt
+[17:39:27]   [227/316] [UPDATE] tellemthatsme/project-confluence-magic
+[17:39:28]   [228/316] [UPDATE] tellemthatsme/project-genesis
+[17:39:30]   [229/316] [UPDATE] tellemthatsme/project-genesis-ai
+[17:39:32]   [230/316] [UPDATE] tellemthatsme/project-sage-haven
+[17:39:34]   [231/316] [UPDATE] tellemthatsme/project-sifter
+[17:39:35]   [232/316] [UPDATE] tellemthatsme/projectbolt
+[17:39:37]   [233/316] [UPDATE] tellemthatsme/projectmanagemenbolt
+[17:39:40]   [234/316] [UPDATE] tellemthatsme/projmanagementhub
+[17:39:44]   [235/316] [UPDATE] tellemthatsme/prompt-waterfall-blitz
+[17:39:46]   [236/316] [UPDATE] tellemthatsme/promptbrain-organizer-ai
+[17:39:48]   [237/316] [UPDATE] tellemthatsme/prompthubbolt
+[17:39:49]   [238/316] [UPDATE] tellemthatsme/prompts
+[17:39:51]   [239/316] [UPDATE] tellemthatsme/PydanticAI-Research-Agent
+[17:39:52]   [240/316] [UPDATE] tellemthatsme/quantify-ai-trader
+[17:39:54]   [241/316] [UPDATE] tellemthatsme/remote-access-tool
+[17:39:55]   [242/316] [UPDATE] tellemthatsme/remote-agentic-coding-system
+[17:39:57]   [243/316] [UPDATE] tellemthatsme/repo-rite
+[17:39:59]   [244/316] [UPDATE] tellemthatsme/repo-wizard-supreme
+[17:40:01]   [245/316] [UPDATE] tellemthatsme/repo-wizard-unleashed
+[17:40:03]   [246/316] [UPDATE] tellemthatsme/research-loop-dashboard
+[17:40:05]   [247/316] [UPDATE] tellemthatsme/Roo-Code
+[17:40:06]   [248/316] [UPDATE] tellemthatsme/roundabout
+[17:40:08]   [249/316] [UPDATE] tellemthatsme/roundabout-creator-hub
+[17:40:10]   [250/316] [UPDATE] tellemthatsme/scrape-automator-wizard
+[17:40:11]   [251/316] [UPDATE] tellemthatsme/scrapy
+[17:40:13]   [252/316] [UPDATE] tellemthatsme/self-hosted-ai-starter-kit
+[17:42:04] ======================================================================
+[17:42:04] RESUMABLE BULK DOWNLOAD - All Accounts
+[17:42:04] Started: 2026-04-27 17:42:04
+[17:42:04] ======================================================================
+[17:42:04] 
+======================================================================
+[17:42:04] ACCOUNT: tellemthatsme
+[17:42:04] ======================================================================
+[17:42:04] 
+Fetching repo list for tellemthatsme...
+[17:42:05]   Page 1: +100 repos
+[17:42:07]   Page 2: +100 repos
+[17:42:08]   Page 3: +100 repos
+[17:42:09]   Page 4: +16 repos
+[17:42:10]   Total repos for tellemthatsme: 316
+[17:42:10] Processing 316 repositories...
+
+[17:42:13]   [1/316] [UPDATE] tellemthatsme/adk-rag-agent
+[17:42:15]   [2/316] [UPDATE] tellemthatsme/agent-zero
+[17:42:19]   [3/316] [UPDATE] tellemthatsme/agenticSeek
+[17:42:20]   [4/316] [UPDATE] tellemthatsme/agents
+[17:42:22]   [5/316] [UPDATE] tellemthatsme/ai
+[17:42:24]   [6/316] [UPDATE] tellemthatsme/ai-browser-playground-hub
+[17:42:26]   [7/316] [UPDATE] tellemthatsme/ai-browser-playground-nexus
+[17:42:28]   [8/316] [UPDATE] tellemthatsme/ai-command-center-nexus-22
+[17:42:30]   [9/316] [UPDATE] tellemthatsme/ai-deal-seeker-pro
+[17:42:32]   [10/316] [UPDATE] tellemthatsme/ai-dev-flow-41
+[17:42:34]   [12/316] [UPDATE] tellemthatsme/ai-empire-monitoring-suite
+[17:42:36]   [13/316] [UPDATE] tellemthatsme/ai-gradio
+[17:42:38]   [14/316] [UPDATE] tellemthatsme/ai-muse-studio
+[17:42:39]   [15/316] [UPDATE] tellemthatsme/ai-navigator-pro
+[17:42:41]   [16/316] [UPDATE] tellemthatsme/ai-nexus-command-center
+[17:42:43]   [17/316] [UPDATE] tellemthatsme/ai-nexus-command-center-13
+[17:42:44]   [18/316] [UPDATE] tellemthatsme/ai-nexus-project-hub
+[17:42:47]   [19/316] [UPDATE] tellemthatsme/ai-phone-farm-platform
+[17:42:49]   [20/316] [UPDATE] tellemthatsme/ai-phone-farming-platform
+[17:42:53]   [21/316] [UPDATE] tellemthatsme/ai-pulse-dashboard
+[17:42:55]   [22/316] [UPDATE] tellemthatsme/ai-pulse-dashboard-72
+[17:42:57]   [23/316] [UPDATE] tellemthatsme/ai-pulse-nexus-ticker
+[17:42:58]   [24/316] [UPDATE] tellemthatsme/ai-s-global-hub
+[17:43:00]   [25/316] [UPDATE] tellemthatsme/ai-synthesis-machine
+[17:43:02]   [26/316] [UPDATE] tellemthatsme/ai-tech-giga-dash
+[17:43:04]   [27/316] [UPDATE] tellemthatsme/ai-tool-guardian-angel
+[17:43:05]   [28/316] [UPDATE] tellemthatsme/ai-toolkit-nexus-forge
+[17:43:07]   [29/316] [UPDATE] tellemthatsme/ai-toolkit-nexus-forge-83
+[17:43:09]   [30/316] [UPDATE] tellemthatsme/ai-world-navigator
+[17:43:10]   [31/316] [UPDATE] tellemthatsme/aicodingassistbolt
+[17:43:12]   [32/316] [UPDATE] tellemthatsme/aicodingbolt
+[17:43:14]   [33/316] [UPDATE] tellemthatsme/aider
+[17:43:15]   [34/316] [UPDATE] tellemthatsme/aiecosystem
+[17:43:17]   [35/316] [UPDATE] tellemthatsme/AIFreeTierTrackerbolt
+[17:43:19]   [36/316] [UPDATE] tellemthatsme/aiinggfbolt
+[17:43:22]   [37/316] [UPDATE] tellemthatsme/aiprojectbolt
+[17:43:25]   [38/316] [UPDATE] tellemthatsme/aitoolkitbolt
+[17:43:28]   [39/316] [UPDATE] tellemthatsme/aittradingbolt
+[17:43:32]   [41/316] [UPDATE] tellemthatsme/aiwriting
+[17:43:33]   [42/316] [UPDATE] tellemthatsme/allinonecryptobolt
+[17:43:35]   [43/316] [UPDATE] tellemthatsme/allspark-dev-studio
+[17:43:37]   [44/316] [UPDATE] tellemthatsme/arcana-craft
+[17:43:38]   [45/316] [UPDATE] tellemthatsme/Archon
+[17:43:40]   [46/316] [UPDATE] tellemthatsme/artbot-crypto-verse
+[17:43:41]   [47/316] [UPDATE] tellemthatsme/AusAIAgencybolt-
+[17:43:43]   [48/316] [UPDATE] tellemthatsme/ausaiagentcybolt
+[17:43:45]   [49/316] [UPDATE] tellemthatsme/aussie-burnout-legends
+[17:43:46]   [50/316] [UPDATE] tellemthatsme/aussie-burnout-legends-61
+[17:43:49]   [51/316] [UPDATE] tellemthatsme/aussie-deals-hub
+[17:43:51]   [52/316] [UPDATE] tellemthatsme/aussie-metal-mayhem-motors
+[17:43:53]   [53/316] [UPDATE] tellemthatsme/automated-app-genesis
+[17:43:55]   [54/316] [UPDATE] tellemthatsme/avatra-content-hive
+[17:43:58]   [55/316] [UPDATE] tellemthatsme/awesome-agents
+[17:44:01]   [56/316] [UPDATE] tellemthatsme/awesome-ai-agents
+[17:44:03]   [57/316] [UPDATE] tellemthatsme/awesome-ai-coding-tools
+[17:44:05]   [58/316] [UPDATE] tellemthatsme/awesome-ai-sdks
+[17:44:06]   [59/316] [UPDATE] tellemthatsme/awesome-browser-automation
+[17:44:07]   [60/316] [UPDATE] tellemthatsme/awesome-claude-code
+[17:44:09]   [61/316] [UPDATE] tellemthatsme/awesome-cli
+[17:44:10]   [62/316] [UPDATE] tellemthatsme/awesome-cli-apps
+[17:44:12]   [63/316] [UPDATE] tellemthatsme/Awesome-Code-LLM
+[17:44:13]   [64/316] [UPDATE] tellemthatsme/awesome-coins
+[17:44:15]   [65/316] [UPDATE] tellemthatsme/awesome-n8n
+[17:44:16]   [66/316] [UPDATE] tellemthatsme/awesome-nocode-lowcode
+[17:44:18]   [67/316] [UPDATE] tellemthatsme/awesome-selfhosted
+[17:44:19]   [68/316] [UPDATE] tellemthatsme/awesome-ui-component-library
+[17:44:21]   [69/316] [UPDATE] tellemthatsme/bloom-boost-social
+[17:44:22]   [70/316] [UPDATE] tellemthatsme/BMAD-METHOD
+[17:44:24]   [71/316] [UPDATE] tellemthatsme/bookcraft-nexus-publish
+[17:44:26]   [72/316] [UPDATE] tellemthatsme/bot-trading-alpha-hub
+[17:44:28]   [73/316] [UPDATE] tellemthatsme/bot-trading-maestro
+[17:44:30]   [74/316] [UPDATE] tellemthatsme/bot-trading-renaissance-hub
+[17:44:33]   [75/316] [UPDATE] tellemthatsme/brainstorm-architect
+[17:44:38]   [77/316] [UPDATE] tellemthatsme/browse-time-insight
+[17:44:40]   [78/316] [UPDATE] tellemthatsme/browser-quad-vision
+[17:44:41]   [79/316] [UPDATE] tellemthatsme/browser-use
+[17:44:43]   [80/316] [UPDATE] tellemthatsme/ccxt
+[17:44:44]   [81/316] [UPDATE] tellemthatsme/chat-merge-mastery
+[17:44:46]   [82/316] [UPDATE] tellemthatsme/chat-saga-sorter
+[17:44:48]   [83/316] [UPDATE] tellemthatsme/chat-saga-sorter-ad13c3d7
+[17:44:50]   [84/316] [UPDATE] tellemthatsme/chatbolthiostory
+[17:44:51]   [85/316] [UPDATE] tellemthatsme/chatexporterbolt
+[17:44:53]   [86/316] [UPDATE] tellemthatsme/ChatGPT
+[17:44:55]   [87/316] [UPDATE] tellemthatsme/chathistoryboplt
+[17:44:56]   [88/316] [UPDATE] tellemthatsme/chatify-organizer
+[17:44:59]   [89/316] [UPDATE] tellemthatsme/chatplatformbolt
+[17:45:01]   [90/316] [UPDATE] tellemthatsme/chatprocessor
+[17:45:03]   [91/316] [UPDATE] tellemthatsme/chatsortold
+[17:45:06]   [92/316] [UPDATE] tellemthatsme/chatty-app-factory
+[17:45:11]   [93/316] [UPDATE] tellemthatsme/ClaraVerse
+[17:45:14]   [94/316] [UPDATE] tellemthatsme/claude-agent-forge
+[17:45:16]   [95/316] [UPDATE] tellemthatsme/claude-code-router
+[17:45:18]   [96/316] [UPDATE] tellemthatsme/claude-conductor
+[17:45:20]   [97/316] [UPDATE] tellemthatsme/claude-openrouter-enterprise-system
+[17:45:22]   [98/316] [UPDATE] tellemthatsme/claudia
+[17:45:24]   [99/316] [UPDATE] tellemthatsme/cmsbolt
+[17:45:26]   [100/316] [UPDATE] tellemthatsme/code-discovery-navigator
+[17:45:28]   [101/316] [UPDATE] tellemthatsme/code-lens-ai-review
+[17:45:30]   [102/316] [UPDATE] tellemthatsme/code-narrative-alchemy
+[17:45:32]   [103/316] [UPDATE] tellemthatsme/Code2Docs
+[17:45:35]   [104/316] [UPDATE] tellemthatsme/codeguide
+[17:45:38]   [105/316] [UPDATE] tellemthatsme/compcryptobolt
+[17:45:39]   [106/316] [UPDATE] tellemthatsme/context7
+[17:45:42]   [107/316] [UPDATE] tellemthatsme/conversation-crafter
+[17:45:51]   [108/316] [UPDATE] tellemthatsme/cosmos-ai-desk
+[17:45:53]   [109/316] [UPDATE] tellemthatsme/craft-ai-stack
+[17:45:55]   [110/316] [UPDATE] tellemthatsme/craft-your-world-87
+[17:45:57]   [111/316] [UPDATE] tellemthatsme/crawlee
+[17:45:58]   [112/316] [UPDATE] tellemthatsme/create-volo-app
+[17:46:01]   [113/316] [UPDATE] tellemthatsme/creatoros-clone
+[17:46:03]   [114/316] [UPDATE] tellemthatsme/creatoros-clone-1
+[17:46:05]   [115/316] [UPDATE] tellemthatsme/crewAI-examples
+[17:46:07]   [116/316] [UPDATE] tellemthatsme/crush
+[17:46:08]   [117/316] [UPDATE] tellemthatsme/crypto-beacon-trader-hub
+[17:46:10]   [118/316] [UPDATE] tellemthatsme/crypto-command-center-lovable
+[17:46:11]   [119/316] [UPDATE] tellemthatsme/crypto-dream-trade-sim
+[17:46:13]   [120/316] [UPDATE] tellemthatsme/crypto-genesis-ai
+[17:46:15]   [121/316] [UPDATE] tellemthatsme/cryptobolt
+[17:46:18]   [122/316] [UPDATE] tellemthatsme/cryptobot-nexus-ai
+[17:46:21]   [123/316] [UPDATE] tellemthatsme/cybersecurity-enterprise-suite
+[17:46:23]   [124/316] [UPDATE] tellemthatsme/deepclaude
+[17:46:24]   [125/316] [UPDATE] tellemthatsme/deepwiki-open
+[17:46:26]   [126/316] [UPDATE] tellemthatsme/deer-flow
+[17:46:27]   [127/316] [UPDATE] tellemthatsme/dev-chatgpt-prompts
+[17:46:30]   [128/316] [UPDATE] tellemthatsme/dev-stream-seek
+[17:46:32]   [129/316] [UPDATE] tellemthatsme/devflow-matrix
+[17:46:34]   [130/316] [UPDATE] tellemthatsme/diagram-insight-ai
+[17:46:35]   [131/316] [UPDATE] tellemthatsme/ditto
+[17:46:37]   [132/316] [UPDATE] tellemthatsme/dream-crypto-trade-sim
+[17:46:38]   [133/316] [UPDATE] tellemthatsme/dyad
+[17:46:40]   [134/316] [UPDATE] tellemthatsme/eliza
+[17:46:41]   [135/316] [UPDATE] tellemthatsme/ember-build-spark
+[17:46:43]   [136/316] [UPDATE] tellemthatsme/emergent
+[17:46:45]   [137/316] [UPDATE] tellemthatsme/engage-boost-social-reach
+[17:46:47]   [138/316] [UPDATE] tellemthatsme/engage-flow-insights-ai
+[17:46:48]   [139/316] [UPDATE] tellemthatsme/fastapi_mcp
+[17:46:49]   [140/316] [UPDATE] tellemthatsme/firecrawl
+[17:46:52]   [141/316] [UPDATE] tellemthatsme/firefox
+[17:46:55]   [142/316] [UPDATE] tellemthatsme/Flowise
+[17:46:58]   [143/316] [UPDATE] tellemthatsme/forge-creative-flow
+[17:46:59]   [144/316] [UPDATE] tellemthatsme/freeitbolt
+[17:47:01]   [145/316] [UPDATE] tellemthatsme/freetrail
+[17:47:03]   [146/316] [UPDATE] tellemthatsme/freetrailbolt
+[17:47:05]   [147/316] [UPDATE] tellemthatsme/fusion-sight-navigator-buddy
+[17:47:06]   [148/316] [UPDATE] tellemthatsme/git-insight-hub
+[17:47:08]   [149/316] [UPDATE] tellemthatsme/git-mcp
+[17:47:09]   [150/316] [UPDATE] tellemthatsme/githubdoco
+[17:47:11]   [151/316] [UPDATE] tellemthatsme/githubhubbolt
+[17:47:13]   [152/316] [UPDATE] tellemthatsme/githubrepoanalyzer
+[17:47:14]   [153/316] [UPDATE] tellemthatsme/goose
+[17:47:16]   [154/316] [UPDATE] tellemthatsme/guardian-ai-speak
+[17:47:17]   [155/316] [UPDATE] tellemthatsme/hackathonbolt
+[17:47:19]   [156/316] [UPDATE] tellemthatsme/Harvard-Algorithmic-Trading-with-AI
+[17:47:20]   [157/316] [UPDATE] tellemthatsme/hermes-agent
+[17:47:22]   [158/316] [UPDATE] tellemthatsme/hyperdrive-ai-nexus
+[17:47:24]   [159/316] [UPDATE] tellemthatsme/hyperlink-organizer-plus
+[17:47:26]   [160/316] [UPDATE] tellemthatsme/ideaforgemobilebolt
+[17:47:29]   [161/316] [UPDATE] tellemthatsme/idealaunch-hub
+[17:47:33]   [162/316] [UPDATE] tellemthatsme/image-code-scholar
+[17:47:34]   [163/316] [UPDATE] tellemthatsme/insight-enterprise-ai-nexus
+[17:47:36]   [164/316] [UPDATE] tellemthatsme/insight-garden-craft
+[17:47:39]   [165/316] [UPDATE] tellemthatsme/InstantCoder
+[17:47:42]   [166/316] [UPDATE] tellemthatsme/intellicode-nexus
+[17:47:44]   [167/316] [UPDATE] tellemthatsme/intellitool-dash
+[17:47:45]   [168/316] [UPDATE] tellemthatsme/JARVIS-Ecosystem
+[17:47:47]   [169/316] [UPDATE] tellemthatsme/kbbolt
+[17:47:49]   [170/316] [UPDATE] tellemthatsme/kbbolt2
+[17:47:51]   [171/316] [UPDATE] tellemthatsme/keno-oz-oracle
+[17:47:52]   [172/316] [UPDATE] tellemthatsme/kenobolt
+[17:47:54]   [173/316] [UPDATE] tellemthatsme/keymaster-bot
+[17:47:56]   [174/316] [UPDATE] tellemthatsme/knnoo
+[17:47:57]   [175/316] [UPDATE] tellemthatsme/knowl-ai-nexus
+[17:47:59]   [176/316] [UPDATE] tellemthatsme/ladybird
+[17:48:01]   [177/316] [UPDATE] tellemthatsme/leaked-system-prompts
+[17:48:05]   [178/316] [UPDATE] tellemthatsme/learn-typescript-from-python
+[17:48:07]   [179/316] [UPDATE] tellemthatsme/legacy-compass
+[17:48:09]   [180/316] [UPDATE] tellemthatsme/legacy-video-forge
+[17:48:10]   [181/316] [UPDATE] tellemthatsme/linkwarden
+[17:48:12]   [182/316] [UPDATE] tellemthatsme/litellm
+[17:48:13]   [183/316] [UPDATE] tellemthatsme/local-ai-packaged
+[17:48:16]   [185/316] [UPDATE] tellemthatsme/lovable-api-genesis
+[17:48:19]   [186/316] [UPDATE] tellemthatsme/lovable-complex-creator
+[17:48:20]   [187/316] [UPDATE] tellemthatsme/lovable-trading-sight
+[17:48:22]   [188/316] [UPDATE] tellemthatsme/lovable-view-hub-nexus
+[17:48:24]   [189/316] [UPDATE] tellemthatsme/loving-crypto-insights
+[17:48:26]   [190/316] [UPDATE] tellemthatsme/lumen-ai-pulse
+[17:48:27]   [191/316] [UPDATE] tellemthatsme/mcp-crawl4ai-rag
+[17:48:28]   [192/316] [UPDATE] tellemthatsme/mcp-demo
+[17:48:29]   [193/316] [UPDATE] tellemthatsme/mcp-use
+[17:48:31]   [194/316] [UPDATE] tellemthatsme/meme-finding
+[17:48:33]   [195/316] [UPDATE] tellemthatsme/metamcp
+[17:48:35]   [196/316] [UPDATE] tellemthatsme/monetization-dashboard
+[17:48:39]   [197/316] [UPDATE] tellemthatsme/money-mint-machine
+[17:48:41]   [198/316] [UPDATE] tellemthatsme/moneymakerbolt
+[17:48:43]   [199/316] [UPDATE] tellemthatsme/moon-dev-ai-agents-for-trading
+[17:48:44]   [200/316] [UPDATE] tellemthatsme/Moon-Dev-Code
+[17:48:46]   [201/316] [UPDATE] tellemthatsme/multi-agent-coding-environment
+[17:48:48]   [202/316] [UPDATE] tellemthatsme/multi-key-mind
+[17:48:49]   [203/316] [UPDATE] tellemthatsme/my-life-verified
+[17:48:51]   [204/316] [UPDATE] tellemthatsme/n8n-verse

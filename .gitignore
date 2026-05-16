@@ -1,0 +1,15 @@
+repos/
+repos_duplicates/
+repos_low_quality/
+node_modules/
+dist/
+build/
+*.pyc
+__pycache__/
+.env
+*.spec
+qa-results/
+.vscode/
+.idea/
+index-product/
+deploy/

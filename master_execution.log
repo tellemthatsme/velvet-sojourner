@@ -1,0 +1,69 @@
+[00:40:34] [INFO] Starting complete execution pipeline
+[00:40:34] [INFO] Working directory: C:\temp\velvet-sojourner
+[00:40:34] [INFO] Python: C:\Program Files\Python313\python.exe
+[00:40:34] [INFO] 
+[00:40:34] [INFO] 
+============================================================
+[00:40:34] [INFO] STEP 1/8: Token Check
+[00:40:34] [INFO] ============================================================
+[00:40:34] [INFO] Running: Token diagnostic check
+[00:40:34] [INFO] Command: C:\Program Files\Python313\python.exe check_tokens.py
+[00:40:43] [SUCCESS] SUCCESS: Token diagnostic check
+[00:40:43] [INFO]   >   3. CHECK the 'repo' checkbox (Full control of private repositories)
+[00:40:43] [INFO]   >   4. Update token in GitHubDownloader app
+[00:40:43] [INFO]   > ================================================================================
+[00:40:43] [INFO]   > Detailed report saved to: C:\Users\karma\AppData\Roaming\GitHubDownloader\token_report.json
+[00:40:43] [INFO] 
+============================================================
+[00:40:43] [INFO] STEP 2/8: Token Fix
+[00:40:43] [INFO] ============================================================
+[00:40:43] [INFO] Opening token fix wizard...
+[00:40:43] [INFO] Follow the instructions to regenerate your tokens
+[00:40:43] [INFO] 
+[00:40:43] [INFO] QUICK FIX STEPS:
+[00:40:43] [INFO] 1. Go to https://github.com/settings/tokens
+[00:40:43] [INFO] 2. Generate new Classic token for EACH account
+[00:40:43] [INFO] 3. CHECK the 'repo' scope checkbox
+[00:40:43] [INFO] 4. Copy token and update in GitHubDownloader
+[00:40:43] [INFO] 
+[00:40:43] [INFO] Running: Token fix wizard
+[00:40:43] [INFO] Command: C:\Program Files\Python313\python.exe token_fix_wizard.py
+[00:40:44] [ERROR] FAILED: Token fix wizard
+[00:40:44] [ERROR] Error: Traceback (most recent call last):
+  File "C:\temp\velvet-sojourner\token_fix_wizard.py", line 387, in <module>
+    main()
+    ~~~~^^
+  File "C:\temp\velvet-sojourner\token_fix_wizard.py", line 383, i
+[00:40:44] [ERROR] Error in step 2: EOF when reading a line
+[00:40:44] [INFO] 
+============================================================
+[00:40:44] [INFO] STEP 3/8: Download Repos
+[00:40:44] [INFO] ============================================================
+[00:40:44] [INFO] To download all repos:
+[00:40:44] [INFO] 1. Open GitHubDownloader.exe
+[00:40:44] [INFO] 2. Go to the 'Download' tab
+[00:40:44] [INFO] 3. Click 'All Accounts' button
+[00:40:44] [INFO] 4. Wait for completion (may take 1-2 hours)
+[00:40:44] [INFO] 
+[00:40:44] [ERROR] Error in step 3: EOF when reading a line
+[00:40:44] [INFO] 
+============================================================
+[00:40:44] [INFO] STEP 4/8: Analyze Repos
+[00:40:44] [INFO] ============================================================
+[00:40:44] [INFO] Running: Repository analysis
+[00:40:44] [INFO] Command: C:\Program Files\Python313\python.exe github_export_processor.py --input repos --output exports --analyze
+[00:45:31] [SUCCESS] SUCCESS: Repository analysis
+[00:45:31] [INFO]   > [92mScanned 153 repositories[0m
+[00:45:31] [INFO]   > [92mReports generated:[0m
+[00:45:31] [INFO]   >   JSON: exports\analytics-report.json
+[00:45:31] [INFO]   >   Markdown: exports\analytics-report.md
+[00:45:31] [SUCCESS] Analysis complete!
+[00:45:31] [INFO] Total repos: 153
+[00:45:31] [INFO] Total size: 5658.73 MB
+[00:45:31] [INFO] Export ready: 88
+[00:45:31] [INFO] 
+============================================================
+[00:45:31] [INFO] STEP 5/8: Create Bundles
+[00:45:31] [INFO] ============================================================
+[00:45:31] [INFO] Creating export bundles...
+[00:45:31] [INFO] This may take several minutes for large repositories

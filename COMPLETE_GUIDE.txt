@@ -1,0 +1,192 @@
+# COMPLETE TOKEN FIX GUIDE - STEP BY STEP
+# Follow this in order. Do not skip steps.
+
+===============================================
+STEP 1: OPEN GITHUB (1 minute)
+===============================================
+
+1. Open your web browser
+2. Go to: https://github.com/settings/tokens
+3. Make sure you are logged in as: tellemthatsme
+
+If you're not logged in as tellemthatsme:
+- Click your profile picture (top right)
+- Click "Sign out"
+- Go to https://github.com/login
+- Enter username: tellemthatsme
+- Enter your password
+- Then go to https://github.com/settings/tokens
+
+===============================================
+STEP 2: GENERATE TOKEN FOR tellemthatsme (2 minutes)
+===============================================
+
+1. Click the GREEN button: "Generate new token"
+2. From dropdown, click: "Generate new token (classic)"
+3. You may need to re-enter your password - do so
+4. On the form:
+   
+   Note: ................... GitHub Downloader Full Access
+   
+   Expiration: .............. Select "No expiration"
+                             (or 90 days if you prefer)
+   
+   Scopes: .................. FIND the section called "repo"
+                             CHECK the box next to "repo"
+                             (It says "Full control of private repositories")
+                             
+                             ALSO CHECK:
+                             - repo:status
+                             - repo_deployment
+                             - repo:invite
+                             - security_events
+                             
+                             You can check ALL boxes under "repo" to be safe.
+   
+5. Scroll to bottom
+6. Click GREEN button: "Generate token"
+7. IMPORTANT: You will see a green box with your new token
+   It looks like: ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+   OR: github_pat_11xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+   
+   COPY THIS ENTIRE TOKEN IMMEDIATELY!
+   GitHub will ONLY show it once!
+   
+8. Paste it somewhere safe (Notepad, text file)
+   Label it: tellemthatsme
+
+===============================================
+STEP 3: REPEAT FOR OTHER 4 ACCOUNTS (8 minutes)
+===============================================
+
+For EACH of these accounts, repeat Step 2:
+
+Account 2: woodsai69rme
+- Sign out of current account
+- Go to https://github.com/login
+- Login as: woodsai69rme
+- Go to https://github.com/settings/tokens
+- Generate new classic token
+- Check "repo" scope
+- Copy and save token
+- Label it: woodsai69rme
+
+Account 3: leahmfoots
+- Sign out
+- Login as: leahmfoots
+- https://github.com/settings/tokens
+- Generate token with "repo" scope
+- Copy and save
+- Label it: leahmfoots
+
+Account 4: acidlink
+- Sign out
+- Login as: acidlink
+- https://github.com/settings/tokens
+- Generate token with "repo" scope
+- Copy and save
+- Label it: acidlink
+
+Account 5: Ashlee69r
+- Sign out
+- Login as: Ashlee69r
+- https://github.com/settings/tokens
+- Generate token with "repo" scope
+- Copy and save
+- Label it: Ashlee69r
+
+===============================================
+STEP 4: UPDATE accounts.json FILE (2 minutes)
+===============================================
+
+You now have 5 new tokens saved. Update the file:
+
+1. Open File Explorer
+2. Navigate to: C:\Users\karma\AppData\Roaming\GitHubDownloader\
+3. Find file: accounts.json
+4. Right-click → Open with → Notepad
+5. You will see 5 sections, one for each account
+6. For EACH account, find the line:
+   "token": "github_pat_xxxxxxxx...",
+   
+   Replace the old token with your NEW token.
+   
+   Example:
+   OLD: "token": "github_pat_11BKPMJIA0Dpbji6GVIbeK_...",
+   NEW: "token": "github_pat_YOUR_NEW_TOKEN_HERE",
+
+7. Save the file (Ctrl+S)
+8. Close Notepad
+
+===============================================
+STEP 5: VERIFY TOKENS WORK (30 seconds)
+===============================================
+
+1. Open Command Prompt or PowerShell
+2. Navigate to your project folder:
+   cd C:\temp\velvet-sojourner
+   
+3. Run:
+   python check_tokens.py
+   
+4. You should see:
+   tellemthatsme: OK | Public: 106 | Private: XXX
+   woodsai69rme: OK | Public: 64 | Private: XXX
+   leahmfoots: OK | Public: 8 | Private: XXX
+   acidlink: OK | Public: 10 | Private: XXX
+   Ashlee69r: OK | Public: 5 | Private: XXX
+   
+   If you see "MISSING_REPO_SCOPE" - you didn't check the repo box.
+   If you see "Invalid token" - you copied it wrong.
+
+===============================================
+STEP 6: DOWNLOAD ALL REPOS (1-2 hours)
+===============================================
+
+1. Open GitHubDownloader.exe
+2. Click button: "All Accounts"
+3. Wait. It will download all repositories.
+4. Expected: ~504 total repos
+5. Go do something else while it runs.
+
+===============================================
+STEP 7: PROCESS EVERYTHING (5 minutes)
+===============================================
+
+After download completes:
+
+1. Open Command Prompt
+2. cd C:\temp\velvet-sojourner
+3. Run: python github_export_processor.py
+4. Wait for it to analyze all repos
+
+===============================================
+STEP 8: LAUNCH YOUR PRODUCT (10 minutes)
+===============================================
+
+1. Deploy landing page:
+   - Go to netlify.com
+   - Drag the folder: C:\temp\velvet-sojourner\deploy
+   - Get your live URL
+   
+2. Create Gumroad listing:
+   - Go to gumroad.com
+   - Click "Create a product"
+   - Upload: C:\temp\velvet-sojourner\dist\ai-agent-starter-kit-v1.0.zip
+   - Price: $299
+   - Publish
+   
+3. Post on Twitter:
+   - Copy text from: marketing\tweet.txt
+   - Add your Gumroad link
+   - Post
+
+===============================================
+DONE! YOU ARE NOW MAKING MONEY.
+===============================================
+
+Expected timeline:
+- Today: First sales
+- Week 1: $300-500
+- Month 1: $1,000-2,000
+- Month 3: $5,000-15,000 (with 504 repos)

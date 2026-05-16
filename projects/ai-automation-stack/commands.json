@@ -1,0 +1,109 @@
+{
+    "version": "1.0",
+    "description": "Voice command mappings for AI Automation Stack",
+    "commands": {
+        "start voice": {
+            "type": "launcher",
+            "command": "voice",
+            "description": "Start voice assistant"
+        },
+        "stop voice": {
+            "type": "launcher",
+            "command": "voice",
+            "args": [
+                "--stop"
+            ],
+            "description": "Stop voice assistant"
+        },
+        "sync github": {
+            "type": "launcher",
+            "command": "sync-github",
+            "description": "Sync GitHub repositories"
+        },
+        "sync drive": {
+            "type": "launcher",
+            "command": "sync-drive",
+            "description": "Sync projects to Google Drive"
+        },
+        "sync vault": {
+            "type": "launcher",
+            "command": "sync-vault",
+            "description": "Sync Obsidian vault"
+        },
+        "export chats": {
+            "type": "launcher",
+            "command": "export",
+            "description": "Export and sort chat files"
+        },
+        "build wiki": {
+            "type": "launcher",
+            "command": "wiki",
+            "description": "Build markdown wiki"
+        },
+        "generate posts": {
+            "type": "launcher",
+            "command": "posts",
+            "description": "Generate social media posts"
+        },
+        "embed knowledge": {
+            "type": "launcher",
+            "command": "embed",
+            "description": "Run RAG embed pipeline"
+        },
+        "start dashboard": {
+            "type": "launcher",
+            "command": "dashboard",
+            "description": "Open dashboard in browser"
+        },
+        "start all": {
+            "type": "launcher",
+            "command": "all",
+            "description": "Start all modules"
+        },
+        "stop all": {
+            "type": "launcher",
+            "command": "stop",
+            "args": [
+                "all"
+            ],
+            "description": "Stop all running modules"
+        },
+        "status check": {
+            "type": "launcher",
+            "command": "status",
+            "description": "Check module status"
+        },
+        "run tests": {
+            "type": "shell",
+            "command": "python run_tests.py",
+            "description": "Run test suite"
+        },
+        "show logs": {
+            "type": "shell",
+            "command": "tail -f logs/*.log",
+            "description": "Show live logs"
+        },
+        "help me": {
+            "type": "shell",
+            "command": "python launch.py --help",
+            "description": "Show help information"
+        },
+        "what's running": {
+            "type": "shell",
+            "command": "python cli_trigger.py --list",
+            "description": "List running modules"
+        }
+    },
+    "hotwords": {
+        "hey assistant": "start voice",
+        "listen up": "start voice",
+        "goodbye": "stop voice",
+        "shut down": "stop all",
+        "sync everything": "sync github",
+        "backup now": "sync drive",
+        "organize": "export chats",
+        "build knowledge": "embed knowledge",
+        "post something": "generate posts",
+        "open dashboard": "start dashboard"
+    }
+}

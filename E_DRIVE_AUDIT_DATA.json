@@ -1,0 +1,55 @@
+{
+    "root_folders": {
+        "$RECYCLE.BIN": "Scanning...",
+        ".claude": "Scanning...",
+        ".github": "Scanning...",
+        ".vscode": "Scanning...",
+        "AI-Automation-Backup": "Scanning...",
+        "ai-ecosystem": "Scanning...",
+        "AI_ARMY_BACKUP_": "Scanning...",
+        "AI_ARMY_BACKUP_20260202": "Scanning...",
+        "Archive": "Scanning...",
+        "Backups": "Scanning...",
+        "central-management-portal": "Scanning...",
+        "CharmCrush_Backup": "Scanning...",
+        "chatgptexports": "Scanning...",
+        "Dashboards": "Scanning...",
+        "DevAppsConfigsBackup": "Scanning...",
+        "github-downloader-new": "Scanning...",
+        "github-downloader-v2": "Scanning...",
+        "github-repo-downloader": "Scanning...",
+        "Organized": "Scanning...",
+        "project": "Scanning...",
+        "System Volume Information": "Scanning..."
+    },
+    "overall": {
+        "total_size": 13001063280,
+        "file_count": 50314,
+        "categories": {
+            "Other": {
+                "size": 6892825340,
+                "count": 22353
+            },
+            "Code": {
+                "size": 2720905073,
+                "count": 24041
+            },
+            "Text/Docs": {
+                "size": 899338166,
+                "count": 3091
+            },
+            "Photos": {
+                "size": 1366390444,
+                "count": 551
+            },
+            "Backups/Archives": {
+                "size": 979423494,
+                "count": 266
+            },
+            "Videos": {
+                "size": 142180763,
+                "count": 12
+            }
+        }
+    }
+}

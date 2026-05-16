@@ -1,0 +1,17 @@
+[Showoff Saturday] AI Agent Starter Kit - From 53 repos to product
+
+Built a complete AI agent platform from curated open-source repos:
+
+**What's inside:**
+- 10 agent frameworks
+- 5 MCP server integrations  
+- Universal LLM proxy
+- Docker deployment
+
+**Tech:** Python/FastAPI, Docker, Redis
+
+**Pricing:** $99-299
+
+Would love feedback! What else should I include?
+
+[LINK]

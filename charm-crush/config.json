@@ -1,0 +1,51 @@
+{
+    "app_name": "Charm Crush Session Manager",
+    "version": "2.0.0",
+    "theme": "dark",
+    "settings": {
+        "default_session_folder": "",
+        "auto_save": false,
+        "auto_save_interval": 60,
+        "recent_sessions_limit": 10,
+        "remember_last_session": true,
+        "check_updates": true,
+        "default_editor_font_size": 10,
+        "tab_size": 4,
+        "use_spaces": true,
+        "line_numbers": true,
+        "word_wrap": false,
+        "highlight_current_line": true,
+        "bracket_matching": true,
+        "syntax_highlighting": true
+    },
+    "editor": {
+        "tab_size": 4,
+        "use_spaces": true,
+        "line_numbers": true,
+        "word_wrap": false,
+        "highlight_current_line": true
+    },
+    "supported_formats": [
+        "json",
+        "yaml",
+        "yml",
+        "ini",
+        "txt"
+    ],
+    "database": {
+        "type": "sqlite",
+        "encryption": "fernet",
+        "password_hash": "pbkdf2_hmac_sha256",
+        "connection_pool_size": 5
+    },
+    "cloud_sync": {
+        "enabled": false,
+        "provider": "dropbox",
+        "auto_sync": false,
+        "sync_interval": 300
+    },
+    "sharing": {
+        "allow_sharing": true,
+        "default_permission": "read"
+    }
+}

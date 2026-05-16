@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "gateway/gateway.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "gateway/gateway.py"
+    }
+  ],
+  "env": {
+    "GATEWAY_PORT": "3000",
+    "ENVIRONMENT": "production"
+  }
+}

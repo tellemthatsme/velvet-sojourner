@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Automation Dashboard</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .status-bar {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--card-bg);
+            border-radius: 2rem;
+            font-size: 0.875rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--text-muted);
+        }
+
+        .status-dot.running {
+            background: var(--success);
+            animation: pulse 2s infinite;
+        }
+
+        .status-dot.error {
+            background: var(--danger);
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .card-subtitle {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .card-description {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+
+        .btn-warning {
+            background: var(--warning);
+            color: #1f2937;
+        }
+
+        .btn-danger {
+            background: var(--danger);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: var(--border);
+            color: var(--text);
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .api-section {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .api-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .api-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .api-endpoint {
+            background: #0d1117;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.85rem;
+            color: #7dd3fc;
+            margin-bottom: 1rem;
+            overflow-x: auto;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            background: #0d1117;
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .results {
+            background: #0d1117;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .result-item {
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        .result-title {
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .result-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .log-viewer {
+            background: #0d1117;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.8rem;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .log-line {
+            padding: 0.25rem 0;
+        }
+
+        .log-line.error {
+            color: #f87171;
+        }
+
+        .log-line.success {
+            color: #34d399;
+        }
+
+        .log-line.info {
+            color: #60a5fa;
+        }
+
+        .terminal {
+            background: #0d1117;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.85rem;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--border);
+            margin-top: 3rem;
+        }
+
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .quick-action {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .quick-action:hover {
+            border-color: var(--primary);
+            background: rgba(37, 99, 235, 0.1);
+        }
+
+        .quick-action-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .quick-action-label {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI Automation Dashboard</h1>
+            <p>Control and monitor your AI productivity stack</p>
+            <div class="status-bar">
+                <div class="status-badge">
+                    <span class="status-dot" id="voiceStatus"></span>
+                    <span>Voice</span>
+                </div>
+                <div class="status-badge">
+                    <span class="status-dot" id="syncStatus"></span>
+                    <span>Sync</span>
+                </div>
+                <div class="status-badge">
+                    <span class="status-dot" id="apiStatus"></span>
+                    <span>APIs</span>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <h2 class="section-title">🚀 Quick Actions</h2>
+            <div class="quick-actions">
+                <div class="quick-action" onclick="launchModule('voice')">
+                    <div class="quick-action-icon">🎙️</div>
+                    <div class="quick-action-label">Voice Assistant</div>
+                </div>
+                <div class="quick-action" onclick="launchModule('sync')">
+                    <div class="quick-action-icon">🔄</div>
+                    <div class="quick-action-label">Sync All</div>
+                </div>
+                <div class="quick-action" onclick="launchModule('export')">
+                    <div class="quick-action-icon">📁</div>
+                    <div class="quick-action-label">Export Chats</div>
+                </div>
+                <div class="quick-action" onclick="launchModule('embed')">
+                    <div class="quick-action-icon">🧠</div>
+                    <div class="quick-action-label">Embed Knowledge</div>
+                </div>
+                <div class="quick-action" onclick="launchModule('posts')">
+                    <div class="quick-action-icon">📱</div>
+                    <div class="quick-action-label">Generate Posts</div>
+                </div>
+                <div class="quick-action" onclick="launchModule('wiki')">
+                    <div class="quick-action-icon">📚</div>
+                    <div class="quick-action-label">Build Wiki</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">⚙️ Module Controls</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #60a5fa, #3b82f6);">🎙️</div>
+                        <div>
+                            <div class="card-title">Voice Assistant</div>
+                            <div class="card-subtitle">Whisper-based hotword detection</div>
+                        </div>
+                    </div>
+                    <p class="card-description">Voice-controlled automation with local Whisper. Say hotwords to trigger
+                        commands.</p>
+                    <div class="btn-group">
+                        <button class="btn btn-success btn-sm" onclick="startVoice()">Start</button>
+                        <button class="btn btn-danger btn-sm" onclick="stopVoice()">Stop</button>
+                        <button class="btn btn-secondary btn-sm" onclick="showVoiceLog()">Logs</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #34d399, #10b981);">🔄</div>
+                        <div>
+                            <div class="card-title">Sync Stack</div>
+                            <div class="card-subtitle">GitHub & Google Drive sync</div>
+                        </div>
+                    </div>
+                    <p class="card-description">Synchronize repositories with GitHub and backup to Google Drive with
+                        rclone.</p>
+                    <div class="btn-group">
+                        <button class="btn btn-success btn-sm" onclick="runSync()">Run All</button>
+                        <button class="btn btn-secondary btn-sm" onclick="syncGitHub()">GitHub</button>
+                        <button class="btn btn-secondary btn-sm" onclick="syncDrive()">Drive</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #f472b6, #ec4899);">📁</div>
+                        <div>
+                            <div class="card-title">Chat Exporter</div>
+                            <div class="card-subtitle">Organize AI chat exports</div>
+                        </div>
+                    </div>
+                    <p class="card-description">Parse, categorize, and organize chat exports from ChatGPT, Claude, and
+                        Gemini.</p>
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-sm" onclick="runExport()">Run Now</button>
+                        <button class="btn btn-secondary btn-sm" onclick="openExports()">Open Folder</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6);">🧠</div>
+                        <div>
+                            <div class="card-title">RAG Embedder</div>
+                            <div class="card-subtitle">Knowledge base vector search</div>
+                        </div>
+                    </div>
+                    <p class="card-description">Build and update the FAISS vector store for semantic search across your
+                        knowledge base.</p>
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-sm" onclick="runEmbed()">Build Index</button>
+                        <button class="btn btn-secondary btn-sm" onclick="searchKnowledge()">Search</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #fbbf24, #f59e0b);">📱</div>
+                        <div>
+                            <div class="card-title">Post Generator</div>
+                            <div class="card-subtitle">AI-powered social content</div>
+                        </div>
+                    </div>
+                    <p class="card-description">Generate engaging social media posts using AI with style templates.</p>
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-sm" onclick="generatePosts()">Generate</button>
+                        <button class="btn btn-secondary btn-sm" onclick="schedulePosts()">Schedule</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #60a5fa, #3b82f6);">📚</div>
+                        <div>
+                            <div class="card-title">Wiki Builder</div>
+                            <div class="card-subtitle">Static HTML documentation</div>
+                        </div>
+                    </div>
+                    <p class="card-description">Build searchable static wiki from markdown files using mdbook.</p>
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-sm" onclick="buildWiki()">Build</button>
+                        <button class="btn btn-secondary btn-sm" onclick="serveWiki()">Serve</button>
+                        <button class="btn btn-secondary btn-sm" onclick="openWiki()">View</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">🔌 API Interfaces</h2>
+
+            <div class="api-section">
+                <div class="api-header">
+                    <div class="api-title">📝 Prompt API</div>
+                    <span class="status-badge">
+                        <span class="status-dot" id="promptApiStatus"></span>
+                        <span id="promptApiPort">Port 5000</span>
+                    </span>
+                </div>
+                <div class="api-endpoint">GET http://localhost:5000/api/prompts</div>
+                <div class="search-box">
+                    <input type="text" class="search-input" id="promptSearch" placeholder="Search prompts...">
+                    <button class="btn btn-primary btn-sm" onclick="searchPrompts()">Search</button>
+                </div>
+                <div class="results" id="promptResults">Enter a search term to find prompts...</div>
+            </div>
+
+            <div class="api-section">
+                <div class="api-header">
+                    <div class="api-title">🔍 Search API</div>
+                    <span class="status-badge">
+                        <span class="status-dot" id="searchApiStatus"></span>
+                        <span id="searchApiPort">Port 5001</span>
+                    </span>
+                </div>
+                <div class="api-endpoint">GET http://localhost:5001/api/search?q=your-query</div>
+                <div class="search-box">
+                    <input type="text" class="search-input" id="wikiSearch" placeholder="Search markdown files...">
+                    <button class="btn btn-primary btn-sm" onclick="searchWiki()">Search</button>
+                </div>
+                <div class="results" id="wikiResults">Enter a search term to find documents...</div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">📊 Logs</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Launcher Log</div>
+                        <button class="btn btn-secondary btn-sm" onclick="refreshLog('launcher')">Refresh</button>
+                    </div>
+                    <div class="log-viewer" id="launcherLog">No log data...</div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Sync Log</div>
+                        <button class="btn btn-secondary btn-sm" onclick="refreshLog('sync')">Refresh</button>
+                    </div>
+                    <div class="log-viewer" id="syncLog">No log data...</div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Voice Log</div>
+                        <button class="btn btn-secondary btn-sm" onclick="refreshLog('voice')">Refresh</button>
+                    </div>
+                    <div class="log-viewer" id="voiceLog">No log data...</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">💻 Terminal</h2>
+            <div class="terminal" id="terminalOutput">
+                AI Automation Stack Terminal
+                ============================
+                Type a command or use the module buttons above.
+
+                Available commands:
+                help - Show this help message
+                voice start - Start voice assistant
+                voice stop - Stop voice assistant
+                sync all - Run all sync operations
+                export - Run chat exporter
+                embed - Run RAG embed pipeline
+                wiki build - Build markdown wiki
+                posts generate - Generate social posts
+                status - Show module status
+                clear - Clear terminal
+
+                > <span id="cursor">_</span>
+            </div>
+            <div class="search-box" style="margin-top: 1rem;">
+                <input type="text" class="search-input" id="terminalInput" placeholder="Enter command..."
+                    onkeypress="handleTerminalKey(event)">
+                <button class="btn btn-primary" onclick="executeCommand()">Execute</button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>AI Automation Stack v1.0.0 | Built with Python, Flask, and Love ❤️</p>
+        <p style="margin-top: 0.5rem; opacity: 0.7;">Open `index.html` in browser to view dashboard</p>
+    </footer>
+
+    <!-- Terminal Output Modal -->
+    <div class="modal" id="terminalModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Terminal Output</div>
+                <button class="modal-close" onclick="closeModal('terminalModal')">&times;</button>
+            </div>
+            <div class="terminal" id="modalTerminalOutput"></div>
+        </div>
+    </div>
+
+    <!-- Search Results Modal -->
+    <div class="modal" id="searchModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Search Results</div>
+                <button class="modal-close" onclick="closeModal('searchModal')">&times;</button>
+            </div>
+            <div class="results" id="modalSearchResults"></div>
+        </div>
+    </div>
+
+    <script>
+        // Base path for API calls
+        const API_BASE = 'http://localhost';
+        const PROMPT_API_PORT = 5000;
+        const SEARCH_API_PORT = 5001;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            checkApiStatus();
+            refreshLog('launcher');
+            refreshLog('sync');
+            refreshLog('voice');
+        });
+
+        // Module launcher functions
+        async function launchModule(module) {
+            const output = document.getElementById('terminalOutput');
+            output.innerHTML += `\n[${new Date().toLocaleTimeString()}] Launching ${module} module...\n`;
+            output.scrollTop = output.scrollHeight;
+
+            try {
+                const response = await fetch(`${API_BASE}:${PROMPT_API_PORT}/api/health`);
+                if (response.ok) {
+                    output.innerHTML += `✅ ${module} module launched successfully\n`;
+                } else {
+                    output.innerHTML += `⚠️ ${module} module may not be running\n`;
+                }
+            } catch (e) {
+                output.innerHTML += `ℹ️ Use CLI to launch: python launch.py --${module}\n`;
+            }
+            output.scrollTop = output.scrollHeight;
+        }
+
+        async function startVoice() {
+            const output = document.getElementById('terminalOutput');
+            output.innerHTML += `\n[${new Date().toLocaleTimeString()}] 🎙️ Starting voice assistant...\n`;
+            output.innerHTML += `Run: python run_voice.py\n`;
+            output.scrollTop = output.scrollHeight;
+            document.getElementById('voiceStatus').classList.add('running');
+        }
+
+        function stopVoice() {
+            document.getElementById('voiceStatus').classList.remove('running');
+            const output = document.getElementById('terminalOutput');
+            output.innerHTML += `\n[${new Date().toLocaleTimeString()}] 🎙️ Voice assistant stopped\n`;
+            output.scrollTop = output.scrollHeight;
+        }
+
+        async function runSync() {
+            const output = document.getElementById('terminalOutput');
+            output.innerHTML += `\n[${new Date().toLocaleTimeString()}] 🔄 Running all sync operations...\n`;
+            output.innerHTML += `Run: python sync.py && bash sync_drive.sh\n`;
+            output.scrollTop = output.scrollHeight;
+            document.getElementById('syncStatus').classList.add('running');
+        }
+
+        function syncGitHub() {
+            const output = document.getElementById('terminalOutput');
+            output.innerHTML += `\n[${new Date().toLocaleTimeString()}] 🔄 Syncing GitHub repositories...\n`;
+            output.innerHTML += `Run: python sync.py --repo owner/repo\n`;
+            output.scrollTop = output.scrollHeight;
+        }
+
+        function syncDrive() {
+            const output = document.getElementById('terminalOutput');
+            output.innerHTML += `\n[${new Date().toLocaleTimeString()}] ☁️ Syncing to Google Drive...\n`;
+            output.innerHTML += `Run: bash sync_drive.sh\n`;
+            output.scrollTop = output.scrollHeight;
+        }
+
+        async function runExport() {
+            const output = document.getElementById('terminalOutput');
+            output.innerHTML += `\n[${new Date().toLocaleTimeString()}] 📁 Running chat exporter...\n`;
+            output.innerHTML += `Run: python export_sorter.py\n`;
+            output.scrollTop = output.scrollHeight;
+        }
+
+        function openExports() {
+            window.open('file://' + document.querySelector('[data-exports-dir]')?.dataset.exportsDir || './exports', '_blank');
+        }
+
+        async function runEmbed() {
+            const output = document.getElementById('terminalOutput');
+            output.innerHTML += `\n[${new Date().toLocaleTimeString()}] 🧠 Building knowledge base index...\n`;
+            output.innerHTML += `Run: python embed.py\n`;
+            output.scrollTop = output.scrollHeight;
+        }
+
+        async function searchKnowledge() {
+            const query = document.getElementById('wikiSearch').value || 'AI automation';
+            const results = await searchWiki(query);
+            showSearchResults(results);
+        }
+
+        async function generatePosts() {
+            const output = document.getElementById('terminalOutput');
+            output.innerHTML += `\n[${new Date().toLocaleTimeString()}] 📱 Generating social posts...\n`;
+            output.innerHTML += `Run: python post_gen.py --topic "your topic"\n`;
+            output.scrollTop = output.scrollHeight;
+        }
+
+        function schedulePosts() {
+            window.open('file://' + './schedule', '_blank');
+        }
+
+        async function buildWiki() {
+            const output = document.getElementById('terminalOutput');
+            output.innerHTML += `\n[${new Date().toLocaleTimeString()}] 📚 Building markdown wiki...\n`;
+            output.innerHTML += `Run: bash mdbook_build.sh\n`;
+            output.scrollTop = output.scrollHeight;
+        }
+
+        function serveWiki() {
+            const output = document.getElementById('terminalOutput');
+            output.innerHTML += `\n[${new Date().toLocaleTimeString()}] 🌐 Serving wiki at http://localhost:3000\n`;
+            output.innerHTML += `Run: bash mdbook_build.sh serve\n`;
+            output.scrollTop = output.scrollHeight;
+        }
+
+        function openWiki() {
+            window.open('file://' + './docs/book/index.html', '_blank');
+        }
+
+        // API functions
+        async function checkApiStatus() {
+            try {
+                const promptResponse = await fetch(`${API_BASE}:${PROMPT_API_PORT}/api/health`);
+                if (promptResponse.ok) {
+                    document.getElementById('promptApiStatus').classList.add('running');
+                    document.getElementById('apiStatus').classList.add('running');
+                }
+            } catch (e) {
+                document.getElementById('promptApiStatus').classList.remove('running');
+            }
+
+            try {
+                const searchResponse = await fetch(`${API_BASE}:${SEARCH_API_PORT}/api/health`);
+                if (searchResponse.ok) {
+                    document.getElementById('searchApiStatus').classList.add('running');
+                    document.getElementById('apiStatus').classList.add('running');
+                }
+            } catch (e) {
+                document.getElementById('searchApiStatus').classList.remove('running');
+            }
+        }
+
+        async function searchPrompts() {
+            const query = document.getElementById('promptSearch').value;
+            if (!query) {
+                document.getElementById('promptResults').innerHTML = 'Enter a search term...';
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}:${PROMPT_API_PORT}/api/search?q=${encodeURIComponent(query)}`);
+                const data = await response.json();
+
+                if (data.results && data.results.length > 0) {
+                    document.getElementById('promptResults').innerHTML = data.results.map(r => `
+                        <div class="result-item">
+                            <div class="result-title">${r.title || 'Untitled'}</div>
+                            <div class="result-meta">${r.tags ? r.tags.join(', ') : 'No tags'} | ${r.category || 'General'}</div>
+                        </div>
+                    `).join('');
+                } else {
+                    document.getElementById('promptResults').innerHTML = 'No prompts found.';
+                }
+            } catch (e) {
+                document.getElementById('promptResults').innerHTML = `Error: ${e.message}`;
+            }
+        }
+
+        async function searchWiki(query = null) {
+            const searchQuery = query || document.getElementById('wikiSearch').value;
+            if (!searchQuery) {
+                document.getElementById('wikiResults').innerHTML = 'Enter a search term...';
+                return [];
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}:${SEARCH_API_PORT}/api/search?q=${encodeURIComponent(searchQuery)}`);
+                const data = await response.json();
+
+                if (data.results && data.results.length > 0) {
+                    const results = data.results.map(r => ({
+                        title: r.file_name,
+                        path: r.file_path,
+                        content: r.line_content,
+                        score: r.score
+                    }));
+                    document.getElementById('wikiResults').innerHTML = results.map(r => `
+                        <div class="result-item">
+                            <div class="result-title">${r.title}</div>
+                            <div class="result-meta">Score: ${r.score?.toFixed(4)}</div>
+                        </div>
+                    `).join('');
+                    return results;
+                } else {
+                    document.getElementById('wikiResults').innerHTML = 'No documents found.';
+                    return [];
+                }
+            } catch (e) {
+                document.getElementById('wikiResults').innerHTML = `Error: ${e.message}`;
+                return [];
+            }
+        }
+
+        function showSearchResults(results) {
+            if (results && results.length > 0) {
+                document.getElementById('modalSearchResults').innerHTML = results.map(r => `
+                    <div class="result-item">
+                        <div class="result-title">${r.title || r.file_name}</div>
+                        <div class="result-meta">${r.content || r.line_content}</div>
+                    </div>
+                `).join('');
+                document.getElementById('searchModal').classList.add('active');
+            }
+        }
+
+        // Log functions
+        async function refreshLog(logName) {
+            const logFile = `./logs/${logName}.log`;
+            const logElement = document.getElementById(`${logName}Log`);
+
+            try {
+                const response = await fetch(logFile);
+                if (response.ok) {
+                    const text = await response.text();
+                    const lines = text.trim().split('\n').slice(-50);
+                    logElement.innerHTML = lines.map(line => {
+                        let className = 'info';
+                        if (line.includes('ERROR')) className = 'error';
+                        else if (line.includes('SUCCESS') || line.includes('✔') || line.includes('✅')) className = 'success';
+                        return `<div class="log-line ${className}">${escapeHtml(line)}</div>`;
+                    }).join('');
+                } else {
+                    logElement.innerHTML = 'No log data available.';
+                }
+            } catch (e) {
+                logElement.innerHTML = `Error reading log: ${e.message}`;
+            }
+        }
+
+        function showVoiceLog() {
+            refreshLog('voice');
+            document.getElementById('modalTerminalOutput').innerHTML = document.getElementById('voiceLog').innerHTML;
+            document.getElementById('terminalModal').classList.add('active');
+        }
+
+        // Terminal functions
+        function handleTerminalKey(event) {
+            if (event.key === 'Enter') {
+                executeCommand();
+            }
+        }
+
+        function executeCommand() {
+            const input = document.getElementById('terminalInput');
+            const command = input.value.trim();
+            if (!command) return;
+
+            const output = document.getElementById('terminalOutput');
+            output.innerHTML += `\n> ${command}\n`;
+            input.value = '';
+
+            processCommand(command, output);
+        }
+
+        function processCommand(command, output) {
+            const cmd = command.toLowerCase();
+
+            if (cmd === 'help') {
+                output.innerHTML += `
+Available commands:
+  help          - Show this help message
+  voice start   - Start voice assistant
+  voice stop    - Stop voice assistant
+  sync all      - Run all sync operations
+  export        - Run chat exporter
+  embed         - Run RAG embed pipeline
+  wiki build    - Build markdown wiki
+  posts generate - Generate social posts
+  status        - Show module status
+  clear         - Clear terminal
+`;
+            } else if (cmd === 'voice start') {
+                startVoice();
+            } else if (cmd === 'voice stop') {
+                stopVoice();
+            } else if (cmd === 'sync all') {
+                runSync();
+            } else if (cmd === 'export') {
+                runExport();
+            } else if (cmd === 'embed') {
+                runEmbed();
+            } else if (cmd === 'wiki build') {
+                buildWiki();
+            } else if (cmd === 'posts generate') {
+                generatePosts();
+            } else if (cmd === 'status') {
+                output.innerHTML += `
+Module Status:
+  Voice: ${document.getElementById('voiceStatus').classList.contains('running') ? 'Running' : 'Stopped'}
+  Sync: ${document.getElementById('syncStatus').classList.contains('running') ? 'Running' : 'Stopped'}
+  Prompt API: ${document.getElementById('promptApiStatus').classList.contains('running') ? 'Running (5000)' : 'Stopped'}
+  Search API: ${document.getElementById('searchApiStatus').classList.contains('running') ? 'Running (5001)' : 'Stopped'}
+`;
+            } else if (cmd === 'clear') {
+                output.innerHTML = 'AI Automation Stack Terminal\n============================\n> ';
+            } else {
+                output.innerHTML += `Unknown command: ${command}\n`;
+            }
+
+            output.scrollTop = output.scrollHeight;
+        }
+
+        // Utility functions
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+
+        // Close modal on outside click
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        });
+
+        // Periodic status check
+        setInterval(checkApiStatus, 30000);
+    </script>
+</body>
+
+</html>

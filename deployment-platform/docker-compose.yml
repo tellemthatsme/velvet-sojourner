@@ -1,0 +1,176 @@
+version: '3.8'
+
+services:
+  # Reverse Proxy & SSL
+  traefik:
+    image: traefik:v3.0
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik:/traefik
+    networks:
+      - agentforge
+
+  # LLM API Gateway (litellm)
+  litellm:
+    image: ghcr.io/berriai/litellm:main-latest
+    environment:
+      - LITELLM_MASTER_KEY=${LITELLM_MASTER_KEY:-sk-agentforge}
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/litellm
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    volumes:
+      - ./configs/litellm.yaml:/app/config.yaml
+    command: ["--config", "/app/config.yaml", "--port", "4000"]
+    ports:
+      - "4000:4000"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.litellm.rule=Host(`api.localhost`)"
+      - "traefik.http.services.litellm.loadbalancer.server.port=4000"
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - agentforge
+
+  # Self-Hosted Chat UI (open-webui)
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    environment:
+      - OPENAI_API_BASE_URL=http://litellm:4000/v1
+      - OPENAI_API_KEY=${LITELLM_MASTER_KEY:-sk-agentforge}
+      - WEBUI_SECRET_KEY=${WEBUI_SECRET_KEY:-agentforge-secret}
+      - ENABLE_SIGNUP=true
+    volumes:
+      - openwebui-data:/app/backend/data
+    ports:
+      - "3000:8080"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.openwebui.rule=Host(`chat.localhost`)"
+      - "traefik.http.services.openwebui.loadbalancer.server.port=8080"
+    depends_on:
+      - litellm
+    networks:
+      - agentforge
+
+  # Workflow Automation (n8n)
+  n8n:
+    image: n8nio/n8n:latest
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=admin
+      - N8N_BASIC_AUTH_PASSWORD=${N8N_PASSWORD:-agentforge123}
+      - N8N_HOST=localhost
+      - WEBHOOK_URL=http://localhost:5678/
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_DATABASE=n8n
+      - DB_POSTGRESDB_USER=postgres
+      - DB_POSTGRESDB_PASSWORD=postgres
+    volumes:
+      - n8n-data:/home/node/.n8n
+    ports:
+      - "5678:5678"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.n8n.rule=Host(`automate.localhost`)"
+      - "traefik.http.services.n8n.loadbalancer.server.port=5678"
+    depends_on:
+      - postgres
+    networks:
+      - agentforge
+
+  # AgentForge Deployer API
+  deployer:
+    build:
+      context: ./deployer
+      dockerfile: Dockerfile
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/agentforge
+      - REDIS_URL=redis://redis:6379
+      - REPOS_DIR=/repos
+      - SECRET_KEY=${DEPLOYER_SECRET:-agentforge-deployer-secret}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${REPOS_DIR:-C:/temp/velvet-sojourner/repos}:/repos:ro
+      - ./deployments:/deployments
+    ports:
+      - "8000:8000"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.deployer.rule=Host(`forge.localhost`)"
+      - "traefik.http.services.deployer.loadbalancer.server.port=8000"
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - agentforge
+
+  # Database
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=agentforge
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - agentforge
+
+  # Cache
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis-data:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - agentforge
+
+  # Optional: Monitoring (Grafana + Prometheus)
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./configs/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    ports:
+      - "9090:9090"
+    networks:
+      - agentforge
+
+  grafana:
+    image: grafana/grafana:latest
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-agentforge}
+    volumes:
+      - grafana-data:/var/lib/grafana
+    ports:
+      - "3001:3000"
+    networks:
+      - agentforge
+
+volumes:
+  openwebui-data:
+  n8n-data:
+  postgres-data:
+  redis-data:
+  prometheus-data:
+  grafana-data:
+
+networks:
+  agentforge:
+    driver: bridge

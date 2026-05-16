@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentForge Deployer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+        header { background: rgba(15,23,42,0.95); border-bottom: 1px solid #1e293b; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 800; color: #667eea; }
+        .stats-bar { display: flex; gap: 1.5rem; font-size: 0.8rem; color: #94a3b8; }
+        .stats-bar span { color: #e2e8f0; font-weight: 600; }
+        .hero { padding: 2rem 0 1rem; text-align: center; }
+        .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero p { color: #94a3b8; }
+        .filters { display: flex; gap: 0.75rem; flex-wrap: wrap; padding: 1rem 0; border-bottom: 1px solid #1e293b; }
+        .search-box { flex: 1; min-width: 200px; padding: 0.6rem 1rem; background: #1e293b; border: 1px solid #334155; border-radius: 6px; color: #e2e8f0; }
+        .filter-select { padding: 0.6rem; background: #1e293b; border: 1px solid #334155; border-radius: 6px; color: #e2e8f0; }
+        .repo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; padding: 1rem 0; }
+        .repo-card { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 1rem; transition: 0.2s; }
+        .repo-card:hover { border-color: #667eea; }
+        .repo-name { font-weight: 600; font-size: 0.9rem; word-break: break-all; margin-bottom: 0.3rem; }
+        .repo-owner { font-size: 0.7rem; color: #667eea; background: rgba(102,126,234,0.1); padding: 0.1rem 0.4rem; border-radius: 3px; display: inline-block; margin-bottom: 0.5rem; }
+        .repo-desc { font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem; line-height: 1.3; min-height: 2.4em; }
+        .repo-meta { display: flex; gap: 0.75rem; font-size: 0.75rem; color: #64748b; margin-bottom: 0.5rem; }
+        .repo-tags { display: flex; gap: 0.3rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+        .tag { font-size: 0.65rem; padding: 0.15rem 0.4rem; background: #0f172a; border-radius: 3px; color: #94a3b8; }
+        .cat-badge { font-size: 0.65rem; padding: 0.15rem 0.4rem; border-radius: 3px; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem; display: inline-block; }
+        .cat-ai-agent { background: rgba(102,126,234,0.15); color: #667eea; }
+        .cat-trading { background: rgba(34,197,94,0.15); color: #22c55e; }
+        .cat-automation { background: rgba(249,115,22,0.15); color: #f97316; }
+        .cat-web-app { background: rgba(168,85,247,0.15); color: #a855f7; }
+        .cat-mcp-server { background: rgba(6,182,212,0.15); color: #06b6d4; }
+        .cat-dev-tool { background: rgba(100,116,139,0.15); color: #94a3b8; }
+        .cat-utility { background: rgba(148,163,184,0.15); color: #cbd5e1; }
+        .btn { padding: 0.4rem 0.8rem; border-radius: 5px; font-size: 0.8rem; font-weight: 500; cursor: pointer; border: none; text-decoration: none; display: inline-block; }
+        .btn-primary { background: #667eea; color: white; }
+        .btn-primary:hover { background: #5568d3; }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .loading { text-align: center; padding: 3rem; color: #64748b; }
+        .pagination { display: flex; justify-content: center; gap: 0.5rem; padding: 1rem 0; }
+        .page-btn { padding: 0.4rem 0.8rem; background: #1e293b; border: 1px solid #334155; color: #e2e8f0; border-radius: 5px; cursor: pointer; }
+        .page-btn:hover { background: #334155; }
+        .page-btn.active { background: #667eea; border-color: #667eea; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">AgentForge</div>
+            <div class="stats-bar" id="statsBar">
+                <div>Repos: <span id="statRepos">-</span></div>
+                <div>Size: <span id="statSize">-</span> GB</div>
+                <div>Deployable: <span id="statDeploy">-</span></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <h1>AI Agent Deployment Platform</h1>
+            <p>Browse 979 curated repositories. Deploy any agent, bot, or tool in one click.</p>
+        </div>
+
+        <div class="filters">
+            <input type="text" class="search-box" id="searchInput" placeholder="Search repos...">
+            <select class="filter-select" id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="ai-agent">AI Agents</option>
+                <option value="trading">Trading</option>
+                <option value="automation">Automation</option>
+                <option value="web-app">Web Apps</option>
+                <option value="mcp-server">MCP Servers</option>
+                <option value="dev-tool">Dev Tools</option>
+                <option value="utility">Utilities</option>
+            </select>
+            <select class="filter-select" id="langFilter">
+                <option value="">All Languages</option>
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="typescript">TypeScript</option>
+                <option value="react">React</option>
+                <option value="rust">Rust</option>
+                <option value="go">Go</option>
+            </select>
+            <label class="checkbox-label"><input type="checkbox" id="deployableOnly"> Deployable only</label>
+        </div>
+
+        <div class="repo-grid" id="repoGrid">
+            <div class="loading">Loading repositories...</div>
+        </div>
+
+        <div class="pagination" id="pagination"></div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin.includes('localhost') ? 'http://localhost:8000' : '';
+        let allRepos = [];
+        let currentPage = 0;
+        const PER_PAGE = 30;
+
+        async function loadStats() {
+            try {
+                const res = await fetch(`${API_BASE}/api/stats`);
+                const data = await res.json();
+                document.getElementById('statRepos').textContent = data.total_repos;
+                document.getElementById('statSize').textContent = data.total_size_gb;
+                document.getElementById('statDeploy').textContent = data.deployable_repos;
+            } catch (e) { console.error('Stats error:', e); }
+        }
+
+        async function loadRepos() {
+            try {
+                const res = await fetch(`${API_BASE}/api/repos?limit=500`);
+                const data = await res.json();
+                allRepos = data.repos;
+                renderPage();
+            } catch (e) {
+                document.getElementById('repoGrid').innerHTML = '<div class="loading">Error loading repos. Is the API running?</div>';
+            }
+        }
+
+        function getFilteredRepos() {
+            let repos = allRepos;
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const cat = document.getElementById('categoryFilter').value;
+            const lang = document.getElementById('langFilter').value;
+            const deployOnly = document.getElementById('deployableOnly').checked;
+
+            if (search) repos = repos.filter(r => r.name.toLowerCase().includes(search) || (r.description && r.description.toLowerCase().includes(search)));
+            if (cat) repos = repos.filter(r => r.category === cat);
+            if (lang) repos = repos.filter(r => r.languages.some(l => l.toLowerCase() === lang));
+            if (deployOnly) repos = repos.filter(r => r.deployable);
+            return repos;
+        }
+
+        function renderPage() {
+            const repos = getFilteredRepos();
+            const start = currentPage * PER_PAGE;
+            const pageRepos = repos.slice(start, start + PER_PAGE);
+            const grid = document.getElementById('repoGrid');
+
+            if (pageRepos.length === 0) {
+                grid.innerHTML = '<div class="loading">No repositories match your filters.</div>';
+                document.getElementById('pagination').innerHTML = '';
+                return;
+            }
+
+            grid.innerHTML = pageRepos.map(repo => {
+                const catClass = `cat-${repo.category}`;
+                const deployBtn = repo.deployable
+                    ? `<button class="btn btn-primary" onclick="deployRepo('${repo.name}')">Deploy</button>`
+                    : `<button class="btn btn-primary" disabled>No Dockerfile</button>`;
+                const langTags = repo.languages.map(l => `<span class="tag">${l}</span>`).join('');
+                return `
+                    <div class="repo-card">
+                        <div class="repo-name">${repo.name}</div>
+                        ${repo.owner ? `<span class="repo-owner">${repo.owner}</span>` : ''}
+                        <span class="cat-badge ${catClass}">${repo.category}</span>
+                        <div class="repo-desc">${repo.description || 'No description available.'}</div>
+                        <div class="repo-meta">
+                            <span>${repo.size_mb} MB</span>
+                            <span>${repo.file_count} files</span>
+                            ${repo.has_dockerfile ? '<span style="color:#22c55e">Docker</span>' : ''}
+                            ${repo.has_compose ? '<span style="color:#06b6d4">Compose</span>' : ''}
+                        </div>
+                        <div class="repo-tags">${langTags}</div>
+                        <div class="repo-actions">
+                            ${deployBtn}
+                            <button class="btn" style="background:#334155;color:#e2e8f0" onclick="viewRepo('${repo.name}')">Details</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            renderPagination(repos.length);
+        }
+
+        function renderPagination(total) {
+            const pages = Math.ceil(total / PER_PAGE);
+            let html = '';
+            for (let i = 0; i < pages; i++) {
+                html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})">${i + 1}</button>`;
+            }
+            document.getElementById('pagination').innerHTML = html;
+        }
+
+        function goToPage(p) { currentPage = p; renderPage(); window.scrollTo(0, 0); }
+
+        async function deployRepo(name) {
+            try {
+                const res = await fetch(`${API_BASE}/api/deploy/${name}`, { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({}) });
+                const data = await res.json();
+                alert(`Deployment created!\nID: ${data.deploy_id}\n\nRun: ${data.instructions}`);
+            } catch (e) { alert('Deploy failed: ' + e.message); }
+        }
+
+        function viewRepo(name) {
+            fetch(`${API_BASE}/api/repos/${name}`).then(r => r.json()).then(data => {
+                alert(JSON.stringify(data, null, 2));
+            });
+        }
+
+        ['searchInput','categoryFilter','langFilter','deployableOnly'].forEach(id => {
+            document.getElementById(id).addEventListener('input', () => { currentPage = 0; renderPage(); });
+        });
+
+        loadStats();
+        loadRepos();
+    </script>
+</body>
+</html>

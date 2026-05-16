@@ -1,0 +1,96 @@
+# THE AI AGENT INDEX 2026
+## 740 Production-Ready AI Repositories — Curated, Categorized, Deployable
+
+---
+
+## What You're Getting
+
+**The most comprehensive catalog of production-ready AI agent code on the market.**
+
+- **740 curated repositories** (6.46 GB of indexed code)
+- **$148,155 estimated development value** — that's what it would cost to build this collection from scratch
+- **142 Docker-ready deployments** — one-command launch capability
+- **7 categories**: AI Agents (244), Trading Bots (71), Automation (19), Web Apps (58), MCP Servers (13), Dev Tools (47), Utilities (288)
+- **Full metadata**: Language tags, framework detection, license status, quality scores, deployment difficulty
+
+---
+
+## What's Inside (Real Examples)
+
+| Repo | Category | Value | Why It Matters |
+|------|----------|-------|----------------|
+| **litellm** | AI Gateway | $5,738 | Universal LLM API proxy — route OpenAI, Anthropic, local models through one endpoint |
+| **open-webui** | Chat Interface | $3,000 | Self-hosted ChatGPT alternative with RAG support |
+| **n8n** | Automation | $1,980 | Workflow automation with 400+ integrations, now AI-powered |
+| **ccxt** | Trading | $2,400 | Connect to 100+ crypto exchanges with unified API |
+| **moon-dev-ai-agents** | Trading AI | $4,500 | Quant-grade algorithmic trading agents |
+| **ClaraVerse** | AI Agent | $2,248 | Autonomous AI assistant framework |
+| **Roo-Code** | AI Coding | $720 | AI-powered VS Code extension for autonomous coding |
+
+---
+
+## Who This Is For
+
+- **AI Developers** — Skip weeks of research, start with proven code
+- **Agencies** — Deliver AI-powered products to clients faster
+- **Entrepreneurs** — Explore 740 proven AI business models and implementations
+- **Engineering Teams** — Evaluate AI infrastructure options without reinventing the wheel
+- **Solo Founders** — Build your MVP using battle-tested open-source components
+
+---
+
+## Format & Delivery
+
+- **Searchable Markdown catalog** — Ctrl+F through 740 repos instantly
+- **CSV export** — Import into Notion, Airtable, or your own database
+- **JSON API format** — Feed directly into your tools
+- **Category breakdown reports** — 7 detailed market analyses
+- **Deployment guides** — Docker templates for the top 50 repos
+
+Delivered instantly via download link. Updated quarterly at no extra cost.
+
+---
+
+## Why Pay For Open Source?
+
+Fair question. Every repo in this index is freely available on GitHub. What you're paying for is:
+
+1. **Curation** — 740 repos selected from 5,000+ candidates. Quality score applied to each.
+2. **Categorization** — AI Agent vs Trading Bot vs Automation — clearly tagged and sorted
+3. **Deployability Analysis** — 142 repos flagged as Docker-ready, 598 flagged as needing setup
+4. **Valuation** — Estimated build cost for each repo so you know what's worth your time
+5. **Time Saved** — 40+ hours of research, downloading, and analysis done for you
+
+---
+
+## Launch Pricing
+
+| Tier | Price | Includes |
+|------|-------|----------|
+| **Launch Special** | **$49** | Full index + quarterly updates (first 50 buyers) |
+| **Standard** | $99 | Full index + quarterly updates |
+| **Agency License** | $299 | Everything + redistribution rights for client work |
+
+---
+
+## FAQ
+
+**Q: Can I use these repos commercially?**
+A: 110 repos have verified MIT/Apache licenses. 630 have no license file — use at your own discretion or add your own. This index includes license status for every repo so you can filter accordingly.
+
+**Q: Do you provide support?**
+A: The index is a self-service research tool. For done-for-you deployment, see our consulting packages at agentforge-consulting.vercel.app.
+
+**Q: How often is this updated?**
+A: Quarterly updates included free. The AI landscape moves fast — new repos are evaluated and added each quarter.
+
+**Q: What's the refund policy?**
+A: 30-day money-back guarantee. If this doesn't save you at least 10 hours of research, I'll refund you.
+
+---
+
+**Ready to stop searching and start building?**
+
+[Buy Now — $49 Launch Special]
+
+*Price increases to $99 after 50 sales*

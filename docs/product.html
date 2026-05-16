@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgentForge — AI Agent Platform</title>
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --card: #12121a;
+    --border: #1e1e2e;
+    --text: #e0e0e8;
+    --muted: #8888a0;
+    --accent: #6c5ce7;
+    --accent2: #00c9a7;
+    --orange: #f39c12;
+    --pink: #e84393;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 80px 24px 60px;
+    text-align: center;
+    background: linear-gradient(180deg, #12121a 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    color: var(--muted);
+    max-width: 640px;
+    margin: 0 auto 32px;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  .hero-stat {
+    text-align: center;
+  }
+  .hero-stat .num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent2);
+  }
+  .hero-stat .label {
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #a855f7);
+    color: #fff;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(108,92,231,0.4);
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .btn-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Sections */
+  .section {
+    padding: 64px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .section-sub {
+    color: var(--muted);
+    margin-bottom: 40px;
+  }
+
+  /* Feature Grid */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .feature-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    transition: border-color 0.2s;
+  }
+  .feature-card:hover {
+    border-color: var(--accent);
+  }
+  .feature-card .icon {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  .feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  .feature-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  /* Screenshots */
+  .screenshots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 20px;
+  }
+  .screenshot-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .screenshot-card img {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid var(--border);
+  }
+  .screenshot-card .caption {
+    padding: 12px 16px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  /* Pricing */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+  .pricing-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    text-align: center;
+    position: relative;
+  }
+  .pricing-card.featured {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(108,92,231,0.15);
+  }
+  .pricing-card .badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .pricing-card .price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 16px 0;
+  }
+  .pricing-card .price span {
+    font-size: 1rem;
+    color: var(--muted);
+  }
+  .pricing-card ul {
+    list-style: none;
+    text-align: left;
+    margin: 20px 0;
+  }
+  .pricing-card ul li {
+    padding: 6px 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .pricing-card ul li::before {
+    content: "✓ ";
+    color: var(--accent2);
+    font-weight: 700;
+  }
+
+  /* Tools */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .tool-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .tool-card .icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+  }
+  .tool-card h4 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+  .tool-card p {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 48px 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  .footer a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    .hero-stats { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>AgentForge</h1>
+  <p>The largest curated collection of AI agent repositories — with deployment tools, searchable index, and one-click infrastructure.</p>
+  <div class="btn-group">
+    <a href="#pricing" class="btn btn-primary">Buy Now — $49</a>
+    <a href="https://agentforge-saas.vercel.app" class="btn btn-outline">Try SaaS Platform</a>
+    <a href="https://agentforge-consulting.vercel.app" class="btn btn-outline">Hire Us</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="num">843</div>
+      <div class="label">Curated Repos</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">32</div>
+      <div class="label">Categories</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">4.4 GB</div>
+      <div class="label">Total Size</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">99%</div>
+      <div class="label">With Dockerfile</div>
+    </div>
+  </div>
+</section>
+
+<!-- What's Included -->
+<section class="section" id="tools">
+  <h2 class="section-title">What You Get</h2>
+  <p class="section-sub">Every tool you need to browse, download, verify, and deploy AI agent repositories.</p>
+
+  <div class="tools-grid">
+    <div class="tool-card">
+      <div class="icon">🔍</div>
+      <div><h4>Searchable Web Index</h4><p>501 KB offline HTML — search, filter, sort all 843 repos by category, language, tier, or name. Works in any browser.</p></div>
+    </div>
+    <div class="tool-card">
+      <div class="icon">⬇️</div>
+      <div><h4>Downloader CLI</h4><p>19 MB standalone EXE. Download single repos, batch from file, verify integrity, export metadata as JSON/CSV.</p></div>
+    </div>
+    <div class="tool-card">
+      <div class="icon">🖥️</div>
+      <div><h4>Downloader GUI</h4><p>48 MB desktop app with PyQt6. Search repos, queue downloads, view progress, manage tokens.</p></div>
+    </div>
+    <div class="tool-card">
+      <div class="icon">🐳</div>
+      <div><h4>Docker Platform</h4><p>7 pre-configured services: Traefik, Postgres, Redis, n8n, Prometheus, Grafana, Auto-Deployer API.</p></div>
+    </div>
+    <div class="tool-card">
+      <div class="icon">🔌</div>
+      <div><h4>Deployer API</h4><p>FastAPI backend with 8 endpoints — browse, search, deploy repos with one POST request. Auto-generates docker-compose.</p></div>
+    </div>
+    <div class="tool-card">
+      <div class="icon">📋</div>
+      <div><h4>QA Toolkit</h4><p>Python script that validates all 843 repos across 9 dimensions — licenses, READMEs, Dockerfiles, integrity, git status.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Screenshots -->
+<section class="section">
+  <h2 class="section-title">See It In Action</h2>
+  <p class="section-sub">The searchable web index — filter 843 repos by category, search by name, sort by size or tier.</p>
+
+  <div class="screenshots-grid">
+    <div class="screenshot-card" style="grid-column:1/-1">
+      <img src="screenshots/repo-browser-demo.gif" alt="Repo Browser Demo" onerror="this.parentElement.innerHTML='<div style=\'padding:40px;text-align:center;color:#8888a0\'>Animated demo: Browse, search, and filter 843 AI agent repos</div>'">
+      <div class="caption">Animated demo — search, filter, and browse all 843 repos</div>
+    </div>
+    <div class="screenshot-card">
+      <img src="screenshots/repo-index-full.png" alt="Repository Index — Full View" onerror="this.parentElement.innerHTML='<div style=\'padding:40px;text-align:center;color:#8888a0\'>Screenshot: Full repository index</div>'">
+      <div class="caption">Full index — 843 repos in a dark-themed table</div>
+    </div>
+    <div class="screenshot-card">
+      <img src="screenshots/repo-filtered.png" alt="Repository Index — Category Filtered" onerror="this.parentElement.innerHTML='<div style=\'padding:40px;text-align:center;color:#8888a0\'>Screenshot: Category-filtered view</div>'">
+      <div class="caption">Filter by category — AI App Builders, Trading Bots, and more</div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section">
+  <h2 class="section-title">Why AgentForge</h2>
+  <p class="section-sub">Built from 5 GitHub accounts over 2 years of curation.</p>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="icon">🎯</div>
+      <h3>Every Repo Enhanced</h3>
+      <p>All 843 repos have MIT LICENSE, Dockerfile, .gitignore, and polished README. Ready to use immediately.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🔒</div>
+      <h3>Security Cleaned</h3>
+      <p>837 exposed GitHub tokens stripped from git remotes. No secrets in your downloads.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📊</div>
+      <h3>A/B/C Tier Scoring</h3>
+      <p>Every repo scored on quality (0-116). 572 A-tier, 168 B-tier, 103 C-tier. Know what you're getting.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🧹</div>
+      <h3>265 Clones Identified</h3>
+      <p>6 clone patterns detected and tagged. No surprises — see which repos are variants.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📝</div>
+      <h3>Expanded Docs</h3>
+      <p>Top 50 A-tier repos have 10-section documentation. 14,422 doc files across 536 repos.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🚀</div>
+      <h3>One-Click Deploy</h3>
+      <p>Deployer API generates docker-compose.yml automatically. POST a repo name, get a running service.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Category Breakdown -->
+<section class="section">
+  <h2 class="section-title">32 Categories</h2>
+  <p class="section-sub">Every repo tagged and searchable.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px">
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center">
+      <div style="font-size:1.1rem;font-weight:700;color:var(--accent2)">179</div>
+      <div style="font-size:0.85rem;color:var(--muted)">AI App Builders</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center">
+      <div style="font-size:1.1rem;font-weight:700;color:var(--accent2)">107</div>
+      <div style="font-size:0.85rem;color:var(--muted)">Trading Bots</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center">
+      <div style="font-size:1.1rem;font-weight:700;color:var(--accent2)">27</div>
+      <div style="font-size:0.85rem;color:var(--muted)">Developer Tools</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center">
+      <div style="font-size:1.1rem;font-weight:700;color:var(--accent2)">13</div>
+      <div style="font-size:0.85rem;color:var(--muted)">MCP Servers</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center">
+      <div style="font-size:1.1rem;font-weight:700;color:var(--accent2)">13</div>
+      <div style="font-size:0.85rem;color:var(--muted)">AI Frameworks</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center">
+      <div style="font-size:1.1rem;font-weight:700;color:var(--accent2)">39</div>
+      <div style="font-size:0.85rem;color:var(--muted)">+27 more categories</div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="section" id="pricing">
+  <h2 class="section-title">Pricing</h2>
+  <p class="section-sub">Three ways to access the collection.</p>
+
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <h3>Curated Index</h3>
+      <div class="price">$49<span> / lifetime</span></div>
+      <ul>
+        <li>843 repos with A/B/C tier scores</li>
+        <li>Searchable web index (offline HTML)</li>
+        <li>32 categories + expanded docs for top 50</li>
+        <li>CLI downloader EXE (19 MB)</li>
+        <li>QA toolkit script</li>
+        <li>repo-categories.json (machine-readable)</li>
+      </ul>
+      <a href="#" class="btn btn-primary" style="width:100%">Buy on Gumroad</a>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="badge">BEST VALUE</div>
+      <h3>SaaS Platform</h3>
+      <div class="price">$149<span> / mo</span></div>
+      <ul>
+        <li>All Curated Index features</li>
+        <li>One-click deploy from browser</li>
+        <li>7-service Docker infrastructure</li>
+        <li>n8n workflow automation</li>
+        <li>Prometheus + Grafana monitoring</li>
+        <li>Auto-deployer API (8 endpoints)</li>
+        <li>GUI downloader (48 MB)</li>
+      </ul>
+      <a href="https://agentforge-saas.vercel.app" class="btn btn-primary" style="width:100%">Get Started</a>
+    </div>
+
+    <div class="pricing-card">
+      <h3>Consulting</h3>
+      <div class="price">$2,500<span> / setup</span></div>
+      <ul>
+        <li>Production deployment in 48 hours</li>
+        <li>Custom infrastructure setup</li>
+        <li>CI/CD pipeline configuration</li>
+        <li>Monitoring and alerting</li>
+        <li>Custom integrations</li>
+        <li>30-day support included</li>
+      </ul>
+      <a href="https://agentforge-consulting.vercel.app" class="btn btn-outline" style="width:100%">Book a Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- Tech Stack -->
+<section class="section">
+  <h2 class="section-title">Tech Stack</h2>
+  <p class="section-sub">The tools used to build and run AgentForge.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center">
+    <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:0.85rem">Python 3.13</span>
+    <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:0.85rem">FastAPI</span>
+    <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:0.85rem">Docker</span>
+    <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:0.85rem">Traefik</span>
+    <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:0.85rem">PostgreSQL</span>
+    <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:0.85rem">Redis</span>
+    <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:0.85rem">n8n</span>
+    <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:0.85rem">PyQt6</span>
+    <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:0.85rem">Prometheus</span>
+    <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:0.85rem">Grafana</span>
+    <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:0.85rem">Vercel</span>
+    <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:0.85rem">PyInstaller</span>
+    <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:0.85rem">Playwright</span>
+  </div>
+</section>
+
+<!-- Footer -->
+<section class="footer">
+  <p>
+    <a href="https://agentforge-consulting.vercel.app">Consulting</a> ·
+    <a href="https://agentforge-saas.vercel.app">SaaS</a> ·
+    <a href="repo-browser.html">Browse Repos</a> ·
+    <a href="QUICKSTART.md">Quickstart</a>
+  </p>
+  <p style="margin-top:12px">AgentForge &copy; 2026 — Curation + Infrastructure, not source code resale.</p>
+</section>
+
+</body>
+</html>

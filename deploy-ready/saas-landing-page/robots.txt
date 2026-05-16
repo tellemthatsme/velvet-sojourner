@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://agentforge-saas.vercel.app/sitemap.xml

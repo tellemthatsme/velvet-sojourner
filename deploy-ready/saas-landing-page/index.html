@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentForge - Deploy AI Agents in One Click</title>
+    <meta name="description" content="The deployment platform for 843 AI agent repositories. One-click deploy any agent, bot, or automation tool.">
+    <meta property="og:title" content="AgentForge - Deploy AI Agents in One Click">
+    <meta property="og:description" content="The deployment platform for 843 AI agent repositories. One-click deploy any agent, bot, or automation tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://agentforge-saas.vercel.app">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AgentForge - Deploy AI Agents in One Click">
+    <meta name="twitter:description" content="The deployment platform for 843 AI agent repositories. One-click deploy any agent, bot, or automation tool.">
+    <meta property="og:image" content="https://agentforge-saas.vercel.app/og-image.svg">
+    <meta name="twitter:image" content="https://agentforge-saas.vercel.app/og-image.svg">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- Google Analytics 4 — Replace G-XXXXXXXXXX with your ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: #0a0a0f; color: #e2e8f0; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header { background: rgba(10,10,15,0.8); backdrop-filter: blur(20px); border-bottom: 1px solid #1a1a2e; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; }
+        .logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(135deg, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; gap: 32px; list-style: none; }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #e2e8f0; }
+        .btn { padding: 10px 24px; border-radius: 8px; font-weight: 600; text-decoration: none; display: inline-block; cursor: pointer; border: none; font-size: 0.95rem; transition: all 0.2s; }
+        .btn-primary { background: linear-gradient(135deg, #6366f1, #a855f7); color: white; box-shadow: 0 4px 20px rgba(99,102,241,0.3); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(99,102,241,0.4); }
+        .btn-secondary { background: transparent; color: #e2e8f0; border: 1px solid #334155; }
+        .btn-secondary:hover { background: #1e293b; }
+        .btn-large { padding: 14px 32px; font-size: 1.05rem; }
+
+        /* Hero */
+        .hero { padding: 160px 0 100px; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 50% 50%, rgba(99,102,241,0.08) 0%, transparent 50%); pointer-events: none; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2); padding: 6px 16px; border-radius: 100px; font-size: 0.85rem; color: #818cf8; margin-bottom: 24px; }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 24px; background: linear-gradient(135deg, #e2e8f0, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero h1 span { background: linear-gradient(135deg, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.25rem; color: #64748b; max-width: 600px; margin: 0 auto 40px; }
+        .hero-buttons { display: flex; gap: 16px; justify-content: center; margin-bottom: 64px; }
+        .hero-stats { display: flex; justify-content: center; gap: 48px; }
+        .hero-stat { text-align: center; }
+        .hero-stat .num { font-size: 2rem; font-weight: 700; color: #e2e8f0; }
+        .hero-stat .label { font-size: 0.85rem; color: #64748b; }
+
+        /* Features */
+        .features { padding: 100px 0; background: linear-gradient(180deg, #0a0a0f 0%, #0f0f1a 100%); }
+        .section-header { text-align: center; margin-bottom: 64px; }
+        .section-header h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; }
+        .section-header p { color: #64748b; font-size: 1.1rem; max-width: 500px; margin: 0 auto; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .feature-card { background: #111118; border: 1px solid #1a1a2e; border-radius: 16px; padding: 32px; transition: all 0.3s; }
+        .feature-card:hover { border-color: #6366f1; transform: translateY(-4px); box-shadow: 0 20px 40px rgba(99,102,241,0.1); }
+        .feature-icon { width: 48px; height: 48px; background: linear-gradient(135deg, #6366f1, #a855f7); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 20px; }
+        .feature-card h3 { font-size: 1.2rem; margin-bottom: 12px; }
+        .feature-card p { color: #64748b; font-size: 0.95rem; line-height: 1.6; }
+
+        /* How It Works */
+        .how { padding: 100px 0; }
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-top: 64px; }
+        .step { text-align: center; position: relative; }
+        .step-num { width: 64px; height: 64px; background: linear-gradient(135deg, #6366f1, #a855f7); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto 24px; }
+        .step h3 { font-size: 1.2rem; margin-bottom: 12px; }
+        .step p { color: #64748b; font-size: 0.95rem; }
+
+        /* Dashboard Preview */
+        .preview { padding: 80px 0; background: #0f0f1a; }
+        .preview-frame { background: #111118; border: 1px solid #1a1a2e; border-radius: 16px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.4); }
+        .preview-header { background: #0a0a0f; padding: 12px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #1a1a2e; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .dot-red { background: #ef4444; }
+        .dot-yellow { background: #f59e0b; }
+        .dot-green { background: #22c55e; }
+        .preview-content { padding: 32px; }
+        .preview-row { display: flex; gap: 16px; margin-bottom: 16px; }
+        .preview-card { flex: 1; background: #0a0a0f; border: 1px solid #1a1a2e; border-radius: 12px; padding: 20px; }
+        .preview-card .title { font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; }
+        .preview-card .meta { font-size: 0.8rem; color: #64748b; }
+        .preview-card .badge { display: inline-block; padding: 2px 8px; background: rgba(99,102,241,0.1); color: #818cf8; border-radius: 4px; font-size: 0.7rem; margin-top: 8px; }
+        .preview-search { background: #0a0a0f; border: 1px solid #1a1a2e; border-radius: 8px; padding: 12px 16px; color: #64748b; font-size: 0.9rem; margin-bottom: 20px; }
+
+        /* Pricing */
+        .pricing { padding: 100px 0; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 64px; }
+        .pricing-card { background: #111118; border: 1px solid #1a1a2e; border-radius: 16px; padding: 40px 32px; text-align: center; position: relative; }
+        .pricing-card.popular { border-color: #6366f1; background: linear-gradient(180deg, #111118 0%, rgba(99,102,241,0.05) 100%); }
+        .popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #6366f1, #a855f7); color: white; padding: 6px 16px; border-radius: 100px; font-size: 0.75rem; font-weight: 600; }
+        .pricing-card h3 { font-size: 1.3rem; margin-bottom: 8px; }
+        .pricing-card .price { font-size: 3rem; font-weight: 700; margin: 16px 0; }
+        .pricing-card .price span { font-size: 1rem; color: #64748b; font-weight: 400; }
+        .pricing-card ul { list-style: none; text-align: left; margin: 24px 0; }
+        .pricing-card li { padding: 8px 0; color: #94a3b8; font-size: 0.95rem; border-bottom: 1px solid #1a1a2e; }
+        .pricing-card li::before { content: "->"; color: #6366f1; margin-right: 8px; font-weight: 700; }
+
+        /* FAQ */
+        .faq { padding: 100px 0; background: #0f0f1a; }
+        .faq-item { background: #111118; border: 1px solid #1a1a2e; border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+        .faq-item h4 { font-size: 1.05rem; margin-bottom: 12px; }
+        .faq-item p { color: #64748b; font-size: 0.95rem; }
+
+        /* Footer */
+        footer { background: #0a0a0f; border-top: 1px solid #1a1a2e; padding: 60px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; margin-bottom: 40px; }
+        .footer-col h4 { color: #e2e8f0; font-size: 0.9rem; margin-bottom: 16px; }
+        .footer-col a { display: block; color: #64748b; text-decoration: none; padding: 6px 0; font-size: 0.85rem; transition: color 0.2s; }
+        .footer-col a:hover { color: #e2e8f0; }
+        .footer-bottom { text-align: center; padding-top: 24px; border-top: 1px solid #1a1a2e; color: #475569; font-size: 0.85rem; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .nav-links { display: none; }
+            .hero-stats { flex-direction: column; gap: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">AgentForge</div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <a href="#pricing" class="btn btn-primary">Get Started</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">Now indexing 900+ AI repositories</div>
+            <h1>Deploy AI Agents<br>in <span>One Click</span></h1>
+            <p>The deployment platform for the entire AI agent ecosystem. Browse 900+ curated repositories and deploy any agent, bot, or automation tool with a single command.</p>
+            <div class="hero-buttons">
+                <a href="#pricing" class="btn btn-primary btn-large">Start Deploying - $49/mo</a>
+                <a href="#how" class="btn btn-secondary btn-large">See How It Works</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat"><div class="num">900+</div><div class="label">Repositories</div></div>
+                <div class="hero-stat"><div class="num">187</div><div class="label">Deployable</div></div>
+                <div class="hero-stat"><div class="num">7</div><div class="label">Categories</div></div>
+                <div class="hero-stat"><div class="num">60s</div><div class="label">Avg Deploy Time</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything You Need to Deploy AI</h2>
+                <p>Pre-configured infrastructure, one-click deployments, and a unified dashboard for your entire AI stack.</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">[>]</div>
+                    <h3>One-Command Deploy</h3>
+                    <p>Deploy any of 187 Docker-ready repositories with a single click. AgentForge reads the repo, generates configs, and spins up containers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">[=]</div>
+                    <h3>Universal LLM Gateway</h3>
+                    <p>Built-in litellm integration routes requests to OpenAI, Anthropic, Gemini, OpenRouter, or local Ollama models seamlessly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">[@]</div>
+                    <h3>Auto SSL & Domains</h3>
+                    <p>Traefik reverse proxy automatically handles HTTPS, subdomains, and load balancing for every deployment.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">[*]</div>
+                    <h3>Workflow Automation</h3>
+                    <p>Integrated n8n for connecting agents to APIs, databases, and external services with visual workflows.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">[+]</div>
+                    <h3>Curated Repo Index</h3>
+                    <p>Search and filter 900+ repositories by category, language, deployability, and size. Only the best AI tools make the list.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">[!]</div>
+                    <h3>Monitoring Built-In</h3>
+                    <p>Prometheus + Grafana dashboards track every deployment's health, performance, and resource usage in real-time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how" id="how">
+        <div class="container">
+            <div class="section-header">
+                <h2>From Repo to Running in 3 Steps</h2>
+                <p>No manual configuration. No dependency hell. Just deploy.</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Browse the Catalog</h3>
+                    <p>Search 900+ repositories across AI agents, trading bots, automation tools, and more. Filter by language, category, or deployability.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>Click Deploy</h3>
+                    <p>AgentForge analyzes the repo's Dockerfile, generates environment variables, and creates a deployment configuration tailored to your infrastructure.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>Go Live</h3>
+                    <p>Your agent is deployed with auto-SSL, subdomain routing, and health monitoring. Access it instantly via your custom domain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Deployment Dashboard</h2>
+                <p>Everything in one place. Browse, deploy, monitor.</p>
+            </div>
+            <div class="preview-frame">
+                <div class="preview-header">
+                    <div class="dot dot-red"></div>
+                    <div class="dot dot-yellow"></div>
+                    <div class="dot dot-green"></div>
+                    <span style="margin-left:12px;color:#64748b;font-size:0.8rem">AgentForge Dashboard</span>
+                </div>
+                <div class="preview-content">
+                    <div class="preview-search">Search 900+ repositories...</div>
+                    <div class="preview-row">
+                        <div class="preview-card">
+                            <div class="title">litellm</div>
+                            <div class="meta">422 MB / 3,771 files / Python</div>
+                            <span class="badge">ai-agent</span>
+                            <span class="badge" style="background:rgba(34,197,94,0.1);color:#22c55e">Docker</span>
+                        </div>
+                        <div class="preview-card">
+                            <div class="title">open-webui</div>
+                            <div class="meta">345 MB / 4,891 files / TypeScript</div>
+                            <span class="badge">web-app</span>
+                            <span class="badge" style="background:rgba(34,197,94,0.1);color:#22c55e">Docker</span>
+                        </div>
+                        <div class="preview-card">
+                            <div class="title">ClaraVerse</div>
+                            <div class="meta">383 MB / 564 files / JavaScript</div>
+                            <span class="badge">utility</span>
+                            <span class="badge" style="background:rgba(34,197,94,0.1);color:#22c55e">Docker</span>
+                        </div>
+                    </div>
+                    <div class="preview-row">
+                        <div class="preview-card">
+                            <div class="title">ccxt</div>
+                            <div class="meta">209 MB / 3,296 files / Python</div>
+                            <span class="badge">trading</span>
+                        </div>
+                        <div class="preview-card">
+                            <div class="title">browser-use</div>
+                            <div class="meta">196 MB / 2,450 files / Python</div>
+                            <span class="badge">automation</span>
+                        </div>
+                        <div class="preview-card">
+                            <div class="title">n8n</div>
+                            <div class="meta">185 MB / 2,100 files / TypeScript</div>
+                            <span class="badge">automation</span>
+                            <span class="badge" style="background:rgba(34,197,94,0.1);color:#22c55e">Compose</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple Pricing</h2>
+                <p>Deploy your first agent in minutes. Scale when ready.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$49<span>/mo</span></div>
+                    <p style="color:#64748b;font-size:0.9rem">For solo developers</p>
+                    <ul>
+                        <li>Up to 5 active deployments</li>
+                        <li>Access to all 900+ repos</li>
+                        <li>Auto-SSL & subdomains</li>
+                        <li>Community support</li>
+                        <li>Basic monitoring</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" style="width:100%">Get Started</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <h3>Professional</h3>
+                    <div class="price">$149<span>/mo</span></div>
+                    <p style="color:#64748b;font-size:0.9rem">For teams and agencies</p>
+                    <ul>
+                        <li>Unlimited deployments</li>
+                        <li>Priority repo indexing</li>
+                        <li>Custom domains</li>
+                        <li>Team collaboration</li>
+                        <li>Advanced monitoring</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width:100%">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$499<span>/mo</span></div>
+                    <p style="color:#64748b;font-size:0.9rem">For organizations</p>
+                    <ul>
+                        <li>Everything in Professional</li>
+                        <li>On-premise deployment</li>
+                        <li>SSO & audit logs</li>
+                        <li>Custom integrations</li>
+                        <li>Dedicated support</li>
+                        <li>SLA guarantee</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" style="width:100%">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-item">
+                <h4>What exactly am I paying for?</h4>
+                <p>AgentForge is a deployment orchestration platform. You are paying for the infrastructure automation, unified dashboard, SSL management, and monitoring — not the underlying repositories, which remain open source.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Do I need the source code of these repos?</h4>
+                <p>Yes. AgentForge generates deployment configurations, but you still need to clone the repositories yourself (or use your own GitHub tokens). We provide the infrastructure layer that makes deployment effortless.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Can I deploy to my own servers?</h4>
+                <p>Yes. The Self-Hosted tier ($199 one-time) runs entirely on your infrastructure. The Managed Cloud tier ($49-499/mo) runs on our infrastructure with zero maintenance from you.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What if a repo doesn't have a Dockerfile?</h4>
+                <p>AgentForge identifies 187 repos that are already Docker-ready. For repos without Dockerfiles, the platform generates a best-effort deployment config based on detected language and framework.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Is there a refund policy?</h4>
+                <p>Yes. We offer a 30-day money-back guarantee. If AgentForge doesn't save you time, we'll refund you in full.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="waitlist" style="padding:80px 0;text-align:center;background:#111118;border-top:1px solid #1a1a2e;">
+        <div class="container">
+            <h2 style="margin-bottom:16px;">Join the Waitlist</h2>
+            <p style="color:#64748b;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto;">Be the first to deploy AI agents with one click. Early access members get 50% off for life.</p>
+            <form action="https://formsubmit.co/ashlee69r@gmail.com" method="POST" style="max-width:420px;margin:0 auto;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+                <input type="email" name="email" placeholder="your@email.com" required style="flex:1;min-width:220px;padding:14px 18px;border-radius:10px;border:1px solid #334155;background:#0a0a0f;color:#e2e8f0;font-size:1rem;outline:none;">
+                <input type="hidden" name="_subject" value="AgentForge Waitlist Signup">
+                <input type="hidden" name="_next" value="https://agentforge-saas.vercel.app">
+                <input type="hidden" name="_captcha" value="false">
+                <button type="submit" class="btn btn-primary">Get Early Access</button>
+            </form>
+            <p style="margin-top:16px;font-size:0.8rem;color:#475569;">No spam. Unsubscribe anytime.</p>
+            <!-- NOTE: Replace ashlee69r@gmail.com with your email. First submission triggers verification. -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#">Changelog</a>
+                    <a href="#">Roadmap</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">CLI Guide</a>
+                    <a href="#">Repo Catalog</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Community</h4>
+                    <a href="#">Discord</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="https://agentforge-consulting.vercel.app">Done-for-You Setup</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>AgentForge. Built for the AI agent ecosystem.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

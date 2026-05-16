@@ -1,0 +1,101 @@
+2026-02-02 01:26:00,191 - __main__ - INFO - ============================================================
+2026-02-02 01:26:00,191 - __main__ - INFO - AI Automation Stack Backup
+2026-02-02 01:26:00,192 - __main__ - INFO - ============================================================
+2026-02-02 01:26:00,192 - __main__ - INFO - Source: C:\Users\karma\.gemini\antigravity\playground\velvet-sojourner\projects\ai-automation-stack
+2026-02-02 01:26:00,192 - __main__ - INFO - Destination: E:\AI-Automation-Backup\backup_20260202_012600
+2026-02-02 01:26:00,192 - __main__ - INFO - Mode: TEST
+2026-02-02 01:26:00,193 - __main__ - INFO - 
+2026-02-02 01:26:00,193 - __main__ - INFO - TEST MODE - No files will be copied
+2026-02-02 01:26:00,229 - __main__ - INFO - Found 32 files to process
+2026-02-02 01:26:00,233 - __main__ - INFO -   [TEST] Would copy: .env.example
+2026-02-02 01:26:00,234 - __main__ - INFO -   [TEST] Would copy: backup.py
+2026-02-02 01:26:00,235 - __main__ - INFO -   [TEST] Would copy: build_exe.py
+2026-02-02 01:26:00,236 - __main__ - INFO -   [TEST] Would copy: chrome-extension\content.js
+2026-02-02 01:26:00,237 - __main__ - INFO -   [TEST] Would copy: chrome-extension\manifest.json
+2026-02-02 01:26:00,238 - __main__ - INFO -   [TEST] Would copy: cli_trigger.py
+2026-02-02 01:26:00,239 - __main__ - INFO -   [TEST] Would copy: commands.json
+2026-02-02 01:26:00,240 - __main__ - INFO -   [TEST] Would copy: docs\api.md
+2026-02-02 01:26:00,241 - __main__ - INFO -   [TEST] Would copy: docs\dashboard.md
+2026-02-02 01:26:00,247 - __main__ - INFO -   [TEST] Would copy: docs\embed.md
+2026-02-02 01:26:00,248 - __main__ - INFO -   [TEST] Would copy: docs\export.md
+2026-02-02 01:26:00,249 - __main__ - INFO -   [TEST] Would copy: docs\voice.md
+2026-02-02 01:26:00,250 - __main__ - INFO -   [TEST] Would copy: embed.py
+2026-02-02 01:26:00,251 - __main__ - INFO -   [TEST] Would copy: export_sorter.py
+2026-02-02 01:26:00,252 - __main__ - INFO -   [TEST] Would copy: index.html
+2026-02-02 01:26:00,253 - __main__ - INFO -   [TEST] Would copy: launch.py
+2026-02-02 01:26:00,254 - __main__ - INFO -   [TEST] Would copy: logs\backup.log
+2026-02-02 01:26:00,255 - __main__ - INFO -   [TEST] Would copy: logs\launcher.log
+2026-02-02 01:26:00,256 - __main__ - INFO -   [TEST] Would copy: logs\sync.log
+2026-02-02 01:26:00,257 - __main__ - INFO -   [TEST] Would copy: mdbook_build.sh
+2026-02-02 01:26:00,258 - __main__ - INFO -   [TEST] Would copy: post_gen.py
+2026-02-02 01:26:00,259 - __main__ - INFO -   [TEST] Would copy: prompt_api.py
+2026-02-02 01:26:00,261 - __main__ - INFO -   [TEST] Would copy: README.md
+2026-02-02 01:26:00,262 - __main__ - INFO -   [TEST] Would copy: requirements.txt
+2026-02-02 01:26:00,262 - __main__ - INFO -   [TEST] Would copy: run_tests.py
+2026-02-02 01:26:00,263 - __main__ - INFO -   [TEST] Would copy: run_voice.py
+2026-02-02 01:26:00,264 - __main__ - INFO -   [TEST] Would copy: schedule.json
+2026-02-02 01:26:00,265 - __main__ - INFO -   [TEST] Would copy: search_server.py
+2026-02-02 01:26:00,267 - __main__ - INFO -   [TEST] Would copy: send_posts.py
+2026-02-02 01:26:00,270 - __main__ - INFO -   [TEST] Would copy: sync.py
+2026-02-02 01:26:00,271 - __main__ - INFO -   [TEST] Would copy: sync_drive.sh
+2026-02-02 01:26:00,272 - __main__ - INFO -   [TEST] Would copy: sync_obsidian_vault.sh
+2026-02-02 01:26:00,274 - __main__ - INFO - 
+============================================================
+2026-02-02 01:26:00,275 - __main__ - INFO - BACKUP SUMMARY
+2026-02-02 01:26:00,275 - __main__ - INFO - ============================================================
+2026-02-02 01:26:00,275 - __main__ - INFO - Total files: 32
+2026-02-02 01:26:00,275 - __main__ - INFO - Copied: 32
+2026-02-02 01:26:00,275 - __main__ - INFO - Skipped: 0
+2026-02-02 01:26:00,280 - __main__ - INFO - Errors: 0
+2026-02-02 01:26:00,283 - __main__ - INFO - Total size: 311,357 bytes
+2026-02-02 01:26:37,604 - __main__ - INFO - ============================================================
+2026-02-02 01:26:37,604 - __main__ - INFO - AI Automation Stack Backup
+2026-02-02 01:26:37,605 - __main__ - INFO - ============================================================
+2026-02-02 01:26:37,605 - __main__ - INFO - Source: C:\Users\karma\.gemini\antigravity\playground\velvet-sojourner\projects\ai-automation-stack
+2026-02-02 01:26:37,605 - __main__ - INFO - Destination: E:\AI-Automation-Backup\backup_20260202_012637
+2026-02-02 01:26:37,605 - __main__ - INFO - Mode: LIVE
+2026-02-02 01:26:37,605 - __main__ - INFO - 
+2026-02-02 01:26:37,643 - __main__ - INFO - Found 32 files to process
+2026-02-02 01:26:37,656 - __main__ - INFO -   [OK] .env.example
+2026-02-02 01:26:37,662 - __main__ - INFO -   [OK] backup.py
+2026-02-02 01:26:37,666 - __main__ - INFO -   [OK] build_exe.py
+2026-02-02 01:26:37,669 - __main__ - INFO -   [OK] chrome-extension\content.js
+2026-02-02 01:26:37,673 - __main__ - INFO -   [OK] chrome-extension\manifest.json
+2026-02-02 01:26:37,678 - __main__ - INFO -   [OK] cli_trigger.py
+2026-02-02 01:26:37,681 - __main__ - INFO -   [OK] commands.json
+2026-02-02 01:26:37,685 - __main__ - INFO -   [OK] docs\api.md
+2026-02-02 01:26:37,688 - __main__ - INFO -   [OK] docs\dashboard.md
+2026-02-02 01:26:37,694 - __main__ - INFO -   [OK] docs\embed.md
+2026-02-02 01:26:37,697 - __main__ - INFO -   [OK] docs\export.md
+2026-02-02 01:26:37,700 - __main__ - INFO -   [OK] docs\voice.md
+2026-02-02 01:26:37,704 - __main__ - INFO -   [OK] embed.py
+2026-02-02 01:26:37,709 - __main__ - INFO -   [OK] export_sorter.py
+2026-02-02 01:26:37,713 - __main__ - INFO -   [OK] index.html
+2026-02-02 01:26:37,720 - __main__ - INFO -   [OK] launch.py
+2026-02-02 01:26:37,728 - __main__ - INFO -   [OK] logs\backup.log
+2026-02-02 01:26:37,733 - __main__ - INFO -   [OK] logs\launcher.log
+2026-02-02 01:26:37,735 - __main__ - INFO -   [OK] logs\sync.log
+2026-02-02 01:26:37,738 - __main__ - INFO -   [OK] mdbook_build.sh
+2026-02-02 01:26:37,745 - __main__ - INFO -   [OK] post_gen.py
+2026-02-02 01:26:37,748 - __main__ - INFO -   [OK] prompt_api.py
+2026-02-02 01:26:37,751 - __main__ - INFO -   [OK] README.md
+2026-02-02 01:26:37,754 - __main__ - INFO -   [OK] requirements.txt
+2026-02-02 01:26:37,761 - __main__ - INFO -   [OK] run_tests.py
+2026-02-02 01:26:37,764 - __main__ - INFO -   [OK] run_voice.py
+2026-02-02 01:26:37,768 - __main__ - INFO -   [OK] schedule.json
+2026-02-02 01:26:37,772 - __main__ - INFO -   [OK] search_server.py
+2026-02-02 01:26:37,781 - __main__ - INFO -   [OK] send_posts.py
+2026-02-02 01:26:37,784 - __main__ - INFO -   [OK] sync.py
+2026-02-02 01:26:37,787 - __main__ - INFO -   [OK] sync_drive.sh
+2026-02-02 01:26:37,793 - __main__ - INFO -   [OK] sync_obsidian_vault.sh
+2026-02-02 01:26:37,796 - __main__ - INFO - 
+Manifest saved: E:\AI-Automation-Backup\backup_20260202_012637\manifest.json
+2026-02-02 01:26:37,796 - __main__ - INFO - 
+============================================================
+2026-02-02 01:26:37,797 - __main__ - INFO - BACKUP SUMMARY
+2026-02-02 01:26:37,797 - __main__ - INFO - ============================================================
+2026-02-02 01:26:37,797 - __main__ - INFO - Total files: 32
+2026-02-02 01:26:37,797 - __main__ - INFO - Copied: 32
+2026-02-02 01:26:37,797 - __main__ - INFO - Skipped: 0
+2026-02-02 01:26:37,797 - __main__ - INFO - Errors: 0
+2026-02-02 01:26:37,797 - __main__ - INFO - Total size: 315,002 bytes

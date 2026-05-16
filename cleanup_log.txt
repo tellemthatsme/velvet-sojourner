@@ -1,0 +1,547 @@
+[2026-05-08 15:08:23] ======================================================================
+[2026-05-08 15:08:23] REPO CLEANUP & SYNC
+[2026-05-08 15:08:23] ======================================================================
+[2026-05-08 15:08:23] 
+[PHASE 1] Removing duplicate repos...
+[2026-05-08 15:08:23] Finding duplicate repos...
+[2026-05-08 15:08:23] Found 448 prefixed duplicates
+[2026-05-08 15:08:23] Duplicates to remove: 448
+[2026-05-08 15:08:23]   - acidlink_ai-navigator-hub
+[2026-05-08 15:08:23]   - acidlink_ai-research-monitor
+[2026-05-08 15:08:23]   - acidlink_ai-voice-agency
+[2026-05-08 15:08:23]   - acidlink_aicodeecoemerg
+[2026-05-08 15:08:23]   - acidlink_apple-bug-bounty-profit-platform
+[2026-05-08 15:08:23]   - acidlink_beat-clone
+[2026-05-08 15:08:23]   - acidlink_cladstudioemerg
+[2026-05-08 15:08:23]   - acidlink_clone-screenshot--chatgpt
+[2026-05-08 15:08:23]   - acidlink_cosmic-craft-core
+[2026-05-08 15:08:23]   - acidlink_drive-doctor-dash
+[2026-05-08 15:08:23]   ... and 438 more
+[2026-05-08 15:08:23] 
+Removing 448 duplicates...
+[2026-05-08 15:08:23]   [OK] Removed: acidlink_ai-navigator-hub
+[2026-05-08 15:08:23]   [OK] Removed: acidlink_ai-research-monitor
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_ai-voice-agency
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_aicodeecoemerg
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_apple-bug-bounty-profit-platform
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_beat-clone
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_cladstudioemerg
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_clone-screenshot--chatgpt
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_cosmic-craft-core
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_drive-doctor-dash
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_earn-big-now
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_engage-nexus-metrics
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_kamakaze-jarvis-inspired-ai-assistant
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_kamakaze-jarvis-inspired-ai-assistant-1
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_kamikaze-ai-buddy
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_monetization-idea-generator
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_nexus-farm-engine
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_oz-hack-emporium
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_perplexity-ai-clone
+[2026-05-08 15:08:24]   [OK] Removed: acidlink_perplexity-ai-clone-1
+[2026-05-08 15:08:25]   [OK] Removed: acidlink_project-hub
+[2026-05-08 15:08:25]   [OK] Removed: acidlink_remix-of-cosmic-craft-core
+[2026-05-08 15:08:25]   [OK] Removed: acidlink_roundabout-creator-platform
+[2026-05-08 15:08:25]   [OK] Removed: acidlink_v0-ai-assistant-framework
+[2026-05-08 15:08:25]   [OK] Removed: acidlink_v0-ai-ops-mission-control
+[2026-05-08 15:08:25]   [OK] Removed: acidlink_v0-api-key-manager
+[2026-05-08 15:08:25]   [OK] Removed: acidlink_vibecloneemergent
+[2026-05-08 15:08:25]   [OK] Removed: Ashlee69r_ai-dev-command
+[2026-05-08 15:08:25]   [OK] Removed: Ashlee69r_ai-dev-command-1
+[2026-05-08 15:08:25]   [OK] Removed: Ashlee69r_ai-dev-command-41725
+[2026-05-08 15:08:25]   [OK] Removed: Ashlee69r_ai-dev-command-clone
+[2026-05-08 15:08:25]   [OK] Removed: Ashlee69r_ai-ecosystem-builder
+[2026-05-08 15:08:25]   [OK] Removed: Ashlee69r_ai-hub-command-center
+[2026-05-08 15:08:26]   [OK] Removed: Ashlee69r_ai-knowledge-weaver
+[2026-05-08 15:08:26]   [OK] Removed: Ashlee69r_ai-music-director
+[2026-05-08 15:08:26]   [OK] Removed: Ashlee69r_ai-project-manager-platform
+[2026-05-08 15:08:26]   [OK] Removed: Ashlee69r_allone
+[2026-05-08 15:08:26]   [OK] Removed: Ashlee69r_australian-location-tracking-education
+[2026-05-08 15:08:26]   [OK] Removed: Ashlee69r_b-7161
+[2026-05-08 15:08:26]   [OK] Removed: Ashlee69r_base44clone
+[2026-05-08 15:08:26]   [OK] Removed: Ashlee69r_chat-harmony-archiver
+[2026-05-08 15:08:26]   [OK] Removed: Ashlee69r_chat-organizer-ultimate
+[2026-05-08 15:08:26]   [OK] Removed: Ashlee69r_chat-scribe-ai-organizer
+[2026-05-08 15:08:26]   [OK] Removed: Ashlee69r_chat-scribe-wiki-forge
+[2026-05-08 15:08:26]   [OK] Removed: Ashlee69r_chat-whisperer-ai-organizer
+[2026-05-08 15:08:26]   [OK] Removed: Ashlee69r_cortex-project-space
+[2026-05-08 15:08:26]   [OK] Removed: Ashlee69r_cortex-project-space-37294
+[2026-05-08 15:08:26]   [OK] Removed: Ashlee69r_cryptoclone
+[2026-05-08 15:08:26]   [OK] Removed: Ashlee69r_dating
+[2026-05-08 15:08:26]   [OK] Removed: Ashlee69r_multi-platform-monetization-strategy
+[2026-05-08 15:08:27]   [OK] Removed: Ashlee69r_repo-prompt-master
+[2026-05-08 15:08:27]   [OK] Removed: Ashlee69r_sky-share-viewer
+[2026-05-08 15:08:27]   [OK] Removed: Ashlee69r_socialv0
+[2026-05-08 15:08:27]   [OK] Removed: Ashlee69r_v0-clone-website
+[2026-05-08 15:08:27]   [OK] Removed: Ashlee69r_v0-prompt-organizer
+[2026-05-08 15:08:27]   [OK] Removed: Ashlee69r_v0-webui-for-text-analysis
+[2026-05-08 15:08:27]   [OK] Removed: leahmfoots_a-889354
+[2026-05-08 15:08:27]   [OK] Removed: leahmfoots_ai-coder-s-compass
+[2026-05-08 15:08:27]   [OK] Removed: leahmfoots_ai-deals-master
+[2026-05-08 15:08:27]   [OK] Removed: leahmfoots_ai-dev-platform
+[2026-05-08 15:08:27]   [OK] Removed: leahmfoots_ai-development-control-system
+[2026-05-08 15:08:27]   [OK] Removed: leahmfoots_ai-pilot-house
+[2026-05-08 15:08:27]   [OK] Removed: leahmfoots_ai-pilot-station
+[2026-05-08 15:08:27]   [OK] Removed: leahmfoots_ai-pulse-hub
+[2026-05-08 15:08:27]   [OK] Removed: leahmfoots_ai-tool-discovery-platform
+[2026-05-08 15:08:27]   [OK] Removed: leahmfoots_ai-tool-discovery-platform-1
+[2026-05-08 15:08:27]   [OK] Removed: leahmfoots_ai-tool-discovery-platform-11
+[2026-05-08 15:08:27]   [OK] Removed: leahmfoots_ai-tool-discovery-platform-3
+[2026-05-08 15:08:27]   [OK] Removed: leahmfoots_ai-tool-discovery-platform-4
+[2026-05-08 15:08:27]   [OK] Removed: leahmfoots_ai-tool-discovery-platform-5
+[2026-05-08 15:08:27]   [OK] Removed: leahmfoots_ai-tool-discovery-platform-6
+[2026-05-08 15:08:27]   [OK] Removed: leahmfoots_ai-tool-discovery-platform-7
+[2026-05-08 15:08:27]   [OK] Removed: leahmfoots_ai-trial-tracker
+[2026-05-08 15:08:28]   [OK] Removed: leahmfoots_ai-usage-guardian-angel
+[2026-05-08 15:08:28]   [OK] Removed: leahmfoots_ai-vibe-hub
+[2026-05-08 15:08:28]   [OK] Removed: leahmfoots_aigenius-toolkit
+[2026-05-08 15:08:28]   [OK] Removed: leahmfoots_aiproj
+[2026-05-08 15:08:28]   [OK] Removed: leahmfoots_aitoolv0
+[2026-05-08 15:08:28]   [OK] Removed: leahmfoots_artspark-gallery-verse
+[2026-05-08 15:08:28]   [OK] Removed: leahmfoots_artspark-nft-hub
+[2026-05-08 15:08:28]   [OK] Removed: leahmfoots_aussie-earn
+[2026-05-08 15:08:28]   [OK] Removed: leahmfoots_boltaicrypto
+[2026-05-08 15:08:28]   [OK] Removed: leahmfoots_boltaidevprojdash
+[2026-05-08 15:08:28]   [OK] Removed: leahmfoots_boltaupromange
+[2026-05-08 15:08:28]   [OK] Removed: leahmfoots_boltbookmarkhub
+[2026-05-08 15:08:28]   [OK] Removed: leahmfoots_boltchathistoryorg
+[2026-05-08 15:08:28]   [OK] Removed: leahmfoots_boltknowledgemanagement
+[2026-05-08 15:08:28]   [OK] Removed: leahmfoots_boltnextgencrypto
+[2026-05-08 15:08:29]   [OK] Removed: leahmfoots_boltrndabout
+[2026-05-08 15:08:29]   [OK] Removed: leahmfoots_boltultagentsystem
+[2026-05-08 15:08:29]   [OK] Removed: leahmfoots_c-389547
+[2026-05-08 15:08:29]   [OK] Removed: leahmfoots_code-archaeologist-workbench
+[2026-05-08 15:08:29]   [OK] Removed: leahmfoots_codecraft-clone
+[2026-05-08 15:08:29]   [OK] Removed: leahmfoots_command-center-ai
+[2026-05-08 15:08:29]   [OK] Removed: leahmfoots_comment-roulette-youtube
+[2026-05-08 15:08:29]   [OK] Removed: leahmfoots_creation-forge-kit
+[2026-05-08 15:08:29]   [OK] Removed: leahmfoots_creativeforge-nexus-studio
+[2026-05-08 15:08:29]   [OK] Removed: leahmfoots_crypto-nexus-compass
+[2026-05-08 15:08:29]   [OK] Removed: leahmfoots_darkflow-ai-nexus
+[2026-05-08 15:08:29]   [OK] Removed: leahmfoots_escorts--babes-clone
+[2026-05-08 15:08:29]   [OK] Removed: leahmfoots_favsort
+[2026-05-08 15:08:29]   [OK] Removed: leahmfoots_fusion-vision-forge
+[2026-05-08 15:08:30]   [OK] Removed: leahmfoots_influence-bloom-hub
+[2026-05-08 15:08:30]   [OK] Removed: leahmfoots_meme-verse-oracle
+[2026-05-08 15:08:30]   [OK] Removed: leahmfoots_model-morph-deploy
+[2026-05-08 15:08:30]   [OK] Removed: leahmfoots_orchids-ai-coder-s-live-dashboard
+[2026-05-08 15:08:30]   [OK] Removed: leahmfoots_prodev-accelerator
+[2026-05-08 15:08:30]   [OK] Removed: leahmfoots_projectzen-ai-dashboard
+[2026-05-08 15:08:30]   [OK] Removed: leahmfoots_promethus-ai-toolkit
+[2026-05-08 15:08:30]   [OK] Removed: leahmfoots_quad-view-grid
+[2026-05-08 15:08:30]   [OK] Removed: leahmfoots_quad-view-nexus
+[2026-05-08 15:08:30]   [OK] Removed: leahmfoots_rogue-parrot-command-center
+[2026-05-08 15:08:30]   [OK] Removed: leahmfoots_social-boost-circle-09963
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_the-lovable-dev-hub
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_ultimate-agent-system
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_ultimate-agent-system-1
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_v0-ai-coding-assistants
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_v0-ai-coding-tools-directory
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_v0-ai-mission-control
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_v0-ai-news-dashboard
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_v0-ai-powered-chat-tool
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_v0-ai-project-management-tool
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_v0-ai-tool-list
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_v0-ai-tools-directory
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_v0-browser-favorites-app
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_v0-comprehensive-content-system
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_v0-crypto-trading-platform
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_v0-iframe-state-preservation
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_v0-image-analysis
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_v0-music-and-video-platform
+[2026-05-08 15:08:31]   [OK] Removed: leahmfoots_v0-prompt-os-app-build
+[2026-05-08 15:08:32]   [OK] Removed: leahmfoots_v0-prompt-os-dashboard
+[2026-05-08 15:08:32]   [OK] Removed: leahmfoots_v0-v0-dev-project-management
+[2026-05-08 15:08:32]   [OK] Removed: leahmfoots_voice-spark-incubator
+[2026-05-08 15:08:32]   [OK] Removed: leahmfoots_youware-fullscreen-clone
+[2026-05-08 15:08:32]   [OK] Removed: leahmfoots_zeronev0
+[2026-05-08 15:08:32]   [OK] Removed: tellemthatsme_ai-browser-playground-hub
+[2026-05-08 15:08:32]   [OK] Removed: tellemthatsme_ai-browser-playground-nexus
+[2026-05-08 15:08:32]   [OK] Removed: tellemthatsme_ai-command-center-nexus-22
+[2026-05-08 15:08:33]   [OK] Removed: tellemthatsme_ai-deal-seeker-pro
+[2026-05-08 15:08:33]   [OK] Removed: tellemthatsme_ai-dev-flow-41
+[2026-05-08 15:08:33]   [OK] Removed: tellemthatsme_ai-muse-studio
+[2026-05-08 15:08:33]   [OK] Removed: tellemthatsme_ai-navigator-pro
+[2026-05-08 15:08:33]   [OK] Removed: tellemthatsme_ai-nexus-command-center
+[2026-05-08 15:08:33]   [OK] Removed: tellemthatsme_ai-nexus-command-center-13
+[2026-05-08 15:08:33]   [OK] Removed: tellemthatsme_ai-nexus-project-hub
+[2026-05-08 15:08:33]   [OK] Removed: tellemthatsme_ai-phone-farm-platform
+[2026-05-08 15:08:33]   [OK] Removed: tellemthatsme_ai-phone-farming-platform
+[2026-05-08 15:08:33]   [OK] Removed: tellemthatsme_ai-pulse-dashboard
+[2026-05-08 15:08:33]   [OK] Removed: tellemthatsme_ai-pulse-dashboard-72
+[2026-05-08 15:08:33]   [OK] Removed: tellemthatsme_ai-pulse-nexus-ticker
+[2026-05-08 15:08:33]   [OK] Removed: tellemthatsme_ai-s-global-hub
+[2026-05-08 15:08:34]   [OK] Removed: tellemthatsme_ai-synthesis-machine
+[2026-05-08 15:08:34]   [OK] Removed: tellemthatsme_ai-tech-giga-dash
+[2026-05-08 15:08:34]   [OK] Removed: tellemthatsme_ai-tool-guardian-angel
+[2026-05-08 15:08:34]   [OK] Removed: tellemthatsme_ai-toolkit-nexus-forge
+[2026-05-08 15:08:34]   [OK] Removed: tellemthatsme_ai-toolkit-nexus-forge-83
+[2026-05-08 15:08:34]   [OK] Removed: tellemthatsme_ai-world-navigator
+[2026-05-08 15:08:34]   [OK] Removed: tellemthatsme_aicodingassistbolt
+[2026-05-08 15:08:34]   [OK] Removed: tellemthatsme_aicodingbolt
+[2026-05-08 15:08:34]   [OK] Removed: tellemthatsme_aiecosystem
+[2026-05-08 15:08:34]   [OK] Removed: tellemthatsme_AIFreeTierTrackerbolt
+[2026-05-08 15:08:34]   [OK] Removed: tellemthatsme_aiinggfbolt
+[2026-05-08 15:08:34]   [OK] Removed: tellemthatsme_aiprojectbolt
+[2026-05-08 15:08:34]   [OK] Removed: tellemthatsme_aitoolkitbolt
+[2026-05-08 15:08:34]   [OK] Removed: tellemthatsme_aittradingbolt
+[2026-05-08 15:08:34]   [OK] Removed: tellemthatsme_aiwriting
+[2026-05-08 15:08:34]   [OK] Removed: tellemthatsme_allinonecryptobolt
+[2026-05-08 15:08:35]   [OK] Removed: tellemthatsme_allspark-dev-studio
+[2026-05-08 15:08:35]   [OK] Removed: tellemthatsme_arcana-craft
+[2026-05-08 15:08:35]   [OK] Removed: tellemthatsme_artbot-crypto-verse
+[2026-05-08 15:08:35]   [OK] Removed: tellemthatsme_AusAIAgencybolt-
+[2026-05-08 15:08:35]   [OK] Removed: tellemthatsme_ausaiagentcybolt
+[2026-05-08 15:08:35]   [OK] Removed: tellemthatsme_aussie-burnout-legends
+[2026-05-08 15:08:35]   [OK] Removed: tellemthatsme_aussie-burnout-legends-61
+[2026-05-08 15:08:35]   [OK] Removed: tellemthatsme_aussie-deals-hub
+[2026-05-08 15:08:35]   [OK] Removed: tellemthatsme_automated-app-genesis
+[2026-05-08 15:08:35]   [OK] Removed: tellemthatsme_avatra-content-hive
+[2026-05-08 15:08:35]   [OK] Removed: tellemthatsme_bloom-boost-social
+[2026-05-08 15:08:35]   [OK] Removed: tellemthatsme_bookcraft-nexus-publish
+[2026-05-08 15:08:35]   [OK] Removed: tellemthatsme_bot-trading-alpha-hub
+[2026-05-08 15:08:35]   [OK] Removed: tellemthatsme_bot-trading-maestro
+[2026-05-08 15:08:35]   [OK] Removed: tellemthatsme_bot-trading-renaissance-hub
+[2026-05-08 15:08:36]   [OK] Removed: tellemthatsme_brainstorm-architect
+[2026-05-08 15:08:36]   [OK] Removed: tellemthatsme_browse-time-insight
+[2026-05-08 15:08:36]   [OK] Removed: tellemthatsme_browser-quad-vision
+[2026-05-08 15:08:36]   [OK] Removed: tellemthatsme_chat-merge-mastery
+[2026-05-08 15:08:36]   [OK] Removed: tellemthatsme_chat-saga-sorter
+[2026-05-08 15:08:36]   [OK] Removed: tellemthatsme_chat-saga-sorter-ad13c3d7
+[2026-05-08 15:08:36]   [OK] Removed: tellemthatsme_chatbolthiostory
+[2026-05-08 15:08:36]   [OK] Removed: tellemthatsme_chatexporterbolt
+[2026-05-08 15:08:36]   [OK] Removed: tellemthatsme_chathistoryboplt
+[2026-05-08 15:08:36]   [OK] Removed: tellemthatsme_chatify-organizer
+[2026-05-08 15:08:36]   [OK] Removed: tellemthatsme_chatplatformbolt
+[2026-05-08 15:08:36]   [OK] Removed: tellemthatsme_chatprocessor
+[2026-05-08 15:08:36]   [OK] Removed: tellemthatsme_chatsortold
+[2026-05-08 15:08:36]   [OK] Removed: tellemthatsme_chatty-app-factory
+[2026-05-08 15:08:37]   [OK] Removed: tellemthatsme_claude-agent-forge
+[2026-05-08 15:08:37]   [OK] Removed: tellemthatsme_cmsbolt
+[2026-05-08 15:08:37]   [OK] Removed: tellemthatsme_code-discovery-navigator
+[2026-05-08 15:08:37]   [OK] Removed: tellemthatsme_code-lens-ai-review
+[2026-05-08 15:08:37]   [OK] Removed: tellemthatsme_code-narrative-alchemy
+[2026-05-08 15:08:37]   [OK] Removed: tellemthatsme_compcryptobolt
+[2026-05-08 15:08:37]   [OK] Removed: tellemthatsme_conversation-crafter
+[2026-05-08 15:08:37]   [OK] Removed: tellemthatsme_cosmos-ai-desk
+[2026-05-08 15:08:37]   [OK] Removed: tellemthatsme_craft-ai-stack
+[2026-05-08 15:08:37]   [OK] Removed: tellemthatsme_craft-your-world-87
+[2026-05-08 15:08:37]   [OK] Removed: tellemthatsme_creatoros-clone
+[2026-05-08 15:08:37]   [OK] Removed: tellemthatsme_creatoros-clone-1
+[2026-05-08 15:08:37]   [OK] Removed: tellemthatsme_crypto-command-center-lovable
+[2026-05-08 15:08:37]   [OK] Removed: tellemthatsme_crypto-genesis-ai
+[2026-05-08 15:08:38]   [OK] Removed: tellemthatsme_cryptobolt
+[2026-05-08 15:08:38]   [OK] Removed: tellemthatsme_cryptobot-nexus-ai
+[2026-05-08 15:08:38]   [OK] Removed: tellemthatsme_dev-stream-seek
+[2026-05-08 15:08:38]   [OK] Removed: tellemthatsme_devflow-matrix
+[2026-05-08 15:08:38]   [OK] Removed: tellemthatsme_diagram-insight-ai
+[2026-05-08 15:08:38]   [OK] Removed: tellemthatsme_dream-crypto-trade-sim
+[2026-05-08 15:08:38]   [OK] Removed: tellemthatsme_ember-build-spark
+[2026-05-08 15:08:38]   [OK] Removed: tellemthatsme_emergent
+[2026-05-08 15:08:38]   [OK] Removed: tellemthatsme_engage-boost-social-reach
+[2026-05-08 15:08:38]   [OK] Removed: tellemthatsme_engage-flow-insights-ai
+[2026-05-08 15:08:38]   [OK] Removed: tellemthatsme_firefox
+[2026-05-08 15:08:38]   [OK] Removed: tellemthatsme_forge-creative-flow
+[2026-05-08 15:08:38]   [OK] Removed: tellemthatsme_freeitbolt
+[2026-05-08 15:08:38]   [OK] Removed: tellemthatsme_freetrail
+[2026-05-08 15:08:38]   [OK] Removed: tellemthatsme_freetrailbolt
+[2026-05-08 15:08:38]   [OK] Removed: tellemthatsme_fusion-sight-navigator-buddy
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_git-insight-hub
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_githubdoco
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_githubhubbolt
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_githubrepoanalyzer
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_guardian-ai-speak
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_hackathonbolt
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_hyperdrive-ai-nexus
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_hyperlink-organizer-plus
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_ideaforgemobilebolt
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_idealaunch-hub
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_image-code-scholar
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_insight-enterprise-ai-nexus
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_insight-garden-craft
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_intellicode-nexus
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_intellitool-dash
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_JARVIS-Ecosystem
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_kbbolt
+[2026-05-08 15:08:39]   [OK] Removed: tellemthatsme_kbbolt2
+[2026-05-08 15:08:40]   [OK] Removed: tellemthatsme_keno-oz-oracle
+[2026-05-08 15:08:40]   [OK] Removed: tellemthatsme_kenobolt
+[2026-05-08 15:08:40]   [OK] Removed: tellemthatsme_keymaster-bot
+[2026-05-08 15:08:40]   [OK] Removed: tellemthatsme_knnoo
+[2026-05-08 15:08:40]   [OK] Removed: tellemthatsme_knowl-ai-nexus
+[2026-05-08 15:08:40]   [OK] Removed: tellemthatsme_legacy-compass
+[2026-05-08 15:08:40]   [OK] Removed: tellemthatsme_legacy-video-forge
+[2026-05-08 15:08:40]   [OK] Removed: tellemthatsme_lovable-api-genesis
+[2026-05-08 15:08:40]   [OK] Removed: tellemthatsme_lovable-complex-creator
+[2026-05-08 15:08:40]   [OK] Removed: tellemthatsme_lovable-trading-sight
+[2026-05-08 15:08:40]   [OK] Removed: tellemthatsme_lovable-view-hub-nexus
+[2026-05-08 15:08:40]   [OK] Removed: tellemthatsme_loving-crypto-insights
+[2026-05-08 15:08:40]   [OK] Removed: tellemthatsme_lumen-ai-pulse
+[2026-05-08 15:08:40]   [OK] Removed: tellemthatsme_meme-finding
+[2026-05-08 15:08:40]   [OK] Removed: tellemthatsme_monetization-dashboard
+[2026-05-08 15:08:40]   [OK] Removed: tellemthatsme_money-mint-machine
+[2026-05-08 15:08:40]   [OK] Removed: tellemthatsme_moneymakerbolt
+[2026-05-08 15:08:41]   [OK] Removed: tellemthatsme_multi-key-mind
+[2026-05-08 15:08:41]   [OK] Removed: tellemthatsme_my-life-verified
+[2026-05-08 15:08:41]   [OK] Removed: tellemthatsme_n8n-verse
+[2026-05-08 15:08:41]   [OK] Removed: tellemthatsme_nocodeexplorerbolt
+[2026-05-08 15:08:41]   [OK] Removed: tellemthatsme_open-source-showcase
+[2026-05-08 15:08:41]   [OK] Removed: tellemthatsme_openrouter-archon-unlimited-ai
+[2026-05-08 15:08:41]   [OK] Removed: tellemthatsme_orchids-devsuite
+[2026-05-08 15:08:41]   [OK] Removed: tellemthatsme_persona-craft-agency
+[2026-05-08 15:08:41]   [OK] Removed: tellemthatsme_poke-marvel-market
+[2026-05-08 15:08:41]   [OK] Removed: tellemthatsme_portalaibolt
+[2026-05-08 15:08:41]   [OK] Removed: tellemthatsme_productblueprintbolt
+[2026-05-08 15:08:41]   [OK] Removed: tellemthatsme_project-confluence-magic
+[2026-05-08 15:08:41]   [OK] Removed: tellemthatsme_project-genesis
+[2026-05-08 15:08:41]   [OK] Removed: tellemthatsme_project-genesis-ai
+[2026-05-08 15:08:42]   [OK] Removed: tellemthatsme_project-sage-haven
+[2026-05-08 15:08:42]   [OK] Removed: tellemthatsme_project-sifter
+[2026-05-08 15:08:42]   [OK] Removed: tellemthatsme_projectbolt
+[2026-05-08 15:08:42]   [OK] Removed: tellemthatsme_projectmanagemenbolt
+[2026-05-08 15:08:42]   [OK] Removed: tellemthatsme_projmanagementhub
+[2026-05-08 15:08:42]   [OK] Removed: tellemthatsme_prompt-waterfall-blitz
+[2026-05-08 15:08:42]   [OK] Removed: tellemthatsme_promptbrain-organizer-ai
+[2026-05-08 15:08:42]   [OK] Removed: tellemthatsme_prompthubbolt
+[2026-05-08 15:08:42]   [OK] Removed: tellemthatsme_quantify-ai-trader
+[2026-05-08 15:08:42]   [OK] Removed: tellemthatsme_repo-rite
+[2026-05-08 15:08:42]   [OK] Removed: tellemthatsme_repo-wizard-supreme
+[2026-05-08 15:08:43]   [OK] Removed: tellemthatsme_repo-wizard-unleashed
+[2026-05-08 15:08:43]   [OK] Removed: tellemthatsme_research-loop-dashboard
+[2026-05-08 15:08:43]   [OK] Removed: tellemthatsme_roundabout-creator-hub
+[2026-05-08 15:08:43]   [OK] Removed: tellemthatsme_scrape-automator-wizard
+[2026-05-08 15:08:43]   [OK] Removed: tellemthatsme_sketch-to-artifact-builder
+[2026-05-08 15:08:43]   [OK] Removed: tellemthatsme_socialautomationbolt
+[2026-05-08 15:08:43]   [OK] Removed: tellemthatsme_socialmediabolt
+[2026-05-08 15:08:43]   [OK] Removed: tellemthatsme_socmedia
+[2026-05-08 15:08:43]   [OK] Removed: tellemthatsme_story-loom-video
+[2026-05-08 15:08:43]   [OK] Removed: tellemthatsme_swift-chat-ai-dock
+[2026-05-08 15:08:43]   [OK] Removed: tellemthatsme_tab-time-automator
+[2026-05-08 15:08:43]   [OK] Removed: tellemthatsme_taskmanagekanbanbolt
+[2026-05-08 15:08:43]   [OK] Removed: tellemthatsme_time-travel-insights-explorer
+[2026-05-08 15:08:43]   [OK] Removed: tellemthatsme_time-travel-tracker-reports
+[2026-05-08 15:08:43]   [OK] Removed: tellemthatsme_time-tunnel-reports
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_tool-stream-ai
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_trace-companion-tool
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_traffic-boost-roundabout
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_truth-timeline
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_ulitimateai
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_ultimateaitoolsbolt
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_ultimatecryptobolt
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_ultimatergithubbolt
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_universal-ai-toolbox
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_v0-ai-project-management-platform
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_v0-aus-ai-workspace
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_v0-browser-extension-features
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_v0-browser-extension-ideas
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_v0-clone
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_v0-combine-projects
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_v0-content-processing-system
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_v0-crypto-mining-dashboard
+[2026-05-08 15:08:44]   [OK] Removed: tellemthatsme_v0-customizable-ai-dashboard
+[2026-05-08 15:08:45]   [OK] Removed: tellemthatsme_v0-marketplace
+[2026-05-08 15:08:45]   [OK] Removed: tellemthatsme_v0-round
+[2026-05-08 15:08:45]   [OK] Removed: tellemthatsme_walpaper
+[2026-05-08 15:08:45]   [OK] Removed: tellemthatsme_web-quad-workspace-vision
+[2026-05-08 15:08:45]   [OK] Removed: tellemthatsme_whitelabelaibolt
+[2026-05-08 15:08:45]   [OK] Removed: tellemthatsme_wiki-weave-ai
+[2026-05-08 15:08:45]   [OK] Removed: tellemthatsme_workspace-ai-automator
+[2026-05-08 15:08:45]   [OK] Removed: tellemthatsme_youware-clone-project
+[2026-05-08 15:08:45]   [OK] Removed: tellemthatsme_z1hackermainbolt
+[2026-05-08 15:08:45]   [OK] Removed: tellemthatsme_z1knowledgebasebolt
+[2026-05-08 15:08:45]   [OK] Removed: tellemthatsme_z1projauditfixbolt
+[2026-05-08 15:08:45]   [OK] Removed: tellemthatsme_zer0onebolt
+[2026-05-08 15:08:45]   [OK] Removed: tellemthatsme_zeroone-private-nexus-50
+[2026-05-08 15:08:45]   [OK] Removed: woodsai69rme_aether-flow-orchestrator
+[2026-05-08 15:08:45]   [OK] Removed: woodsai69rme_agent-nexus
+[2026-05-08 15:08:45]   [OK] Removed: woodsai69rme_agent-orchestrator
+[2026-05-08 15:08:45]   [OK] Removed: woodsai69rme_agentive-ai-discovery-board
+[2026-05-08 15:08:46]   [OK] Removed: woodsai69rme_ai-coder-hub
+[2026-05-08 15:08:46]   [OK] Removed: woodsai69rme_ai-command-center
+[2026-05-08 15:08:46]   [OK] Removed: woodsai69rme_ai-command-center-nexus
+[2026-05-08 15:08:46]   [OK] Removed: woodsai69rme_ai-crypto-trading--monitoring
+[2026-05-08 15:08:46]   [OK] Removed: woodsai69rme_ai-deals-nexus
+[2026-05-08 15:08:46]   [OK] Removed: woodsai69rme_ai-deals-oasis
+[2026-05-08 15:08:46]   [OK] Removed: woodsai69rme_ai-dev-team
+[2026-05-08 15:08:46]   [OK] Removed: woodsai69rme_ai-insight-hub
+[2026-05-08 15:08:46]   [OK] Removed: woodsai69rme_ai-keykeeper
+[2026-05-08 15:08:46]   [OK] Removed: woodsai69rme_ai-money-maker-au
+[2026-05-08 15:08:46]   [OK] Removed: woodsai69rme_ai-nexus-hub
+[2026-05-08 15:08:46]   [OK] Removed: woodsai69rme_ai-nexus-toolkit
+[2026-05-08 15:08:46]   [OK] Removed: woodsai69rme_ai-ops-nexus-hub
+[2026-05-08 15:08:47]   [OK] Removed: woodsai69rme_ai-resource-guardian
+[2026-05-08 15:08:47]   [OK] Removed: woodsai69rme_ai-text-stripper
+[2026-05-08 15:08:47]   [OK] Removed: woodsai69rme_ai-trial-tracker-pro
+[2026-05-08 15:08:47]   [OK] Removed: woodsai69rme_ai-usage-navigator
+[2026-05-08 15:08:47]   [OK] Removed: woodsai69rme_ai-wisdom-vault
+[2026-05-08 15:08:47]   [OK] Removed: woodsai69rme_aiittoolsbolt
+[2026-05-08 15:08:47]   [OK] Removed: woodsai69rme_aiusemaxbolt
+[2026-05-08 15:08:47]   [OK] Removed: woodsai69rme_aiworkspace
+[2026-05-08 15:08:47]   [OK] Removed: woodsai69rme_alpha-ai-crypto-trader
+[2026-05-08 15:08:47]   [OK] Removed: woodsai69rme_alpha-ai-trade-hub
+[2026-05-08 15:08:47]   [OK] Removed: woodsai69rme_antique-vista-verify
+[2026-05-08 15:08:47]   [OK] Removed: woodsai69rme_api-idea-genesis
+[2026-05-08 15:08:47]   [OK] Removed: woodsai69rme_art-echo-creator
+[2026-05-08 15:08:47]   [OK] Removed: woodsai69rme_artspark-nft-haven
+[2026-05-08 15:08:47]   [OK] Removed: woodsai69rme_aud-ai-saver
+[2026-05-08 15:08:48]   [OK] Removed: woodsai69rme_aus-ai-ascend
+[2026-05-08 15:08:48]   [OK] Removed: woodsai69rme_aussie-ai-agency
+[2026-05-08 15:08:48]   [OK] Removed: woodsai69rme_aussie-metal-mayhem-motors
+[2026-05-08 15:08:48]   [OK] Removed: woodsai69rme_auto-researcher-pro
+[2026-05-08 15:08:48]   [OK] Removed: woodsai69rme_auto-synth-ops
+[2026-05-08 15:08:48]   [OK] Removed: woodsai69rme_beacon-clone-trader-dash
+[2026-05-08 15:08:48]   [OK] Removed: woodsai69rme_bolt2
+[2026-05-08 15:08:48]   [OK] Removed: woodsai69rme_boltcrypto
+[2026-05-08 15:08:48]   [OK] Removed: woodsai69rme_boltnew
+[2026-05-08 15:08:48]   [OK] Removed: woodsai69rme_bookmark-buddy-sort
+[2026-05-08 15:08:48]   [OK] Removed: woodsai69rme_bot-bloom-capital
+[2026-05-08 15:08:48]   [OK] Removed: woodsai69rme_branch-buddy-deploy
+[2026-05-08 15:08:48]   [OK] Removed: woodsai69rme_c-2693
+[2026-05-08 15:08:49]   [OK] Removed: woodsai69rme_c-3685
+[2026-05-08 15:08:49]   [OK] Removed: woodsai69rme_c-442780
+[2026-05-08 15:08:49]   [OK] Removed: woodsai69rme_c-692182
+[2026-05-08 15:08:49]   [OK] Removed: woodsai69rme_c-8316
+[2026-05-08 15:08:49]   [OK] Removed: woodsai69rme_c-855294
+[2026-05-08 15:08:49]   [OK] Removed: woodsai69rme_canvas-royale-market
+[2026-05-08 15:08:49]   [OK] Removed: woodsai69rme_charm-clone-assemble-verse
+[2026-05-08 15:08:49]   [OK] Removed: woodsai69rme_chat-spark-organizer
+[2026-05-08 15:08:49]   [OK] Removed: woodsai69rme_chatgpt-file-organizer
+[2026-05-08 15:08:49]   [OK] Removed: woodsai69rme_chatter-connect-analyze-now
+[2026-05-08 15:08:49]   [OK] Removed: woodsai69rme_chrome-and-country-kings
+[2026-05-08 15:08:50]   [OK] Removed: woodsai69rme_claraverse-evolve-ai-nexus
+[2026-05-08 15:08:50]   [OK] Removed: woodsai69rme_claude-code-complete-backup
+[2026-05-08 15:08:50]   [OK] Removed: woodsai69rme_claude-web-clone-magic
+[2026-05-08 15:08:50]   [OK] Removed: woodsai69rme_cloud-companion
+[2026-05-08 15:08:50]   [OK] Removed: woodsai69rme_code-archaeologist-ai-explorer
+[2026-05-08 15:08:50]   [OK] Removed: woodsai69rme_code-archaeologist-ai-forge
+[2026-05-08 15:08:50]   [OK] Removed: woodsai69rme_code-flow-oracle
+[2026-05-08 15:08:50]   [OK] Removed: woodsai69rme_codesnipstripper
+[2026-05-08 15:08:50]   [OK] Removed: woodsai69rme_cognitive-prism-analyzer
+[2026-05-08 15:08:50]   [OK] Removed: woodsai69rme_cogno-control-center
+[2026-05-08 15:08:50]   [OK] Removed: woodsai69rme_coin-alchemy-ai
+[2026-05-08 15:08:50]   [OK] Removed: woodsai69rme_cplatform
+[2026-05-08 15:08:50]   [OK] Removed: woodsai69rme_crypto-ai-hivemind
+[2026-05-08 15:08:50]   [OK] Removed: woodsai69rme_crypto-ai-horizon-dashboard
+[2026-05-08 15:08:50]   [OK] Removed: woodsai69rme_crypto-ai-research--trading-hub
+[2026-05-08 15:08:51]   [OK] Removed: woodsai69rme_crypto-ai-research--trading-hub-1
+[2026-05-08 15:08:51]   [OK] Removed: woodsai69rme_crypto-ai-tradeflow-nexus
+[2026-05-08 15:08:51]   [OK] Removed: woodsai69rme_crypto-ai-trading-platform
+[2026-05-08 15:08:51]   [OK] Removed: woodsai69rme_crypto-all-in-one
+[2026-05-08 15:08:51]   [OK] Removed: woodsai69rme_crypto-automa-pilot
+[2026-05-08 15:08:51]   [OK] Removed: woodsai69rme_crypto-beacon-fusion-hub
+[2026-05-08 15:08:51]   [OK] Removed: woodsai69rme_crypto-beacon-trader-hub-11
+[2026-05-08 15:08:51]   [OK] Removed: woodsai69rme_crypto-cosmos-nexus
+[2026-05-08 15:08:52]   [OK] Removed: woodsai69rme_crypto-dream-trade-sim-11
+[2026-05-08 15:08:52]   [OK] Removed: woodsai69rme_crypto-dream-trade-sim-18
+[2026-05-08 15:08:52]   [OK] Removed: woodsai69rme_crypto-dream-voyage-sim
+[2026-05-08 15:08:52]   [OK] Removed: woodsai69rme_crypto-finder--miner
+[2026-05-08 15:08:52]   [OK] Removed: woodsai69rme_crypto-flow-nexus-ai
+[2026-05-08 15:08:52]   [OK] Removed: woodsai69rme_crypto-forge-master
+[2026-05-08 15:08:52]   [OK] Removed: woodsai69rme_crypto-fusion-genesis
+[2026-05-08 15:08:52]   [OK] Removed: woodsai69rme_crypto-fusion-nexus-flow
+[2026-05-08 15:08:52]   [OK] Removed: woodsai69rme_crypto-fusion-quest
+[2026-05-08 15:08:53]   [OK] Removed: woodsai69rme_crypto-lovable-trader
+[2026-05-08 15:08:53]   [OK] Removed: woodsai69rme_crypto-navigator-ai
+[2026-05-08 15:08:53]   [OK] Removed: woodsai69rme_crypto-nexus-automator
+[2026-05-08 15:08:53]   [OK] Removed: woodsai69rme_crypto-nexus-fusion
+[2026-05-08 15:08:53]   [OK] Removed: woodsai69rme_crypto-nexus-fusion-07
+[2026-05-08 15:08:53]   [OK] Removed: woodsai69rme_crypto-sim-alpha
+[2026-05-08 15:08:53]   [OK] Removed: woodsai69rme_crypto-vision-suite
+[2026-05-08 15:08:53]   [OK] Removed: woodsai69rme_crypto-woods-trader-sim
+[2026-05-08 15:08:53]   [OK] Removed: woodsai69rme_crypto-woods-ulitmate-26
+[2026-05-08 15:08:53]   [OK] Removed: woodsai69rme_cryptoai-trade-commander
+[2026-05-08 15:08:54]   [OK] Removed: woodsai69rme_cryptoai-trade-forge
+[2026-05-08 15:08:54]   [OK] Removed: woodsai69rme_cryptoai-tradeflow-nexus
+[2026-05-08 15:08:54]   [OK] Removed: woodsai69rme_cryptonaut-ai-terminal
+[2026-05-08 15:08:54]   [OK] Removed: woodsai69rme_design-source-hub
+[2026-05-08 15:08:54]   [OK] Removed: woodsai69rme_dev-forge-omni
+[2026-05-08 15:08:54]   [OK] Removed: woodsai69rme_dev-plan-nexus
+[2026-05-08 15:08:54]   [OK] Removed: woodsai69rme_digest-email-forge
+[2026-05-08 15:08:54]   [OK] Removed: woodsai69rme_digital-trading-flow
+[2026-05-08 15:08:54]   [OK] Removed: woodsai69rme_directorybolt
+[2026-05-08 15:08:54]   [OK] Removed: woodsai69rme_docu-prime
+[2026-05-08 15:08:54]   [OK] Removed: woodsai69rme_dream-trade-adventures-club
+[2026-05-08 15:08:55]   [OK] Removed: woodsai69rme_dream-trade-forge
+[2026-05-08 15:08:55]   [OK] Removed: woodsai69rme_echo-chamber-of-wisdom
+[2026-05-08 15:08:55]   [OK] Removed: woodsai69rme_openclaw-hub
+[2026-05-08 15:08:55]   [OK] Removed: woodsai69rme_v0-untitled-project
+[2026-05-08 15:08:55]   [OK] Removed: woodsai69rme_vidmuse-studio
+[2026-05-08 15:08:55]   [OK] Removed: woodsai69rme_zeroonebolt
+[2026-05-08 15:08:55] Removed: 448, Failed: 0
+[2026-05-08 15:08:55] 
+[PHASE 2] Downloading missing repos...
+[2026-05-08 15:08:55] 
+Downloading 161 missing repos...
+[2026-05-08 15:09:05]   [OK] Downloaded: Hackrf (from woodsai69rme)
+[2026-05-08 15:09:05]   [FAIL] Could not download: SuperClaude
+[2026-05-08 15:09:10]   [OK] Downloaded: engine-craft-games (from woodsai69rme)
+[2026-05-08 15:09:15]   [OK] Downloaded: ethosai-moral-compass-agent (from woodsai69rme)
+[2026-05-08 15:09:20]   [OK] Downloaded: evermind-enterprise-ai (from woodsai69rme)
+[2026-05-08 15:09:26]   [OK] Downloaded: fast-video-studio (from woodsai69rme)
+[2026-05-08 15:09:33]   [OK] Downloaded: favorite-flow-dashboard (from woodsai69rme)
+[2026-05-08 15:09:39]   [OK] Downloaded: find-your-funds (from woodsai69rme)
+[2026-05-08 15:09:46]   [OK] Downloaded: firefox-fav-flow (from woodsai69rme)
+[2026-05-08 15:09:52]   [OK] Downloaded: freebie-ai-optimiser (from woodsai69rme)
+[2026-05-08 15:10:01]   [OK] Downloaded: freecrypto (from woodsai69rme)
+[2026-05-08 15:10:23]   [OK] Downloaded: fusion-trading-vision (from woodsai69rme)
+[2026-05-08 15:10:30]   [OK] Downloaded: fusion-trading-vision-38 (from woodsai69rme)
+[2026-05-08 15:10:36]   [OK] Downloaded: fusion-trading-vision-42 (from woodsai69rme)
+[2026-05-08 15:10:44]   [OK] Downloaded: g-8461 (from woodsai69rme)
+[2026-05-08 15:10:56]   [OK] Downloaded: gamedevforusers (from woodsai69rme)
+[2026-05-08 15:11:02]   [OK] Downloaded: gemcopilot-media-scribe (from woodsai69rme)
+[2026-05-08 15:11:26]   [OK] Downloaded: github-insights-hub (from woodsai69rme)
+[2026-05-08 15:11:33]   [OK] Downloaded: gvie-launchpad (from woodsai69rme)
+[2026-05-08 15:11:40]   [OK] Downloaded: hackrfv0 (from woodsai69rme)
+[2026-05-08 15:12:00]   [OK] Downloaded: idea-ace-showdown-wins (from woodsai69rme)
+[2026-05-08 15:12:08]   [OK] Downloaded: idea-fusion-alchemy (from woodsai69rme)
+[2026-05-08 15:12:14]   [OK] Downloaded: inferno-project-pulse-forge (from woodsai69rme)
+[2026-05-08 15:12:20]   [OK] Downloaded: insight-engine-buddy (from woodsai69rme)
+[2026-05-08 15:12:26]   [OK] Downloaded: instant-code-smith (from woodsai69rme)
+[2026-05-08 15:12:32]   [OK] Downloaded: intel-agent-grid (from woodsai69rme)
+[2026-05-08 15:12:49]   [OK] Downloaded: junior-clone (from woodsai69rme)
+[2026-05-08 15:12:54]   [OK] Downloaded: karma-intel-hub (from woodsai69rme)
+[2026-05-08 15:13:00]   [OK] Downloaded: keno-ai-fortune (from woodsai69rme)
+[2026-05-08 15:13:06]   [OK] Downloaded: keno-oracle-elite-picks (from woodsai69rme)
+[2026-05-08 15:13:12]   [OK] Downloaded: link-locker-organizer (from woodsai69rme)
+[2026-05-08 15:13:18]   [OK] Downloaded: local-ai-alchemy-lab (from woodsai69rme)
+[2026-05-08 15:13:24]   [OK] Downloaded: local-ai-deployer (from woodsai69rme)
+[2026-05-08 15:13:30]   [OK] Downloaded: lovable-ai-companion (from woodsai69rme)
+[2026-05-08 15:13:36]   [OK] Downloaded: lovable-complex-ideas (from woodsai69rme)
+[2026-05-08 15:13:41]   [OK] Downloaded: lovable-custom-gpt (from woodsai69rme)
+[2026-05-08 15:13:48]   [OK] Downloaded: lovable-evolved-fusion-core (from woodsai69rme)
+[2026-05-08 15:13:54]   [OK] Downloaded: lovable-fusion-spark (from woodsai69rme)
+[2026-05-08 15:14:00]   [OK] Downloaded: lovable-idea-nexus (from woodsai69rme)
+[2026-05-08 15:14:05]   [OK] Downloaded: lovable-project-merger (from woodsai69rme)
+[2026-05-08 15:14:11]   [OK] Downloaded: lovable-task-board-magic (from woodsai69rme)
+[2026-05-08 15:14:17]   [OK] Downloaded: love-bolt-clone-magic (from woodsai69rme)
+[2026-05-08 15:14:23]   [OK] Downloaded: love-db-quest (from woodsai69rme)
+[2026-05-08 15:14:29]   [OK] Downloaded: lovebolt-zero-clone (from woodsai69rme)
+[2026-05-08 15:14:35]   [OK] Downloaded: lovely-web-clone (from woodsai69rme)
+[2026-05-08 15:14:41]   [OK] Downloaded: lovestruck-crypto-nexus (from woodsai69rme)
+[2026-05-08 15:14:47]   [OK] Downloaded: loving-bolt-vortex-clone (from woodsai69rme)
+[2026-05-08 15:14:54]   [OK] Downloaded: marvel-ai-trading-hub (from woodsai69rme)
+[2026-05-08 15:15:02]   [OK] Downloaded: marvel-ai-trading-hub-14 (from woodsai69rme)
+[2026-05-08 15:15:10]   [OK] Downloaded: marvel-ai-trading-hub-53 (from woodsai69rme)
+[2026-05-08 15:15:15]   [OK] Downloaded: marvelaitradebolt (from woodsai69rme)
+[2026-05-08 15:15:22]   [OK] Downloaded: marvelpokemoncards (from woodsai69rme)
+[2026-05-08 15:15:37]   [OK] Downloaded: memory-montage-maker (from woodsai69rme)
+[2026-05-08 15:16:07]   [OK] Downloaded: mimic-youware-clone (from woodsai69rme)
+[2026-05-08 15:16:15]   [OK] Downloaded: mind-weaver (from woodsai69rme)
+[2026-05-08 15:16:23]   [OK] Downloaded: moneymaker-ai-quest (from woodsai69rme)
+[2026-05-08 15:16:30]   [OK] Downloaded: muse-master-dashboard (from woodsai69rme)
+[2026-05-08 15:16:35]   [FAIL] Could not download: n8n-workflows
+[2026-05-08 15:16:42]   [OK] Downloaded: ndis-assistant-ai (from woodsai69rme)
+[2026-05-08 15:16:56]   [OK] Downloaded: ndis-flow (from woodsai69rme)
+[2026-05-08 15:17:03]   [OK] Downloaded: nebula-weave (from woodsai69rme)
+[2026-05-08 15:17:09]   [OK] Downloaded: newcrypto (from woodsai69rme)
+[2026-05-08 15:17:15]   [OK] Downloaded: nifty-quest-ai (from woodsai69rme)
+[2026-05-08 15:17:22]   [OK] Downloaded: note-scribe-echo (from woodsai69rme)
+[2026-05-08 15:17:28]   [OK] Downloaded: omni-ai-enterprise-bot (from woodsai69rme)
+[2026-05-08 15:17:34]   [OK] Downloaded: opstart-glimpse-demo (from woodsai69rme)
+[2026-05-08 15:17:40]   [OK] Downloaded: orchids-ai-development-control-system (from woodsai69rme)
+[2026-05-08 15:17:47]   [OK] Downloaded: phantom-profit-platform (from woodsai69rme)
+[2026-05-08 15:17:54]   [OK] Downloaded: phoenix-repo-revival (from woodsai69rme)
+[2026-05-08 15:18:01]   [OK] Downloaded: plant-path-eye-diagnose (from woodsai69rme)
+[2026-05-08 15:18:07]   [OK] Downloaded: poke-monopoly-ai-hub (from woodsai69rme)
+[2026-05-08 15:18:13]   [OK] Downloaded: pretty-charts-ui (from woodsai69rme)
+[2026-05-08 15:18:18]   [OK] Downloaded: profile-detective-seeker (from woodsai69rme)

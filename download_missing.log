@@ -1,0 +1,762 @@
+[23:46:09] ======================================================================
+[23:46:09] MISSING REPO DOWNLOADER
+[23:46:09] Started: 2026-04-27 23:46:09
+[23:46:09] Only downloading repos that don't exist yet
+[23:46:09] ======================================================================
+[23:46:09] 
+======================================================================
+[23:46:09] ACCOUNT: tellemthatsme
+[23:46:09] ======================================================================
+[23:46:09] 
+Fetching repo list for tellemthatsme...
+[23:46:11]   Page 1: +100 repos
+[23:46:12]   Page 2: +100 repos
+[23:46:14]   Page 3: +100 repos
+[23:46:15]   Page 4: +16 repos
+[23:46:15]   Total repos: 316
+[23:46:15] Processing 316 repos (skipping already downloaded)...
+[23:46:15] 
+[OK] tellemthatsme: 0 new repos downloaded
+[23:46:15] 
+======================================================================
+[23:46:15] ACCOUNT: leahmfoots
+[23:46:15] ======================================================================
+[23:46:15] 
+Fetching repo list for leahmfoots...
+[23:46:17]   Page 1: +98 repos
+[23:46:18]   Total repos: 98
+[23:46:18] Processing 98 repos (skipping already downloaded)...
+[23:46:18]   [66/98] Downloading leahmfoots/orchids-ai-coder-s-live-dashboard [PRIVATE]
+[23:46:20]     [OK] Downloaded!
+[23:46:20]   [67/98] Downloading leahmfoots/prodev-accelerator [PRIVATE]
+[23:46:22]     [OK] Downloaded!
+[23:46:22]   [68/98] Downloading leahmfoots/projectzen-ai-dashboard [PRIVATE]
+[23:46:25]     [OK] Downloaded!
+[23:46:25]   [69/98] Downloading leahmfoots/promethus-ai-toolkit [PRIVATE]
+[23:46:31]     [OK] Downloaded!
+[23:46:31]   [70/98] Downloading leahmfoots/quad-view-grid [PRIVATE]
+[23:46:33]     [OK] Downloaded!
+[23:46:33]   [71/98] Downloading leahmfoots/quad-view-nexus [PRIVATE]
+[23:46:35]     [OK] Downloaded!
+[23:46:35]   [72/98] Downloading leahmfoots/rest-express-replit [public]
+[23:46:36]     [OK] Downloaded!
+[23:46:36]   [73/98] Downloading leahmfoots/rogue-parrot-command-center [PRIVATE]
+[23:46:38]     [OK] Downloaded!
+[23:46:38]   [74/98] Downloading leahmfoots/social-boost-circle [public]
+[23:46:40]     [OK] Downloaded!
+[23:46:40]   [75/98] Downloading leahmfoots/social-boost-circle-09963 [PRIVATE]
+[23:46:42]     [OK] Downloaded!
+[23:46:42]   [76/98] Downloading leahmfoots/the-lovable-dev-hub [PRIVATE]
+[23:46:45]     [OK] Downloaded!
+[23:46:45]   [77/98] Downloading leahmfoots/ultimate-agent-system [PRIVATE]
+[23:46:47]     [OK] Downloaded!
+[23:46:47]   [78/98] Downloading leahmfoots/ultimate-agent-system-1 [PRIVATE]
+[23:46:49]     [OK] Downloaded!
+[23:46:49]   [79/98] Downloading leahmfoots/v0-ai-coding-assistants [PRIVATE]
+[23:46:51]     [OK] Downloaded!
+[23:46:51]   [80/98] Downloading leahmfoots/v0-ai-coding-tools-directory [PRIVATE]
+[23:46:53]     [OK] Downloaded!
+[23:46:53]   [81/98] Downloading leahmfoots/v0-ai-mission-control [PRIVATE]
+[23:46:55]     [OK] Downloaded!
+[23:46:55]   [82/98] Downloading leahmfoots/v0-ai-news-dashboard [PRIVATE]
+[23:46:57]     [OK] Downloaded!
+[23:46:57]   [83/98] Downloading leahmfoots/v0-ai-powered-chat-tool [PRIVATE]
+[23:47:00]     [OK] Downloaded!
+[23:47:00]   [84/98] Downloading leahmfoots/v0-ai-project-management-tool [PRIVATE]
+[23:47:04]     [OK] Downloaded!
+[23:47:04]   [85/98] Downloading leahmfoots/v0-ai-tool-list [PRIVATE]
+[23:47:07]     [OK] Downloaded!
+[23:47:07]   [86/98] Downloading leahmfoots/v0-ai-tools-directory [PRIVATE]
+[23:47:08]     [OK] Downloaded!
+[23:47:09]   [87/98] Downloading leahmfoots/v0-browser-favorites-app [PRIVATE]
+[23:47:10]     [OK] Downloaded!
+[23:47:10]   [88/98] Downloading leahmfoots/v0-comprehensive-content-system [PRIVATE]
+[23:47:12]     [OK] Downloaded!
+[23:47:12]   [89/98] Downloading leahmfoots/v0-crypto-trading-platform [PRIVATE]
+[23:47:14]     [OK] Downloaded!
+[23:47:14]   [90/98] Downloading leahmfoots/v0-iframe-state-preservation [PRIVATE]
+[23:47:16]     [OK] Downloaded!
+[23:47:16]   [91/98] Downloading leahmfoots/v0-image-analysis [PRIVATE]
+[23:47:17]     [OK] Downloaded!
+[23:47:18]   [92/98] Downloading leahmfoots/v0-music-and-video-platform [PRIVATE]
+[23:47:19]     [OK] Downloaded!
+[23:47:20]   [93/98] Downloading leahmfoots/v0-prompt-os-app-build [PRIVATE]
+[23:47:21]     [OK] Downloaded!
+[23:47:22]   [94/98] Downloading leahmfoots/v0-prompt-os-dashboard [PRIVATE]
+[23:47:23]     [OK] Downloaded!
+[23:47:24]   [95/98] Downloading leahmfoots/v0-v0-dev-project-management [PRIVATE]
+[23:47:28]     [OK] Downloaded!
+[23:47:28]   [96/98] Downloading leahmfoots/voice-spark-incubator [PRIVATE]
+[23:47:30]     [OK] Downloaded!
+[23:47:30]   [97/98] Downloading leahmfoots/youware-fullscreen-clone [PRIVATE]
+[23:47:32]     [OK] Downloaded!
+[23:47:32]   [98/98] Downloading leahmfoots/zeronev0 [PRIVATE]
+[23:47:35]     [OK] Downloaded!
+[23:47:35] 
+[OK] leahmfoots: 33 new repos downloaded
+[23:47:35] 
+======================================================================
+[23:47:35] ACCOUNT: acidlink
+[23:47:35] ======================================================================
+[23:47:35] 
+Fetching repo list for acidlink...
+[23:47:37]   Page 1: +39 repos
+[23:47:38]   Total repos: 39
+[23:47:38] Processing 39 repos (skipping already downloaded)...
+[23:47:38]   [1/39] Downloading acidlink/affiliate-ai-platform [public]
+[23:47:40]     [OK] Downloaded!
+[23:47:40]   [2/39] Downloading acidlink/ai-business-platform [public]
+[23:48:24]     [OK] Downloaded!
+[23:48:24]   [3/39] Downloading acidlink/ai-coder-hub [PRIVATE]
+[23:48:26]     [OK] Downloaded!
+[23:48:27]   [4/39] Downloading acidlink/ai-influencer-platform [public]
+[23:48:28]     [OK] Downloaded!
+[23:48:28]   [5/39] Downloading acidlink/ai-navigator-hub [PRIVATE]
+[23:48:30]     [OK] Downloaded!
+[23:48:30]   [6/39] Downloading acidlink/ai-research-monitor [PRIVATE]
+[23:48:32]     [OK] Downloaded!
+[23:48:33]   [7/39] Downloading acidlink/ai-super-assistant-platform [public]
+[23:48:34]     [OK] Downloaded!
+[23:48:34]   [8/39] Downloading acidlink/ai-voice-agency [PRIVATE]
+[23:48:37]     [OK] Downloaded!
+[23:48:37]   [9/39] Downloading acidlink/aicodeecoemerg [PRIVATE]
+[23:48:38]     [OK] Downloaded!
+[23:48:39]   [10/39] Downloading acidlink/apple-bug-bounty-profit-platform [PRIVATE]
+[23:48:41]     [OK] Downloaded!
+[23:48:41]   [11/39] Downloading acidlink/Archon [public]
+[23:48:48]     [OK] Downloaded!
+[23:48:49]   [12/39] Downloading acidlink/awesome-ai-coding-tools [public]
+[23:48:50]     [OK] Downloaded!
+[23:48:50]   [13/39] Downloading acidlink/beat-clone [PRIVATE]
+[23:48:52]     [OK] Downloaded!
+[23:48:53]   [14/39] Downloading acidlink/cladstudioemerg [PRIVATE]
+[23:48:54]     [OK] Downloaded!
+[23:48:54]   [15/39] Downloading acidlink/clone-screenshot--chatgpt [PRIVATE]
+[23:48:56]     [OK] Downloaded!
+[23:48:56]   [16/39] Downloading acidlink/cosmic-craft-core [PRIVATE]
+[23:48:58]     [OK] Downloaded!
+[23:48:59]   [17/39] Downloading acidlink/DeepSeek-Coder-V2 [public]
+[23:49:01]     [OK] Downloaded!
+[23:49:01]   [18/39] Downloading acidlink/drive-doctor-dash [PRIVATE]
+[23:49:03]     [OK] Downloaded!
+[23:49:03]   [19/39] Downloading acidlink/earn-big-now [PRIVATE]
+[23:49:05]     [OK] Downloaded!
+[23:49:05]   [20/39] Downloading acidlink/engage-nexus-metrics [PRIVATE]
+[23:49:07]     [OK] Downloaded!
+[23:49:07]   [21/39] Downloading acidlink/kamakaze-jarvis-inspired-ai-assistant [PRIVATE]
+[23:49:09]     [OK] Downloaded!
+[23:49:09]   [22/39] Downloading acidlink/kamakaze-jarvis-inspired-ai-assistant-1 [PRIVATE]
+[23:49:11]     [OK] Downloaded!
+[23:49:11]   [23/39] Downloading acidlink/kamikaze-ai-buddy [PRIVATE]
+[23:49:13]     [OK] Downloaded!
+[23:49:13]   [24/39] Downloading acidlink/monetization-idea-generator [PRIVATE]
+[23:49:15]     [OK] Downloaded!
+[23:49:15]   [25/39] Downloading acidlink/nexus-farm-engine [PRIVATE]
+[23:49:19]     [OK] Downloaded!
+[23:49:20]   [26/39] Downloading acidlink/openclaw-hub [PRIVATE]
+[23:49:22]     [OK] Downloaded!
+[23:49:23]   [27/39] Downloading acidlink/oz-hack-emporium [PRIVATE]
+[23:49:25]     [OK] Downloaded!
+[23:49:25]   [28/39] Downloading acidlink/perplexity-ai-clone [PRIVATE]
+[23:49:27]     [OK] Downloaded!
+[23:49:27]   [29/39] Downloading acidlink/perplexity-ai-clone-1 [PRIVATE]
+[23:49:29]     [OK] Downloaded!
+[23:49:30]   [30/39] Downloading acidlink/project-hub [PRIVATE]
+[23:49:31]     [OK] Downloaded!
+[23:49:32]   [31/39] Downloading acidlink/remix-of-cosmic-craft-core [PRIVATE]
+[23:49:33]     [OK] Downloaded!
+[23:49:34]   [32/39] Downloading acidlink/roundabout-creator-platform [PRIVATE]
+[23:49:36]     [OK] Downloaded!
+[23:49:36]   [33/39] Downloading acidlink/v0-ai-assistant-framework [PRIVATE]
+[23:49:38]     [OK] Downloaded!
+[23:49:38]   [34/39] Downloading acidlink/v0-ai-ops-mission-control [PRIVATE]
+[23:49:40]     [OK] Downloaded!
+[23:49:40]   [35/39] Downloading acidlink/v0-api-key-manager [PRIVATE]
+[23:49:42]     [OK] Downloaded!
+[23:49:42]   [36/39] Downloading acidlink/vibecloneemergent [PRIVATE]
+[23:49:44]     [OK] Downloaded!
+[23:49:44]   [37/39] Downloading acidlink/voice-coder [public]
+[23:49:45]     [OK] Downloaded!
+[23:49:45]   [38/39] Downloading acidlink/wifi-3d-fusion [public]
+[23:51:19]     [OK] Downloaded!
+[23:51:20]   [39/39] Downloading acidlink/WorldView [public]
+[23:51:42]     [OK] Downloaded!
+[23:51:43] 
+[OK] acidlink: 39 new repos downloaded
+[23:51:43] 
+======================================================================
+[23:51:43] ACCOUNT: Ashlee69r
+[23:51:43] ======================================================================
+[23:51:43] 
+Fetching repo list for Ashlee69r...
+[23:51:44]   Page 1: +35 repos
+[23:51:44]   Total repos: 35
+[23:51:44] Processing 35 repos (skipping already downloaded)...
+[23:51:44]   [1/35] Downloading Ashlee69r/ai-dev-command [PRIVATE]
+[23:51:47]     [OK] Downloaded!
+[23:51:47]   [2/35] Downloading Ashlee69r/ai-dev-command-1 [PRIVATE]
+[23:51:49]     [OK] Downloaded!
+[23:51:50]   [3/35] Downloading Ashlee69r/ai-dev-command-41725 [PRIVATE]
+[23:51:51]     [OK] Downloaded!
+[23:51:52]   [4/35] Downloading Ashlee69r/ai-dev-command-clone [PRIVATE]
+[23:51:53]     [OK] Downloaded!
+[23:51:54]   [5/35] Downloading Ashlee69r/ai-ecosystem-builder [PRIVATE]
+[23:51:56]     [OK] Downloaded!
+[23:51:56]   [6/35] Downloading Ashlee69r/ai-hub-command-center [PRIVATE]
+[23:51:58]     [OK] Downloaded!
+[23:51:58]   [7/35] Downloading Ashlee69r/ai-knowledge-weaver [PRIVATE]
+[23:52:00]     [OK] Downloaded!
+[23:52:00]   [8/35] Downloading Ashlee69r/ai-music-director [PRIVATE]
+[23:52:02]     [OK] Downloaded!
+[23:52:02]   [9/35] Downloading Ashlee69r/ai-project-manager-platform [PRIVATE]
+[23:52:05]     [OK] Downloaded!
+[23:52:05]   [10/35] Downloading Ashlee69r/allone [PRIVATE]
+[23:52:07]     [OK] Downloaded!
+[23:52:07]   [11/35] Downloading Ashlee69r/ashai [public]
+[23:52:08]     [OK] Downloaded!
+[23:52:09]   [12/35] Downloading Ashlee69r/australian-location-tracking-education [PRIVATE]
+[23:52:13]     [OK] Downloaded!
+[23:52:13]   [13/35] Downloading Ashlee69r/b-7161 [PRIVATE]
+[23:52:16]     [OK] Downloaded!
+[23:52:16]   [14/35] Downloading Ashlee69r/base44clone [PRIVATE]
+[23:52:18]     [OK] Downloaded!
+[23:52:18]   [15/35] Downloading Ashlee69r/chat-harmony-archiver [PRIVATE]
+[23:52:20]     [OK] Downloaded!
+[23:52:20]   [16/35] Downloading Ashlee69r/chat-organizer-ultimate [PRIVATE]
+[23:52:23]     [OK] Downloaded!
+[23:52:23]   [17/35] Downloading Ashlee69r/chat-scribe-ai-organizer [PRIVATE]
+[23:52:25]     [OK] Downloaded!
+[23:52:25]   [18/35] Downloading Ashlee69r/chat-scribe-wiki-forge [PRIVATE]
+[23:52:27]     [OK] Downloaded!
+[23:52:27]   [19/35] Downloading Ashlee69r/chat-whisperer-ai-organizer [PRIVATE]
+[23:52:29]     [OK] Downloaded!
+[23:52:29]   [20/35] Downloading Ashlee69r/cortex-project-space [PRIVATE]
+[23:52:31]     [OK] Downloaded!
+[23:52:31]   [21/35] Downloading Ashlee69r/cortex-project-space-37294 [PRIVATE]
+[23:52:33]     [OK] Downloaded!
+[23:52:33]   [22/35] Downloading Ashlee69r/crush [public]
+[23:52:35]     [OK] Downloaded!
+[23:52:35]   [23/35] Downloading Ashlee69r/cryptoclone [PRIVATE]
+[23:52:37]     [OK] Downloaded!
+[23:52:37]   [24/35] Downloading Ashlee69r/dating [PRIVATE]
+[23:52:39]     [OK] Downloaded!
+[23:52:39]   [25/35] Downloading Ashlee69r/dev-workflow-commander [public]
+[23:52:40]     [OK] Downloaded!
+[23:52:40]   [26/35] Downloading Ashlee69r/metamcp [public]
+[23:52:44]     [OK] Downloaded!
+[23:52:44]   [27/35] Downloading Ashlee69r/multi-platform-monetization-strategy [PRIVATE]
+[23:52:49]     [OK] Downloaded!
+[23:52:49]   [28/35] Downloading Ashlee69r/pipedream [public]
+[23:55:28]     [OK] Downloaded!
+[23:55:28]   [29/35] Downloading Ashlee69r/repo-prompt-master [PRIVATE]
+[23:55:30]     [OK] Downloaded!
+[23:55:30]   [30/35] Downloading Ashlee69r/sky-share-viewer [PRIVATE]
+[23:55:50]     [OK] Downloaded!
+[23:55:50]   [31/35] Downloading Ashlee69r/socialv0 [PRIVATE]
+[23:55:56]     [OK] Downloaded!
+[23:55:57]   [32/35] Downloading Ashlee69r/v0-chat-history-organizer [PRIVATE]
+[23:55:58]     [OK] Downloaded!
+[23:55:58]   [33/35] Downloading Ashlee69r/v0-clone-website [PRIVATE]
+[23:56:00]     [OK] Downloaded!
+[23:56:00]   [34/35] Downloading Ashlee69r/v0-prompt-organizer [PRIVATE]
+[23:56:02]     [OK] Downloaded!
+[23:56:02]   [35/35] Downloading Ashlee69r/v0-webui-for-text-analysis [PRIVATE]
+[23:56:04]     [OK] Downloaded!
+[23:56:04] 
+[OK] Ashlee69r: 35 new repos downloaded
+[23:56:04] 
+======================================================================
+[23:56:04] ACCOUNT: woodsai69rme
+[23:56:04] ======================================================================
+[23:56:04] 
+Fetching repo list for woodsai69rme...
+[23:56:06]   Page 1: +100 repos
+[23:56:07]   Page 2: +100 repos
+[23:56:09]   Page 3: +100 repos
+[23:56:11]   Page 4: +43 repos
+[23:56:13]   Total repos: 343
+[23:56:13] Processing 343 repos (skipping already downloaded)...
+[23:56:13]   [1/343] Downloading woodsai69rme/accomplish [public]
+[23:56:19]     [OK] Downloaded!
+[23:56:20]   [2/343] Downloading woodsai69rme/adk-rag-agent [public]
+[23:56:21]     [OK] Downloaded!
+[23:56:21]   [3/343] Downloading woodsai69rme/aether-flow-orchestrator [PRIVATE]
+[23:56:23]     [OK] Downloaded!
+[23:56:24]   [4/343] Downloading woodsai69rme/agent-nexus [PRIVATE]
+[23:56:25]     [OK] Downloaded!
+[23:56:26]   [5/343] Downloading woodsai69rme/agent-orchestrator [PRIVATE]
+[23:56:28]     [OK] Downloaded!
+[23:56:28]   [6/343] Downloading woodsai69rme/agentive-ai-discovery-board [PRIVATE]
+[23:56:30]     [OK] Downloaded!
+[23:56:30]   [7/343] Downloading woodsai69rme/ai [public]
+[23:56:31]     [OK] Downloaded!
+[23:56:31]   [8/343] Downloading woodsai69rme/ai-coder-hub [PRIVATE]
+[23:56:33]     [OK] Downloaded!
+[23:56:34]   [9/343] Downloading woodsai69rme/ai-command-center [PRIVATE]
+[23:56:36]     [OK] Downloaded!
+[23:56:36]   [10/343] Downloading woodsai69rme/ai-command-center-nexus [PRIVATE]
+[23:56:38]     [OK] Downloaded!
+[23:56:38]   [11/343] Downloading woodsai69rme/ai-crypto-ecosystem-complete [public]
+[23:56:39]     [OK] Downloaded!
+[23:56:39]   [12/343] Downloading woodsai69rme/ai-crypto-trading--monitoring [PRIVATE]
+[23:56:41]     [OK] Downloaded!
+[23:56:41]   [13/343] Downloading woodsai69rme/ai-crypto-trading-ecosystem-complete [public]
+[23:56:43]     [OK] Downloaded!
+[23:56:43]   [14/343] Downloading woodsai69rme/ai-deals-nexus [PRIVATE]
+[23:56:47]     [OK] Downloaded!
+[23:56:48]   [15/343] Downloading woodsai69rme/ai-deals-oasis [PRIVATE]
+[23:56:50]     [OK] Downloaded!
+[23:56:50]   [16/343] Downloading woodsai69rme/ai-dev-team [PRIVATE]
+[23:56:52]     [OK] Downloaded!
+[23:56:53]   [17/343] Downloading woodsai69rme/ai-insight-hub [PRIVATE]
+[23:56:55]     [OK] Downloaded!
+[23:56:55]   [18/343] Downloading woodsai69rme/ai-keykeeper [PRIVATE]
+[23:56:58]     [OK] Downloaded!
+[23:56:58]   [19/343] Downloading woodsai69rme/ai-money-maker-au [PRIVATE]
+[23:57:00]     [OK] Downloaded!
+[23:57:00]   [20/343] Downloading woodsai69rme/ai-nexus-hub [PRIVATE]
+[23:57:02]     [OK] Downloaded!
+[23:57:03]   [21/343] Downloading woodsai69rme/ai-nexus-toolkit [PRIVATE]
+[23:57:05]     [OK] Downloaded!
+[23:57:05]   [22/343] Downloading woodsai69rme/ai-ops-nexus-hub [PRIVATE]
+[23:57:07]     [OK] Downloaded!
+[23:57:08]   [23/343] Downloading woodsai69rme/ai-pulse-dashboard [PRIVATE]
+[23:57:10]     [OK] Downloaded!
+[23:57:10]   [24/343] Downloading woodsai69rme/ai-resource-guardian [PRIVATE]
+[23:57:12]     [OK] Downloaded!
+[23:57:12]   [25/343] Downloading woodsai69rme/ai-text-stripper [PRIVATE]
+[23:57:14]     [OK] Downloaded!
+[23:57:14]   [26/343] Downloading woodsai69rme/ai-trial-tracker-pro [PRIVATE]
+[23:57:16]     [OK] Downloaded!
+[23:57:16]   [27/343] Downloading woodsai69rme/ai-usage-navigator [PRIVATE]
+[23:57:19]     [OK] Downloaded!
+[23:57:19]   [28/343] Downloading woodsai69rme/ai-wisdom-vault [PRIVATE]
+[23:57:23]     [OK] Downloaded!
+[23:57:24]   [29/343] Downloading woodsai69rme/aiittoolsbolt [PRIVATE]
+[23:57:25]     [OK] Downloaded!
+[23:57:26]   [30/343] Downloading woodsai69rme/aiusemaxbolt [PRIVATE]
+[23:57:27]     [OK] Downloaded!
+[23:57:27]   [31/343] Downloading woodsai69rme/aiworkspace [PRIVATE]
+[23:57:29]     [OK] Downloaded!
+[23:57:29]   [32/343] Downloading woodsai69rme/alpha-ai-crypto-trader [PRIVATE]
+[23:57:31]     [OK] Downloaded!
+[23:57:32]   [33/343] Downloading woodsai69rme/alpha-ai-trade-hub [PRIVATE]
+[23:57:34]     [OK] Downloaded!
+[23:57:34]   [34/343] Downloading woodsai69rme/antique-vista-verify [PRIVATE]
+[23:57:36]     [OK] Downloaded!
+[23:57:36]   [35/343] Downloading woodsai69rme/api [PRIVATE]
+[23:57:37]     [OK] Downloaded!
+[23:57:37]   [36/343] Downloading woodsai69rme/api-idea-genesis [PRIVATE]
+[23:57:39]     [OK] Downloaded!
+[23:57:39]   [37/343] Downloading woodsai69rme/Archon [public]
+[23:57:41]     [OK] Downloaded!
+[23:57:41]   [38/343] Downloading woodsai69rme/art-echo-creator [PRIVATE]
+[23:57:43]     [OK] Downloaded!
+[23:57:43]   [39/343] Downloading woodsai69rme/artspark-nft-haven [PRIVATE]
+[23:57:45]     [OK] Downloaded!
+[23:57:45]   [40/343] Downloading woodsai69rme/aud-ai-saver [PRIVATE]
+[23:57:47]     [OK] Downloaded!
+[23:57:47]   [41/343] Downloading woodsai69rme/aus-ai-ascend [PRIVATE]
+[23:57:49]     [OK] Downloaded!
+[23:57:49]   [42/343] Downloading woodsai69rme/aussie-ai-agency [PRIVATE]
+[23:57:52]     [OK] Downloaded!
+[23:57:52]   [43/343] Downloading woodsai69rme/aussie-metal-mayhem-motors [PRIVATE]
+[23:57:58]     [OK] Downloaded!
+[23:57:58]   [44/343] Downloading woodsai69rme/auto-researcher-pro [PRIVATE]
+[23:58:00]     [OK] Downloaded!
+[23:58:00]   [45/343] Downloading woodsai69rme/auto-synth-ops [PRIVATE]
+[23:58:02]     [OK] Downloaded!
+[23:58:02]   [46/343] Downloading woodsai69rme/awesome-ai-sdks [public]
+[23:58:04]     [OK] Downloaded!
+[23:58:04]   [47/343] Downloading woodsai69rme/awesome-claude-agents [public]
+[23:58:06]     [OK] Downloaded!
+[23:58:06]   [48/343] Downloading woodsai69rme/awesome-claude-code [public]
+[23:58:07]     [OK] Downloaded!
+[23:58:07]   [49/343] Downloading woodsai69rme/awesome-claude-code-subagents [public]
+[23:58:09]     [OK] Downloaded!
+[23:58:09]   [50/343] Downloading woodsai69rme/awesome-cli [public]
+[23:58:10]     [OK] Downloaded!
+[23:58:10]   [51/343] Downloading woodsai69rme/awesome-cli-apps [public]
+[23:58:11]     [OK] Downloaded!
+[23:58:12]   [52/343] Downloading woodsai69rme/Awesome-Code-LLM [public]
+[23:58:13]     [OK] Downloaded!
+[23:58:13]   [53/343] Downloading woodsai69rme/awesome-coins [public]
+[23:58:14]     [OK] Downloaded!
+[23:58:14]   [54/343] Downloading woodsai69rme/awesome-devtools [public]
+[23:58:16]     [OK] Downloaded!
+[23:58:16]   [55/343] Downloading woodsai69rme/awesome-mcp-servers [public]
+[23:58:17]     [OK] Downloaded!
+[23:58:17]   [56/343] Downloading woodsai69rme/awesome-n8n [public]
+[23:58:18]     [OK] Downloaded!
+[23:58:19]   [57/343] Downloading woodsai69rme/awesome-n8n-templates [public]
+[23:58:21]     [OK] Downloaded!
+[23:58:21]   [58/343] Downloading woodsai69rme/awesome-nocode-lowcode [public]
+[23:58:22]     [OK] Downloaded!
+[23:58:22]   [59/343] Downloading woodsai69rme/awesome-selfhosted [public]
+[23:58:24]     [OK] Downloaded!
+[23:58:24]   [60/343] Downloading woodsai69rme/beacon-clone-trader-dash [PRIVATE]
+[23:58:26]     [OK] Downloaded!
+[23:58:26]   [61/343] Downloading woodsai69rme/bolt.diy [public]
+[23:58:33]     [OK] Downloaded!
+[23:58:34]   [62/343] Downloading woodsai69rme/bolt2 [PRIVATE]
+[23:58:35]     [OK] Downloaded!
+[23:58:36]   [63/343] Downloading woodsai69rme/boltcrypto [PRIVATE]
+[23:58:37]     [OK] Downloaded!
+[23:58:38]   [64/343] Downloading woodsai69rme/bolthypercoding [PRIVATE]
+[23:58:39]     [OK] Downloaded!
+[23:58:39]   [65/343] Downloading woodsai69rme/boltnew [PRIVATE]
+[23:58:41]     [OK] Downloaded!
+[23:58:41]   [66/343] Downloading woodsai69rme/bookmark-buddy-sort [PRIVATE]
+[23:58:43]     [OK] Downloaded!
+[23:58:43]   [67/343] Downloading woodsai69rme/bot-bloom-capital [PRIVATE]
+[23:58:45]     [OK] Downloaded!
+[23:58:45]   [68/343] Downloading woodsai69rme/branch-buddy-deploy [PRIVATE]
+[23:58:48]     [OK] Downloaded!
+[23:58:48]   [69/343] Downloading woodsai69rme/c-2693 [PRIVATE]
+[23:58:52]     [OK] Downloaded!
+[23:58:52]   [70/343] Downloading woodsai69rme/c-3685 [PRIVATE]
+[23:58:54]     [OK] Downloaded!
+[23:58:55]   [71/343] Downloading woodsai69rme/c-442780 [PRIVATE]
+[23:58:56]     [OK] Downloaded!
+[23:58:56]   [72/343] Downloading woodsai69rme/c-692182 [PRIVATE]
+[23:58:59]     [OK] Downloaded!
+[23:59:00]   [73/343] Downloading woodsai69rme/c-8316 [PRIVATE]
+[23:59:02]     [OK] Downloaded!
+[23:59:03]   [74/343] Downloading woodsai69rme/c-855294 [PRIVATE]
+[23:59:07]     [OK] Downloaded!
+[23:59:07]   [75/343] Downloading woodsai69rme/canvas-royale-market [PRIVATE]
+[23:59:10]     [OK] Downloaded!
+[23:59:10]   [76/343] Downloading woodsai69rme/ccxt [public]
+[23:59:33]     [OK] Downloaded!
+[23:59:33]   [77/343] Downloading woodsai69rme/charm-clone-assemble-verse [PRIVATE]
+[23:59:35]     [OK] Downloaded!
+[23:59:36]   [78/343] Downloading woodsai69rme/chat-spark-organizer [PRIVATE]
+[23:59:41]     [OK] Downloaded!
+[23:59:41]   [79/343] Downloading woodsai69rme/chatgpt-file-organizer [PRIVATE]
+[23:59:43]     [OK] Downloaded!
+[23:59:43]   [80/343] Downloading woodsai69rme/chatsortbolt [PRIVATE]
+[23:59:45]     [OK] Downloaded!
+[23:59:45]   [81/343] Downloading woodsai69rme/chatter-connect-analyze-now [PRIVATE]
+[23:59:47]     [OK] Downloaded!
+[23:59:47]   [82/343] Downloading woodsai69rme/cherry-studio [public]
+[23:59:54]     [OK] Downloaded!
+[23:59:54]   [83/343] Downloading woodsai69rme/chrome-and-country-kings [PRIVATE]
+[23:59:56]     [OK] Downloaded!
+[23:59:56]   [84/343] Downloading woodsai69rme/ClaraVerse [public]
+[00:01:02]     [OK] Downloaded!
+[00:01:03]   [85/343] Downloading woodsai69rme/claraverse-evolve-ai-nexus [PRIVATE]
+[00:01:05]     [OK] Downloaded!
+[00:01:05]   [86/343] Downloading woodsai69rme/claude-code-complete-backup [PRIVATE]
+[00:01:34]     [OK] Downloaded!
+[00:01:34]   [87/343] Downloading woodsai69rme/claude-code-subagents [public]
+[00:01:35]     [OK] Downloaded!
+[00:01:36]   [88/343] Downloading woodsai69rme/claude-conductor [public]
+[00:01:37]     [OK] Downloaded!
+[00:01:37]   [89/343] Downloading woodsai69rme/claude-task-master [public]
+[00:01:40]     [OK] Downloaded!
+[00:01:40]   [90/343] Downloading woodsai69rme/claude-web-clone-magic [PRIVATE]
+[00:01:42]     [OK] Downloaded!
+[00:01:42]   [91/343] Downloading woodsai69rme/claudia [public]
+[00:01:44]     [OK] Downloaded!
+[00:01:44]   [92/343] Downloading woodsai69rme/cloud-companion [PRIVATE]
+[00:01:46]     [OK] Downloaded!
+[00:01:47]   [93/343] Downloading woodsai69rme/code-archaeologist-ai-explorer [PRIVATE]
+[00:01:49]     [OK] Downloaded!
+[00:01:49]   [94/343] Downloading woodsai69rme/code-archaeologist-ai-forge [PRIVATE]
+[00:01:51]     [OK] Downloaded!
+[00:01:51]   [95/343] Downloading woodsai69rme/code-flow-oracle [PRIVATE]
+[00:01:54]     [OK] Downloaded!
+[00:01:54]   [96/343] Downloading woodsai69rme/codesnipstripper [PRIVATE]
+[00:01:57]     [OK] Downloaded!
+[00:01:57]   [97/343] Downloading woodsai69rme/cognitive-prism-analyzer [PRIVATE]
+[00:02:02]     [OK] Downloaded!
+[00:02:02]   [98/343] Downloading woodsai69rme/cogno-control-center [PRIVATE]
+[00:02:04]     [OK] Downloaded!
+[00:02:04]   [99/343] Downloading woodsai69rme/coin-alchemy-ai [PRIVATE]
+[00:02:06]     [OK] Downloaded!
+[00:02:06]   [100/343] Downloading woodsai69rme/command-center-ai [PRIVATE]
+[00:02:08]     [OK] Downloaded!
+[00:02:08]   [101/343] Downloading woodsai69rme/context-engineering-intro [public]
+[00:02:10]     [OK] Downloaded!
+[00:02:10]   [102/343] Downloading woodsai69rme/context7 [public]
+[00:02:11]     [OK] Downloaded!
+[00:02:11]   [103/343] Downloading woodsai69rme/cplatform [PRIVATE]
+[00:02:13]     [OK] Downloaded!
+[00:02:13]   [104/343] Downloading woodsai69rme/create-volo-app [public]
+[00:02:17]     [OK] Downloaded!
+[00:02:18]   [105/343] Downloading woodsai69rme/crush [public]
+[00:02:20]     [OK] Downloaded!
+[00:02:20]   [106/343] Downloading woodsai69rme/crypto-ai-hivemind [PRIVATE]
+[00:02:22]     [OK] Downloaded!
+[00:02:22]   [107/343] Downloading woodsai69rme/crypto-ai-horizon-dashboard [PRIVATE]
+[00:02:25]     [OK] Downloaded!
+[00:02:25]   [108/343] Downloading woodsai69rme/crypto-ai-nexus-dashboard [public]
+[00:02:27]     [OK] Downloaded!
+[00:02:27]   [109/343] Downloading woodsai69rme/crypto-ai-research--trading-hub [PRIVATE]
+[00:02:31]     [OK] Downloaded!
+[00:02:31]   [110/343] Downloading woodsai69rme/crypto-ai-research--trading-hub-1 [PRIVATE]
+[00:02:35]     [OK] Downloaded!
+[00:02:35]   [111/343] Downloading woodsai69rme/crypto-ai-tradeflow-nexus [PRIVATE]
+[00:02:37]     [OK] Downloaded!
+[00:02:38]   [112/343] Downloading woodsai69rme/crypto-ai-trading-platform [PRIVATE]
+[00:02:39]     [OK] Downloaded!
+[00:02:40]   [113/343] Downloading woodsai69rme/crypto-all-in-one [PRIVATE]
+[00:02:41]     [OK] Downloaded!
+[00:02:42]   [114/343] Downloading woodsai69rme/crypto-automa-pilot [PRIVATE]
+[00:02:44]     [OK] Downloaded!
+[00:02:44]   [115/343] Downloading woodsai69rme/crypto-beacon-fusion-hub [PRIVATE]
+[00:02:46]     [OK] Downloaded!
+[00:02:47]   [116/343] Downloading woodsai69rme/crypto-beacon-trader-hub [public]
+[00:02:49]     [OK] Downloaded!
+[00:02:49]   [117/343] Downloading woodsai69rme/crypto-beacon-trader-hub-11 [PRIVATE]
+[00:02:52]     [OK] Downloaded!
+[00:02:52]   [118/343] Downloading woodsai69rme/crypto-cosmos-nexus [PRIVATE]
+[00:02:54]     [OK] Downloaded!
+[00:02:54]   [119/343] Downloading woodsai69rme/crypto-dream-trade-sim [public]
+[00:02:56]     [OK] Downloaded!
+[00:02:56]   [120/343] Downloading woodsai69rme/crypto-dream-trade-sim-11 [PRIVATE]
+[00:03:00]     [OK] Downloaded!
+[00:03:00]   [121/343] Downloading woodsai69rme/crypto-dream-trade-sim-18 [PRIVATE]
+[00:03:07]     [OK] Downloaded!
+[00:03:07]   [122/343] Downloading woodsai69rme/crypto-dream-voyage-sim [PRIVATE]
+[00:03:09]     [OK] Downloaded!
+[00:03:10]   [123/343] Downloading woodsai69rme/crypto-finder--miner [PRIVATE]
+[00:03:11]     [OK] Downloaded!
+[00:03:12]   [124/343] Downloading woodsai69rme/crypto-flow-nexus-ai [PRIVATE]
+[00:03:14]     [OK] Downloaded!
+[00:03:14]   [125/343] Downloading woodsai69rme/crypto-forge-master [PRIVATE]
+[00:03:16]     [OK] Downloaded!
+[00:03:16]   [126/343] Downloading woodsai69rme/crypto-fusion-genesis [PRIVATE]
+[00:03:18]     [OK] Downloaded!
+[00:03:18]   [127/343] Downloading woodsai69rme/crypto-fusion-nexus-flow [PRIVATE]
+[00:03:20]     [OK] Downloaded!
+[00:03:20]   [128/343] Downloading woodsai69rme/crypto-fusion-quest [PRIVATE]
+[00:03:22]     [OK] Downloaded!
+[00:03:22]   [129/343] Downloading woodsai69rme/crypto-lovable-trader [PRIVATE]
+[00:03:24]     [OK] Downloaded!
+[00:03:24]   [130/343] Downloading woodsai69rme/crypto-navigator-ai [PRIVATE]
+[00:03:26]     [OK] Downloaded!
+[00:03:26]   [131/343] Downloading woodsai69rme/crypto-nexus-automator [PRIVATE]
+[00:03:28]     [OK] Downloaded!
+[00:03:28]   [132/343] Downloading woodsai69rme/crypto-nexus-automator-41 [PRIVATE]
+[00:03:29]     [OK] Downloaded!
+[00:03:30]   [133/343] Downloading woodsai69rme/crypto-nexus-automator-41-33e32191 [PRIVATE]
+[00:03:31]     [OK] Downloaded!
+[00:03:31]   [134/343] Downloading woodsai69rme/crypto-nexus-automator-41-e423d3fc [PRIVATE]
+[00:03:32]     [OK] Downloaded!
+[00:03:32]   [135/343] Downloading woodsai69rme/crypto-nexus-fusion [PRIVATE]
+[00:03:34]     [OK] Downloaded!
+[00:03:35]   [136/343] Downloading woodsai69rme/crypto-nexus-fusion-07 [PRIVATE]
+[00:03:41]     [OK] Downloaded!
+[00:03:41]   [137/343] Downloading woodsai69rme/crypto-sim-alpha [PRIVATE]
+[00:03:43]     [OK] Downloaded!
+[00:03:44]   [138/343] Downloading woodsai69rme/crypto-vision-suite [PRIVATE]
+[00:03:46]     [OK] Downloaded!
+[00:03:47]   [139/343] Downloading woodsai69rme/crypto-woods-alpha [public]
+[00:03:48]     [OK] Downloaded!
+[00:03:48]   [140/343] Downloading woodsai69rme/crypto-woods-trader-sim [PRIVATE]
+[00:03:50]     [OK] Downloaded!
+[00:03:51]   [141/343] Downloading woodsai69rme/crypto-woods-ulitmate-26 [PRIVATE]
+[00:03:53]     [OK] Downloaded!
+[00:03:53]   [142/343] Downloading woodsai69rme/cryptoai-trade-commander [PRIVATE]
+[00:03:55]     [OK] Downloaded!
+[00:03:55]   [143/343] Downloading woodsai69rme/cryptoai-trade-forge [PRIVATE]
+[00:03:57]     [OK] Downloaded!
+[00:03:57]   [144/343] Downloading woodsai69rme/cryptoai-tradeflow-nexus [PRIVATE]
+[00:03:59]     [OK] Downloaded!
+[00:04:00]   [145/343] Downloading woodsai69rme/cryptonaut-ai-terminal [PRIVATE]
+[00:04:02]     [OK] Downloaded!
+[00:04:02]   [146/343] Downloading woodsai69rme/deepwiki-open [public]
+[00:04:05]     [OK] Downloaded!
+[00:04:05]   [147/343] Downloading woodsai69rme/design-source-hub [PRIVATE]
+[00:04:07]     [OK] Downloaded!
+[00:04:07]   [148/343] Downloading woodsai69rme/dev-forge-omni [PRIVATE]
+[00:04:09]     [OK] Downloaded!
+[00:04:09]   [149/343] Downloading woodsai69rme/dev-plan-nexus [PRIVATE]
+[00:04:12]     [OK] Downloaded!
+[00:04:12]   [150/343] Downloading woodsai69rme/dev-workflow-commander [public]
+[00:04:16]     [OK] Downloaded!
+[00:04:16]   [151/343] Downloading woodsai69rme/DevMonitor-Widget [public]
+[00:04:17]     [OK] Downloaded!
+[00:04:18]   [152/343] Downloading woodsai69rme/digest-email-forge [PRIVATE]
+[00:04:20]     [OK] Downloaded!
+[00:04:20]   [153/343] Downloading woodsai69rme/digital-trading-flow [PRIVATE]
+[00:04:22]     [OK] Downloaded!
+[00:04:22]   [154/343] Downloading woodsai69rme/directorybolt [PRIVATE]
+[00:04:24]     [OK] Downloaded!
+[00:04:24]   [155/343] Downloading woodsai69rme/docu-prime [PRIVATE]
+[00:04:26]     [OK] Downloaded!
+[00:04:26]   [156/343] Downloading woodsai69rme/dream-trade-adventures-club [PRIVATE]
+[00:04:29]     [OK] Downloaded!
+[00:04:29]   [157/343] Downloading woodsai69rme/dream-trade-forge [PRIVATE]
+[00:04:31]     [OK] Downloaded!
+[00:04:31]   [158/343] Downloading woodsai69rme/echo-chamber-of-wisdom [PRIVATE]
+[00:04:33]     [OK] Downloaded!
+[00:04:33]   [159/343] Downloading woodsai69rme/Empire-Active-Labs [PRIVATE]
+[00:04:34]     [OK] Downloaded!
+[00:04:34]   [160/343] Downloading woodsai69rme/Empire-Brain-Scripts [PRIVATE]
+[00:04:35]     [OK] Downloaded!
+[00:04:35]   [161/343] Downloading woodsai69rme/Empire-Revenue-Suites [PRIVATE]
+[00:04:37]     [OK] Downloaded!
+[00:04:37]   [162/343] Downloading woodsai69rme/engine-craft-games [PRIVATE]
+[00:04:39]     [OK] Downloaded!
+[00:04:39]   [163/343] Downloading woodsai69rme/ethosai-moral-compass-agent [PRIVATE]
+[00:04:41]     [OK] Downloaded!
+[00:04:41]   [164/343] Downloading woodsai69rme/evermind-enterprise-ai [PRIVATE]
+[00:04:43]     [OK] Downloaded!
+[00:04:43]   [165/343] Downloading woodsai69rme/fast-video-studio [PRIVATE]
+[00:04:45]     [OK] Downloaded!
+[00:04:45]   [166/343] Downloading woodsai69rme/favorite-flow-dashboard [PRIVATE]
+[00:04:49]     [OK] Downloaded!
+[00:04:50]   [167/343] Downloading woodsai69rme/find-your-funds [PRIVATE]
+[00:04:52]     [OK] Downloaded!
+[00:04:53]   [168/343] Downloading woodsai69rme/firefox-fav-flow [PRIVATE]
+[00:04:55]     [OK] Downloaded!
+[00:04:55]   [169/343] Downloading woodsai69rme/freebie-ai-optimiser [PRIVATE]
+[00:04:57]     [OK] Downloaded!
+[00:04:57]   [170/343] Downloading woodsai69rme/freecrypto [PRIVATE]
+[00:04:59]     [OK] Downloaded!
+[00:04:59]   [171/343] Downloading woodsai69rme/fusion-trading-vision [PRIVATE]
+[00:05:01]     [OK] Downloaded!
+[00:05:02]   [172/343] Downloading woodsai69rme/fusion-trading-vision-38 [PRIVATE]
+[00:05:04]     [OK] Downloaded!
+[00:05:04]   [173/343] Downloading woodsai69rme/fusion-trading-vision-42 [PRIVATE]
+[00:05:07]     [OK] Downloaded!
+[00:05:07]   [174/343] Downloading woodsai69rme/g-8461 [PRIVATE]
+[00:05:09]     [OK] Downloaded!
+[00:05:10]   [175/343] Downloading woodsai69rme/gamedevforusers [PRIVATE]
+[00:05:12]     [OK] Downloaded!
+[00:05:12]   [176/343] Downloading woodsai69rme/gemcopilot-media-scribe [PRIVATE]
+[00:05:14]     [OK] Downloaded!
+[00:05:14]   [177/343] Downloading woodsai69rme/gemini-cli [public]
+[00:05:17]     [OK] Downloaded!
+[00:05:17]   [178/343] Downloading woodsai69rme/git-insight-hub [PRIVATE]
+[00:05:19]     [OK] Downloaded!
+[00:05:19]   [179/343] Downloading woodsai69rme/github-insights-hub [PRIVATE]
+[00:05:22]     [OK] Downloaded!
+[00:05:22]   [180/343] Downloading woodsai69rme/gvie-launchpad [PRIVATE]
+[00:05:27]     [OK] Downloaded!
+[00:05:27]   [181/343] Downloading woodsai69rme/Hackrf [PRIVATE]
+[00:05:28]     [OK] Downloaded!
+[00:05:28]   [182/343] Downloading woodsai69rme/hackrfv0 [PRIVATE]
+[00:05:30]     [OK] Downloaded!
+[00:05:30]   [183/343] Downloading woodsai69rme/idea-ace-showdown-wins [PRIVATE]
+[00:05:32]     [OK] Downloaded!
+[00:05:32]   [184/343] Downloading woodsai69rme/idea-fusion-alchemy [PRIVATE]
+[00:05:34]     [OK] Downloaded!
+[00:05:34]   [185/343] Downloading woodsai69rme/inferno-project-pulse-forge [PRIVATE]
+[00:05:36]     [OK] Downloaded!
+[00:05:36]   [186/343] Downloading woodsai69rme/insight-engine-buddy [PRIVATE]
+[00:05:38]     [OK] Downloaded!
+[00:05:38]   [187/343] Downloading woodsai69rme/instant-code-smith [PRIVATE]
+[00:05:40]     [OK] Downloaded!
+[00:05:40]   [188/343] Downloading woodsai69rme/InstantCoder [public]
+[00:05:42]     [OK] Downloaded!
+[00:05:42]   [189/343] Downloading woodsai69rme/intel-agent-grid [PRIVATE]
+[00:05:44]     [OK] Downloaded!
+[00:05:44]   [190/343] Downloading woodsai69rme/junior-clone [PRIVATE]
+[00:05:46]     [OK] Downloaded!
+[00:05:46]   [191/343] Downloading woodsai69rme/keno-ai-fortune [PRIVATE]
+[00:05:48]     [OK] Downloaded!
+[00:05:48]   [192/343] Downloading woodsai69rme/keno-oracle-elite-picks [PRIVATE]
+[00:05:50]     [OK] Downloaded!
+[00:05:50]   [193/343] Downloading woodsai69rme/link-locker-organizer [PRIVATE]
+[00:05:52]     [OK] Downloaded!
+[00:05:52]   [194/343] Downloading woodsai69rme/local-ai-alchemy-lab [PRIVATE]
+[00:05:54]     [OK] Downloaded!
+[00:05:54]   [195/343] Downloading woodsai69rme/local-ai-deployer [PRIVATE]
+[00:05:58]     [OK] Downloaded!
+[00:05:58]   [196/343] Downloading woodsai69rme/lovable-ai-companion [PRIVATE]
+[00:06:02]     [OK] Downloaded!
+[00:06:02]   [197/343] Downloading woodsai69rme/lovable-complex-ideas [PRIVATE]
+[00:06:04]     [OK] Downloaded!
+[00:06:04]   [198/343] Downloading woodsai69rme/lovable-custom-gpt [public]
+[00:06:05]     [OK] Downloaded!
+[00:06:05]   [199/343] Downloading woodsai69rme/lovable-evolved-fusion-core [PRIVATE]
+[00:06:08]     [OK] Downloaded!
+[00:06:08]   [200/343] Downloading woodsai69rme/lovable-fusion-spark [PRIVATE]
+[00:06:10]     [OK] Downloaded!
+[00:06:10]   [201/343] Downloading woodsai69rme/lovable-idea-nexus [PRIVATE]
+[00:06:11]     [OK] Downloaded!
+[00:06:12]   [202/343] Downloading woodsai69rme/lovable-project-merger [PRIVATE]
+[00:06:13]     [OK] Downloaded!
+[00:06:14]   [203/343] Downloading woodsai69rme/lovable-task-board-magic [PRIVATE]
+[00:06:15]     [OK] Downloaded!
+[00:06:16]   [204/343] Downloading woodsai69rme/love-bolt-clone-magic [PRIVATE]
+[00:06:18]     [OK] Downloaded!
+[00:06:18]   [205/343] Downloading woodsai69rme/love-db-quest [PRIVATE]
+[00:06:21]     [OK] Downloaded!
+[00:06:21]   [206/343] Downloading woodsai69rme/lovebolt-zero-clone [PRIVATE]
+[00:06:23]     [OK] Downloaded!
+[00:06:23]   [207/343] Downloading woodsai69rme/lovely-web-clone [PRIVATE]
+[00:06:25]     [OK] Downloaded!
+[00:06:25]   [208/343] Downloading woodsai69rme/lovestruck-crypto-nexus [PRIVATE]
+[00:06:28]     [OK] Downloaded!
+[00:06:28]   [209/343] Downloading woodsai69rme/loving-bolt-vortex-clone [PRIVATE]
+[00:06:31]     [OK] Downloaded!
+[00:06:31]   [210/343] Downloading woodsai69rme/marvel-ai-trading-hub [PRIVATE]
+[00:06:36]     [OK] Downloaded!
+[00:06:36]   [211/343] Downloading woodsai69rme/marvel-ai-trading-hub-14 [PRIVATE]
+[00:06:39]     [OK] Downloaded!
+[00:06:39]   [212/343] Downloading woodsai69rme/marvel-ai-trading-hub-53 [PRIVATE]
+[00:06:42]     [OK] Downloaded!
+[00:06:42]   [213/343] Downloading woodsai69rme/marvelaitradebolt [PRIVATE]
+[00:06:44]     [OK] Downloaded!
+[00:06:45]   [214/343] Downloading woodsai69rme/marvelpokemoncards [PRIVATE]
+[00:06:46]     [OK] Downloaded!
+[00:06:47]   [215/343] Downloading woodsai69rme/mcp-crawl4ai-rag [public]
+[00:06:48]     [OK] Downloaded!
+[00:06:48]   [216/343] Downloading woodsai69rme/mimic-youware-clone [PRIVATE]
+[00:06:50]     [OK] Downloaded!
+[00:06:50]   [217/343] Downloading woodsai69rme/mind-weaver [PRIVATE]
+[00:06:53]     [OK] Downloaded!
+[00:06:53]   [218/343] Downloading woodsai69rme/moneymaker-ai-quest [PRIVATE]
+[00:06:55]     [OK] Downloaded!
+[00:06:55]   [219/343] Downloading woodsai69rme/moon-dev-ai-agents [public]
+[00:08:12]     [OK] Downloaded!
+[00:08:12]   [220/343] Downloading woodsai69rme/muse-master-dashboard [PRIVATE]
+[00:08:15]     [OK] Downloaded!
+[00:08:15]   [221/343] Downloading woodsai69rme/n8n [public]
+[00:08:36]     [OK] Downloaded!
+[00:08:36]   [222/343] Downloading woodsai69rme/n8n-workflows [public]
+[13:48:47]     [ERROR] woodsai69rme/n8n-workflows: Command '['git', 'clone', '--depth', '1', 'https://github.com/woodsai69rme/n8n-w
+[13:48:47]   [223/343] Downloading woodsai69rme/ndis-assistant-ai [PRIVATE]
+[13:48:49]     [OK] Downloaded!
+[13:48:49]   [224/343] Downloading woodsai69rme/ndis-flow [PRIVATE]
+[13:48:51]     [OK] Downloaded!
+[13:48:51]   [225/343] Downloading woodsai69rme/nebula-weave [PRIVATE]
+[13:48:53]     [OK] Downloaded!
+[13:48:53]   [226/343] Downloading woodsai69rme/newcrypto [PRIVATE]
+[13:48:55]     [OK] Downloaded!
+[13:48:55]   [227/343] Downloading woodsai69rme/nifty-quest-ai [PRIVATE]
+[13:48:56]     [OK] Downloaded!
+[13:48:57]   [228/343] Downloading woodsai69rme/note-scribe-echo [PRIVATE]
+[13:48:58]     [OK] Downloaded!
+[13:48:59]   [229/343] Downloading woodsai69rme/omnara [public]
+[13:49:38]     [OK] Downloaded!
+[13:49:39]   [230/343] Downloading woodsai69rme/omni-ai-enterprise-bot [PRIVATE]
+[13:49:44]     [OK] Downloaded!
+[13:49:44]   [231/343] Downloading woodsai69rme/onthereg-vscode-extension [public]
+[13:49:46]     [OK] Downloaded!
+[13:49:46]   [232/343] Downloading woodsai69rme/open-lovable [public]
+[13:49:47]     [OK] Downloaded!
+[13:49:48]   [233/343] Downloading woodsai69rme/openclaw-hub [PRIVATE]
+[13:49:49]     [OK] Downloaded!
+[13:49:50]   [234/343] Downloading woodsai69rme/openrouter-ai-ecosystem [public]
+[13:50:33]     [OK] Downloaded!
+[13:50:33]   [235/343] Downloading woodsai69rme/opstart-glimpse-demo [PRIVATE]
+[13:50:37]     [OK] Downloaded!
+[13:50:38]   [236/343] Downloading woodsai69rme/orchids-ai-development-control-system [PRIVATE]
+[13:50:42]     [OK] Downloaded!
+[13:50:42]   [237/343] Downloading woodsai69rme/phantom-profit-platform [PRIVATE]
+[13:50:46]     [OK] Downloaded!
+[13:50:46]   [238/343] Downloading woodsai69rme/phoenix-repo-revival [PRIVATE]
+[13:50:52]     [OK] Downloaded!
+[13:50:52]   [239/343] Downloading woodsai69rme/pipedream [public]
+[13:54:54]     [OK] Downloaded!
+[13:54:55]   [240/343] Downloading woodsai69rme/plandex [public]
+[13:55:37]     [OK] Downloaded!
+[13:55:38]   [241/343] Downloading woodsai69rme/plant-path-eye-diagnose [PRIVATE]
+[13:55:42]     [OK] Downloaded!
+[13:55:42]   [242/343] Downloading woodsai69rme/poke-monopoly-ai-hub [PRIVATE]
+[13:55:48]     [OK] Downloaded!

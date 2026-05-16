@@ -1,0 +1,24 @@
+Subject: Launch: AI Agent Starter Kit ($99-299)
+
+Hey,
+
+Want to add AI to your projects without months of setup?
+
+I built the AI Agent Starter Kit - everything you need:
+
+✓ CrewAI, AutoGen, LangChain (pre-configured)
+✓ LiteLLM proxy (100+ models)
+✓ MCP servers for docs, DB, Git
+✓ Docker deployment
+
+Pricing:
+• Starter: $99
+• Pro: $299 (most popular)
+• Enterprise: $999
+
+[GET IT NOW - YOUR_LINK]
+
+Questions? Just reply.
+
+Best,
+[Your Name]

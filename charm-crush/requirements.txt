@@ -1,0 +1,16 @@
+# Charm Crush Session Manager - Dependencies
+
+# GUI Framework
+PyQt6>=6.6.0
+
+# Cryptography for encrypted storage
+cryptography>=41.0.0
+
+# YAML support
+pyyaml>=6.0
+
+# Windows-specific dependencies
+pywin32>=306; sys_platform == 'win32'
+
+# Build tool
+pyinstaller>=6.3.0

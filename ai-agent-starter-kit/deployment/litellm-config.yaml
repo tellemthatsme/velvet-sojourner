@@ -1,0 +1,89 @@
+# LiteLLM Proxy Configuration
+# Routes requests to multiple LLM providers
+
+model_list:
+  # OpenAI Models
+  - model_name: gpt-4o
+    litellm_params:
+      model: openai/gpt-4o
+      api_key: os.environ/OPENAI_API_KEY
+      
+  - model_name: gpt-4o-mini
+    litellm_params:
+      model: openai/gpt-4o-mini
+      api_key: os.environ/OPENAI_API_KEY
+      
+  - model_name: gpt-4-turbo
+    litellm_params:
+      model: openai/gpt-4-turbo-preview
+      api_key: os.environ/OPENAI_API_KEY
+
+  # Anthropic Models
+  - model_name: claude-3-5-sonnet
+    litellm_params:
+      model: anthropic/claude-3-5-sonnet-20241022
+      api_key: os.environ/ANTHROPIC_API_KEY
+      
+  - model_name: claude-3-opus
+    litellm_params:
+      model: anthropic/claude-3-opus-20240229
+      api_key: os.environ/ANTHROPIC_API_KEY
+
+  # Google Models
+  - model_name: gemini-pro
+    litellm_params:
+      model: gemini/gemini-pro
+      api_key: os.environ/GOOGLE_API_KEY
+      
+  - model_name: gemini-ultra
+    litellm_params:
+      model: gemini/gemini-ultra
+      api_key: os.environ/GOOGLE_API_KEY
+
+  # OpenRouter (Access to 100+ models)
+  - model_name: openrouter-llama-3-70b
+    litellm_params:
+      model: openrouter/meta-llama/llama-3-70b-instruct
+      api_key: os.environ/OPENROUTER_API_KEY
+
+# Load Balancing & Fallbacks
+router_settings:
+  routing_strategy: simple-shuffle
+  timeout: 30
+  max_retries: 3
+
+# Rate Limits
+rate_limits:
+  - model: gpt-4o
+    tpm: 100000
+    rpm: 500
+  - model: claude-3-5-sonnet
+    tpm: 100000
+    rpm: 500
+
+# Guardrails
+guardrails:
+  - prompt_injection:
+      callbacks: [hide_secrets, moderate_content]
+  - moderation:
+      callbacks: [openai_moderations]
+
+# Logging
+litellm_settings:
+  success_callback: ["langfuse"]
+  failure_callback: ["langfuse", "sentry"]
+  service_callback: ["langfuse"]
+  turn_off_message_logging: false
+
+# UI Settings
+ui:
+  enabled: true
+  title: "AI Agent Starter Kit - LLM Proxy"
+  logo: "https://your-logo-url.com/logo.png"
+
+# General Settings
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
+  proxy_batch_write_at: 60
+  database_connection_pool_limit: 10
+  database_url: os.environ/DATABASE_URL

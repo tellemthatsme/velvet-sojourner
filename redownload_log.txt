@@ -1,0 +1,434 @@
+[1/113] Cloning acidlink/affiliate-ai-platform -> acidlink_affiliate-ai-platform ...
+OK (18 files)
+[2/113] Cloning acidlink/ai-influencer-platform -> acidlink_ai-influencer-platform ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\acidlink_ai-influencer-platform' already exists and is not an empty directory.
+
+[3/113] Cloning acidlink/awesome-ai-coding-tools -> acidlink_awesome-ai-coding-tools ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\acidlink_awesome-ai-coding-tools' already exists and is not an empty directory.
+
+[4/113] Cloning acidlink/voice-coder -> acidlink_voice-coder ...
+OK (18 files)
+[5/113] Cloning acidlink/affiliate-ai-platform -> affiliate-ai-platform ...
+OK (18 files)
+[6/113] Cloning tellemthatsme/agent-zero -> agent-zero ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\agent-zero' already exists and is not an empty directory.
+
+[7/113] Cloning woodsai69rme/ai-crypto-ecosystem-complete -> ai-crypto-ecosystem-complete ...
+OK (18 files)
+[8/113] Cloning acidlink/ai-influencer-platform -> ai-influencer-platform ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\ai-influencer-platform' already exists and is not an empty directory.
+
+[9/113] Cloning leahmfoots/ai-tools-directory -> ai-tools-directory ...
+OK (18 files)
+[10/113] Cloning leahmfoots/api-key-management-dashboard -> api-key-management-dashboard ...
+OK (18 files)
+[11/113] Cloning Ashlee69r/ashai -> ashai ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\ashai' already exists and is not an empty directory.
+
+[12/113] Cloning Ashlee69r/ashai -> Ashlee69r_ashai ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\Ashlee69r_ashai' already exists and is not an empty directory.
+
+[13/113] Cloning Ashlee69r/dev-workflow-commander -> Ashlee69r_dev-workflow-commander ...
+OK (18 files)
+[14/113] Cloning Ashlee69r/v0-chat-history-organizer -> Ashlee69r_v0-chat-history-organizer ...
+OK (18 files)
+[15/113] Cloning tellemthatsme/awesome-agents -> awesome-agents ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\awesome-agents' already exists and is not an empty directory.
+
+[16/113] Cloning tellemthatsme/awesome-ai-coding-tools -> awesome-ai-coding-tools ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\awesome-ai-coding-tools' already exists and is not an empty directory.
+
+[17/113] Cloning tellemthatsme/awesome-ai-sdks -> awesome-ai-sdks ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\awesome-ai-sdks' already exists and is not an empty directory.
+
+[18/113] Cloning tellemthatsme/awesome-browser-automation -> awesome-browser-automation ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\awesome-browser-automation' already exists and is not an empty directory.
+
+[19/113] Cloning woodsai69rme/awesome-claude-agents -> awesome-claude-agents ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\awesome-claude-agents' already exists and is not an empty directory.
+
+[20/113] Cloning tellemthatsme/awesome-claude-code -> awesome-claude-code ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\awesome-claude-code' already exists and is not an empty directory.
+
+[21/113] Cloning tellemthatsme/Awesome-Code-LLM -> Awesome-Code-LLM ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\Awesome-Code-LLM' already exists and is not an empty directory.
+
+[22/113] Cloning woodsai69rme/awesome-devtools -> awesome-devtools ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\awesome-devtools' already exists and is not an empty directory.
+
+[23/113] Cloning tellemthatsme/awesome-n8n -> awesome-n8n ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\awesome-n8n' already exists and is not an empty directory.
+
+[24/113] Cloning leahmfoots/code-and-ai-tool-discount -> code-and-ai-tool-discount ...
+OK (18 files)
+[25/113] Cloning leahmfoots/cryptotrade-pro -> cryptotrade-pro ...
+OK (18 files)
+[26/113] Cloning tellemthatsme/dev-chatgpt-prompts -> dev-chatgpt-prompts ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\dev-chatgpt-prompts' already exists and is not an empty directory.
+
+[27/113] Cloning Ashlee69r/dev-workflow-commander -> dev-workflow-commander ...
+OK (18 files)
+[28/113] Cloning leahmfoots/keno-oracle -> keno-oracle ...
+OK (18 files)
+[29/113] Cloning leahmfoots/ai-tool-discovery-platform -> leahmfoots_ai-tool-discovery-platform ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform' already exists and is not an empty directory.
+
+[30/113] Cloning leahmfoots/ai-tool-discovery-platform-1 -> leahmfoots_ai-tool-discovery-platform-1 ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-1' already exists and is not an empty directory.
+
+[31/113] Cloning leahmfoots/ai-tool-discovery-platform-10 -> leahmfoots_ai-tool-discovery-platform-10 ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-10' already exists and is not an empty directory.
+
+[32/113] Cloning leahmfoots/ai-tool-discovery-platform-11 -> leahmfoots_ai-tool-discovery-platform-11 ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-11' already exists and is not an empty directory.
+
+[33/113] Cloning leahmfoots/ai-tool-discovery-platform-2 -> leahmfoots_ai-tool-discovery-platform-2 ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-2' already exists and is not an empty directory.
+
+[34/113] Cloning leahmfoots/ai-tool-discovery-platform-3 -> leahmfoots_ai-tool-discovery-platform-3 ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-3' already exists and is not an empty directory.
+
+[35/113] Cloning leahmfoots/ai-tool-discovery-platform-4 -> leahmfoots_ai-tool-discovery-platform-4 ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-4' already exists and is not an empty directory.
+
+[36/113] Cloning leahmfoots/ai-tool-discovery-platform-5 -> leahmfoots_ai-tool-discovery-platform-5 ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-5' already exists and is not an empty directory.
+
+[37/113] Cloning leahmfoots/ai-tool-discovery-platform-6 -> leahmfoots_ai-tool-discovery-platform-6 ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-6' already exists and is not an empty directory.
+
+[38/113] Cloning leahmfoots/ai-tool-discovery-platform-7 -> leahmfoots_ai-tool-discovery-platform-7 ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-7' already exists and is not an empty directory.
+
+[39/113] Cloning leahmfoots/ai-tool-discovery-platform-8 -> leahmfoots_ai-tool-discovery-platform-8 ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-8' already exists and is not an empty directory.
+
+[40/113] Cloning leahmfoots/ai-tool-discovery-platform-9 -> leahmfoots_ai-tool-discovery-platform-9 ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-9' already exists and is not an empty directory.
+
+[41/113] Cloning leahmfoots/ai-tools-directory -> leahmfoots_ai-tools-directory ...
+OK (18 files)
+[42/113] Cloning leahmfoots/aiaccountoptimizer -> leahmfoots_aiaccountoptimizer ...
+OK (18 files)
+[43/113] Cloning leahmfoots/AIAccountOptimizerreplit -> leahmfoots_AIAccountOptimizerreplit ...
+OK (18 files)
+[44/113] Cloning leahmfoots/AIChorus -> leahmfoots_AIChorus ...
+OK (18 files)
+[45/113] Cloning leahmfoots/AiDiscountHunter -> leahmfoots_AiDiscountHunter ...
+OK (18 files)
+[46/113] Cloning leahmfoots/api-key-management-dashboard -> leahmfoots_api-key-management-dashboard ...
+OK (18 files)
+[47/113] Cloning leahmfoots/ApiKeyFlow -> leahmfoots_ApiKeyFlow ...
+OK (18 files)
+[48/113] Cloning leahmfoots/boltaiprojmanagement -> leahmfoots_boltaiprojmanagement ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_boltaiprojmanagement' already exists and is not an empty directory.
+
+[49/113] Cloning leahmfoots/code-and-ai-tool-discount -> leahmfoots_code-and-ai-tool-discount ...
+OK (18 files)
+[50/113] Cloning leahmfoots/cryptotrade-pro -> leahmfoots_cryptotrade-pro ...
+OK (18 files)
+[51/113] Cloning leahmfoots/keno-oracle -> leahmfoots_keno-oracle ...
+FAILED: Cloning into 'C:\temp\velvet-sojourner\repos\leahmfoots_keno-oracle'...
+error: LoadLibraryExW() failed with: The paging file is too small for this operation to complete.?
+
+fatal: failed to load librar
+[52/113] Cloning leahmfoots/n8n-workflows -> leahmfoots_n8n-workflows ...
+FAILED: Cloning into 'C:\temp\velvet-sojourner\repos\leahmfoots_n8n-workflows'...
+remote: Repository unavailable due to DMCA takedown.
+remote: See the takedown notice for more details:
+remote:   https://githu
+[53/113] Cloning leahmfoots/rest-express-replit -> leahmfoots_rest-express-replit ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_rest-express-replit' already exists and is not an empty directory.
+
+[54/113] Cloning woodsai69rme/lovable-custom-gpt -> lovable-custom-gpt ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\lovable-custom-gpt' already exists and is not an empty directory.
+
+[55/113] Cloning leahmfoots/rest-express-replit -> rest-express-replit ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\rest-express-replit' already exists and is not an empty directory.
+
+[56/113] Cloning tellemthatsme/roundabout -> roundabout ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\roundabout' already exists and is not an empty directory.
+
+[57/113] Cloning tellemthatsme/tellem -> tellem ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellem' already exists and is not an empty directory.
+
+[58/113] Cloning tellemthatsme/tellemthatsme -> tellemthatsme ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme' already exists and is not an empty directory.
+
+[59/113] Cloning tellemthatsme/agent-zero -> tellemthatsme_agent-zero ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_agent-zero' already exists and is not an empty directory.
+
+[60/113] Cloning tellemthatsme/AI-Empire-Mission-Control -> tellemthatsme_AI-Empire-Mission-Control ...
+OK (18 files)
+[61/113] Cloning tellemthatsme/aiusage -> tellemthatsme_aiusage ...
+OK (18 files)
+[62/113] Cloning tellemthatsme/awesome-agents -> tellemthatsme_awesome-agents ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_awesome-agents' already exists and is not an empty directory.
+
+[63/113] Cloning tellemthatsme/awesome-ai-coding-tools -> tellemthatsme_awesome-ai-coding-tools ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_awesome-ai-coding-tools' already exists and is not an empty directory.
+
+[64/113] Cloning tellemthatsme/awesome-ai-sdks -> tellemthatsme_awesome-ai-sdks ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_awesome-ai-sdks' already exists and is not an empty directory.
+
+[65/113] Cloning tellemthatsme/awesome-browser-automation -> tellemthatsme_awesome-browser-automation ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_awesome-browser-automation' already exists and is not an empty directory.
+
+[66/113] Cloning tellemthatsme/awesome-claude-code -> tellemthatsme_awesome-claude-code ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_awesome-claude-code' already exists and is not an empty directory.
+
+[67/113] Cloning tellemthatsme/Awesome-Code-LLM -> tellemthatsme_Awesome-Code-LLM ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_Awesome-Code-LLM' already exists and is not an empty directory.
+
+[68/113] Cloning tellemthatsme/awesome-n8n -> tellemthatsme_awesome-n8n ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_awesome-n8n' already exists and is not an empty directory.
+
+[69/113] Cloning tellemthatsme/brave-owl -> tellemthatsme_brave-owl ...
+OK (18 files)
+[70/113] Cloning tellemthatsme/dev-chatgpt-prompts -> tellemthatsme_dev-chatgpt-prompts ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_dev-chatgpt-prompts' already exists and is not an empty directory.
+
+[71/113] Cloning tellemthatsme/kbbolt2 -> tellemthatsme_kbbolt2 ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_kbbolt2' already exists and is not an empty directory.
+
+[72/113] Cloning tellemthatsme/knnoo -> tellemthatsme_knnoo ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_knnoo' already exists and is not an empty directory.
+
+[73/113] Cloning tellemthatsme/local-operator -> tellemthatsme_local-operator ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_local-operator' already exists and is not an empty directory.
+
+[74/113] Cloning tellemthatsme/n8necobolt -> tellemthatsme_n8necobolt ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_n8necobolt' already exists and is not an empty directory.
+
+[75/113] Cloning tellemthatsme/orchids-poolday-ai-clone -> tellemthatsme_orchids-poolday-ai-clone ...
+OK (18 files)
+[76/113] Cloning tellemthatsme/platenhance -> tellemthatsme_platenhance ...
+OK (18 files)
+[77/113] Cloning tellemthatsme/roundabout -> tellemthatsme_roundabout ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_roundabout' already exists and is not an empty directory.
+
+[78/113] Cloning tellemthatsme/tellem -> tellemthatsme_tellem ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_tellem' already exists and is not an empty directory.
+
+[79/113] Cloning tellemthatsme/tellemthatsme -> tellemthatsme_tellemthatsme ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_tellemthatsme' already exists and is not an empty directory.
+
+[80/113] Cloning tellemthatsme/top-ai-directories -> tellemthatsme_top-ai-directories ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_top-ai-directories' already exists and is not an empty directory.
+
+[81/113] Cloning tellemthatsme/v0-ai-project-management-platform -> tellemthatsme_v0-ai-project-management-platform ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_v0-ai-project-management-platform' already exists and is not an empty directory.
+
+[82/113] Cloning tellemthatsme/v0-untitled-project -> tellemthatsme_v0-untitled-project ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_v0-untitled-project' already exists and is not an empty directory.
+
+[83/113] Cloning tellemthatsme/voice-coding-assistant -> tellemthatsme_voice-coding-assistant ...
+OK (18 files)
+[84/113] Cloning tellemthatsme/zer01bolt -> tellemthatsme_zer01bolt ...
+OK (18 files)
+[85/113] Cloning tellemthatsme/zeroonebolt -> tellemthatsme_zeroonebolt ...
+OK (18 files)
+[86/113] Cloning tellemthatsme/top-ai-directories -> top-ai-directories ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\top-ai-directories' already exists and is not an empty directory.
+
+[87/113] Cloning tellemthatsme/voice-coding-assistant -> voice-coding-assistant ...
+OK (18 files)
+[88/113] Cloning woodsai69rme/ai -> woodsai69rme_ai ...
+OK (18 files)
+[89/113] Cloning woodsai69rme/ai-crypto-ecosystem-complete -> woodsai69rme_ai-crypto-ecosystem-complete ...
+OK (18 files)
+[90/113] Cloning woodsai69rme/api -> woodsai69rme_api ...
+OK (18 files)
+[91/113] Cloning woodsai69rme/awesome-ai-sdks -> woodsai69rme_awesome-ai-sdks ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\woodsai69rme_awesome-ai-sdks' already exists and is not an empty directory.
+
+[92/113] Cloning woodsai69rme/awesome-claude-agents -> woodsai69rme_awesome-claude-agents ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\woodsai69rme_awesome-claude-agents' already exists and is not an empty directory.
+
+[93/113] Cloning woodsai69rme/Awesome-Code-LLM -> woodsai69rme_Awesome-Code-LLM ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\woodsai69rme_Awesome-Code-LLM' already exists and is not an empty directory.
+
+[94/113] Cloning woodsai69rme/awesome-devtools -> woodsai69rme_awesome-devtools ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\woodsai69rme_awesome-devtools' already exists and is not an empty directory.
+
+[95/113] Cloning woodsai69rme/awesome-n8n -> woodsai69rme_awesome-n8n ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\woodsai69rme_awesome-n8n' already exists and is not an empty directory.
+
+[96/113] Cloning woodsai69rme/bolthypercoding -> woodsai69rme_bolthypercoding ...
+OK (18 files)
+[97/113] Cloning woodsai69rme/chatsortbolt -> woodsai69rme_chatsortbolt ...
+OK (18 files)
+[98/113] Cloning woodsai69rme/codesnipstripper -> woodsai69rme_codesnipstripper ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\woodsai69rme_codesnipstripper' already exists and is not an empty directory.
+
+[99/113] Cloning woodsai69rme/crypto-nexus-automator-41 -> woodsai69rme_crypto-nexus-automator-41 ...
+OK (18 files)
+[100/113] Cloning woodsai69rme/crypto-nexus-automator-41-33e32191 -> woodsai69rme_crypto-nexus-automator-41-33e32191 ...
+OK (18 files)
+[101/113] Cloning woodsai69rme/crypto-nexus-automator-41-e423d3fc -> woodsai69rme_crypto-nexus-automator-41-e423d3fc ...
+OK (18 files)
+[102/113] Cloning woodsai69rme/Empire-Active-Labs -> woodsai69rme_Empire-Active-Labs ...
+OK (18 files)
+[103/113] Cloning woodsai69rme/Empire-Brain-Scripts -> woodsai69rme_Empire-Brain-Scripts ...
+OK (18 files)
+[104/113] Cloning woodsai69rme/Empire-Revenue-Suites -> woodsai69rme_Empire-Revenue-Suites ...
+OK (18 files)
+[105/113] Cloning woodsai69rme/Hackrf -> woodsai69rme_Hackrf ...
+OK (18 files)
+[106/113] Cloning woodsai69rme/lovable-custom-gpt -> woodsai69rme_lovable-custom-gpt ...
+FAILED: fatal: destination path 'C:\temp\velvet-sojourner\repos\woodsai69rme_lovable-custom-gpt' already exists and is not an empty directory.
+
+[107/113] Cloning woodsai69rme/public -> woodsai69rme_public ...
+OK (18 files)
+[108/113] Cloning woodsai69rme/scripts -> woodsai69rme_scripts ...
+OK (18 files)
+[109/113] Cloning woodsai69rme/src -> woodsai69rme_src ...
+OK (18 files)
+[110/113] Cloning woodsai69rme/woodsandroidv2 -> woodsai69rme_woodsandroidv2 ...
+OK (18 files)
+[111/113] Cloning woodsai69rme/zeroone-toolkit -> woodsai69rme_zeroone-toolkit ...
+OK (18 files)
+[112/113] Cloning woodsai69rme/woodsandroidv2 -> woodsandroidv2 ...
+OK (18 files)
+[113/113] Cloning woodsai69rme/zeroone-toolkit -> zeroone-toolkit ...
+OK (18 files)
+
+============================================================
+RE-DOWNLOAD COMPLETE
+Success: 49
+Failed:  64
+Skipped: 0
+============================================================
+
+FAILED REPOS:
+  - acidlink_ai-influencer-platform: fatal: destination path 'C:\temp\velvet-sojourner\repos\acidlink_ai-influencer-platform' already exists and is not an empty directory.
+
+  - acidlink_awesome-ai-coding-tools: fatal: destination path 'C:\temp\velvet-sojourner\repos\acidlink_awesome-ai-coding-tools' already exists and is not an empty directory.
+
+  - agent-zero: fatal: destination path 'C:\temp\velvet-sojourner\repos\agent-zero' already exists and is not an empty directory.
+
+  - ai-influencer-platform: fatal: destination path 'C:\temp\velvet-sojourner\repos\ai-influencer-platform' already exists and is not an empty directory.
+
+  - ashai: fatal: destination path 'C:\temp\velvet-sojourner\repos\ashai' already exists and is not an empty directory.
+
+  - Ashlee69r_ashai: fatal: destination path 'C:\temp\velvet-sojourner\repos\Ashlee69r_ashai' already exists and is not an empty directory.
+
+  - awesome-agents: fatal: destination path 'C:\temp\velvet-sojourner\repos\awesome-agents' already exists and is not an empty directory.
+
+  - awesome-ai-coding-tools: fatal: destination path 'C:\temp\velvet-sojourner\repos\awesome-ai-coding-tools' already exists and is not an empty directory.
+
+  - awesome-ai-sdks: fatal: destination path 'C:\temp\velvet-sojourner\repos\awesome-ai-sdks' already exists and is not an empty directory.
+
+  - awesome-browser-automation: fatal: destination path 'C:\temp\velvet-sojourner\repos\awesome-browser-automation' already exists and is not an empty directory.
+
+  - awesome-claude-agents: fatal: destination path 'C:\temp\velvet-sojourner\repos\awesome-claude-agents' already exists and is not an empty directory.
+
+  - awesome-claude-code: fatal: destination path 'C:\temp\velvet-sojourner\repos\awesome-claude-code' already exists and is not an empty directory.
+
+  - Awesome-Code-LLM: fatal: destination path 'C:\temp\velvet-sojourner\repos\Awesome-Code-LLM' already exists and is not an empty directory.
+
+  - awesome-devtools: fatal: destination path 'C:\temp\velvet-sojourner\repos\awesome-devtools' already exists and is not an empty directory.
+
+  - awesome-n8n: fatal: destination path 'C:\temp\velvet-sojourner\repos\awesome-n8n' already exists and is not an empty directory.
+
+  - dev-chatgpt-prompts: fatal: destination path 'C:\temp\velvet-sojourner\repos\dev-chatgpt-prompts' already exists and is not an empty directory.
+
+  - leahmfoots_ai-tool-discovery-platform: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform' already exists and is not an empty directory.
+
+  - leahmfoots_ai-tool-discovery-platform-1: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-1' already exists and is not an empty directory.
+
+  - leahmfoots_ai-tool-discovery-platform-10: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-10' already exists and is not an empty directory.
+
+  - leahmfoots_ai-tool-discovery-platform-11: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-11' already exists and is not an empty directory.
+
+  - leahmfoots_ai-tool-discovery-platform-2: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-2' already exists and is not an empty directory.
+
+  - leahmfoots_ai-tool-discovery-platform-3: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-3' already exists and is not an empty directory.
+
+  - leahmfoots_ai-tool-discovery-platform-4: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-4' already exists and is not an empty directory.
+
+  - leahmfoots_ai-tool-discovery-platform-5: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-5' already exists and is not an empty directory.
+
+  - leahmfoots_ai-tool-discovery-platform-6: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-6' already exists and is not an empty directory.
+
+  - leahmfoots_ai-tool-discovery-platform-7: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-7' already exists and is not an empty directory.
+
+  - leahmfoots_ai-tool-discovery-platform-8: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-8' already exists and is not an empty directory.
+
+  - leahmfoots_ai-tool-discovery-platform-9: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_ai-tool-discovery-platform-9' already exists and is not an empty directory.
+
+  - leahmfoots_boltaiprojmanagement: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_boltaiprojmanagement' already exists and is not an empty directory.
+
+  - leahmfoots_keno-oracle: Cloning into 'C:\temp\velvet-sojourner\repos\leahmfoots_keno-oracle'...
+error: LoadLibraryExW() failed with: The paging file is too small for this operation to complete.?
+
+fatal: failed to load librar
+  - leahmfoots_n8n-workflows: Cloning into 'C:\temp\velvet-sojourner\repos\leahmfoots_n8n-workflows'...
+remote: Repository unavailable due to DMCA takedown.
+remote: See the takedown notice for more details:
+remote:   https://githu
+  - leahmfoots_rest-express-replit: fatal: destination path 'C:\temp\velvet-sojourner\repos\leahmfoots_rest-express-replit' already exists and is not an empty directory.
+
+  - lovable-custom-gpt: fatal: destination path 'C:\temp\velvet-sojourner\repos\lovable-custom-gpt' already exists and is not an empty directory.
+
+  - rest-express-replit: fatal: destination path 'C:\temp\velvet-sojourner\repos\rest-express-replit' already exists and is not an empty directory.
+
+  - roundabout: fatal: destination path 'C:\temp\velvet-sojourner\repos\roundabout' already exists and is not an empty directory.
+
+  - tellem: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellem' already exists and is not an empty directory.
+
+  - tellemthatsme: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme' already exists and is not an empty directory.
+
+  - tellemthatsme_agent-zero: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_agent-zero' already exists and is not an empty directory.
+
+  - tellemthatsme_awesome-agents: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_awesome-agents' already exists and is not an empty directory.
+
+  - tellemthatsme_awesome-ai-coding-tools: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_awesome-ai-coding-tools' already exists and is not an empty directory.
+
+  - tellemthatsme_awesome-ai-sdks: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_awesome-ai-sdks' already exists and is not an empty directory.
+
+  - tellemthatsme_awesome-browser-automation: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_awesome-browser-automation' already exists and is not an empty directory.
+
+  - tellemthatsme_awesome-claude-code: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_awesome-claude-code' already exists and is not an empty directory.
+
+  - tellemthatsme_Awesome-Code-LLM: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_Awesome-Code-LLM' already exists and is not an empty directory.
+
+  - tellemthatsme_awesome-n8n: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_awesome-n8n' already exists and is not an empty directory.
+
+  - tellemthatsme_dev-chatgpt-prompts: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_dev-chatgpt-prompts' already exists and is not an empty directory.
+
+  - tellemthatsme_kbbolt2: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_kbbolt2' already exists and is not an empty directory.
+
+  - tellemthatsme_knnoo: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_knnoo' already exists and is not an empty directory.
+
+  - tellemthatsme_local-operator: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_local-operator' already exists and is not an empty directory.
+
+  - tellemthatsme_n8necobolt: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_n8necobolt' already exists and is not an empty directory.
+
+  - tellemthatsme_roundabout: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_roundabout' already exists and is not an empty directory.
+
+  - tellemthatsme_tellem: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_tellem' already exists and is not an empty directory.
+
+  - tellemthatsme_tellemthatsme: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_tellemthatsme' already exists and is not an empty directory.
+
+  - tellemthatsme_top-ai-directories: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_top-ai-directories' already exists and is not an empty directory.
+
+  - tellemthatsme_v0-ai-project-management-platform: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_v0-ai-project-management-platform' already exists and is not an empty directory.
+
+  - tellemthatsme_v0-untitled-project: fatal: destination path 'C:\temp\velvet-sojourner\repos\tellemthatsme_v0-untitled-project' already exists and is not an empty directory.
+
+  - top-ai-directories: fatal: destination path 'C:\temp\velvet-sojourner\repos\top-ai-directories' already exists and is not an empty directory.
+
+  - woodsai69rme_awesome-ai-sdks: fatal: destination path 'C:\temp\velvet-sojourner\repos\woodsai69rme_awesome-ai-sdks' already exists and is not an empty directory.
+
+  - woodsai69rme_awesome-claude-agents: fatal: destination path 'C:\temp\velvet-sojourner\repos\woodsai69rme_awesome-claude-agents' already exists and is not an empty directory.
+
+  - woodsai69rme_Awesome-Code-LLM: fatal: destination path 'C:\temp\velvet-sojourner\repos\woodsai69rme_Awesome-Code-LLM' already exists and is not an empty directory.
+
+  - woodsai69rme_awesome-devtools: fatal: destination path 'C:\temp\velvet-sojourner\repos\woodsai69rme_awesome-devtools' already exists and is not an empty directory.
+
+  - woodsai69rme_awesome-n8n: fatal: destination path 'C:\temp\velvet-sojourner\repos\woodsai69rme_awesome-n8n' already exists and is not an empty directory.
+
+  - woodsai69rme_codesnipstripper: fatal: destination path 'C:\temp\velvet-sojourner\repos\woodsai69rme_codesnipstripper' already exists and is not an empty directory.
+
+  - woodsai69rme_lovable-custom-gpt: fatal: destination path 'C:\temp\velvet-sojourner\repos\woodsai69rme_lovable-custom-gpt' already exists and is not an empty directory.

@@ -1,0 +1,39 @@
+[2026-05-08 07:36:48] ======================================================================
+[2026-05-08 07:36:48] COMPLETE GITHUB REPO CHECK
+[2026-05-08 07:36:48] ======================================================================
+[2026-05-08 07:36:48] 
+[PHASE 1] Testing all tokens...
+[2026-05-08 07:36:50]   [OK] tellemthatsme: VALID
+[2026-05-08 07:36:50]        Public repos: 107, Private repos: 208
+[2026-05-08 07:36:50]        Scopes: admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key, admin:repo_hook, admin:ssh_signing_key, audit_log, codespace, copilot, gist, notifications, project, repo, user, workflow, write:discussion, write:network_configurations, write:packages
+[2026-05-08 07:36:52]   [OK] leahmfoots: VALID
+[2026-05-08 07:36:52]        Public repos: 8, Private repos: 90
+[2026-05-08 07:36:52]        Scopes: admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key, admin:repo_hook, admin:ssh_signing_key, audit_log, codespace, copilot, gist, notifications, project, repo, user, workflow, write:discussion, write:network_configurations, write:packages
+[2026-05-08 07:36:53]   [OK] acidlink: VALID
+[2026-05-08 07:36:53]        Public repos: 10, Private repos: 29
+[2026-05-08 07:36:53]        Scopes: admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key, admin:repo_hook, admin:ssh_signing_key, audit_log, codespace, copilot, gist, notifications, project, repo, user, workflow, write:discussion, write:network_configurations, write:packages
+[2026-05-08 07:36:54]   [OK] Ashlee69r: VALID
+[2026-05-08 07:36:54]        Public repos: 5, Private repos: 30
+[2026-05-08 07:36:55]        Scopes: admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key, admin:repo_hook, admin:ssh_signing_key, audit_log, codespace, copilot, gist, notifications, project, repo, user, workflow, write:discussion, write:network_configurations, write:packages
+[2026-05-08 07:36:56]   [OK] woodsai69rme: VALID
+[2026-05-08 07:36:56]        Public repos: 64, Private repos: 283
+[2026-05-08 07:36:56]        Scopes: admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key, admin:repo_hook, admin:ssh_signing_key, audit_log, codespace, copilot, gist, notifications, project, repo, user, workflow, write:discussion, write:network_configurations, write:packages
+[2026-05-08 07:36:56] 
+[PHASE 2] Fetching all repos from GitHub API...
+[2026-05-08 07:36:56]   Fetching repos for tellemthatsme...
+[2026-05-08 07:37:07]   Found: 315 repos
+[2026-05-08 07:37:07]   Fetching repos for leahmfoots...
+[2026-05-08 07:37:10]   Found: 98 repos
+[2026-05-08 07:37:10]   Fetching repos for acidlink...
+[2026-05-08 07:37:12]   Found: 39 repos
+[2026-05-08 07:37:12]   Fetching repos for Ashlee69r...
+[2026-05-08 07:37:17]   Found: 35 repos
+[2026-05-08 07:37:17]   Fetching repos for woodsai69rme...
+[2026-05-08 07:37:55]   Found: 347 repos
+[2026-05-08 07:37:55] 
+Total repos across all accounts: 834
+[2026-05-08 07:37:55] 
+[PHASE 3] Checking local repositories...
+[2026-05-08 07:37:55] Local repo folders: 1219
+[2026-05-08 07:37:55] 
+[PHASE 4] Comparing API vs Local...

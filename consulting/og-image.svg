@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0a0a0f"/>
+  <circle cx="600" cy="315" r="400" fill="url(#grad)" opacity="0.1"/>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <text x="600" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="800" text-anchor="middle" fill="#e2e8f0">AI Infrastructure Setup</text>
+  <text x="600" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="600" text-anchor="middle" fill="#a855f7">Done For You in 48 Hours</text>
+  <text x="600" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="400" text-anchor="middle" fill="#64748b">LLM Gateway · Chat UI · Automation · Monitoring</text>
+  <rect x="440" y="480" width="320" height="50" rx="25" fill="url(#grad)"/>
+  <text x="600" y="515" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" text-anchor="middle" fill="white">Book Free Discovery Call</text>
+</svg>

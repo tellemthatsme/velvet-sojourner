@@ -1,0 +1,139 @@
+{
+    "version": "1.0",
+    "description": "Social media post schedule configuration",
+    "settings": {
+        "default_platform": "twitter",
+        "post_time": "09:00",
+        "max_posts_per_day": 3,
+        "auto_post": false,
+        "timezone": "UTC"
+    },
+    "templates": {
+        "professional": {
+            "style": "professional",
+            "hashtags": 3,
+            "emoji_level": "minimal"
+        },
+        "casual": {
+            "style": "casual",
+            "hashtags": 2,
+            "emoji_level": "moderate"
+        },
+        "thought_leader": {
+            "style": "thought_leader",
+            "hashtags": 4,
+            "emoji_level": "none"
+        },
+        "educational": {
+            "style": "educational",
+            "hashtags": 3,
+            "emoji_level": "minimal"
+        }
+    },
+    "topics": [
+        {
+            "id": "ai-automation",
+            "name": "AI Automation",
+            "keywords": [
+                "AI",
+                "automation",
+                "productivity",
+                "AI tools"
+            ],
+            "weight": 0.3
+        },
+        {
+            "id": "development",
+            "name": "Development",
+            "keywords": [
+                "coding",
+                "programming",
+                "software",
+                "dev"
+            ],
+            "weight": 0.25
+        },
+        {
+            "id": "productivity",
+            "name": "Productivity",
+            "keywords": [
+                "productivity",
+                "workflow",
+                "efficiency",
+                "tips"
+            ],
+            "weight": 0.2
+        },
+        {
+            "id": "ai-research",
+            "name": "AI Research",
+            "keywords": [
+                "research",
+                "paper",
+                "breakthrough",
+                "science"
+            ],
+            "weight": 0.15
+        },
+        {
+            "id": "tools",
+            "name": "AI Tools",
+            "keywords": [
+                "tool",
+                "app",
+                "software",
+                "platform"
+            ],
+            "weight": 0.1
+        }
+    ],
+    "schedule": {
+        "monday": {
+            "topics": [
+                "ai-automation",
+                "development"
+            ],
+            "style": "professional"
+        },
+        "tuesday": {
+            "topics": [
+                "productivity",
+                "tools"
+            ],
+            "style": "casual"
+        },
+        "wednesday": {
+            "topics": [
+                "development",
+                "ai-research"
+            ],
+            "style": "educational"
+        },
+        "thursday": {
+            "topics": [
+                "ai-automation",
+                "productivity"
+            ],
+            "style": "thought_leader"
+        },
+        "friday": {
+            "topics": [
+                "development",
+                "tools"
+            ],
+            "style": "casual"
+        },
+        "saturday": {
+            "topics": [
+                "ai-research"
+            ],
+            "style": "thought_leader"
+        },
+        "sunday": {
+            "topics": [
+                "productivity"
+            ],
+            "style": "educational"
+        }
+    }
+}

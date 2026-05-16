@@ -1,0 +1,137 @@
+name: Obsidian Vault Backup
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Obsidian/**'
+      - '.github/workflows/obsidian-vault.yml'
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'Custom commit message'
+        required: false
+        default: 'Auto-backup vault'
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if [ -d "Obsidian/AI-Vault" ]; then
+            cd Obsidian/AI-Vault
+            git add -A
+            CHANGES=$(git diff --cached --name-only)
+            if [ -n "$CHANGES" ]; then
+              echo "changes=true" >> $GITHUB_OUTPUT
+              echo "changed_files=$(echo "$CHANGES" | wc -l)" >> $GITHUB_OUTPUT
+            else
+              echo "changes=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "message=Vault directory not found" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push if changes
+        if: steps.changes.outputs.changes == 'true'
+        run: |
+          cd Obsidian/AI-Vault
+          
+          # Get commit message from input or use default
+          COMMIT_MSG="${{ github.event.inputs.message || 'Auto-backup vault' }}"
+          COMMIT_MSG="$COMMIT_MSG - $(date '+%Y-%m-%d %H:%M:%S')"
+          
+          git add -A
+          git commit -m "$COMMIT_MSG"
+          
+          # Push to main branch
+          git push origin main
+          
+          echo "Backup completed successfully"
+          echo "Changed files: ${{ steps.changes.outputs.changed_files }}"
+
+      - name: Create backup archive
+        if: steps.changes.outputs.changes == 'true'
+        run: |
+          BACKUP_NAME="vault-backup-$(date +%Y%m%d-%H%M%S).zip"
+          zip -r "$BACKUP_NAME" Obsidian/AI-Vault/
+          
+          # Upload backup as artifact (kept for 7 days)
+          unzip -l "$BACKUP_NAME" | head -20
+          echo "Backup archive created: $BACKUP_NAME"
+
+      - name: Vault stats
+        run: |
+          if [ -d "Obsidian/AI-Vault" ]; then
+            echo "=== Vault Statistics ==="
+            echo "Total files: $(find Obsidian/AI-Vault -type f | wc -l)"
+            echo "Total size: $(du -sh Obsidian/AI-Vault | cut -f1)"
+            echo "Last modified: $(find Obsidian/AI-Vault -type f -mtime -1 | wc -l) files modified in last 24h"
+          else
+            echo "Vault directory not found"
+          fi
+
+  sync-drive:
+    needs: backup
+    runs-on: ubuntu-latest
+    if: needs.backup.result == 'success'
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup rclone
+        run: |
+          curl https://rclone.org/install.sh | sudo bash
+
+      - name: Configure rclone
+        env:
+          RCLONE_CONFIG_REMOTE: ${{ secrets.RCLONE_CONFIG }}
+        run: |
+          mkdir -p ~/.config/rclone/
+          echo "$RCLONE_CONFIG_REMOTE" > ~/.config/rclone/rclone.conf
+          chmod 600 ~/.config/rclone/rclone.conf
+
+      - name: Sync to Google Drive
+        run: |
+          rclone sync Obsidian/AI-Vault/ "gdrive:ai-automation/vault" \
+            --verbose \
+            --stats-one-line \
+            --dedup-mode older
+
+      - name: Verify sync
+        run: |
+          echo "=== Google Drive Sync Complete ==="
+          rclone about "gdrive:ai-automation/vault" 2>/dev/null || echo "Could not get drive usage"
+
+  notify:
+    needs: sync-drive
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+      - name: Generate notification
+        run: |
+          if [ "${{ needs.sync-drive.result }}" == "success" ]; then
+            echo "✅ Vault backup completed successfully"
+          else
+            echo "❌ Vault backup failed"
+            exit 1
+          fi

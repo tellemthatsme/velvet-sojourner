@@ -1,0 +1,600 @@
+"""
+User Authentication System for GitHub Repo Downloader
+Handles local user accounts with encrypted credentials
+Supports both SQLite and JSON storage (auto-detects)
+"""
+
+import os
+import json
+import hashlib
+import secrets
+import tempfile
+from datetime import datetime
+from cryptography.fernet import Fernet
+from typing import Optional, Dict, Any, List
+
+# Try to import sqlite3, fall back to JSON if not available
+USE_SQLITE = False
+try:
+    import sqlite3
+
+    # Test if sqlite3 actually works
+    test_conn = sqlite3.connect(":memory:")
+    test_conn.close()
+    USE_SQLITE = True
+except Exception:
+    USE_SQLITE = False
+
+
+class JSONUserDatabase:
+    """JSON-based user authentication database (fallback when sqlite3 unavailable)"""
+
+    def __init__(self, db_path: str = None):
+        if db_path is None:
+            app_data = os.environ.get("APPDATA", os.path.expanduser("~"))
+            self.db_dir = os.path.join(app_data, "GitHubDownloader")
+            self.db_path = os.path.join(self.db_dir, "users.json")
+        else:
+            self.db_dir = os.path.dirname(db_path)
+            self.db_path = db_path
+
+        os.makedirs(self.db_dir, exist_ok=True)
+        self._load_db()
+        self.encryption_key = self._get_or_create_encryption_key()
+
+    def _get_or_create_encryption_key(self) -> bytes:
+        """Get or create encryption key for credentials"""
+        key_file = os.path.join(self.db_dir, ".enc_key")
+        if os.path.exists(key_file):
+            with open(key_file, "rb") as f:
+                return f.read()
+        else:
+            key = Fernet.generate_key()
+            with open(key_file, "wb") as f:
+                f.write(key)
+            return key
+
+    def _load_db(self):
+        """Load or initialize the database"""
+        if os.path.exists(self.db_path):
+            with open(self.db_path, "r") as f:
+                self.data = json.load(f)
+        else:
+            self.data = {
+                "users": [],
+                "github_credentials": [],
+                "download_history": [],
+                "app_settings": {},
+            }
+            self._save_db()
+
+    def _save_db(self):
+        """Save the database"""
+        with open(self.db_path, "w") as f:
+            json.dump(self.data, f, indent=2, default=str)
+
+    def _get_next_id(self, collection: str) -> int:
+        """Get next ID for a collection"""
+        items = self.data.get(collection, [])
+        if not items:
+            return 1
+        return max(item.get("id", 0) for item in items) + 1
+
+    def hash_password(self, password: str) -> tuple:
+        """Hash password with salt"""
+        salt = secrets.token_hex(32)
+        hash_obj = hashlib.pbkdf2_hmac(
+            "sha256", password.encode(), salt.encode(), 100000
+        )
+        return hash_obj.hex(), salt
+
+    def verify_password(self, password: str, password_hash: str, salt: str) -> bool:
+        """Verify password against hash"""
+        hash_obj = hashlib.pbkdf2_hmac(
+            "sha256", password.encode(), salt.encode(), 100000
+        )
+        return hash_obj.hex() == password_hash
+
+    def create_user(self, username: str, password: str) -> tuple:
+        """Create a new user account"""
+        password_hash, salt = self.hash_password(password)
+
+        # Check if username exists
+        if any(u.get("username") == username for u in self.data["users"]):
+            return False, None
+
+        user_id = self._get_next_id("users")
+        user = {
+            "id": user_id,
+            "username": username,
+            "password_hash": password_hash,
+            "salt": salt,
+            "created_at": datetime.now().isoformat(),
+            "last_login": None,
+            "is_active": 1,
+        }
+        self.data["users"].append(user)
+        self._save_db()
+        return True, user_id
+
+    def authenticate_user(self, username: str, password: str) -> Optional[int]:
+        """Authenticate user and return user_id"""
+        for user in self.data["users"]:
+            if user.get("username") == username and user.get("is_active") == 1:
+                if self.verify_password(password, user["password_hash"], user["salt"]):
+                    user["last_login"] = datetime.now().isoformat()
+                    self._save_db()
+                    return user["id"]
+        return None
+
+    def get_user(self, user_id: int) -> Optional[Dict]:
+        """Get user details"""
+        for user in self.data["users"]:
+            if user.get("id") == user_id:
+                return {
+                    "id": user["id"],
+                    "username": user["username"],
+                    "created_at": user.get("created_at"),
+                    "last_login": user.get("last_login"),
+                }
+        return None
+
+    def save_github_credentials(
+        self,
+        user_id: int,
+        auth_type: str,
+        access_token: str,
+        github_username: str,
+        refresh_token: str = None,
+        token_expires_at: datetime = None,
+    ):
+        """Save GitHub credentials for user"""
+        fernet = Fernet(self.encryption_key)
+        encrypted_token = fernet.encrypt(access_token.encode()).decode()
+
+        # Remove existing credentials for this user
+        self.data["github_credentials"] = [
+            c for c in self.data["github_credentials"] if c.get("user_id") != user_id
+        ]
+
+        cred = {
+            "id": self._get_next_id("github_credentials"),
+            "user_id": user_id,
+            "auth_type": auth_type,
+            "access_token": encrypted_token,
+            "refresh_token": fernet.encrypt(refresh_token.encode()).decode()
+            if refresh_token
+            else None,
+            "token_expires_at": token_expires_at.isoformat()
+            if token_expires_at
+            else None,
+            "github_username": github_username,
+            "created_at": datetime.now().isoformat(),
+        }
+        self.data["github_credentials"].append(cred)
+        self._save_db()
+
+    def get_github_credentials(self, user_id: int) -> Optional[Dict]:
+        """Get decrypted GitHub credentials"""
+        fernet = Fernet(self.encryption_key)
+
+        for cred in self.data["github_credentials"]:
+            if cred.get("user_id") == user_id:
+                try:
+                    access_token = fernet.decrypt(
+                        cred["access_token"].encode()
+                    ).decode()
+                except Exception:
+                    access_token = None
+
+                refresh_token = None
+                if cred.get("refresh_token"):
+                    try:
+                        refresh_token = fernet.decrypt(
+                            cred["refresh_token"].encode()
+                        ).decode()
+                    except Exception:
+                        pass
+
+                return {
+                    "auth_type": cred.get("auth_type"),
+                    "access_token": access_token,
+                    "refresh_token": refresh_token,
+                    "token_expires_at": cred.get("token_expires_at"),
+                    "github_username": cred.get("github_username"),
+                }
+        return None
+
+    def delete_github_credentials(self, user_id: int):
+        """Delete GitHub credentials"""
+        self.data["github_credentials"] = [
+            c for c in self.data["github_credentials"] if c.get("user_id") != user_id
+        ]
+        self._save_db()
+
+    def log_download(
+        self,
+        user_id: int,
+        repo_url: str,
+        repo_name: str,
+        local_path: str,
+        file_count: int,
+        file_size: int,
+        status: str,
+    ):
+        """Log a download to history"""
+        entry = {
+            "id": self._get_next_id("download_history"),
+            "user_id": user_id,
+            "repo_url": repo_url,
+            "repo_name": repo_name,
+            "local_path": local_path,
+            "downloaded_at": datetime.now().isoformat(),
+            "file_count": file_count,
+            "file_size": file_size,
+            "status": status,
+        }
+        self.data["download_history"].append(entry)
+        self._save_db()
+
+    def get_download_history(self, user_id: int, limit: int = 100) -> list:
+        """Get download history for user"""
+        history = [
+            h for h in self.data["download_history"] if h.get("user_id") == user_id
+        ]
+        history.sort(key=lambda x: x.get("downloaded_at", ""), reverse=True)
+        return history[:limit]
+
+    def get_user_count(self) -> int:
+        """Get total user count"""
+        return sum(1 for u in self.data["users"] if u.get("is_active") == 1)
+
+
+# Choose the right implementation based on sqlite3 availability
+if USE_SQLITE:
+
+    class UserDatabase:
+        """SQLite-based user authentication database"""
+
+        def __init__(self, db_path: str = None):
+            if db_path is None:
+                app_data = os.environ.get("APPDATA", os.path.expanduser("~"))
+                self.db_path = os.path.join(app_data, "GitHubDownloader", "users.db")
+            else:
+                self.db_path = db_path
+
+            os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
+            self._init_db()
+            self.encryption_key = self._get_or_create_encryption_key()
+
+        def _get_or_create_encryption_key(self) -> bytes:
+            """Get or create encryption key for credentials"""
+            key_file = os.path.join(os.path.dirname(self.db_path), ".enc_key")
+            if os.path.exists(key_file):
+                with open(key_file, "rb") as f:
+                    return f.read()
+            else:
+                key = Fernet.generate_key()
+                with open(key_file, "wb") as f:
+                    f.write(key)
+                return key
+
+        def _init_db(self):
+            """Initialize the database schema"""
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS users (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    username TEXT UNIQUE NOT NULL,
+                    password_hash TEXT NOT NULL,
+                    salt TEXT NOT NULL,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    last_login TIMESTAMP,
+                    is_active INTEGER DEFAULT 1
+                )
+            """)
+
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS github_credentials (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    user_id INTEGER NOT NULL,
+                    auth_type TEXT NOT NULL,
+                    access_token TEXT,
+                    refresh_token TEXT,
+                    token_expires_at TIMESTAMP,
+                    github_username TEXT,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    FOREIGN KEY (user_id) REFERENCES users(id)
+                )
+            """)
+
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS download_history (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    user_id INTEGER NOT NULL,
+                    repo_url TEXT NOT NULL,
+                    repo_name TEXT,
+                    local_path TEXT,
+                    downloaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    file_count INTEGER,
+                    file_size INTEGER,
+                    status TEXT,
+                    FOREIGN KEY (user_id) REFERENCES users(id)
+                )
+            """)
+
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS app_settings (
+                    key TEXT PRIMARY KEY,
+                    value TEXT
+                )
+            """)
+
+            conn.commit()
+            conn.close()
+
+        def hash_password(self, password: str) -> tuple:
+            """Hash password with salt"""
+            salt = secrets.token_hex(32)
+            hash_obj = hashlib.pbkdf2_hmac(
+                "sha256", password.encode(), salt.encode(), 100000
+            )
+            return hash_obj.hex(), salt
+
+        def verify_password(self, password: str, password_hash: str, salt: str) -> bool:
+            """Verify password against hash"""
+            hash_obj = hashlib.pbkdf2_hmac(
+                "sha256", password.encode(), salt.encode(), 100000
+            )
+            return hash_obj.hex() == password_hash
+
+        def create_user(self, username: str, password: str) -> tuple:
+            """Create a new user account"""
+            password_hash, salt = self.hash_password(password)
+
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+
+            try:
+                cursor.execute(
+                    "INSERT INTO users (username, password_hash, salt) VALUES (?, ?, ?)",
+                    (username, password_hash, salt),
+                )
+                user_id = cursor.lastrowid
+                conn.commit()
+                return True, user_id
+            except sqlite3.IntegrityError:
+                return False, None
+            finally:
+                conn.close()
+
+        def authenticate_user(self, username: str, password: str) -> Optional[int]:
+            """Authenticate user and return user_id"""
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+
+            cursor.execute(
+                "SELECT id, password_hash, salt, is_active FROM users WHERE username = ?",
+                (username,),
+            )
+            result = cursor.fetchone()
+
+            if result and result[3] == 1:
+                user_id, password_hash, salt, _ = result
+                if self.verify_password(password, password_hash, salt):
+                    cursor.execute(
+                        "UPDATE users SET last_login = CURRENT_TIMESTAMP WHERE id = ?",
+                        (user_id,),
+                    )
+                    conn.commit()
+                    conn.close()
+                    return user_id
+
+            conn.close()
+            return None
+
+        def get_user(self, user_id: int) -> Optional[Dict]:
+            """Get user details"""
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+
+            cursor.execute(
+                "SELECT id, username, created_at, last_login FROM users WHERE id = ?",
+                (user_id,),
+            )
+            result = cursor.fetchone()
+
+            conn.close()
+            if result:
+                return {
+                    "id": result[0],
+                    "username": result[1],
+                    "created_at": result[2],
+                    "last_login": result[3],
+                }
+            return None
+
+        def save_github_credentials(
+            self,
+            user_id: int,
+            auth_type: str,
+            access_token: str,
+            github_username: str,
+            refresh_token: str = None,
+            token_expires_at: datetime = None,
+        ):
+            """Save GitHub credentials for user"""
+            fernet = Fernet(self.encryption_key)
+            encrypted_token = fernet.encrypt(access_token.encode()).decode()
+
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+
+            cursor.execute(
+                "SELECT id FROM github_credentials WHERE user_id = ?", (user_id,)
+            )
+            existing = cursor.fetchone()
+
+            if existing:
+                cursor.execute(
+                    """
+                    UPDATE github_credentials 
+                    SET auth_type = ?, access_token = ?, refresh_token = ?,
+                        token_expires_at = ?, github_username = ?
+                    WHERE user_id = ?
+                """,
+                    (
+                        auth_type,
+                        encrypted_token,
+                        fernet.encrypt(refresh_token.encode()).decode()
+                        if refresh_token
+                        else None,
+                        token_expires_at,
+                        github_username,
+                        user_id,
+                    ),
+                )
+            else:
+                cursor.execute(
+                    """
+                    INSERT INTO github_credentials 
+                    (user_id, auth_type, access_token, refresh_token, token_expires_at, github_username)
+                    VALUES (?, ?, ?, ?, ?, ?)
+                """,
+                    (
+                        user_id,
+                        auth_type,
+                        encrypted_token,
+                        fernet.encrypt(refresh_token.encode()).decode()
+                        if refresh_token
+                        else None,
+                        token_expires_at,
+                        github_username,
+                    ),
+                )
+
+            conn.commit()
+            conn.close()
+
+        def get_github_credentials(self, user_id: int) -> Optional[Dict]:
+            """Get decrypted GitHub credentials"""
+            fernet = Fernet(self.encryption_key)
+
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+
+            cursor.execute(
+                """
+                SELECT auth_type, access_token, refresh_token, token_expires_at, github_username 
+                FROM github_credentials WHERE user_id = ?
+            """,
+                (user_id,),
+            )
+            result = cursor.fetchone()
+
+            conn.close()
+
+            if result:
+                (
+                    auth_type,
+                    encrypted_token,
+                    encrypted_refresh,
+                    token_expires,
+                    github_username,
+                ) = result
+
+                try:
+                    access_token = fernet.decrypt(encrypted_token.encode()).decode()
+                except:
+                    access_token = None
+
+                refresh_token = None
+                if encrypted_refresh:
+                    try:
+                        refresh_token = fernet.decrypt(
+                            encrypted_refresh.encode()
+                        ).decode()
+                    except:
+                        pass
+
+                return {
+                    "auth_type": auth_type,
+                    "access_token": access_token,
+                    "refresh_token": refresh_token,
+                    "token_expires_at": token_expires,
+                    "github_username": github_username,
+                }
+            return None
+
+        def delete_github_credentials(self, user_id: int):
+            """Delete GitHub credentials"""
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            cursor.execute(
+                "DELETE FROM github_credentials WHERE user_id = ?", (user_id,)
+            )
+            conn.commit()
+            conn.close()
+
+        def log_download(
+            self,
+            user_id: int,
+            repo_url: str,
+            repo_name: str,
+            local_path: str,
+            file_count: int,
+            file_size: int,
+            status: str,
+        ):
+            """Log a download to history"""
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            cursor.execute(
+                """
+                INSERT INTO download_history 
+                (user_id, repo_url, repo_name, local_path, file_count, file_size, status)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+            """,
+                (
+                    user_id,
+                    repo_url,
+                    repo_name,
+                    local_path,
+                    file_count,
+                    file_size,
+                    status,
+                ),
+            )
+            conn.commit()
+            conn.close()
+
+        def get_download_history(self, user_id: int, limit: int = 100) -> list:
+            """Get download history for user"""
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            cursor.execute(
+                """
+                SELECT * FROM download_history 
+                WHERE user_id = ? 
+                ORDER BY downloaded_at DESC 
+                LIMIT ?
+            """,
+                (user_id, limit),
+            )
+            results = cursor.fetchall()
+            conn.close()
+            return results
+
+        def get_user_count(self) -> int:
+            """Get total user count"""
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            cursor.execute("SELECT COUNT(*) FROM users WHERE is_active = 1")
+            count = cursor.fetchone()[0]
+            conn.close()
+            return count
+else:
+    # Use JSON-based fallback
+    UserDatabase = JSONUserDatabase

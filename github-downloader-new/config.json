@@ -1,0 +1,38 @@
+{
+    "github": {
+        "rate_limit": {
+            "safety_margin": 0.8,
+            "authenticated_limit": 5000,
+            "unauthenticated_limit": 60,
+            "request_delay_ms": 100
+        },
+        "token": ""
+    },
+    "downloads": {
+        "default_output": "~/Downloads",
+        "max_file_size_mb": 100,
+        "max_concurrent": 3,
+        "retry_attempts": 3,
+        "retry_delay_seconds": 5
+    },
+    "sync": {
+        "strategy": "smart",
+        "auto_sync": false,
+        "sync_interval_hours": 24
+    },
+    "notifications": {
+        "enabled": true,
+        "discord_webhook": "",
+        "slack_webhook": "",
+        "email_smtp": {}
+    },
+    "ui": {
+        "theme": "dark",
+        "remember_last_repo": true,
+        "recent_repos_limit": 20
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "downloads.log"
+    }
+}
