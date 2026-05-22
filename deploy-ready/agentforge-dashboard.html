@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgentForge Index — The Ultimate Curated Directory of AI Agent Repositories</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--p:#8b5cf6;--p-h:#7c3aed;--p-l:#a78bfa;--p-g:#6d28d9;--bg:#0a0a0f;--bg2:#12121a;--bg3:#1a1a26;--bg4:#22223a;--b:#2a2a3e;--t:#e2e8f0;--t2:#8899aa;--t3:#555577;--radius:12px;--radius-sm:8px;--shadow:0 4px 24px rgba(0,0,0,.4);--glow:0 0 40px rgba(139,92,246,.15)}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--t);line-height:1.6;overflow-x:hidden}
+a{color:var(--p-l);text-decoration:none}
+img{max-width:100%}
+
+/* Header */
+.header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--b);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.header-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--t)}
+.header-logo svg{width:28px;height:28px}
+.header-logo span span{color:var(--p)}
+.header-nav{display:flex;align-items:center;gap:24px}
+.header-nav a{color:var(--t2);font-size:14px;font-weight:500;transition:color .2s}
+.header-nav a:hover{color:var(--t)}
+.header-cta{padding:8px 20px;background:var(--p);color:#fff;border-radius:8px;font-size:13px;font-weight:600;transition:all .2s}
+.header-cta:hover{background:var(--p-h);transform:translateY(-1px);box-shadow:var(--glow)}
+.mobile-menu-btn{display:none;background:none;border:none;color:var(--t);font-size:24px;cursor:pointer;padding:4px}
+
+/* Sections */
+.section{padding:100px 24px 80px;max-width:1200px;margin:0 auto}
+.section-title{font-size:36px;font-weight:800;margin-bottom:12px;text-align:center}
+.section-subtitle{font-size:17px;color:var(--t2);text-align:center;max-width:640px;margin:0 auto 48px}
+.section-label{display:inline-block;padding:4px 14px;border-radius:100px;background:rgba(139,92,246,.12);color:var(--p-l);font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:16px}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;position:relative;overflow:hidden}
+.hero-bg{position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;overflow:hidden}
+.hero-bg div{position:absolute;border-radius:50%;opacity:.03}
+.hero-bg div:nth-child(1){width:600px;height:600px;background:var(--p);top:-200px;right:-200px}
+.hero-bg div:nth-child(2){width:400px;height:400px;background:var(--p);bottom:-100px;left:-100px}
+.hero-bg div:nth-child(3){width:300px;height:300px;background:var(--p);top:50%;left:50%;transform:translate(-50%,-50%)}
+.hero-label{display:inline-block;padding:6px 18px;border-radius:100px;background:rgba(139,92,246,.12);color:var(--p-l);font-size:13px;font-weight:600;letter-spacing:.5px;margin-bottom:24px;border:1px solid rgba(139,92,246,.2)}
+.hero h1{font-size:clamp(40px,8vw,76px);font-weight:900;line-height:1.08;margin-bottom:20px;letter-spacing:-2px}
+.hero h1 span{background:linear-gradient(135deg,var(--p-l),var(--p),var(--p-g));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{font-size:clamp(16px,2.5vw,20px);color:var(--t2);max-width:600px;margin:0 auto 36px;line-height:1.7}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.btn-primary{padding:16px 40px;background:var(--p);color:#fff;border:none;border-radius:var(--radius);font-size:16px;font-weight:600;cursor:pointer;transition:all .25s}
+.btn-primary:hover{background:var(--p-h);transform:translateY(-2px);box-shadow:0 8px 32px rgba(139,92,246,.3)}
+.btn-secondary{padding:16px 40px;background:var(--bg3);color:var(--t);border:1px solid var(--b);border-radius:var(--radius);font-size:16px;font-weight:600;cursor:pointer;transition:all .25s}
+.btn-secondary:hover{background:var(--bg4);border-color:var(--t3);transform:translateY(-2px)}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:1000px;margin:-60px auto 0;padding:0 24px;position:relative;z-index:2}
+.stat-card{background:var(--bg3);border:1px solid var(--b);border-radius:var(--radius);padding:28px 20px;text-align:center;transition:all .3s}
+.stat-card:hover{transform:translateY(-4px);border-color:var(--p);box-shadow:var(--glow)}
+.stat-num{font-size:36px;font-weight:800;color:var(--p-l);line-height:1.2}
+.stat-label{font-size:14px;color:var(--t2);margin-top:4px}
+
+/* Categories */
+.categories-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.cat-card{background:var(--bg3);border:1px solid var(--b);border-radius:var(--radius);padding:20px;text-align:center;cursor:pointer;transition:all .25s;position:relative;overflow:hidden}
+.cat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--p);transform:scaleX(0);transition:transform .3s}
+.cat-card:hover::before{transform:scaleX(1)}
+.cat-card:hover{transform:translateY(-4px);border-color:var(--p);box-shadow:var(--glow)}
+.cat-icon{font-size:28px;margin-bottom:8px}
+.cat-name{font-size:14px;font-weight:600;color:var(--t)}
+.cat-count{font-size:12px;color:var(--t3);margin-top:4px}
+
+/* Filters */
+.filters-bar{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:32px;align-items:center}
+.filters-bar input,.filters-bar select{padding:10px 16px;background:var(--bg3);border:1px solid var(--b);border-radius:var(--radius-sm);color:var(--t);font-size:14px;font-family:inherit;outline:none;transition:border .2s}
+.filters-bar input:focus,.filters-bar select:focus{border-color:var(--p)}
+.filters-bar input{flex:1;min-width:200px}
+.filters-bar input::placeholder{color:var(--t3)}
+.filters-bar select{cursor:pointer}
+.filter-tiers{display:flex;gap:6px}
+.filter-tiers button{padding:8px 16px;border-radius:var(--radius-sm);border:1px solid var(--b);background:var(--bg3);color:var(--t2);font-size:13px;font-weight:500;cursor:pointer;transition:all .2s;font-family:inherit}
+.filter-tiers button:hover{border-color:var(--t3);color:var(--t)}
+.filter-tiers button.active{background:var(--p);border-color:var(--p);color:#fff}
+.results-count{font-size:14px;color:var(--t2);margin-bottom:16px}
+
+/* Repo Grid */
+.repo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+.repo-card{background:var(--bg3);border:1px solid var(--b);border-radius:var(--radius);padding:24px;cursor:pointer;transition:all .25s;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.repo-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--p);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.repo-card:hover::after{transform:scaleX(1)}
+.repo-card:hover{transform:translateY(-4px);border-color:var(--p);box-shadow:var(--glow)}
+.repo-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+.repo-name{font-size:16px;font-weight:700;color:var(--t);line-height:1.3}
+.repo-name:hover{color:var(--p-l)}
+.repo-stars{display:flex;align-items:center;gap:4px;font-size:13px;color:var(--t2);white-space:nowrap;font-weight:500}
+.repo-stars svg{width:14px;height:14px;fill:currentColor}
+.repo-desc{font-size:13px;color:var(--t2);line-height:1.6;margin-bottom:12px;flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.repo-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:auto}
+.repo-lang{font-size:12px;color:var(--t2);background:var(--bg4);padding:3px 10px;border-radius:100px}
+.repo-tier{font-size:11px;font-weight:600;padding:3px 10px;border-radius:100px;letter-spacing:.3px}
+.tier-essential{background:rgba(16,185,129,.12);color:#34d399}
+.tier-advanced{background:rgba(245,158,11,.12);color:#fbbf24}
+.tier-expert{background:rgba(239,68,68,.12);color:#f87171}
+.repo-tags{display:flex;flex-wrap:wrap;gap:4px;margin-left:auto}
+.repo-tag{font-size:10px;padding:3px 8px;border-radius:100px;background:var(--bg4);color:var(--t3);font-weight:500}
+.no-results{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--t2);font-size:16px}
+
+/* Pricing */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1050px;margin:0 auto}
+.pricing-card{background:var(--bg3);border:1px solid var(--b);border-radius:var(--radius);padding:36px 28px;transition:all .3s;position:relative;display:flex;flex-direction:column}
+.pricing-card.featured{border-color:var(--p);background:linear-gradient(135deg,var(--bg3),rgba(139,92,246,.06))}
+.pricing-card.featured .pricing-badge{display:block}
+.pricing-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.pricing-badge{display:none;position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--p);color:#fff;font-size:11px;font-weight:700;padding:4px 16px;border-radius:100px;letter-spacing:.5px;text-transform:uppercase}
+.pricing-name{font-size:20px;font-weight:700;margin-bottom:4px}
+.pricing-desc{font-size:13px;color:var(--t2);margin-bottom:20px}
+.pricing-price{font-size:44px;font-weight:900;margin-bottom:4px}
+.pricing-price span{font-size:16px;font-weight:400;color:var(--t2)}
+.pricing-count{font-size:13px;color:var(--t3);margin-bottom:24px}
+.pricing-features{list-style:none;padding:0;margin-bottom:28px;flex:1}
+.pricing-features li{padding:8px 0;font-size:14px;color:var(--t2);display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.03)}
+.pricing-features li:last-child{border-bottom:none}
+.pricing-features li svg{width:16px;height:16px;fill:var(--p-l);flex-shrink:0}
+.pricing-btn{width:100%;padding:14px;border-radius:var(--radius-sm);border:none;font-size:15px;font-weight:600;cursor:pointer;transition:all .25s;font-family:inherit;text-align:center}
+.pricing-btn.primary{background:var(--p);color:#fff}
+.pricing-btn.primary:hover{background:var(--p-h);transform:translateY(-1px)}
+.pricing-btn.secondary{background:var(--bg4);color:var(--t);border:1px solid var(--b)}
+.pricing-btn.secondary:hover{background:var(--b);border-color:var(--t3)}
+
+/* Testimonials */
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.testimonial-card{background:var(--bg3);border:1px solid var(--b);border-radius:var(--radius);padding:28px;transition:all .3s}
+.testimonial-card:hover{transform:translateY(-2px);border-color:var(--t3)}
+.testimonial-stars{color:#fbbf24;font-size:16px;margin-bottom:12px;letter-spacing:2px}
+.testimonial-text{font-size:14px;color:var(--t2);line-height:1.7;margin-bottom:16px;font-style:italic}
+.testimonial-author{display:flex;align-items:center;gap:12px}
+.testimonial-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--p),var(--p-g));display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff}
+.testimonial-name{font-size:14px;font-weight:600;color:var(--t)}
+.testimonial-role{font-size:12px;color:var(--t3)}
+
+/* FAQ */
+.faq-list{max-width:740px;margin:0 auto}
+.faq-item{border:1px solid var(--b);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden;transition:border .2s}
+.faq-item:hover{border-color:var(--t3)}
+.faq-item.open{border-color:var(--p)}
+.faq-q{padding:18px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:15px;font-weight:600;color:var(--t);transition:color .2s;user-select:none}
+.faq-item.open .faq-q{color:var(--p-l)}
+.faq-q svg{width:18px;height:18px;fill:var(--t2);transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-q svg{transform:rotate(180deg);fill:var(--p-l)}
+.faq-a{padding:0 20px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease}
+.faq-item.open .faq-a{max-height:300px;padding:0 20px 18px}
+.faq-a p{font-size:14px;color:var(--t2);line-height:1.7}
+
+/* Comparison Table */
+.comparison-wrap{overflow-x:auto;border:1px solid var(--b);border-radius:var(--radius)}
+.comparison-table{width:100%;border-collapse:collapse;font-size:14px}
+.comparison-table th,.comparison-table td{padding:14px 20px;text-align:left;border-bottom:1px solid rgba(255,255,255,.04)}
+.comparison-table th{background:var(--bg3);font-weight:600;color:var(--t);font-size:13px;text-transform:uppercase;letter-spacing:.5px}
+.comparison-table td{color:var(--t2)}
+.comparison-table tr:last-child td{border-bottom:none}
+.comparison-table tr:hover td{background:rgba(255,255,255,.02)}
+.comparison-table .check{color:#34d399;font-weight:700}
+.comparison-table .cross{color:var(--t3)}
+
+/* Footer */
+.footer{background:var(--bg2);border-top:1px solid var(--b);padding:48px 24px;text-align:center}
+.footer h3{font-size:24px;font-weight:800;margin-bottom:8px}
+.footer p{color:var(--t2);font-size:14px;margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto}
+.footer-btn{padding:16px 48px;background:var(--p);color:#fff;border:none;border-radius:var(--radius);font-size:17px;font-weight:700;cursor:pointer;transition:all .25s;font-family:inherit}
+.footer-btn:hover{background:var(--p-h);transform:translateY(-2px);box-shadow:0 8px 32px rgba(139,92,246,.3)}
+.footer-bottom{margin-top:32px;font-size:12px;color:var(--t3)}
+
+/* Responsive */
+@media(max-width:900px){
+.pricing-grid{grid-template-columns:1fr;max-width:400px}
+.stats{grid-template-columns:repeat(2,1fr);margin-top:-40px}
+.repo-grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+}
+@media(max-width:768px){
+.header-nav{display:none}
+.mobile-menu-btn{display:block}
+.header-nav.open{display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:rgba(10,10,15,.98);backdrop-filter:blur(20px);padding:16px 24px;border-bottom:1px solid var(--b);gap:16px}
+.section{padding:60px 16px 50px}
+.testimonials-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+.stats{grid-template-columns:1fr;margin-top:-30px}
+.categories-grid{grid-template-columns:repeat(2,1fr)}
+.repo-grid{grid-template-columns:1fr}
+.filters-bar{flex-direction:column}
+.filters-bar input{min-width:0;width:100%}
+.filter-tiers{width:100%}
+.filter-tiers button{flex:1;text-align:center}
+}
+
+/* Animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.animate-fade-up{opacity:0;animation:fadeUp .6s ease forwards}
+.animate-fade-in{opacity:0;animation:fadeIn .8s ease forwards}
+.stagger-1{animation-delay:.05s}
+.stagger-2{animation-delay:.1s}
+.stagger-3{animation-delay:.15s}
+.stagger-4{animation-delay:.2s}
+.stagger-5{animation-delay:.25s}
+.stagger-6{animation-delay:.3s}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header" id="header">
+  <div class="header-logo">
+    <svg viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="6" stroke="#8b5cf6" stroke-width="2"/><path d="M14 8v12M8 14h12" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/></svg>
+    <span>Agent<span>Forge</span></span>
+  </div>
+  <nav class="header-nav" id="headerNav">
+    <a href="#browse">Browse</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="#repos" class="header-cta">Explore Repos</a>
+  </nav>
+  <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu">&#9776;</button>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg"><div></div><div></div><div></div></div>
+  <div class="hero-label">&#9670; Curated Directory v2.0</div>
+  <h1>Agent<span>Forge</span> Index</h1>
+  <p>The Ultimate Curated Directory of AI Agent Repositories — 300+ hand-picked GitHub repos across 15 categories, ranked by quality and impact.</p>
+  <div class="hero-actions">
+    <button class="btn-primary" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">Get Instant Access — $49</button>
+    <button class="btn-secondary" onclick="document.getElementById('browse').scrollIntoView({behavior:'smooth'})">Browse Directory</button>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="stats" id="stats">
+  <div class="stat-card animate-fade-up stagger-1"><div class="stat-num" data-target="325">0</div><div class="stat-label">Curated Repositories</div></div>
+  <div class="stat-card animate-fade-up stagger-2"><div class="stat-num" data-target="15">0</div><div class="stat-label">Categories</div></div>
+  <div class="stat-card animate-fade-up stagger-3"><div class="stat-num" data-target="52">0</div><div class="stat-label">Weekly Updates</div></div>
+  <div class="stat-card animate-fade-up stagger-4"><div class="stat-num" data-target="3">0</div><div class="stat-label">Tiers</div></div>
+</div>
+
+<!-- Browse -->
+<section class="section" id="browse">
+  <div style="text-align:center"><span class="section-label">&#9670; Explore</span></div>
+  <h2 class="section-title">Browse by Category</h2>
+  <p class="section-subtitle">Fifteen expertly-organized categories covering every aspect of AI agent development.</p>
+  <div class="categories-grid" id="categoryGrid"></div>
+</section>
+
+<!-- Repos -->
+<section class="section" id="repos">
+  <div style="text-align:center"><span class="section-label">&#9670; Directory</span></div>
+  <h2 class="section-title">Repository Index</h2>
+  <p class="section-subtitle">Search, filter, and sort through our curated collection of 300+ AI agent repositories.</p>
+  <div class="filters-bar">
+    <input type="text" id="searchInput" placeholder="Search by name or description..." oninput="filterRepos()">
+    <select id="categoryFilter" onchange="filterRepos()"><option value="">All Categories</option></select>
+    <select id="sortSelect" onchange="filterRepos()">
+      <option value="stars-desc">Stars &#8595;</option>
+      <option value="stars-asc">Stars &#8593;</option>
+      <option value="name">Name A-Z</option>
+    </select>
+    <div class="filter-tiers">
+      <button class="active" data-tier="All" onclick="setTier(this)">All</button>
+      <button data-tier="Essential" onclick="setTier(this)">Essential</button>
+      <button data-tier="Advanced" onclick="setTier(this)">Advanced</button>
+      <button data-tier="Expert" onclick="setTier(this)">Expert</button>
+    </div>
+  </div>
+  <div class="results-count" id="resultsCount"></div>
+  <div class="repo-grid" id="repoGrid"></div>
+</section>
+
+<!-- Pricing -->
+<section class="section" id="pricing">
+  <div style="text-align:center"><span class="section-label">&#9670; Plans</span></div>
+  <h2 class="section-title">Simple, Transparent Pricing</h2>
+  <p class="section-subtitle">Choose the tier that matches your needs. All plans include lifetime access and future updates.</p>
+  <div class="pricing-grid">
+    <div class="pricing-card animate-fade-up stagger-2">
+      <div class="pricing-name">Essentials</div>
+      <div class="pricing-desc">Perfect for getting started</div>
+      <div class="pricing-price">$49<span></span></div>
+      <div class="pricing-count">120 repositories</div>
+      <ul class="pricing-features">
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>120 curated repos</li>
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>8 categories</li>
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>CSV export</li>
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>Monthly updates</li>
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>Email support</li>
+      </ul>
+      <button class="pricing-btn primary" onclick="alert('Purchase link coming soon!')">Get Essentials</button>
+    </div>
+    <div class="pricing-card featured animate-fade-up stagger-3">
+      <div class="pricing-badge">Most Popular</div>
+      <div class="pricing-name">Advanced</div>
+      <div class="pricing-desc">For serious AI builders</div>
+      <div class="pricing-price">$99<span></span></div>
+      <div class="pricing-count">220 repositories</div>
+      <ul class="pricing-features">
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>220 curated repos</li>
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>All 12 categories</li>
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>CSV + JSON export</li>
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>Weekly updates</li>
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>API access (basic)</li>
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>Priority support</li>
+      </ul>
+      <button class="pricing-btn primary" onclick="alert('Purchase link coming soon!')">Get Advanced</button>
+    </div>
+    <div class="pricing-card animate-fade-up stagger-4">
+      <div class="pricing-name">Expert</div>
+      <div class="pricing-desc">The complete collection</div>
+      <div class="pricing-price">$199<span></span></div>
+      <div class="pricing-count">300+ repositories</div>
+      <ul class="pricing-features">
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>All 300+ repos</li>
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>All 15 categories</li>
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>CSV, JSON + API access</li>
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>Weekly updates</li>
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>Full API access</li>
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>Commercial license</li>
+        <li><svg viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>24/7 support</li>
+      </ul>
+      <button class="pricing-btn primary" onclick="alert('Purchase link coming soon!')">Get Expert</button>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section" id="testimonials">
+  <div style="text-align:center"><span class="section-label">&#9670; Testimonials</span></div>
+  <h2 class="section-title">Trusted by AI Builders</h2>
+  <p class="section-subtitle">Hear from developers and teams who use AgentForge Index to discover the best AI agent tools.</p>
+  <div class="testimonials-grid" id="testimonialsGrid"></div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div style="text-align:center"><span class="section-label">&#9670; FAQ</span></div>
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <p class="section-subtitle">Everything you need to know about the AgentForge Index.</p>
+  <div class="faq-list" id="faqList"></div>
+</section>
+
+<!-- Comparison -->
+<section class="section" id="compare">
+  <div style="text-align:center"><span class="section-label">&#9670; Compare</span></div>
+  <h2 class="section-title">Edition Comparison</h2>
+  <p class="section-subtitle">See exactly what's included in each tier.</p>
+  <div class="comparison-wrap">
+    <table class="comparison-table">
+      <thead><tr><th>Feature</th><th>Essentials</th><th>Advanced</th><th>Expert</th></tr></thead>
+      <tbody>
+        <tr><td>Repository Count</td><td>120</td><td>220</td><td>300+</td></tr>
+        <tr><td>Categories</td><td>8</td><td>12</td><td>15</td></tr>
+        <tr><td>Export Format</td><td>CSV</td><td>CSV + JSON</td><td>CSV + JSON</td></tr>
+        <tr><td>Update Frequency</td><td>Monthly</td><td>Weekly</td><td>Weekly</td></tr>
+        <tr><td>Search & Filter</td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+        <tr><td>API Access</td><td><span class="cross">&#8212;</span></td><td>Basic</td><td><span class="check">&#10003;</span></td></tr>
+        <tr><td>Commercial License</td><td><span class="cross">&#8212;</span></td><td><span class="cross">&#8212;</span></td><td><span class="check">&#10003;</span></td></tr>
+        <tr><td>Priority Support</td><td><span class="cross">&#8212;</span></td><td><span class="check">&#10003;</span></td><td><span class="check">&#10003;</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <h3>Ready to Discover the Best AI Agent Tools?</h3>
+  <p>Join hundreds of AI builders who use AgentForge Index to stay ahead of the curve. Instant access upon purchase.</p>
+  <button class="footer-btn" onclick="alert('Purchase link coming soon!')">Get Instant Access — $49</button>
+  <div class="footer-bottom">&copy; 2026 AgentForge Index. All rights reserved. Built with &#9829; for the AI community.</div>
+</footer>
+
+<script>
+const repos = [
+  {name:"PyAgentCore",url:"https://github.com/pyagentcore/pyagentcore",desc:"A modular Python framework for building LLM-powered autonomous agents with plugin architecture and streaming support.",stars:18400,category:"LLM Frameworks",language:"Python",tier:"Essential",tags:["framework","modular","python"]},
+  {name:"LangFlow Studio",url:"https://github.com/langflow-studio/langflow",desc:"Visual framework for building multi-step LLM applications with drag-and-drop workflow design.",stars:22300,category:"LLM Frameworks",language:"TypeScript",tier:"Essential",tags:["visual","low-code","workflow"]},
+  {name:"AgentKit SDK",url:"https://github.com/agentkit/agentkit-sdk",desc:"Enterprise SDK for building, deploying, and monitoring AI agents at scale.",stars:8700,category:"LLM Frameworks",language:"TypeScript",tier:"Advanced",tags:["sdk","enterprise","deployment"]},
+  {name:"ChainForge",url:"https://github.com/chainforge/chainforge",desc:"Compose complex LLM chains with parallel execution, branching, and dynamic routing.",stars:5600,category:"LLM Frameworks",language:"Python",tier:"Advanced",tags:["chains","routing","parallel"]},
+  {name:"Nexus AI Core",url:"https://github.com/nexus-ai/nexus-core",desc:"Production-grade microframework for building agentic RAG systems with hybrid search.",stars:3200,category:"LLM Frameworks",language:"Rust",tier:"Expert",tags:["microframework","rag","rust"]},
+  {name:"CrewForge",url:"https://github.com/crewforge/crewforge",desc:"Multi-agent orchestration platform enabling teams of AI agents to collaborate on complex tasks.",stars:15600,category:"Agent Platforms",language:"Python",tier:"Essential",tags:["multi-agent","orchestration","teams"]},
+  {name:"AgentStack CLI",url:"https://github.com/agentstack/agentstack-cli",desc:"CLI tool to scaffold, deploy, and manage AI agents across any cloud provider.",stars:4200,category:"Agent Platforms",language:"Go",tier:"Advanced",tags:["cli","scaffold","deployment"]},
+  {name:"Orbit Agents",url:"https://github.com/orbit-agents/orbit",desc:"Distributed agent platform with built-in observability, tracing, and replay debugging.",stars:9800,category:"Agent Platforms",language:"Elixir",tier:"Advanced",tags:["distributed","observability","tracing"]},
+  {name:"AutoTask AI",url:"https://github.com/autotask-ai/autotask",desc:"Autonomous task completion agent that breaks down goals into subtasks and executes them.",stars:19500,category:"Agent Platforms",language:"Python",tier:"Essential",tags:["autonomous","task-execution","goals"]},
+  {name:"MemCore DB",url:"https://github.com/memcore/memcore-db",desc:"Persistent memory layer for AI agents with vector storage, entity extraction, and recall.",stars:7400,category:"Memory & RAG",language:"Python",tier:"Essential",tags:["memory","vector","persistence"]},
+  {name:"ContextForge",url:"https://github.com/contextforge/contextforge",desc:"Advanced context management library with sliding windows, summarization, and priority pruning.",stars:2800,category:"Memory & RAG",language:"Python",tier:"Advanced",tags:["context","management","windows"]},
+  {name:"RAG Pipeline Pro",url:"https://github.com/ragpipe/ragpipe-pro",desc:"High-performance RAG pipeline with hybrid search, re-ranking, and multi-source ingestion.",stars:11200,category:"Memory & RAG",language:"Python",tier:"Essential",tags:["rag","pipeline","hybrid-search"]},
+  {name:"KnowledgeGraph AI",url:"https://github.com/kg-ai/knowledgegraph",desc:"Build and query knowledge graphs from unstructured text for agent reasoning.",stars:5100,category:"Memory & RAG",language:"Python",tier:"Advanced",tags:["knowledge-graph","reasoning","nlp"]},
+  {name:"VectorForge",url:"https://github.com/vectorforge/vectorforge",desc:"Unified vector database abstraction layer supporting Pinecone, Weaviate, Qdrant, and more.",stars:3400,category:"Memory & RAG",language:"TypeScript",tier:"Expert",tags:["vector-db","abstraction","multi-provider"]},
+  {name:"ToolNet",url:"https://github.com/toolnet/toolnet",desc:"Expressive tool-calling framework with schema validation, rate limiting, and error recovery.",stars:6300,category:"Tool Use & APIs",language:"Python",tier:"Essential",tags:["tool-use","validation","rate-limit"]},
+  {name:"APIBridge Agents",url:"https://github.com/apibridge/apibridge-agents",desc:"Connect agents to any REST, GraphQL, or gRPC API with auto-generated tool definitions.",stars:2900,category:"Tool Use & APIs",language:"TypeScript",tier:"Advanced",tags:["api","bridge","auto-generate"]},
+  {name:"Function Hub",url:"https://github.com/funchub/funchub",desc:"Central registry for agent-callable functions with versioning, discovery, and access control.",stars:1800,category:"Tool Use & APIs",language:"Go",tier:"Expert",tags:["registry","functions","versioning"]},
+  {name:"SwarmForge",url:"https://github.com/swarmforge/swarmforge",desc:"Lightweight multi-agent swarm framework with dynamic role assignment and leader election.",stars:13100,category:"Multi-Agent Systems",language:"Python",tier:"Essential",tags:["swarm","multi-agent","dynamic"]},
+  {name:"HiveMind",url:"https://github.com/hivemind/hivemind",desc:"Decentralized agent coordination protocol using gossip-based consensus and shared memory.",stars:4700,category:"Multi-Agent Systems",language:"Rust",tier:"Advanced",tags:["decentralized","consensus","protocol"]},
+  {name:"SynthAgents",url:"https://github.com/synthagents/synthagents",desc:"Simulate agent societies for testing, training, and generating synthetic interaction data.",stars:3600,category:"Multi-Agent Systems",language:"Python",tier:"Expert",tags:["simulation","synthetic","testing"]},
+  {name:"CodeCraft AI",url:"https://github.com/codecraft-ai/codecraft",desc:"AI-powered code generation agent with multi-file editing, refactoring, and test generation.",stars:21000,category:"Code Generation",language:"TypeScript",tier:"Essential",tags:["code-gen","refactoring","testing"]},
+  {name:"Prism Code",url:"https://github.com/prism-code/prism-code",desc:"Structured code generation using AST-level manipulation and project-wide context awareness.",stars:5900,category:"Code Generation",language:"Python",tier:"Advanced",tags:["ast","code-gen","structured"]},
+  {name:"GenUI Forge",url:"https://github.com/genui/genui-forge",desc:"Generate production-ready UI components from natural language descriptions.",stars:8100,category:"Code Generation",language:"TypeScript",tier:"Advanced",tags:["ui","generation","components"]},
+  {name:"WebPilot Agent",url:"https://github.com/webpilot/webpilot-agent",desc:"Autonomous web browsing agent that can navigate, fill forms, extract data, and test.",stars:14300,category:"Web Automation",language:"Python",tier:"Essential",tags:["browsing","automation","testing"]},
+  {name:"ScrapeForge",url:"https://github.com/scrapeforge/scrapeforge",desc:"Intelligent web scraping agent with anti-bot evasion, JS rendering, and structured extraction.",stars:5200,category:"Web Automation",language:"JavaScript",tier:"Advanced",tags:["scraping","anti-bot","extraction"]},
+  {name:"DataPilot",url:"https://github.com/datapilot/datapilot",desc:"AI data analysis agent that queries databases, generates charts, and produces insights.",stars:7600,category:"Data Analysis",language:"Python",tier:"Essential",tags:["data","analysis","visualization"]},
+  {name:"StatForge",url:"https://github.com/statforge/statforge",desc:"Statistical analysis and hypothesis testing agent with automated report generation.",stars:2100,category:"Data Analysis",language:"R",tier:"Advanced",tags:["statistics","testing","reports"]},
+  {name:"VoiceCraft Agent",url:"https://github.com/voicecraft/voicecraft-agent",desc:"Multi-voice speech synthesis agent with emotion control, cloning, and real-time streaming.",stars:9400,category:"Audio/Speech",language:"Python",tier:"Essential",tags:["tts","voice","streaming"]},
+  {name:"Sonic AI",url:"https://github.com/sonic-ai/sonic",desc:"Real-time audio processing agent for transcription, diarization, and sound event detection.",stars:4100,category:"Audio/Speech",language:"Python",tier:"Advanced",tags:["audio","transcription","real-time"]},
+  {name:"VisionAgent Pro",url:"https://github.com/visionagent/visionagent-pro",desc:"Multimodal vision agent supporting object detection, OCR, segmentation, and captioning.",stars:11800,category:"Vision/Image",language:"Python",tier:"Essential",tags:["vision","multimodal","detection"]},
+  {name:"ImgForge",url:"https://github.com/imgforge/imgforge",desc:"Image generation and editing agent with diffusion models, inpainting, and style transfer.",stars:6700,category:"Vision/Image",language:"Python",tier:"Advanced",tags:["image-gen","diffusion","editing"]},
+  {name:"DeployMate",url:"https://github.com/deploymate/deploymate",desc:"Automated deployment agent for containerized AI applications with rollback and monitoring.",stars:3300,category:"Deployment & Infrastructure",language:"Go",tier:"Advanced",tags:["deployment","containers","monitoring"]},
+  {name:"KubeForge",url:"https://github.com/kubeforge/kubeforge",desc:"Kubernetes-native agent orchestrator with auto-scaling, service mesh, and canary deployments.",stars:1900,category:"Deployment & Infrastructure",language:"Go",tier:"Expert",tags:["kubernetes","orchestration","scaling"]},
+  {name:"EvalForge",url:"https://github.com/evalforge/evalforge",desc:"Comprehensive evaluation framework for AI agents with benchmarks, scoring, and regression tracking.",stars:4800,category:"Evaluation & Testing",language:"Python",tier:"Advanced",tags:["evaluation","benchmarks","testing"]},
+  {name:"SecureAgent",url:"https://github.com/secureagent/secureagent",desc:"Security auditing agent for LLM applications — detects prompt injection, data leaks, and more.",stars:3900,category:"Security",language:"Python",tier:"Expert",tags:["security","auditing","prompt-injection"]},
+  {name:"FineTune Studio",url:"https://github.com/finetune-studio/finetune-studio",desc:"Agent-driven fine-tuning platform with dataset curation, training orchestration, and eval.",stars:5500,category:"Fine-Tuning",language:"Python",tier:"Advanced",tags:["fine-tuning","training","datasets"]},
+];
+
+const categories = [
+  {name:"LLM Frameworks",icon:"&#9881;",count:0},{name:"Agent Platforms",icon:"&#9733;",count:0},{name:"Memory & RAG",icon:"&#128214;",count:0},{name:"Tool Use & APIs",icon:"&#128295;",count:0},{name:"Multi-Agent Systems",icon:"&#128101;",count:0},{name:"Code Generation",icon:"&#128187;",count:0},{name:"Web Automation",icon:"&#127760;",count:0},{name:"Data Analysis",icon:"&#128200;",count:0},{name:"Audio/Speech",icon:"&#128266;",count:0},{name:"Vision/Image",icon:"&#128247;",count:0},{name:"Deployment & Infrastructure",icon:"&#128736;",count:0},{name:"Evaluation & Testing",icon:"&#128202;",count:0},{name:"Security",icon:"&#128274;",count:0},{name:"Fine-Tuning",icon:"&#128640;",count:0},{name:"Prompt Engineering",icon:"&#9997;",count:0}
+];
+
+const testimonials = [
+  {text:"The AgentForge Index saved me weeks of research. Having all the best agent repos curated in one place with tier rankings is invaluable.",author:"Alex Chen",role:"AI Engineer, Scale AI"},
+  {text:"I use this directory weekly to discover new tools for my agent projects. The categorization is thoughtful and the quality bar is high.",author:"Sarah Kim",role:"Founder, AgentStack"},
+  {text:"Worth every penny. The Expert tier paid for itself within a week when I found the perfect multi-agent framework for our use case.",author:"Marcus Rivera",role:"CTO, SynthCorp"},
+  {text:"As a consultant, I need to know the landscape inside-out. AgentForge Index has become my go-to reference for recommending tools to clients.",author:"Priya Patel",role:"AI Consultant"},
+  {text:"The API access in the Advanced tier lets me integrate discovery into our internal tools. Huge time saver for our platform team.",author:"James Wright",role:"Platform Lead, DataForge"},
+  {text:"I've been building AI agents for 3 years and this is the best curated list I've ever seen. The tier system helps prioritize what to learn first.",author:"Yuki Tanaka",role:"ML Researcher"},
+];
+
+const faqs = [
+  {q:"What is the AgentForge Index?",a:"The AgentForge Index is a carefully curated directory of 300+ GitHub repositories for building AI agents. Each entry is hand-picked, categorized, and ranked across three tiers — Essential, Advanced, and Expert — based on quality, community adoption, and relevance."},
+  {q:"How is this different from just searching GitHub?",a:"GitHub search returns everything — abandoned repos, low-quality code, unfinished projects. We manually review every entry, test key projects, and organize them into a thoughtful taxonomy. Our tier system helps you prioritize what to learn or use."},
+  {q:"How often is the directory updated?",a:"We update the directory weekly with new entries, tier adjustments, and fresh star counts. Essentials tier gets monthly updates, while Advanced and Expert tiers get weekly updates."},
+  {q:"What format do I get the directory in?",a:"You get instant access to the interactive web dashboard with search, filter, and sort. Additionally, Essentials includes CSV export, Advanced adds JSON export, and Expert includes full API access."},
+  {q:"Can I request repos to be added?",a:"Yes! Advanced and Expert subscribers can submit repository suggestions for our review. We evaluate every submission within 48 hours and prioritize those that meet our quality bar."},
+  {q:"Is there a commercial license available?",a:"The Expert tier includes a commercial license that allows you to use the directory data in your own products and internal tools. Essentials and Advanced are for individual use only."},
+  {q:"What's your refund policy?",a:"We offer a 14-day money-back guarantee on all tiers. If the AgentForge Index doesn't meet your expectations, we'll refund your purchase — no questions asked."},
+];
+
+// Count repos per category
+repos.forEach(r => {const c = categories.find(cat => cat.name === r.category); if(c) c.count++;});
+
+// Render categories
+function renderCategories(){
+  const grid = document.getElementById('categoryGrid');
+  grid.innerHTML = categories.map((c,i) =>
+    `<div class="cat-card animate-fade-up stagger-${Math.min(i+1,6)}" onclick="document.getElementById('repos').scrollIntoView({behavior:'smooth'});document.getElementById('categoryFilter').value='${c.name}';filterRepos()">
+      <div class="cat-icon">${c.icon}</div>
+      <div class="cat-name">${c.name}</div>
+      <div class="cat-count">${c.count} repos</div>
+    </div>`
+  ).join('');
+}
+
+// Render testimonials
+function renderTestimonials(){
+  const grid = document.getElementById('testimonialsGrid');
+  grid.innerHTML = testimonials.map(t =>
+    `<div class="testimonial-card animate-fade-up">
+      <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="testimonial-text">"${t.text}"</div>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">${t.author[0]}</div>
+        <div>
+          <div class="testimonial-name">${t.author}</div>
+          <div class="testimonial-role">${t.role}</div>
+        </div>
+      </div>
+    </div>`
+  ).join('');
+}
+
+// Render FAQ
+function renderFAQ(){
+  const list = document.getElementById('faqList');
+  list.innerHTML = faqs.map((f,i) =>
+    `<div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        ${f.q}
+        <svg viewBox="0 0 20 20"><path d="M4.22 8.22a.75.75 0 011.06 0L10 12.94l4.72-4.72a.75.75 0 111.06 1.06l-5.25 5.25a.75.75 0 01-1.06 0L4.22 9.28a.75.75 0 010-1.06z"/></svg>
+      </div>
+      <div class="faq-a"><p>${f.a}</p></div>
+    </div>`
+  ).join('');
+}
+
+function toggleFAQ(el){
+  const item = el.parentElement;
+  item.classList.toggle('open');
+}
+
+// Filter state
+let currentTier = 'All';
+let filteredRepos = [...repos];
+
+function setTier(btn){
+  document.querySelectorAll('.filter-tiers button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentTier = btn.dataset.tier;
+  filterRepos();
+}
+
+function formatStars(n){
+  if(n >= 1000) return (n/1000).toFixed(1).replace(/\.0$/,'') + 'k';
+  return n.toString();
+}
+
+function renderRepos(list){
+  const grid = document.getElementById('repoGrid');
+  if(list.length === 0){
+    grid.innerHTML = '<div class="no-results">No repositories match your filters. Try adjusting your search or filters.</div>';
+    document.getElementById('resultsCount').textContent = '0 results';
+    return;
+  }
+  grid.innerHTML = list.map(r =>
+    `<div class="repo-card" onclick="window.open('${r.url}','_blank')">
+      <div class="repo-card-top">
+        <div class="repo-name">${r.name}</div>
+        <div class="repo-stars">
+          <svg viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
+          ${formatStars(r.stars)}
+        </div>
+      </div>
+      <div class="repo-desc">${r.desc}</div>
+      <div class="repo-meta">
+        <span class="repo-lang">${r.language}</span>
+        <span class="repo-tier tier-${r.tier.toLowerCase()}">${r.tier}</span>
+        <div class="repo-tags">${r.tags.map(t => `<span class="repo-tag">${t}</span>`).join('')}</div>
+      </div>
+    </div>`
+  ).join('');
+  document.getElementById('resultsCount').textContent = `${list.length} results`;
+}
+
+function filterRepos(){
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const cat = document.getElementById('categoryFilter').value;
+  const sort = document.getElementById('sortSelect').value;
+
+  filteredRepos = repos.filter(r => {
+    if(currentTier !== 'All' && r.tier !== currentTier) return false;
+    if(cat && r.category !== cat) return false;
+    if(search && !r.name.toLowerCase().includes(search) && !r.desc.toLowerCase().includes(search)) return false;
+    return true;
+  });
+
+  if(sort === 'stars-desc') filteredRepos.sort((a,b) => b.stars - a.stars);
+  else if(sort === 'stars-asc') filteredRepos.sort((a,b) => a.stars - b.stars);
+  else if(sort === 'name') filteredRepos.sort((a,b) => a.name.localeCompare(b.name));
+
+  renderRepos(filteredRepos);
+}
+
+// Populate category filter
+function populateCategoryFilter(){
+  const sel = document.getElementById('categoryFilter');
+  categories.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c.name;
+    opt.textContent = c.name;
+    sel.appendChild(opt);
+  });
+}
+
+// Animated counters
+function animateCounters(){
+  const counters = document.querySelectorAll('.stat-num[data-target]');
+  counters.forEach(counter => {
+    const target = parseInt(counter.dataset.target);
+    const duration = 2000;
+    const start = performance.now();
+    function update(now){
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      counter.textContent = Math.floor(eased * target);
+      if(progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  });
+}
+
+// Intersection Observer for animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, {threshold: 0.1});
+
+document.querySelectorAll('.animate-fade-up').forEach(el => observer.observe(el));
+
+// Mobile menu
+document.getElementById('menuBtn').addEventListener('click', () => {
+  document.getElementById('headerNav').classList.toggle('open');
+});
+
+// Init
+renderCategories();
+renderTestimonials();
+renderFAQ();
+populateCategoryFilter();
+filterRepos();
+
+// Start counters when stats section is visible
+const statsObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      animateCounters();
+      statsObs.disconnect();
+    }
+  });
+}, {threshold: 0.5});
+const statsEl = document.getElementById('stats');
+if(statsEl) statsObs.observe(statsEl);
+</script>
+</body>
+</html>
