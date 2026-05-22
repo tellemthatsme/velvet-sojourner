@@ -266,7 +266,8 @@ class ExportOrganizer:
 
     def organize(self, chat: ChatExport) -> Optional[Path]:
         content = self._format_chat(chat)
-        content_hash = self._calculate_hash(content)
+        hash_input = f"{chat.source}|{chat.title}|{chat.date}|{chat.model}|{chat.first_prompt}|{json.dumps(chat.messages, sort_keys=True)}"
+        content_hash = hashlib.sha256(hash_input.encode()).hexdigest()
         if content_hash in self.processed_hashes:
             return None
         date = chat.date or datetime.now().strftime("%Y-%m-%d")
