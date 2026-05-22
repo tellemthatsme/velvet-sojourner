@@ -13,3 +13,14 @@ qa-results/
 .idea/
 index-product/
 deploy/
+archive/
+deploy-ready/chatgpt-export/
+deploy-ready/bundle-landing.html
+deploy-ready/BUNDLE_LISTING.md
+deploy-ready/LAUNCH_METRICS.csv
+github-downloader-new/docs/landing.html
+github-downloader-new/dist/
+github-downloader-new/__pycache__/
+chatgpt-export/__pycache__/
+chatgpt-export/examples/
+chatgpt-export/*.spec
