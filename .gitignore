@@ -24,3 +24,5 @@ github-downloader-new/__pycache__/
 chatgpt-export/__pycache__/
 chatgpt-export/examples/
 chatgpt-export/*.spec
+chatgpt-export/*.db
+chatgpt-export/dist/
