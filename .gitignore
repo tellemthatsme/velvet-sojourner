@@ -2,7 +2,6 @@ repos/
 repos_duplicates/
 repos_low_quality/
 node_modules/
-dist/
 build/
 *.pyc
 __pycache__/
@@ -26,3 +25,11 @@ chatgpt-export/examples/
 chatgpt-export/*.spec
 chatgpt-export/*.db
 chatgpt-export/dist/
+chatgpt-export/build/
+skill-scan/__pycache__/
+skill-scan/.pytest_cache/
+skill-scan/build/
+skill-scan/dist/
+skill-scan/*.egg-info/
+skill-scan/*.spec
+skill-scan/.venv/
