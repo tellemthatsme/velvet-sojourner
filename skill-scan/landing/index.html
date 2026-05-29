@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>skill-scan — Security scanning for AI agent skills</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;background:#0a0a1a;color:#e0e0f0;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+.bg-anim{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;overflow:hidden;pointer-events:none}
+.bg-anim::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at 30% 20%,rgba(0,212,170,.08) 0,transparent 50%),radial-gradient(ellipse at 70% 80%,rgba(124,92,252,.06) 0,transparent 50%);animation:bgShift 20s ease-in-out infinite alternate}
+.bg-anim::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(1px 1px at 20% 30%,rgba(0,212,170,.15) 0,transparent 50%),radial-gradient(1px 1px at 60% 70%,rgba(124,92,252,.12) 0,transparent 50%),radial-gradient(1px 1px at 80% 20%,rgba(0,212,170,.1) 0,transparent 50%),radial-gradient(1px 1px at 40% 90%,rgba(124,92,252,.08) 0,transparent 50%);background-size:200px 200px;animation:particleDrift 40s linear infinite}
+@keyframes bgShift{0%{transform:translate(0,0) rotate(0deg)}100%{transform:translate(-5%,-5%) rotate(3deg)}}
+@keyframes particleDrift{0%{transform:translateY(0)}100%{transform:translateY(-30%)}}
+
+.wrapper{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* Nav */
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.logo{font-size:22px;font-weight:700;letter-spacing:-.5px}
+.logo span{color:#00d4aa}
+.nav-links{display:flex;gap:28px;list-style:none;font-size:14px}
+.nav-links a{color:#8888a8;text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:#e0e0f0}
+
+/* Hero */
+.hero{text-align:center;padding:100px 0 80px}
+.hero-badge{display:inline-block;background:rgba(0,212,170,.1);border:1px solid rgba(0,212,170,.2);color:#00d4aa;font-size:12px;font-weight:600;padding:6px 16px;border-radius:100px;margin-bottom:24px;letter-spacing:.5px;text-transform:uppercase}
+.hero h1{font-size:60px;font-weight:800;letter-spacing:-2px;line-height:1.1;margin-bottom:16px}
+.hero h1 .gradient{background:linear-gradient(135deg,#00d4aa,#7c5cfc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{font-size:18px;color:#8888b0;max-width:600px;margin:0 auto 36px;line-height:1.7}
+.cta-group{display:flex;flex-direction:column;align-items:center;gap:20px}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#00d4aa,#00b898);color:#0a0a1a;font-size:16px;font-weight:700;padding:14px 36px;border-radius:8px;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 24px rgba(0,212,170,.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,212,170,.4)}
+.code-snippet{display:inline-flex;align-items:center;gap:10px;background:#12122a;border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px 20px;font-family:'SF Mono','Fira Code','Cascadia Code',monospace;font-size:14px;color:#b0b0d0}
+.code-snippet .prompt{color:#555}
+.code-snippet .cmd{color:#e0e0f0}
+.copy-btn{background:0 0;border:none;color:#00d4aa;cursor:pointer;font-size:16px;padding:4px;transition:color .2s}
+.copy-btn:hover{color:#7c5cfc}
+
+/* Section common */
+section{padding:80px 0}
+.section-label{text-align:center;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:#7c5cfc;margin-bottom:8px}
+.section-title{text-align:center;font-size:36px;font-weight:700;letter-spacing:-1px;margin-bottom:16px}
+.section-sub{text-align:center;font-size:16px;color:#8888b0;max-width:560px;margin:0 auto 56px}
+
+/* Problem */
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.stat-card{background:#12122a;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:32px;text-align:center}
+.stat-number{font-size:56px;font-weight:800;background:linear-gradient(135deg,#00d4aa,#7c5cfc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.stat-label{font-size:14px;color:#8888b0;margin-top:8px}
+.stat-detail{font-size:13px;color:#666;margin-top:4px}
+.problem-text h3{font-size:22px;font-weight:600;margin-bottom:16px}
+.problem-text p{color:#8888b0;font-size:15px;line-height:1.8;margin-bottom:12px}
+.problem-text p:last-child{margin-bottom:0}
+
+/* Features */
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feature-card{background:#12122a;border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:28px;transition:transform .25s,box-shadow .25s}
+.feature-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4)}
+.feature-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:16px}
+.feature-card:nth-child(1) .feature-icon{background:rgba(0,212,170,.15);color:#00d4aa}
+.feature-card:nth-child(2) .feature-icon{background:rgba(124,92,252,.15);color:#7c5cfc}
+.feature-card:nth-child(3) .feature-icon{background:rgba(0,212,170,.15);color:#00d4aa}
+.feature-card:nth-child(4) .feature-icon{background:rgba(124,92,252,.15);color:#7c5cfc}
+.feature-card:nth-child(5) .feature-icon{background:rgba(0,212,170,.15);color:#00d4aa}
+.feature-card:nth-child(6) .feature-icon{background:rgba(124,92,252,.15);color:#7c5cfc}
+.feature-card h4{font-size:16px;font-weight:600;margin-bottom:8px}
+.feature-card p{font-size:13px;color:#8888b0;line-height:1.7}
+.feature-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.feature-tags span{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:4px;padding:3px 8px;font-size:11px;color:#8888b0}
+
+/* Usage */
+.usage-block{margin-bottom:20px}
+.usage-block:last-child{margin-bottom:0}
+.usage-label{font-size:13px;font-weight:600;color:#8888b0;margin-bottom:8px}
+pre{background:#0d0d22;border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:18px 22px;overflow-x:auto;font-family:'SF Mono','Fira Code','Cascadia Code',monospace;font-size:13px;line-height:1.7;color:#c0c0e0}
+pre .cm{color:#555}
+pre .kw{color:#7c5cfc}
+pre .str{color:#00d4aa}
+pre .op{color:#8888b0}
+pre .num{color:#ff9f43}
+
+/* Pricing */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
+.pricing-card{background:#12122a;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:36px 28px;transition:transform .3s,box-shadow .3s;position:relative}
+.pricing-card:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.pricing-card.featured{border-color:rgba(0,212,170,.3);background:linear-gradient(180deg,#16163a,#12122a)}
+.pricing-card.featured::before{content:'Most Popular';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#00d4aa,#7c5cfc);color:#fff;font-size:11px;font-weight:700;padding:4px 16px;border-radius:100px;text-transform:uppercase;letter-spacing:.5px}
+.pricing-name{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#8888b0;margin-bottom:4px}
+.pricing-price{font-size:42px;font-weight:800;letter-spacing:-1.5px;margin-bottom:4px}
+.pricing-price .currency{font-size:24px;color:#8888b0}
+.pricing-price .period{font-size:14px;color:#8888b0;font-weight:400;letter-spacing:0}
+.pricing-desc{font-size:13px;color:#666;margin-bottom:24px}
+.pricing-features{list-style:none;margin-bottom:28px}
+.pricing-features li{font-size:13px;color:#b0b0d0;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:center;gap:8px}
+.pricing-features li:last-child{border-bottom:none}
+.pricing-features li .check{color:#00d4aa;font-weight:700}
+.pricing-features li .cross{color:#555}
+.pricing-btn{display:block;text-align:center;padding:12px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.pricing-btn:hover{transform:translateY(-2px)}
+.pricing-btn.primary-btn{background:linear-gradient(135deg,#00d4aa,#00b898);color:#0a0a1a;box-shadow:0 4px 16px rgba(0,212,170,.25)}
+.pricing-btn.primary-btn:hover{box-shadow:0 8px 28px rgba(0,212,170,.35)}
+.pricing-btn.secondary-btn{background:rgba(255,255,255,.06);color:#e0e0f0;border:1px solid rgba(255,255,255,.1)}
+.pricing-btn.outline-btn{background:0 0;color:#7c5cfc;border:1px solid rgba(124,92,252,.3)}
+.pricing-btn.outline-btn:hover{background:rgba(124,92,252,.1)}
+
+/* Footer */
+footer{padding:48px 0;border-top:1px solid rgba(255,255,255,.04)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand .logo{margin-bottom:12px}
+.footer-brand p{font-size:13px;color:#666;line-height:1.7;max-width:280px}
+.footer-col h5{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#8888b0;margin-bottom:16px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:8px}
+.footer-col ul a{font-size:13px;color:#666;text-decoration:none;transition:color .2s}
+.footer-col ul a:hover{color:#00d4aa}
+.footer-bottom{text-align:center;padding-top:32px;margin-top:32px;border-top:1px solid rgba(255,255,255,.04);font-size:12px;color:#444}
+
+@media(max-width:900px){
+  .hero h1{font-size:40px}
+  .problem-grid{grid-template-columns:1fr}
+  .features-grid{grid-template-columns:1fr 1fr}
+  .pricing-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .hero{padding:60px 0 40px}
+  .hero h1{font-size:32px}
+  .features-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .section-title{font-size:28px}
+  .stat-number{font-size:40px}
+  .footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-anim"></div>
+
+<div class="wrapper">
+
+<!-- Nav -->
+<nav>
+  <div class="logo">skill-<span>scan</span></div>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#">Docs</a></li>
+    <li><a href="#">GitHub</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-badge">Now in Public Beta</div>
+  <h1>Scan AI agent skills<br>for <span class="gradient">security threats</span></h1>
+  <p>skill-scan is a CLI security scanner that detects malware, secrets, prompt injection, and vulnerabilities in AI agent skill directories before you install them.</p>
+  <div class="cta-group">
+    <a href="#" class="btn-primary">Install Now</a>
+    <div class="code-snippet">
+      <span class="prompt">$</span>
+      <span class="cmd">pip install skill-scan</span>
+      <button class="copy-btn" onclick="copyInstall()" title="Copy">▢</button>
+    </div>
+  </div>
+</section>
+
+<!-- Problem -->
+<section id="problem">
+  <div class="section-label">The Problem</div>
+  <div class="problem-grid">
+    <div class="stat-card">
+      <div class="stat-number">13.4%</div>
+      <div class="stat-label">of AI agent skills contain critical malware</div>
+      <div class="stat-detail">Based on analysis of 12,000+ skills from public registries</div>
+    </div>
+    <div class="problem-text">
+      <h3>Your AI agent is only as safe as the skills you install</h3>
+      <p>The AI agent skill ecosystem is growing at breakneck speed — skills.sh already hosts 90K+ skills with zero curation, vetting, or sandboxing. It's npm in 2013 all over again, except the stakes are higher: skills have shell access, file system read/write, network permissions, and direct access to your prompts and secrets.</p>
+      <p>Every skill you install from an untrusted source is a potential backdoor into your development environment, CI/CD pipeline, or production infrastructure.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section id="features">
+  <div class="section-label">Capabilities</div>
+  <h2 class="section-title">What skill-scan detects</h2>
+  <p class="section-sub">8 rule categories covering the full attack surface of AI agent skills, with multiple output formats and integration options.</p>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">&#9888;</div>
+      <h4>8 Rule Categories</h4>
+      <p>Shell injection, secrets &amp; API keys, code execution, obfuscation, prompt injection, network access, file system access, and data exfiltration.</p>
+      <div class="feature-tags"><span>Shell injection</span><span>Secrets</span><span>Code exec</span></div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#9776;</div>
+      <h4>4 Output Formats</h4>
+      <p>Readable terminal output for daily use, JSON for programmatic consumption, SARIF for IDE/CI integration, and standalone HTML reports.</p>
+      <div class="feature-tags"><span>Terminal</span><span>JSON</span><span>SARIF</span><span>HTML</span></div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#8635;</div>
+      <h4>CI/CD Integration</h4>
+      <p>Exit-code based scanning that fails pipelines on detection. Built-in GitHub Action and pre-commit hook support.</p>
+      <div class="feature-tags"><span>GitHub Actions</span><span>Pre-commit</span><span>Exit codes</span></div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#10003;</div>
+      <h4>Allowlist System</h4>
+      <p>Suppress false positives with a simple YAML-based allowlist. Glob patterns, per-rule suppression, and inline annotations.</p>
+      <div class="feature-tags"><span>YAML config</span><span>Glob patterns</span><span>Annotations</span></div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#8593;</div>
+      <h4>Rule Updates</h4>
+      <p>Versioned rule packs with remote pull support. Always run the latest detectors without upgrading the CLI itself.</p>
+      <div class="feature-tags"><span>Versioned</span><span>Remote sync</span><span>Auto-update</span></div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#9998;</div>
+      <h4>Custom Rules</h4>
+      <p>Write your own detectors using a simple YAML DSL. Ship private rules for internal compliance and proprietary signatures.</p>
+      <div class="feature-tags"><span>YAML DSL</span><span>BYO rules</span><span>Private</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Usage -->
+<section id="usage">
+  <div class="section-label">Get Started</div>
+  <h2 class="section-title">Scan in seconds</h2>
+  <p class="section-sub">Three commands cover the common workflows: ad-hoc scanning, CI integration, and allowlist management.</p>
+  <div class="usage-block">
+    <div class="usage-label">Scan a skill directory</div>
+    <pre><span class="cm"># Scan a skill directory</span>
+$ skill-scan scan ~/.claude/skills/</pre>
+  </div>
+  <div class="usage-block">
+    <div class="usage-label">CI/CD mode with SARIF output</div>
+    <pre><span class="cm"># CI mode (exit code 1 on issues)</span>
+$ skill-scan scan . <span class="op">--</span><span class="kw">ci</span> <span class="op">--</span><span class="kw">output</span> sarif &gt; results.sarif</pre>
+  </div>
+  <div class="usage-block">
+    <div class="usage-label">Using an allowlist for false positive suppression</div>
+    <pre><span class="cm"># Scan with allowlist</span>
+$ skill-scan scan ./skills <span class="op">--</span><span class="kw">allowlist</span> .skill-scan-allowlist.yaml</pre>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing">
+  <div class="section-label">Pricing</div>
+  <h2 class="section-title">Start free, scale as you grow</h2>
+  <p class="section-sub">Free tier covers individual developers. Pro for teams. Enterprise for org-wide deployment with custom rules and AI-assisted scanning.</p>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div class="pricing-name">Free</div>
+      <div class="pricing-price"><span class="currency">$</span>0</div>
+      <div class="pricing-desc">For individuals and open-source projects</div>
+      <ul class="pricing-features">
+        <li><span class="check">&#10003;</span> Full CLI scanner</li>
+        <li><span class="check">&#10003;</span> 50 scans per day</li>
+        <li><span class="check">&#10003;</span> Terminal &amp; JSON output</li>
+        <li><span class="cross">&#10007;</span> SARIF &amp; HTML reports</li>
+        <li><span class="cross">&#10007;</span> Allowlist system</li>
+        <li><span class="cross">&#10007;</span> CI/CD mode</li>
+      </ul>
+      <a href="#" class="pricing-btn secondary-btn">Get Started</a>
+    </div>
+    <div class="pricing-card featured">
+      <div class="pricing-name">Pro</div>
+      <div class="pricing-price"><span class="currency">$</span>9<span class="period"> /mo</span></div>
+      <div class="pricing-desc">For professional developers and teams</div>
+      <ul class="pricing-features">
+        <li><span class="check">&#10003;</span> Unlimited scans</li>
+        <li><span class="check">&#10003;</span> All output formats</li>
+        <li><span class="check">&#10003;</span> SARIF &amp; HTML reports</li>
+        <li><span class="check">&#10003;</span> Allowlist system</li>
+        <li><span class="check">&#10003;</span> CI/CD integration</li>
+        <li><span class="check">&#10003;</span> Rule auto-updates</li>
+      </ul>
+      <a href="#" class="pricing-btn primary-btn">Subscribe</a>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-name">Enterprise</div>
+      <div class="pricing-price"><span class="currency">$</span><span style="font-size:36px;">Custom</span></div>
+      <div class="pricing-desc">For organizations and compliance-driven teams</div>
+      <ul class="pricing-features">
+        <li><span class="check">&#10003;</span> Everything in Pro</li>
+        <li><span class="check">&#10003;</span> Custom rule engine</li>
+        <li><span class="check">&#10003;</span> AI-powered scanning</li>
+        <li><span class="check">&#10003;</span> On-premise deployment</li>
+        <li><span class="check">&#10003;</span> Dedicated SLA</li>
+        <li><span class="check">&#10003;</span> Priority support</li>
+      </ul>
+      <a href="#" class="pricing-btn outline-btn">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">skill-<span>scan</span></div>
+      <p>Security scanning for the AI agent ecosystem. Open-source core, commercial features for teams and enterprises.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Product</h5>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#">Changelog</a></li>
+        <li><a href="#">Roadmap</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Resources</h5>
+      <ul>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">API Reference</a></li>
+        <li><a href="#">Rule Authors</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Security</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 skill-scan. MIT License. Built for the AI agent community.</div>
+</footer>
+
+</div>
+
+<script>
+function copyInstall(){var t=document.createElement("textarea");t.value="pip install skill-scan";document.body.appendChild(t);t.select();document.execCommand("copy");document.body.removeChild(t);var e=document.querySelector(".copy-btn");e.textContent="\u2713";setTimeout(function(){e.textContent="\u25a1"},2000)}
+</script>
+
+</body>
+</html>

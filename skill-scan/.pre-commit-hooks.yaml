@@ -1,0 +1,6 @@
+- id: skill-scan
+  name: skill-scan
+  description: Scan AI agent skills for security issues
+  entry: skill-scan scan
+  language: python
+  files: \.md$

@@ -1,0 +1,154 @@
+allowlist:
+  # Test fixture files — contain intentional malicious patterns for testing
+  - rule_id: secrets/github-token
+    file_pattern: tests/fixtures/*
+    reason: "Test credential fixtures"
+    expires: "2027-01-01"
+  - rule_id: secrets/openai-key
+    file_pattern: tests/fixtures/*
+    reason: "Test credential fixtures"
+    expires: "2027-01-01"
+  - rule_id: secrets/anthropic-key
+    file_pattern: tests/fixtures/*
+    reason: "Test credential fixtures"
+    expires: "2027-01-01"
+  - rule_id: secrets/aws-key
+    file_pattern: tests/fixtures/*
+    reason: "Test credential fixtures"
+    expires: "2027-01-01"
+  - rule_id: secrets/generic-secret
+    file_pattern: tests/fixtures/*
+    reason: "Test credential fixtures"
+    expires: "2027-01-01"
+  - rule_id: secrets/env-secret
+    file_pattern: tests/fixtures/*
+    reason: "Test credential fixtures"
+    expires: "2027-01-01"
+  - rule_id: shell-injection/*
+    file_pattern: tests/fixtures/*
+    reason: "Test fixtures with intentional shell patterns"
+    expires: "2027-01-01"
+  - rule_id: code-exec/*
+    file_pattern: tests/fixtures/*
+    reason: "Test fixtures with intentional code exec patterns"
+    expires: "2027-01-01"
+  - rule_id: obfuscation/*
+    file_pattern: tests/fixtures/*
+    reason: "Test fixtures with intentional obfuscation patterns"
+    expires: "2027-01-01"
+  - rule_id: network/*
+    file_pattern: tests/fixtures/*
+    reason: "Test fixtures with intentional network patterns"
+    expires: "2027-01-01"
+
+  # Test files — inline malicious content used for test assertions
+  - rule_id: secrets/*
+    file_pattern: tests/*
+    reason: "Test files with credential pattern assertions"
+    expires: "2027-01-01"
+  - rule_id: shell-injection/*
+    file_pattern: tests/*
+    reason: "Test files with shell injection pattern assertions"
+    expires: "2027-01-01"
+  - rule_id: code-exec/*
+    file_pattern: tests/*
+    reason: "Test files with code exec pattern assertions"
+    expires: "2027-01-01"
+  - rule_id: obfuscation/*
+    file_pattern: tests/*
+    reason: "Test files with obfuscation pattern assertions"
+    expires: "2027-01-01"
+  - rule_id: network/*
+    file_pattern: tests/*
+    reason: "Test files with network pattern assertions"
+    expires: "2027-01-01"
+  - rule_id: prompt-injection/*
+    file_pattern: tests/*
+    reason: "Test files with prompt injection pattern assertions"
+    expires: "2027-01-01"
+  - rule_id: file-access/*
+    file_pattern: tests/*
+    reason: "Test files with file access pattern assertions"
+    expires: "2027-01-01"
+  - rule_id: exfiltration/*
+    file_pattern: tests/*
+    reason: "Test files with exfiltration pattern assertions"
+    expires: "2027-01-01"
+
+  # Rule files — define the patterns they detect (self-referential)
+  - rule_id: shell-injection/*
+    file_pattern: skill_scan/rules/*
+    reason: "Rule definitions containing patterns they detect"
+    expires: "2027-01-01"
+  - rule_id: code-exec/*
+    file_pattern: skill_scan/rules/*
+    reason: "Rule definitions containing patterns they detect"
+    expires: "2027-01-01"
+  - rule_id: obfuscation/*
+    file_pattern: skill_scan/rules/*
+    reason: "Rule definitions containing patterns they detect"
+    expires: "2027-01-01"
+  - rule_id: network/*
+    file_pattern: skill_scan/rules/*
+    reason: "Rule definitions containing patterns they detect"
+    expires: "2027-01-01"
+  - rule_id: prompt-injection/*
+    file_pattern: skill_scan/rules/*
+    reason: "Rule definitions containing patterns they detect"
+    expires: "2027-01-01"
+  - rule_id: file-access/*
+    file_pattern: skill_scan/rules/*
+    reason: "Rule definitions containing patterns they detect"
+    expires: "2027-01-01"
+  - rule_id: exfiltration/*
+    file_pattern: skill_scan/rules/*
+    reason: "Rule definitions containing patterns they detect"
+    expires: "2027-01-01"
+
+  # Parser files — re.compile patterns for legitimate parsing
+  - rule_id: shell-injection/backtick
+    file_pattern: skill_scan/parsers/*
+    reason: "Legitimate re.compile for SKILL.md parsing"
+    expires: "2027-01-01"
+
+  # Updater — uses requests library for remote updates
+  - rule_id: network/requests-http
+    file_pattern: skill_scan/updater.py
+    reason: "Legitimate HTTP for rule update downloads"
+    expires: "2027-01-01"
+
+  # README — code examples in markdown
+  - rule_id: code-exec/*
+    file_pattern: README.md
+    reason: "Code examples in documentation"
+    expires: "2027-01-01"
+  - rule_id: shell-injection/*
+    file_pattern: README.md
+    reason: "Code examples in documentation"
+    expires: "2027-01-01"
+  - rule_id: obfuscation/*
+    file_pattern: README.md
+    reason: "Code examples in documentation"
+    expires: "2027-01-01"
+  - rule_id: prompt-injection/*
+    file_pattern: README.md
+    reason: "Code examples in documentation"
+    expires: "2027-01-01"
+
+  # CHANGELOG — backtick references in changelog entries
+  - rule_id: shell-injection/backtick
+    file_pattern: CHANGELOG.md
+    reason: "Backtick-formatted command references in changelog"
+    expires: "2027-01-01"
+
+  # Parser files — re.compile for SKILL.md parsing (not compile())
+  - rule_id: code-exec/compile
+    file_pattern: skill_scan/parsers/*
+    reason: "Legitimate re.compile regex compilation, not dynamic code exec"
+    expires: "2027-01-01"
+
+  # pyproject.toml — requests dependency line, not actual exfiltration
+  - rule_id: exfiltration/http-then-read
+    file_pattern: pyproject.toml
+    reason: "Dependency declaration for 'requests' library, not exfiltration"
+    expires: "2027-01-01"

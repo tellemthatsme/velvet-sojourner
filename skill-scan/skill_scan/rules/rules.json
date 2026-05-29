@@ -1,0 +1,54 @@
+{
+  "manifest_version": "1.0",
+  "updated": "2026-05-29",
+  "rules": {
+    "shell-injection": {
+      "version": "1.0.0",
+      "file": "shell_injection.py",
+      "severity": "HIGH",
+      "description": "Detects shell command injection patterns in skill files"
+    },
+    "secrets": {
+      "version": "1.0.0",
+      "file": "secrets.py",
+      "severity": "CRITICAL",
+      "description": "Detects hardcoded API keys, tokens, and credentials in skill files"
+    },
+    "code-exec": {
+      "version": "1.0.0",
+      "file": "code_exec.py",
+      "severity": "CRITICAL",
+      "description": "Detects arbitrary code execution patterns in skill files"
+    },
+    "obfuscation": {
+      "version": "1.0.0",
+      "file": "obfuscation.py",
+      "severity": "MEDIUM",
+      "description": "Detects obfuscated code, encoded strings, and suspicious encoding patterns"
+    },
+    "prompt-injection": {
+      "version": "1.0.0",
+      "file": "prompt_injection.py",
+      "severity": "HIGH",
+      "description": "Detects system prompt override and instruction injection patterns"
+    },
+    "network": {
+      "version": "1.0.0",
+      "file": "network.py",
+      "severity": "MEDIUM",
+      "description": "Detects unexpected network calls and suspicious outbound connections"
+    },
+    "file-access": {
+      "version": "1.0.0",
+      "file": "file_access.py",
+      "severity": "MEDIUM",
+      "description": "Detects file operations outside expected skill scope"
+    },
+    "exfiltration": {
+      "version": "1.0.0",
+      "file": "exfiltration.py",
+      "severity": "CRITICAL",
+      "description": "Detects data exfiltration patterns"
+    }
+  }
+}
