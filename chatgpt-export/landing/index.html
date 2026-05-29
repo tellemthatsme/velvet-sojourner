@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChatGPT Exporter Pro — Export, Analyze, Own Your AI Conversations</title>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  background: #0f0f1a;
+  color: #e0e0e0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { color: #e94560; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Animated gradient background */
+.bg-gradient {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: -1;
+  background: linear-gradient(135deg, #0f0f1a 0%, #0f3460 25%, #1a1a2e 50%, #0f3460 75%, #0f0f1a 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 18s ease infinite;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Overlay dots texture */
+.bg-gradient::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: radial-gradient(rgba(233,69,96,0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center;
+  padding: 80px 24px 60px;
+  position: relative;
+}
+.hero-badge {
+  display: inline-block;
+  padding: 6px 18px;
+  background: rgba(233,69,96,0.12);
+  border: 1px solid rgba(233,69,96,0.25);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #e94560;
+  margin-bottom: 28px;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff 0%, #e94560 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+.hero p {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: #a0a0b8;
+  max-width: 640px;
+  margin-bottom: 12px;
+}
+.hero-btn-row {
+  display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
+  margin-top: 32px;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 34px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: none;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary {
+  background: #e94560;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(233,69,96,0.35);
+}
+.btn-primary:hover { box-shadow: 0 6px 28px rgba(233,69,96,0.5); }
+.btn-outline {
+  background: transparent;
+  color: #e0e0e0;
+  border: 1px solid rgba(233,69,96,0.4);
+}
+.btn-outline:hover { border-color: #e94560; background: rgba(233,69,96,0.08); }
+.btn-code {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.85rem;
+  color: #b0b0c8;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  margin-top: 10px;
+}
+.btn-code:hover { background: rgba(255,255,255,0.08); border-color: rgba(233,69,96,0.3); }
+.btn-code .copy-icon { font-size: 1rem; }
+.copied-msg {
+  font-size: 0.75rem;
+  color: #4ade80;
+  margin-top: 6px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Section headings */
+.section { padding: 80px 0; }
+.section-title {
+  text-align: center;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.section-sub {
+  text-align: center;
+  color: #8888a0;
+  max-width: 620px;
+  margin: 0 auto 52px;
+  font-size: 1.05rem;
+}
+
+/* Problem */
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.problem-card {
+  background: #1a1a2e;
+  border-radius: 12px;
+  padding: 28px 24px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+.problem-card .icon { font-size: 1.6rem; margin-bottom: 12px; }
+.problem-card h3 { font-size: 1rem; color: #e94560; margin-bottom: 8px; }
+.problem-card p { font-size: 0.9rem; color: #8888a0; }
+
+/* Features */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.feature-card {
+  background: #1a1a2e;
+  border-radius: 12px;
+  padding: 28px 24px;
+  border: 1px solid rgba(255,255,255,0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+  border-color: rgba(233,69,96,0.15);
+}
+.feature-card .icon {
+  font-size: 1.5rem;
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(233,69,96,0.1);
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+.feature-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
+.feature-card p { font-size: 0.88rem; color: #8888a0; line-height: 1.5; }
+
+/* Usage */
+.usage-step {
+  background: #1a1a2e;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(255,255,255,0.04);
+  display: flex; align-items: center; gap: 16px;
+}
+.usage-step .num {
+  width: 32px; height: 32px; min-width: 32px;
+  display: flex; align-items: center; justify-content: center;
+  background: #e94560;
+  border-radius: 8px;
+  font-weight: 700; font-size: 0.85rem;
+  color: #fff;
+}
+.usage-step code {
+  font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.88rem;
+  color: #c0c0d8;
+  word-break: break-all;
+}
+.usage-step .desc {
+  color: #8888a0;
+  font-size: 0.85rem;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+/* Pricing */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.pricing-card {
+  background: #1a1a2e;
+  border-radius: 14px;
+  padding: 32px 28px;
+  border: 1px solid rgba(255,255,255,0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+}
+.pricing-card.featured {
+  border-color: #e94560;
+  box-shadow: 0 0 0 1px #e94560;
+}
+.pricing-card.featured::before {
+  content: 'Most Popular';
+  position: absolute;
+  top: -12px; left: 50%;
+  transform: translateX(-50%);
+  background: #e94560;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 100px;
+}
+.pricing-card .tier { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #e94560; margin-bottom: 8px; }
+.pricing-card .price { font-size: 2.2rem; font-weight: 800; color: #fff; }
+.pricing-card .price span { font-size: 0.95rem; color: #8888a0; font-weight: 400; }
+.pricing-card .desc { color: #8888a0; font-size: 0.85rem; margin: 10px 0 20px; }
+.pricing-card ul { list-style: none; margin-bottom: 24px; }
+.pricing-card ul li { padding: 6px 0; font-size: 0.9rem; color: #c0c0d0; display: flex; align-items: center; gap: 8px; }
+.pricing-card ul li::before { content: '✓'; color: #e94560; font-weight: 700; }
+.pricing-card .btn {
+  width: 100%; justify-content: center; text-align: center;
+}
+.pricing-card .btn-outline { border-color: rgba(255,255,255,0.1); }
+
+/* Footer */
+.footer {
+  border-top: 1px solid rgba(255,255,255,0.04);
+  padding: 40px 0;
+  text-align: center;
+}
+.footer-links { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; margin-bottom: 16px; }
+.footer-links a { color: #8888a0; font-size: 0.88rem; transition: color 0.2s; }
+.footer-links a:hover { color: #e94560; }
+.footer p { color: #555570; font-size: 0.8rem; }
+
+@media (max-width: 600px) {
+  .hero { padding: 60px 20px 40px; }
+  .usage-step { flex-wrap: wrap; }
+  .usage-step .desc { white-space: normal; margin-left: 0; width: 100%; }
+  .pricing-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="bg-gradient"></div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-badge">v2.1.0 &middot; Open Source</div>
+  <h1>ChatGPT Exporter Pro</h1>
+  <p>Export, Analyze, and Own Your AI Conversations.</p>
+  <p style="font-size:1rem;color:#8888a0">Supports ChatGPT &bull; Claude &bull; Gemini &bull; 5 export formats</p>
+  <div class="hero-btn-row">
+    <a href="#" class="btn btn-primary">Download Now</a>
+    <a href="#features" class="btn btn-outline">See Features</a>
+  </div>
+  <div>
+    <div class="btn-code" id="pipCopyBtn">
+      <span class="copy-icon">⌨</span>
+      <span>pip install chatgpt-export-pro</span>
+    </div>
+    <div class="copied-msg" id="copiedMsg">Copied to clipboard!</div>
+  </div>
+</section>
+
+<!-- Problem -->
+<section class="section" id="problem">
+  <div class="container">
+    <h2 class="section-title">Your conversations are trapped</h2>
+    <p class="section-sub">Scattered across ChatGPT, Claude.ai, and Gemini with no way to search, analyze, or track costs.</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="icon">📡</div>
+        <h3>Fragmented Data</h3>
+        <p>Conversations locked inside three different platforms, each with its own UI and no cross-platform search.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">💰</div>
+        <h3>No Cost Visibility</h3>
+        <p>Subscriptions stack without per-conversation cost breakdown. No idea which models drain your budget.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">📄</div>
+        <h3>Basic Exporters Only</h3>
+        <p>Native exports are limited to Markdown or PDF — no analytics, no metadata, no structured data.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">🔍</div>
+        <h3>Zero Cross-Platform Search</h3>
+        <p>Can't search across all your AI conversations in one place. Needle in a haystack, three times over.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section" id="features">
+  <div class="container">
+    <h2 class="section-title">Everything you need to own your AI data</h2>
+    <p class="section-sub">Export, analyze, search, and sync across every major AI platform.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon">🔄</div>
+        <h3>Multi-Platform Import</h3>
+        <p>Import from ChatGPT, Claude.ai, and Gemini. Supports JSON, HTML, PDF, ZIP, and plain text — 5 formats.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">💵</div>
+        <h3>Cost Tracking</h3>
+        <p>Real-time cost estimates per model, per conversation, per platform. Know exactly where your API budget goes.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📊</div>
+        <h3>Analytics Dashboard</h3>
+        <p>Web UI with Chart.js — 6 tabs covering usage, costs, model distribution, trends, exports, and storage.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🔎</div>
+        <h3>Semantic Search</h3>
+        <p>Cross-platform search powered by local embeddings. Find any conversation in under 500ms.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📓</div>
+        <h3>Obsidian Sync</h3>
+        <p>Auto-export conversations to your Obsidian vault as formatted markdown notes. Bi-directional linking ready.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🏷</div>
+        <h3>Topic Classification</h3>
+        <p>Auto-categorize conversations by topic, model, and platform using local ML. Filter and group instantly.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🔌</div>
+        <h3>REST API</h3>
+        <p>Full REST API for exporting, searching, and analytics. Integrate with your own tools and workflows.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📁</div>
+        <h3>Multiple Export Formats</h3>
+        <p>Export to Markdown, HTML, PDF, CSV, or JSON. Preserve metadata, tokens, costs, and conversation structure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Usage -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Get started in seconds</h2>
+    <p class="section-sub">Install once, export everything.</p>
+    <div class="usage-step">
+      <span class="num">1</span>
+      <code>pip install chatgpt-export-pro</code>
+      <span class="desc">Install the package</span>
+    </div>
+    <div class="usage-step">
+      <span class="num">2</span>
+      <code>chatgpt-export --input ./downloads --analytics</code>
+      <span class="desc">Export and analyze</span>
+    </div>
+    <div class="usage-step">
+      <span class="num">3</span>
+      <code>chatgpt-export --serve</code>
+      <span class="desc">Launch web dashboard</span>
+    </div>
+    <div class="usage-step">
+      <span class="num">4</span>
+      <code>chatgpt-export --cost</code>
+      <span class="desc">Cost breakdown</span>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="section" id="pricing">
+  <div class="container">
+    <h2 class="section-title">Simple, transparent pricing</h2>
+    <p class="section-sub">Start free, upgrade when you need more.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="tier">Free</div>
+        <div class="price">$0<span>/mo</span></div>
+        <div class="desc">For casual users getting started.</div>
+        <ul>
+          <li>50 conversations</li>
+          <li>Basic export</li>
+          <li>Markdown + HTML</li>
+          <li>Single platform</li>
+        </ul>
+        <a href="#" class="btn btn-outline">Get Started</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="tier">Pro</div>
+        <div class="price">$12<span>/mo</span></div>
+        <div class="desc">For power users who need full control.</div>
+        <ul>
+          <li>Unlimited conversations</li>
+          <li>Cost tracking</li>
+          <li>Analytics dashboard</li>
+          <li>Obsidian sync</li>
+          <li>Semantic search</li>
+          <li>Topic classification</li>
+          <li>All export formats</li>
+        </ul>
+        <a href="#" class="btn btn-primary">Subscribe</a>
+      </div>
+      <div class="pricing-card">
+        <div class="tier">Pro Max</div>
+        <div class="price">$24<span>/mo</span></div>
+        <div class="desc">For teams and heavy workflows.</div>
+        <ul>
+          <li>Multi-account support</li>
+          <li>REST API access</li>
+          <li>Team workspace</li>
+          <li>Priority support</li>
+          <li>Everything in Pro</li>
+        </ul>
+        <a href="#" class="btn btn-outline">Subscribe</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="#">GitHub</a>
+      <a href="#">Documentation</a>
+      <a href="#">API Reference</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy</a>
+    </div>
+    <p>&copy; 2026 ChatGPT Exporter Pro. Released under the MIT License.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var btn = document.getElementById('pipCopyBtn');
+  var msg = document.getElementById('copiedMsg');
+  if (btn) {
+    btn.addEventListener('click', function() {
+      var text = 'pip install chatgpt-export-pro';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function() {
+          showCopied();
+        }).catch(function() {
+          fallbackCopy(text);
+        });
+      } else {
+        fallbackCopy(text);
+      }
+    });
+  }
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed'; ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showCopied(); } catch(e) {}
+    document.body.removeChild(ta);
+  }
+  function showCopied() {
+    msg.style.opacity = '1';
+    setTimeout(function() { msg.style.opacity = '0'; }, 2000);
+  }
+  // Smooth scroll for anchor clicks
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

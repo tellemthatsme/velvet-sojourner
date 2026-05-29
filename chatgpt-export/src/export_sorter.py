@@ -100,6 +100,14 @@ class ExportParser:
             source = "gemini"
         title = filepath.stem
         model = data.get("model", None)
+        if not model:
+            try:
+                from src.analyzers.model_detector import ModelDetector
+                detected = ModelDetector().detect(json.dumps(data)[:2000])
+                if detected[1] > 0.3:
+                    model = detected[0]
+            except ImportError:
+                pass
         date = data.get("created_at", None) or data.get("date", None)
         first_prompt = ""
         messages = []
@@ -191,9 +199,19 @@ class ExportParser:
                 first_prompt = msg["content"][:200]
                 break
         model = None
-        model_match = re.search(r"(?:model|model:|using|powered by|gpt-4|gpt-3\.5|claude-2|claude-3)", content_lower)
-        if model_match:
-            model = content[model_match.start():model_match.end() + 20].strip()
+        try:
+            from src.analyzers.model_detector import ModelDetector
+            detected = ModelDetector().detect(content)
+            if detected[1] > 0.5:
+                model = detected[0]
+            else:
+                model_match = re.search(r"(?:model|model:|using|powered by|gpt-4|gpt-3\.5|claude-2|claude-3)", content_lower)
+                if model_match:
+                    model = content[model_match.start():model_match.end() + 20].strip()
+        except ImportError:
+            model_match = re.search(r"(?:model|model:|using|powered by|gpt-4|gpt-3\.5|claude-2|claude-3)", content_lower)
+            if model_match:
+                model = content[model_match.start():model_match.end() + 20].strip()
         date = None
         date_match = re.search(r"(\d{4}-\d{2}-\d{2}|\d{2}/\d{2}/\d{4})", content[:500])
         if date_match:

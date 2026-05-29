@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChatGPT Export Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+    <h2>ChatGPT Export</h2>
+    <ul>
+      <li data-tab="overview" class="active" onclick="switchTab('overview')">Overview</li>
+      <li data-tab="trends" onclick="switchTab('trends')">Usage Trends</li>
+      <li data-tab="costs" onclick="switchTab('costs')">Cost Analysis</li>
+      <li data-tab="topics" onclick="switchTab('topics')">Topic Distribution</li>
+      <li data-tab="search" onclick="switchTab('search')">Search</li>
+      <li data-tab="export" onclick="switchTab('export')">Export</li>
+    </ul>
+  </nav>
+
+  <main class="content">
+
+    <div id="tab-overview" class="tab active">
+      <div class="cards" id="stat-cards">
+        <div class="card"><h3>Total Conversations</h3><div class="value" id="stat-total">-</div></div>
+        <div class="card"><h3>Total Cost</h3><div class="value" id="stat-cost">-</div></div>
+        <div class="card"><h3>Most Used Model</h3><div class="value model-name" id="stat-model">-</div></div>
+        <div class="card"><h3>Active Days</h3><div class="value" id="stat-days">-</div></div>
+      </div>
+
+      <div class="chart-row">
+        <div class="chart-box">
+          <h3>Daily Activity</h3>
+          <canvas id="overviewDailyChart" height="250"></canvas>
+        </div>
+        <div class="chart-box">
+          <h3>Source Distribution</h3>
+          <canvas id="overviewSourceChart" height="250"></canvas>
+        </div>
+      </div>
+
+      <div class="section-title">Recent Conversations</div>
+      <table>
+        <thead><tr><th>Title</th><th>Date</th><th>Source</th><th>Model</th><th>Topic</th></tr></thead>
+        <tbody id="recent-table"></tbody>
+      </table>
+    </div>
+
+    <div id="tab-trends" class="tab">
+      <div class="toggle-group">
+        <button class="toggle-btn active" data-period="daily" onclick="switchTrendPeriod('daily')">Daily</button>
+        <button class="toggle-btn" data-period="weekly" onclick="switchTrendPeriod('weekly')">Weekly</button>
+        <button class="toggle-btn" data-period="monthly" onclick="switchTrendPeriod('monthly')">Monthly</button>
+      </div>
+      <div class="chart-row">
+        <div class="chart-box">
+          <h3>Conversations Over Time</h3>
+          <canvas id="trendLineChart" height="280"></canvas>
+        </div>
+        <div class="chart-box">
+          <h3>Source Breakdown</h3>
+          <canvas id="trendSourceChart" height="280"></canvas>
+        </div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-box">
+          <h3>Model Usage</h3>
+          <canvas id="trendModelChart" height="280"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-costs" class="tab">
+      <div class="chart-row">
+        <div class="chart-box">
+          <h3>Cost by Model</h3>
+          <canvas id="costBarChart" height="280"></canvas>
+        </div>
+        <div class="chart-box">
+          <h3>Cumulative Cost</h3>
+          <canvas id="costAreaChart" height="280"></canvas>
+        </div>
+      </div>
+      <div class="section-title">Monthly Cost Breakdown</div>
+      <table>
+        <thead><tr><th>Month</th><th>Conversations</th><th>Total Tokens</th><th>Est. Cost</th></tr></thead>
+        <tbody id="cost-monthly-table"></tbody>
+      </table>
+    </div>
+
+    <div id="tab-topics" class="tab">
+      <div class="chart-row">
+        <div class="chart-box">
+          <h3>Topic Distribution</h3>
+          <canvas id="topicPieChart" height="280"></canvas>
+        </div>
+        <div class="chart-box">
+          <h3>Topic Trend Over Time</h3>
+          <canvas id="topicTrendChart" height="280"></canvas>
+        </div>
+      </div>
+      <div class="section-title">Keyword Cloud</div>
+      <div class="keyword-cloud" id="keyword-cloud"></div>
+    </div>
+
+    <div id="tab-search" class="tab">
+      <input type="text" class="search-input" id="search-input" placeholder="Search conversations..." oninput="debouncedSearch()">
+      <div id="search-results"></div>
+    </div>
+
+    <div id="tab-export" class="tab">
+      <div class="export-section">
+        <h3>Export All Conversations</h3>
+        <div class="export-row">
+          <button class="btn btn-primary" onclick="exportCSV()">Export as CSV</button>
+          <button class="btn btn-secondary" onclick="exportHTML()">Export Report as HTML</button>
+          <button class="btn btn-secondary" onclick="exportJSON()">Export as JSON</button>
+        </div>
+      </div>
+      <div class="export-section">
+        <h3>Filtered Export</h3>
+        <div class="export-row">
+          <label>From: <input type="date" id="export-start"></label>
+          <label>To: <input type="date" id="export-end"></label>
+          <select id="export-format">
+            <option value="csv">CSV</option>
+            <option value="html">HTML</option>
+            <option value="json">JSON</option>
+          </select>
+          <button class="btn btn-primary" onclick="exportFiltered()">Export</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="/static/chart.js"></script>
+<script>
+let trendPeriod = 'daily';
+let searchTimeout = null;
+
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.sidebar li').forEach(l => l.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  document.querySelector('.sidebar li[data-tab="' + name + '"]').classList.add('active');
+}
+
+function showLoading(id) {
+  const el = document.getElementById(id);
+  if (el) el.innerHTML = '<tr><td colspan="5" style="text-align:center;color:#888;">Loading...</td></tr>';
+}
+
+async function fetchJSON(url) {
+  const res = await fetch(url);
+  return await res.json();
+}
+
+async function loadOverview() {
+  const [stats, trends, costs] = await Promise.all([
+    fetchJSON('/api/stats'),
+    fetchJSON('/api/trends'),
+    fetchJSON('/api/costs'),
+  ]);
+  document.getElementById('stat-total').textContent = stats.total_conversations || 0;
+  document.getElementById('stat-cost').textContent = '$' + (costs.total_cost || 0).toFixed(2);
+  document.getElementById('stat-days').textContent = (trends.daily || []).length;
+
+  const modelCounts = costs.by_model || {};
+  let topModel = 'N/A', topCount = 0;
+  for (const [m, d] of Object.entries(modelCounts)) {
+    if (d.count > topCount) { topCount = d.count; topModel = m; }
+  }
+  document.getElementById('stat-model').textContent = topModel;
+
+  const daily = trends.daily || [];
+  createLineChart('overviewDailyChart',
+    daily.map(d => d.date),
+    [{ label: 'Conversations', data: daily.map(d => d.count), borderColor: '#e94560', backgroundColor: 'rgba(233,69,96,0.1)', fill: true, tension: 0.3 }],
+    { plugins: { legend: { display: false } } }
+  );
+
+  const srcData = trends.source_timeline || {};
+  const srcLabels = Object.keys(srcData);
+  const srcValues = srcLabels.map(s => srcData[s].reduce((a, d) => a + d.count, 0));
+  if (srcLabels.length) {
+    createDoughnutChart('overviewSourceChart', srcLabels, srcValues);
+  }
+
+  const convs = await fetchJSON('/api/conversations?page=1&per_page=10');
+  const tbody = document.getElementById('recent-table');
+  tbody.innerHTML = '';
+  (convs.items || []).forEach(c => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = '<td>' + (c.title || 'Untitled') + '</td><td>' + (c.date || '') + '</td><td>' + (c.source || '') + '</td><td>' + (c.model || '') + '</td><td>' + (c.topic || '') + '</td>';
+    tbody.appendChild(tr);
+  });
+}
+
+async function loadTrends() {
+  const trends = await fetchJSON('/api/trends');
+  let data = [];
+  let labels = [];
+  if (trendPeriod === 'daily') {
+    data = trends.daily || [];
+    labels = data.map(d => d.date);
+  } else if (trendPeriod === 'weekly') {
+    data = trends.weekly || [];
+    labels = data.map(d => d.week);
+  } else if (trendPeriod === 'monthly') {
+    const daily = trends.daily || [];
+    const monthMap = {};
+    daily.forEach(d => {
+      const m = d.date.substring(0, 7);
+      monthMap[m] = (monthMap[m] || 0) + d.count;
+    });
+    labels = Object.keys(monthMap).sort();
+    data = labels.map(m => ({ count: monthMap[m] }));
+  }
+
+  const chartId = 'trendLineChart';
+  const oldChart = Chart.getChart(chartId);
+  if (oldChart) oldChart.destroy();
+  createLineChart(chartId,
+    labels,
+    [{ label: 'Conversations', data: data.map(d => d.count), borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,0.1)', fill: true, tension: 0.3 }],
+    { plugins: { legend: { display: false } } }
+  );
+
+  const srcTimeline = trends.source_timeline || {};
+  const srcNames = Object.keys(srcTimeline);
+  if (srcNames.length) {
+    const srcLabels = labels;
+    const srcDatasets = srcNames.map((s, i) => ({
+      label: s,
+      data: srcLabels.map(l => {
+        const entry = (srcTimeline[s] || []).find(d => d.date === l || d.week === l);
+        return entry ? entry.count : 0;
+      }),
+      backgroundColor: COLORS[i % COLORS.length],
+    }));
+    const oldSrc = Chart.getChart('trendSourceChart');
+    if (oldSrc) oldSrc.destroy();
+    createBarChart('trendSourceChart', srcLabels, srcDatasets);
+  }
+
+  const modelData = trends.source_timeline || {};
+  const models = trends.daily ? Object.keys(costs ? costs.by_model || {} : {}) : [];
+  if (models.length) {
+    const oldMod = Chart.getChart('trendModelChart');
+    if (oldMod) oldMod.destroy();
+    createPieChart('trendModelChart', models, models.map(m => (costs.by_model[m] || {}).count || 0));
+  }
+}
+
+async function loadCosts() {
+  const costs = await fetchJSON('/api/costs');
+  const monthly = await fetchJSON('/api/costs/monthly');
+
+  const byModel = costs.by_model || {};
+  const modelNames = Object.keys(byModel);
+  const oldBar = Chart.getChart('costBarChart');
+  if (oldBar) oldBar.destroy();
+  createBarChart('costBarChart', modelNames, [{
+    label: 'Cost ($)',
+    data: modelNames.map(m => byModel[m].total_cost),
+    backgroundColor: COLORS.slice(0, modelNames.length),
+  }]);
+
+  const daily = (await fetchJSON('/api/trends')).daily || [];
+  let cumulative = 0;
+  const cumData = daily.map(d => {
+    cumulative += d.count * 0.01;
+    return { date: d.date, cum: +cumulative.toFixed(4) };
+  });
+  const oldArea = Chart.getChart('costAreaChart');
+  if (oldArea) oldArea.destroy();
+  createAreaChart('costAreaChart', cumData.map(d => d.date), [{
+    label: 'Cumulative Cost ($)',
+    data: cumData.map(d => d.cum),
+    borderColor: '#8b5cf6',
+    backgroundColor: 'rgba(139,92,246,0.15)',
+  }]);
+
+  const tbody = document.getElementById('cost-monthly-table');
+  tbody.innerHTML = '';
+  (monthly || []).forEach(m => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = '<td>' + m.month + '</td><td>' + m.count + '</td><td>' + (m.total_tokens || 0).toLocaleString() + '</td><td>$' + (m.total_cost || 0).toFixed(2) + '</td>';
+    tbody.appendChild(tr);
+  });
+}
+
+async function loadTopics() {
+  const [topics, trends, stats] = await Promise.all([
+    fetchJSON('/api/topics'),
+    fetchJSON('/api/trends'),
+    fetchJSON('/api/stats'),
+  ]);
+
+  if (topics && topics.length) {
+    const oldPie = Chart.getChart('topicPieChart');
+    if (oldPie) oldPie.destroy();
+    createPieChart('topicPieChart', topics.map(t => t[0]), topics.map(t => t[1]));
+
+    const topicTrend = {};
+    const daily = trends.daily || [];
+    topics.slice(0, 5).forEach(t => {
+      const name = t[0];
+      topicTrend[name] = daily.map(d => {
+        const srcTimeline = trends.source_timeline || {};
+        return 0;
+      });
+    });
+
+    const topicDrift = trends.topic_drift || [];
+    const driftLabels = topicDrift.map(d => d.topic).slice(0, 8);
+    const driftData1 = topicDrift.map(d => d.first_half).slice(0, 8);
+    const driftData2 = topicDrift.map(d => d.second_half).slice(0, 8);
+    if (driftLabels.length) {
+      const oldTrend = Chart.getChart('topicTrendChart');
+      if (oldTrend) oldTrend.destroy();
+      createBarChart('topicTrendChart', driftLabels, [
+        { label: 'First Half', data: driftData1, backgroundColor: '#0f3460' },
+        { label: 'Second Half', data: driftData2, backgroundColor: '#e94560' },
+      ]);
+    }
+  }
+
+  const keywords = stats.top_keywords || [];
+  const cloud = document.getElementById('keyword-cloud');
+  cloud.innerHTML = '';
+  const maxCount = keywords.length ? keywords[0][1] : 1;
+  keywords.forEach(([word, count]) => {
+    const size = 0.7 + (count / maxCount) * 1.8;
+    const span = document.createElement('span');
+    span.textContent = word;
+    span.style.fontSize = size + 'em';
+    span.style.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+    span.title = count + ' occurrences';
+    cloud.appendChild(span);
+  });
+}
+
+function switchTrendPeriod(period) {
+  trendPeriod = period;
+  document.querySelectorAll('.toggle-btn').forEach(b => b.classList.toggle('active', b.dataset.period === period));
+  loadTrends();
+}
+
+async function debouncedSearch() {
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(performSearch, 300);
+}
+
+let expandedConv = null;
+
+async function performSearch() {
+  const q = document.getElementById('search-input').value.trim();
+  const container = document.getElementById('search-results');
+  if (!q) { container.innerHTML = '<p style="color:#888;text-align:center;padding:20px;">Type to search conversations...</p>'; return; }
+
+  const results = await fetchJSON('/api/search?q=' + encodeURIComponent(q) + '&limit=50');
+  container.innerHTML = '';
+  if (!results || !results.length) {
+    container.innerHTML = '<p style="color:#888;text-align:center;padding:20px;">No results found.</p>';
+    return;
+  }
+
+  results.forEach(r => {
+    const div = document.createElement('div');
+    div.className = 'search-result';
+    div.innerHTML = '<h4>' + (r.title || 'Untitled') + '</h4>' +
+      '<div class="meta">' + (r.date || '') + ' &middot; ' + (r.source || '') + ' &middot; ' + (r.model || '') + '</div>' +
+      '<div class="snippet">' + highlightText(r.content || '', q) + '</div>';
+    container.appendChild(div);
+  });
+}
+
+function highlightText(text, query) {
+  if (!text || !query) return text || '';
+  const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return text.replace(new RegExp('(' + escaped + ')', 'gi'), '<mark>$1</mark>');
+}
+
+async function exportCSV() {
+  const res = await fetch('/api/export/csv');
+  const blob = await res.blob();
+  downloadBlob(blob, 'conversations.csv');
+}
+
+async function exportHTML() {
+  const res = await fetch('/api/export/report');
+  const blob = await res.blob();
+  downloadBlob(blob, 'analytics_report.html');
+}
+
+async function exportJSON() {
+  const res = await fetch('/api/conversations?page=1&per_page=10000');
+  const data = await res.json();
+  const blob = new Blob([JSON.stringify(data.items || [], null, 2)], { type: 'application/json' });
+  downloadBlob(blob, 'conversations.json');
+}
+
+async function exportFiltered() {
+  const start = document.getElementById('export-start').value;
+  const end = document.getElementById('export-end').value;
+  const format = document.getElementById('export-format').value;
+  const params = new URLSearchParams();
+  if (start) params.set('start', start);
+  if (end) params.set('end', end);
+  params.set('format', format);
+  const res = await fetch('/api/export/data?' + params.toString());
+  if (format === 'html') {
+    const blob = await res.blob();
+    downloadBlob(blob, 'filtered_report.html');
+  } else if (format === 'csv') {
+    const blob = await res.blob();
+    downloadBlob(blob, 'filtered_conversations.csv');
+  } else {
+    const data = await res.json();
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    downloadBlob(blob, 'filtered_conversations.json');
+  }
+}
+
+function downloadBlob(blob, filename) {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+loadOverview().then(() => {
+  loadCosts();
+  loadTopics();
+});
+loadTrends();
+</script>
+</body>
+</html>

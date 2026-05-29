@@ -1,9 +1,7 @@
 import pytest
 import sys
 import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
-
-from export_sorter import ExportParser, ExportOrganizer, ExportSorter, ChatExport
+from src.export_sorter import ExportParser, ExportOrganizer, ExportSorter, ChatExport
 from pathlib import Path
 import tempfile
 import json
@@ -213,7 +211,6 @@ class TestExportSorter:
     
     def test_scan_input_with_files(self):
         with tempfile.TemporaryDirectory() as tmpdir:
-            # Create some test files
             Path(tmpdir, "test1.txt").write_text("ChatGPT test")
             Path(tmpdir, "test2.json").write_text("{}")
             Path(tmpdir, "subdir").mkdir()

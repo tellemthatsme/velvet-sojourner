@@ -2,7 +2,6 @@
 import sys
 import os
 from pathlib import Path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
 
 try:
     from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
@@ -62,7 +61,7 @@ class ExportGUI(QMainWindow):
 
         input_row = QHBoxLayout()
         self.input_label = QLabel("Input: Not selected")
-        input_btn = QPushButton("📁 Select Input Folder")
+        input_btn = QPushButton("Select Input Folder")
         input_btn.clicked.connect(self.select_input)
         input_row.addWidget(self.input_label, 1)
         input_row.addWidget(input_btn)
@@ -70,7 +69,7 @@ class ExportGUI(QMainWindow):
 
         output_row = QHBoxLayout()
         self.output_label = QLabel("Output: Not selected")
-        output_btn = QPushButton("📂 Select Output Folder")
+        output_btn = QPushButton("Select Output Folder")
         output_btn.clicked.connect(self.select_output)
         output_row.addWidget(self.output_label, 1)
         output_row.addWidget(output_btn)
@@ -93,14 +92,14 @@ class ExportGUI(QMainWindow):
         self.stats_text.setReadOnly(True)
         self.stats_text.setMaximumHeight(150)
         stats_layout.addWidget(self.stats_text)
-        tabs.addTab(stats_tab, "📊 Statistics")
+        tabs.addTab(stats_tab, "Statistics")
 
         preview_tab = QWidget()
         preview_layout = QVBoxLayout(preview_tab)
         self.preview_text = QTextEdit()
         self.preview_text.setReadOnly(True)
         preview_layout.addWidget(self.preview_text)
-        tabs.addTab(preview_tab, "📋 Preview")
+        tabs.addTab(preview_tab, "Preview")
 
         search_tab = QWidget()
         search_layout = QVBoxLayout(search_tab)
@@ -108,7 +107,7 @@ class ExportGUI(QMainWindow):
         self.search_input = QTextEdit()
         self.search_input.setMaximumHeight(40)
         self.search_input.setPlaceholderText("Search conversations...")
-        search_btn = QPushButton("🔍 Search")
+        search_btn = QPushButton("Search")
         search_btn.clicked.connect(self.do_search)
         search_row.addWidget(self.search_input)
         search_row.addWidget(search_btn)
@@ -116,7 +115,7 @@ class ExportGUI(QMainWindow):
         self.search_results = QTextEdit()
         self.search_results.setReadOnly(True)
         search_layout.addWidget(self.search_results)
-        tabs.addTab(search_tab, "🔍 Search")
+        tabs.addTab(search_tab, "Search")
 
         layout.addWidget(tabs)
 
@@ -125,12 +124,12 @@ class ExportGUI(QMainWindow):
         layout.addWidget(self.progress)
 
         btn_row = QHBoxLayout()
-        export_btn = QPushButton("▶️ Export")
+        export_btn = QPushButton("Export")
         export_btn.setMinimumHeight(40)
         export_btn.clicked.connect(self.start_export)
-        obsidian_btn = QPushButton("📓 Sync to Obsidian")
+        obsidian_btn = QPushButton("Sync to Obsidian")
         obsidian_btn.clicked.connect(self.sync_obsidian)
-        self.status_btn = QPushButton("📊 Show Stats")
+        self.status_btn = QPushButton("Show Stats")
         self.status_btn.clicked.connect(self.show_stats)
         btn_row.addWidget(export_btn)
         btn_row.addWidget(obsidian_btn)
@@ -170,13 +169,13 @@ class ExportGUI(QMainWindow):
     def export_finished(self, message):
         self.progress.setVisible(False)
         self.statusBar().showMessage("Export complete")
-        self.preview_text.append(f"\n✅ {message}")
+        self.preview_text.append(f"\n{message}")
         self.show_stats()
 
     def export_error(self, error):
         self.progress.setVisible(False)
         self.statusBar().showMessage("Export failed")
-        self.preview_text.append(f"\n❌ ERROR: {error}")
+        self.preview_text.append(f"\nERROR: {error}")
 
     def sync_obsidian(self):
         vault = QFileDialog.getExistingDirectory(self, "Select Obsidian Vault Folder")
@@ -209,7 +208,7 @@ class ExportGUI(QMainWindow):
             return
         text = f"Found {len(results)} results for '{query}':\n\n"
         for r in results:
-            text += f"📄 {r['title']} ({r['topic']}, {r['source']})\n{r['content']}\n---\n"
+            text += f"{r['title']} ({r['topic']}, {r['source']})\n{r['content']}\n---\n"
         self.search_results.setText(text)
 
 
