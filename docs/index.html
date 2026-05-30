@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velvet Sojourner — AI Infrastructure & Security Tools</title>
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+    background: #080818;
+    color: #d0d0e0;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .bg {
+    position: fixed; inset: 0;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 20%, rgba(0, 212, 170, 0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 30%, rgba(233, 69, 96, 0.05) 0%, transparent 50%),
+      radial-gradient(ellipse 70% 60% at 50% 80%, rgba(74, 158, 255, 0.05) 0%, transparent 50%);
+    opacity: 0.8;
+  }
+
+  .bg-shift {
+    position: fixed; inset: 0;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 70% 50% at 30% 20%, rgba(0, 212, 170, 0.05) 0%, transparent 50%),
+      radial-gradient(ellipse 50% 40% at 70% 60%, rgba(233, 69, 96, 0.04) 0%, transparent 40%),
+      radial-gradient(ellipse 60% 50% at 60% 80%, rgba(74, 158, 255, 0.05) 0%, transparent 50%);
+    animation: panGradient 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes panGradient {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  .wrapper {
+    position: relative; z-index: 1;
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  }
+
+  /* Hero */
+  .hero { padding: 80px 0 60px; text-align: center; }
+  .hero h1 {
+    font-size: 3.2rem; font-weight: 700;
+    background: linear-gradient(135deg, #00d4aa, #4a9eff, #e94560);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  .hero .tagline {
+    font-size: 1.2rem; color: #8888a8;
+    margin-bottom: 20px;
+  }
+  .hero .intro {
+    max-width: 620px; margin: 0 auto;
+    color: #a0a0c0; line-height: 1.7;
+    font-size: 0.98rem;
+  }
+  .hero .intro span { color: #d0d0e0; font-weight: 500; }
+
+  /* Product Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding-bottom: 64px;
+  }
+
+  .card {
+    background: #101028;
+    border: 1px solid #1a1a3e;
+    border-radius: 16px;
+    padding: 32px 28px;
+    display: flex; flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 16px 16px 0 0;
+    opacity: 0.6;
+  }
+  .card--teal::before { background: #00d4aa; }
+  .card--pink::before { background: #e94560; }
+  .card--blue::before { background: #4a9eff; }
+
+  .card:hover {
+    transform: translateY(-4px);
+  }
+  .card--teal:hover {
+    border-color: rgba(0, 212, 170, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 212, 170, 0.12);
+  }
+  .card--pink:hover {
+    border-color: rgba(233, 69, 96, 0.3);
+    box-shadow: 0 8px 32px rgba(233, 69, 96, 0.12);
+  }
+  .card--blue:hover {
+    border-color: rgba(74, 158, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(74, 158, 255, 0.12);
+  }
+
+  .card h2 {
+    font-size: 1.25rem; font-weight: 600; margin-bottom: 4px;
+  }
+  .card--teal h2 { color: #00d4aa; }
+  .card--pink h2 { color: #e94560; }
+  .card--blue h2 { color: #4a9eff; }
+
+  .card .subtitle {
+    font-size: 0.88rem; color: #a0a0c0;
+    margin-bottom: 14px;
+  }
+
+  .card .desc {
+    font-size: 0.88rem; color: #8080a0; line-height: 1.65;
+    margin-bottom: 20px; flex: 1;
+  }
+
+  .card .badge {
+    display: inline-block;
+    font-size: 0.75rem; font-weight: 600;
+    padding: 4px 12px; border-radius: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 0.01em;
+  }
+  .card--teal .badge {
+    background: rgba(0, 212, 170, 0.1); color: #00d4aa;
+    border: 1px solid rgba(0, 212, 170, 0.2);
+  }
+  .card--pink .badge {
+    background: rgba(233, 69, 96, 0.1); color: #e94560;
+    border: 1px solid rgba(233, 69, 96, 0.2);
+  }
+  .card--blue .badge {
+    background: rgba(74, 158, 255, 0.1); color: #4a9eff;
+    border: 1px solid rgba(74, 158, 255, 0.2);
+  }
+
+  .card a {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.88rem; font-weight: 500;
+    text-decoration: none;
+    transition: gap 0.2s ease;
+    margin-top: auto;
+  }
+  .card a:hover { gap: 10px; }
+  .card--teal a { color: #00d4aa; }
+  .card--pink a { color: #e94560; }
+  .card--blue a { color: #4a9eff; }
+
+  /* Stats */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 48px 0 64px;
+    border-top: 1px solid #1a1a3e;
+    text-align: center;
+  }
+  .stat-value {
+    font-size: 3rem; font-weight: 700;
+    background: linear-gradient(135deg, #00d4aa, #4a9eff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .stat-label {
+    font-size: 0.85rem; color: #8888a8; margin-top: 4px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 32px 0 48px;
+    border-top: 1px solid #1a1a3e;
+    color: #606080; font-size: 0.85rem;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .hero { padding: 48px 0 40px; }
+    .hero h1 { font-size: 2rem; }
+    .hero .tagline { font-size: 1rem; }
+    .grid { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: 1fr; gap: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+<div class="bg-shift"></div>
+
+<div class="wrapper">
+
+  <section class="hero">
+    <h1>Velvet Sojourner</h1>
+    <p class="tagline">AI Infrastructure &amp; Security Tools</p>
+    <p class="intro">
+      A suite of open-source and freemium tools for the AI development lifecycle —
+      <span>skill-scan</span>, <span>ChatGPT Exporter Pro</span>, and <span>OpenCode Analytics</span>.
+    </p>
+  </section>
+
+  <div class="grid">
+
+    <div class="card card--teal">
+      <h2>skill-scan</h2>
+      <p class="subtitle">Security scanner for AI agent skills</p>
+      <p class="desc">
+        Detects malware, secrets, and prompt injection in SKILL.md files.
+        8 rule categories, CI integration, 4 output formats.
+      </p>
+      <span class="badge">Open Source · Free</span>
+      <a href="../skill-scan/landing/index.html">Learn More &rarr;</a>
+    </div>
+
+    <div class="card card--pink">
+      <h2>ChatGPT Exporter Pro</h2>
+      <p class="subtitle">Export, analyze, and own AI conversations</p>
+      <p class="desc">
+        Multi-platform export from ChatGPT, Claude, Gemini. Cost tracking,
+        analytics dashboard, Obsidian sync.
+      </p>
+      <span class="badge">Freemium · $12/mo</span>
+      <a href="../chatgpt-export/landing/index.html">Learn More &rarr;</a>
+    </div>
+
+    <div class="card card--blue">
+      <h2>OpenCode Tools</h2>
+      <p class="subtitle">Analytics infrastructure for AI development</p>
+      <p class="desc">
+        Session tracking, cost analytics, semantic search, and knowledge
+        management for Claude Code and OpenCode users.
+      </p>
+      <span class="badge">Internal Tool</span>
+      <a href="#">Learn More &rarr;</a>
+    </div>
+
+  </div>
+
+  <section class="stats">
+    <div>
+      <div class="stat-value">8</div>
+      <div class="stat-label">Rule Categories</div>
+    </div>
+    <div>
+      <div class="stat-value">63</div>
+      <div class="stat-label">Passing Tests</div>
+    </div>
+    <div>
+      <div class="stat-value">3</div>
+      <div class="stat-label">Platforms Supported</div>
+    </div>
+  </section>
+
+  <footer>
+    Built with Python &middot; 2026
+  </footer>
+
+</div>
+
+</body>
+</html>
