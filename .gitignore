@@ -33,3 +33,24 @@ skill-scan/dist/
 skill-scan/*.egg-info/
 skill-scan/*.spec
 skill-scan/.venv/
+
+# Build artifacts
+dist/
+zips/
+*.egg-info/
+*.zip
+*.exe
+
+# Generated project files
+deploy-ready/*
+!deploy-ready/README.md
+launch/
+products/
+plans/
+charm-crush/dist/
+projects/ai-automation-stack/dist/
+github-downloader-new/dist/
+
+# Logs
+*.log
+projects/**/logs/
