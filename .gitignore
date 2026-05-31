@@ -54,3 +54,14 @@ github-downloader-new/dist/
 # Logs
 *.log
 projects/**/logs/
+
+# Local development
+.venv/
+drift-music-video/
+exports/
+chatgpt-export/build/
+chatgpt-export/dist/
+skill-scan/build/
+skill-scan/dist/
+github-downloader-new/build/
+github-downloader-new/dist/
